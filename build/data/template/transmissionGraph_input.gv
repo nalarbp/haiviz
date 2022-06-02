@@ -1,0 +1,945 @@
+/* Created by igraph @VERSION@ */
+digraph {
+  0 [
+    name=Isolate1
+    dates=18248.9987515605
+    label=1
+  ];
+  1 [
+    name=Isolate10
+    dates=18218.9937578027
+    label=2
+  ];
+  2 [
+    name=Isolate100
+    dates=18015.9987515605
+    label=3
+  ];
+  3 [
+    name=Isolate11
+    dates=17852.9787765293
+    label=4
+  ];
+  4 [
+    name=Isolate12
+    dates=17598.8164794007
+    label=5
+  ];
+  5 [
+    name=Isolate13
+    dates=17616.9225967541
+    label=6
+  ];
+  6 [
+    name=Isolate14
+    dates=17668.936329588
+    label=7
+  ];
+  7 [
+    name=Isolate15
+    dates=17746.9650436954
+    label=8
+  ];
+  8 [
+    name=Isolate16
+    dates=17901.4032459426
+    label=9
+  ];
+  9 [
+    name=Isolate17
+    dates=17926.9925093633
+    label=10
+  ];
+  10 [
+    name=Isolate18
+    dates=17991
+    label=11
+  ];
+  11 [
+    name=Isolate19
+    dates=18123
+    label=12
+  ];
+  12 [
+    name=Isolate2
+    dates=18158.9875156055
+    label=13
+  ];
+  13 [
+    name=Isolate20
+    dates=18139.9962546816
+    label=14
+  ];
+  14 [
+    name=Isolate21
+    dates=18009.9787765293
+    label=15
+  ];
+  15 [
+    name=Isolate22
+    dates=17557
+    label=16
+  ];
+  16 [
+    name=Isolate23
+    dates=18006.9350811486
+    label=17
+  ];
+  17 [
+    name=Isolate24
+    dates=18241.9987515605
+    label=18
+  ];
+  18 [
+    name=Isolate25
+    dates=18246.9962546816
+    label=19
+  ];
+  19 [
+    name=Isolate26
+    dates=18245.9975031211
+    label=20
+  ];
+  20 [
+    name=Isolate27
+    dates=18262.9962546816
+    label=21
+  ];
+  21 [
+    name=Isolate28
+    dates=18271.9937578027
+    label=22
+  ];
+  22 [
+    name=Isolate29
+    dates=17845.9063670412
+    label=23
+  ];
+  23 [
+    name=Isolate3
+    dates=18154.8514357054
+    label=24
+  ];
+  24 [
+    name=Isolate30
+    dates=17859.9325842697
+    label=25
+  ];
+  25 [
+    name=Isolate31
+    dates=18210.9987515605
+    label=26
+  ];
+  26 [
+    name=Isolate32
+    dates=18218.9975031211
+    label=27
+  ];
+  27 [
+    name=Isolate33
+    dates=17852.9213483146
+    label=28
+  ];
+  28 [
+    name=Isolate34
+    dates=17598.4843945069
+    label=29
+  ];
+  29 [
+    name=Isolate35
+    dates=17616.975031211
+    label=30
+  ];
+  30 [
+    name=Isolate36
+    dates=18158.9875156055
+    label=31
+  ];
+  31 [
+    name=Isolate37
+    dates=18154.9900124844
+    label=32
+  ];
+  32 [
+    name=Isolate38
+    dates=18147.9800249688
+    label=33
+  ];
+  33 [
+    name=Isolate39
+    dates=18135.9650436954
+    label=34
+  ];
+  34 [
+    name=Isolate4
+    dates=18147.9925093633
+    label=35
+  ];
+  35 [
+    name=Isolate40
+    dates=18210.9762796504
+    label=36
+  ];
+  36 [
+    name=Isolate41
+    dates=18210.9812734082
+    label=37
+  ];
+  37 [
+    name=Isolate42
+    dates=17990.9837702871
+    label=38
+  ];
+  38 [
+    name=Isolate43
+    dates=18210.9775280899
+    label=39
+  ];
+  39 [
+    name=Isolate44
+    dates=18249
+    label=40
+  ];
+  40 [
+    name=Isolate45
+    dates=18158.9925093633
+    label=41
+  ];
+  41 [
+    name=Isolate46
+    dates=18154.9850187266
+    label=42
+  ];
+  42 [
+    name=Isolate47
+    dates=18156
+    label=43
+  ];
+  43 [
+    name=Isolate48
+    dates=18156.9937578027
+    label=44
+  ];
+  44 [
+    name=Isolate49
+    dates=18157.9825218477
+    label=45
+  ];
+  45 [
+    name=Isolate5
+    dates=18135.9950062422
+    label=46
+  ];
+  46 [
+    name=Isolate50
+    dates=18159
+    label=47
+  ];
+  47 [
+    name=Isolate51
+    dates=18159.9962546816
+    label=48
+  ];
+  48 [
+    name=Isolate52
+    dates=18006.9837702871
+    label=49
+  ];
+  49 [
+    name=Isolate53
+    dates=18241.9937578027
+    label=50
+  ];
+  50 [
+    name=Isolate54
+    dates=18246.9975031211
+    label=51
+  ];
+  51 [
+    name=Isolate55
+    dates=18245.9987515605
+    label=52
+  ];
+  52 [
+    name=Isolate56
+    dates=17746.9987515605
+    label=53
+  ];
+  53 [
+    name=Isolate57
+    dates=17902.9712858926
+    label=54
+  ];
+  54 [
+    name=Isolate58
+    dates=17926.9875156055
+    label=55
+  ];
+  55 [
+    name=Isolate59
+    dates=17990.9875156055
+    label=56
+  ];
+  56 [
+    name=Isolate6
+    dates=18210.9900124844
+    label=57
+  ];
+  57 [
+    name=Isolate60
+    dates=18122.9900124844
+    label=58
+  ];
+  58 [
+    name=Isolate61
+    dates=18139.9687890137
+    label=59
+  ];
+  59 [
+    name=Isolate62
+    dates=18009.9950062422
+    label=60
+  ];
+  60 [
+    name=Isolate63
+    dates=18011
+    label=61
+  ];
+  61 [
+    name=Isolate64
+    dates=18011.9937578027
+    label=62
+  ];
+  62 [
+    name=Isolate65
+    dates=18012.986267166
+    label=63
+  ];
+  63 [
+    name=Isolate66
+    dates=18013.9950062422
+    label=64
+  ];
+  64 [
+    name=Isolate67
+    dates=18014.9937578027
+    label=65
+  ];
+  65 [
+    name=Isolate68
+    dates=18015.9987515605
+    label=66
+  ];
+  66 [
+    name=Isolate69
+    dates=18016.9925093633
+    label=67
+  ];
+  67 [
+    name=Isolate7
+    dates=18210.9987515605
+    label=68
+  ];
+  68 [
+    name=Isolate70
+    dates=18246.9975031211
+    label=69
+  ];
+  69 [
+    name=Isolate71
+    dates=18246
+    label=70
+  ];
+  70 [
+    name=Isolate72
+    dates=18263
+    label=71
+  ];
+  71 [
+    name=Isolate73
+    dates=18271.9900124844
+    label=72
+  ];
+  72 [
+    name=Isolate74
+    dates=17845.9650436954
+    label=73
+  ];
+  73 [
+    name=Isolate75
+    dates=17859.9413233458
+    label=74
+  ];
+  74 [
+    name=Isolate76
+    dates=18207.5405742821
+    label=75
+  ];
+  75 [
+    name=Isolate77
+    dates=18218.9962546816
+    label=76
+  ];
+  76 [
+    name=Isolate78
+    dates=18210.9650436954
+    label=77
+  ];
+  77 [
+    name=Isolate79
+    dates=17990.986267166
+    label=78
+  ];
+  78 [
+    name=Isolate8
+    dates=18238.9962546816
+    label=79
+  ];
+  79 [
+    name=Isolate80
+    dates=18210.7528089888
+    label=80
+  ];
+  80 [
+    name=Isolate81
+    dates=18248.9950062422
+    label=81
+  ];
+  81 [
+    name=Isolate82
+    dates=18158.9887640449
+    label=82
+  ];
+  82 [
+    name=Isolate83
+    dates=18155
+    label=83
+  ];
+  83 [
+    name=Isolate84
+    dates=18155.9975031211
+    label=84
+  ];
+  84 [
+    name=Isolate85
+    dates=18156.9737827715
+    label=85
+  ];
+  85 [
+    name=Isolate86
+    dates=18157.9912609238
+    label=86
+  ];
+  86 [
+    name=Isolate87
+    dates=18158.9925093633
+    label=87
+  ];
+  87 [
+    name=Isolate88
+    dates=18159.9887640449
+    label=88
+  ];
+  88 [
+    name=Isolate89
+    dates=18160.9900124844
+    label=89
+  ];
+  89 [
+    name=Isolate9
+    dates=18210.4444444444
+    label=90
+  ];
+  90 [
+    name=Isolate90
+    dates=18161.9900124844
+    label=91
+  ];
+  91 [
+    name=Isolate91
+    dates=18162.9875156055
+    label=92
+  ];
+  92 [
+    name=Isolate92
+    dates=18163.9937578027
+    label=93
+  ];
+  93 [
+    name=Isolate93
+    dates=18164.9825218477
+    label=94
+  ];
+  94 [
+    name=Isolate94
+    dates=18165.9700374532
+    label=95
+  ];
+  95 [
+    name=Isolate95
+    dates=18010.975031211
+    label=96
+  ];
+  96 [
+    name=Isolate96
+    dates=18011.9900124844
+    label=97
+  ];
+  97 [
+    name=Isolate97
+    dates=18012.9650436954
+    label=98
+  ];
+  98 [
+    name=Isolate98
+    dates=18013.9575530587
+    label=99
+  ];
+  99 [
+    name=Isolate99
+    dates=18014.9600499376
+    label=100
+  ];
+
+  17 -> 0 [
+    color="#4B4B4B"
+    weight=0.710362047440699
+    curved=1
+    "nb.mut"=1
+    label="1/0.71"
+  ];
+  23 -> 1 [
+    color="#484848"
+    weight=0.720349563046192
+    curved=1
+    "nb.mut"=0
+    label="0/0.72"
+  ];
+  16 -> 2 [
+    color="#242424"
+    weight=0.858926342072409
+    curved=1
+    "nb.mut"=0
+    label="0/0.86"
+  ];
+  22 -> 3 [
+    color="#080808"
+    weight=0.965043695380774
+    curved=1
+    "nb.mut"=2
+    label="2/0.97"
+  ];
+  15 -> 4 [
+    color="#343434"
+    weight=0.802746566791511
+    curved=1
+    "nb.mut"=5
+    label="5/0.8"
+  ];
+  4 -> 5 [
+    color="#484848"
+    weight=0.716604244694132
+    curved=1
+    "nb.mut"=7
+    label="7/0.72"
+  ];
+  29 -> 6 [
+    color="#000000"
+    weight=1
+    curved=1
+    "nb.mut"=4
+    label="4/1"
+  ];
+  28 -> 7 [
+    color="#4D4D4D"
+    weight=0.697877652933833
+    curved=1
+    "nb.mut"=3
+    label="3/0.7"
+  ];
+  24 -> 8 [
+    color="#484848"
+    weight=0.722846441947566
+    curved=1
+    "nb.mut"=3
+    label="3/0.72"
+  ];
+  9 -> 10 [
+    color="#434343"
+    weight=0.739076154806492
+    curved=1
+    "nb.mut"=2
+    label="2/0.74"
+  ];
+  11 -> 13 [
+    color="#030303"
+    weight=0.99250936329588
+    curved=1
+    "nb.mut"=0
+    label="0/0.99"
+  ];
+  16 -> 14 [
+    color="#393939"
+    weight=0.779026217228464
+    curved=1
+    "nb.mut"=2
+    label="2/0.78"
+  ];
+  10 -> 16 [
+    color="#050505"
+    weight=0.976279650436954
+    curved=1
+    "nb.mut"=1
+    label="1/0.98"
+  ];
+  17 -> 19 [
+    color="#0A0A0A"
+    weight=0.957553058676654
+    curved=1
+    "nb.mut"=1
+    label="1/0.96"
+  ];
+  52 -> 22 [
+    color="#000000"
+    weight=1
+    curved=1
+    "nb.mut"=5
+    label="5/1"
+  ];
+  13 -> 23 [
+    color="#1C1C1C"
+    weight=0.890137328339575
+    curved=1
+    "nb.mut"=3
+    label="3/0.89"
+  ];
+  27 -> 24 [
+    color="#646464"
+    weight=0.611735330836454
+    curved=1
+    "nb.mut"=0
+    label="0/0.61"
+  ];
+  23 -> 25 [
+    color="#555555"
+    weight=0.666666666666667
+    curved=1
+    "nb.mut"=0
+    label="0/0.67"
+  ];
+  23 -> 26 [
+    color="#4D4D4D"
+    weight=0.697877652933833
+    curved=1
+    "nb.mut"=0
+    label="0/0.7"
+  ];
+  22 -> 27 [
+    color="#000000"
+    weight=1
+    curved=1
+    "nb.mut"=0
+    label="0/1"
+  ];
+  15 -> 28 [
+    color="#0F0F0F"
+    weight=0.943820224719101
+    curved=1
+    "nb.mut"=2
+    label="2/0.94"
+  ];
+  23 -> 30 [
+    color="#363636"
+    weight=0.794007490636704
+    curved=1
+    "nb.mut"=3
+    label="3/0.79"
+  ];
+  13 -> 31 [
+    color="#404040"
+    weight=0.746566791510612
+    curved=1
+    "nb.mut"=5
+    label="5/0.75"
+  ];
+  13 -> 32 [
+    color="#5F5F5F"
+    weight=0.632958801498127
+    curved=1
+    "nb.mut"=6
+    label="6/0.63"
+  ];
+  11 -> 33 [
+    color="#5F5F5F"
+    weight=0.626716604244694
+    curved=1
+    "nb.mut"=6
+    label="6/0.63"
+  ];
+  13 -> 34 [
+    color="#343434"
+    weight=0.801498127340824
+    curved=1
+    "nb.mut"=4
+    label="4/0.8"
+  ];
+  40 -> 39 [
+    color="#050505"
+    weight=0.983770287141074
+    curved=1
+    "nb.mut"=1
+    label="1/0.98"
+  ];
+  43 -> 40 [
+    color="#434343"
+    weight=0.742821473158552
+    curved=1
+    "nb.mut"=5
+    label="5/0.74"
+  ];
+  23 -> 42 [
+    color="#404040"
+    weight=0.749063670411985
+    curved=1
+    "nb.mut"=2
+    label="2/0.75"
+  ];
+  23 -> 43 [
+    color="#212121"
+    weight=0.866416978776529
+    curved=1
+    "nb.mut"=3
+    label="3/0.87"
+  ];
+  34 -> 44 [
+    color="#646464"
+    weight=0.612983770287141
+    curved=1
+    "nb.mut"=5
+    label="5/0.61"
+  ];
+  95 -> 45 [
+    color="#363636"
+    weight=0.791510611735331
+    curved=1
+    "nb.mut"=0
+    label="0/0.79"
+  ];
+  96 -> 46 [
+    color="#050505"
+    weight=0.982521847690387
+    curved=1
+    "nb.mut"=0
+    label="0/0.98"
+  ];
+  10 -> 48 [
+    color="#272727"
+    weight=0.850187265917603
+    curved=1
+    "nb.mut"=3
+    label="3/0.85"
+  ];
+  49 -> 50 [
+    color="#0D0D0D"
+    weight=0.948813982521848
+    curved=1
+    "nb.mut"=0
+    label="0/0.95"
+  ];
+  8 -> 54 [
+    color="#050505"
+    weight=0.97752808988764
+    curved=1
+    "nb.mut"=2
+    label="2/0.98"
+  ];
+  8 -> 55 [
+    color="#363636"
+    weight=0.794007490636704
+    curved=1
+    "nb.mut"=5
+    label="5/0.79"
+  ];
+  11 -> 58 [
+    color="#272727"
+    weight=0.84769038701623
+    curved=1
+    "nb.mut"=2
+    label="2/0.85"
+  ];
+  10 -> 59 [
+    color="#5F5F5F"
+    weight=0.629213483146067
+    curved=1
+    "nb.mut"=5
+    label="5/0.63"
+  ];
+  59 -> 60 [
+    color="#000000"
+    weight=1
+    curved=1
+    "nb.mut"=0
+    label="0/1"
+  ];
+  59 -> 61 [
+    color="#000000"
+    weight=0.995006242197253
+    curved=1
+    "nb.mut"=3
+    label="3/1"
+  ];
+  59 -> 62 [
+    color="#050505"
+    weight=0.975031210986267
+    curved=1
+    "nb.mut"=4
+    label="4/0.98"
+  ];
+  59 -> 63 [
+    color="#050505"
+    weight=0.982521847690387
+    curved=1
+    "nb.mut"=1
+    label="1/0.98"
+  ];
+  59 -> 64 [
+    color="#030303"
+    weight=0.987515605493134
+    curved=1
+    "nb.mut"=1
+    label="1/0.99"
+  ];
+  64 -> 65 [
+    color="#363636"
+    weight=0.791510611735331
+    curved=1
+    "nb.mut"=1
+    label="1/0.79"
+  ];
+  63 -> 66 [
+    color="#3B3B3B"
+    weight=0.769038701622971
+    curved=1
+    "nb.mut"=0
+    label="0/0.77"
+  ];
+  87 -> 67 [
+    color="#050505"
+    weight=0.978776529338327
+    curved=1
+    "nb.mut"=0
+    label="0/0.98"
+  ];
+  88 -> 68 [
+    color="#1F1F1F"
+    weight=0.880149812734082
+    curved=1
+    "nb.mut"=0
+    label="0/0.88"
+  ];
+  89 -> 69 [
+    color="#3E3E3E"
+    weight=0.764044943820225
+    curved=1
+    "nb.mut"=0
+    label="0/0.76"
+  ];
+  69 -> 70 [
+    color="#363636"
+    weight=0.791510611735331
+    curved=1
+    "nb.mut"=2
+    label="2/0.79"
+  ];
+  15 -> 72 [
+    color="#646464"
+    weight=0.607990012484395
+    curved=1
+    "nb.mut"=5
+    label="5/0.61"
+  ];
+  74 -> 75 [
+    color="#646464"
+    weight=0.610486891385768
+    curved=1
+    "nb.mut"=1
+    label="1/0.61"
+  ];
+  74 -> 76 [
+    color="#313131"
+    weight=0.808988764044944
+    curved=1
+    "nb.mut"=1
+    label="1/0.81"
+  ];
+  9 -> 77 [
+    color="#363636"
+    weight=0.787765293383271
+    curved=1
+    "nb.mut"=5
+    label="5/0.79"
+  ];
+  74 -> 79 [
+    color="#313131"
+    weight=0.811485642946317
+    curved=1
+    "nb.mut"=1
+    label="1/0.81"
+  ];
+  79 -> 80 [
+    color="#626262"
+    weight=0.615480649188514
+    curved=1
+    "nb.mut"=0
+    label="0/0.62"
+  ];
+  13 -> 82 [
+    color="#050505"
+    weight=0.975031210986267
+    curved=1
+    "nb.mut"=0
+    label="0/0.98"
+  ];
+  82 -> 83 [
+    color="#555555"
+    weight=0.66916354556804
+    curved=1
+    "nb.mut"=0
+    label="0/0.67"
+  ];
+  23 -> 84 [
+    color="#4B4B4B"
+    weight=0.709113607990012
+    curved=1
+    "nb.mut"=2
+    label="2/0.71"
+  ];
+  23 -> 85 [
+    color="#4B4B4B"
+    weight=0.709113607990012
+    curved=1
+    "nb.mut"=2
+    label="2/0.71"
+  ];
+  74 -> 89 [
+    color="#313131"
+    weight=0.805243445692884
+    curved=1
+    "nb.mut"=1
+    label="1/0.81"
+  ];
+  16 -> 95 [
+    color="#1C1C1C"
+    weight=0.886392009987516
+    curved=1
+    "nb.mut"=3
+    label="3/0.89"
+  ];
+  14 -> 96 [
+    color="#505050"
+    weight=0.689138576779026
+    curved=1
+    "nb.mut"=7
+    label="7/0.69"
+  ];
+}
