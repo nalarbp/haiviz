@@ -1,0 +1,5 @@
+# ADD SETTINGS
+- reducer >> index.js: add setting param to moduleSettings
+- reducer-moduleSettings >> write constants, add actions >> add constants.js
+- action-moduleSettings >> add actions function
+- module component settings >> add UI settings button

@@ -1,0 +1,220 @@
+isolate_name,isolate_sourceName,isolate_colDate,isolate_sourceType,isolate_species,isolate_colLocation,profile_1,profile_2,profile_3,isolate_colLocation_original
+M86329,P1,2018-01-19,Patient,Enterococcus faecium,4BT,1422,VRE-vanA,Ef1421-A4,W4BT
+M86331,P2,2018-01-29,Patient,Enterococcus faecium,5D,80,VRE-vanB,NA,W5D
+M86338,P3,2018-02-16,Patient,Enterococcus faecium,2E,1421,VRE-vanA,Ef1421-A4,W2E
+M86339,P4,2018-02-17,Patient,Enterococcus faecium,MAPU,1478,VRE-vanA,NA,WMAPU
+M86356,P5,2018-03-28,Patient,Enterococcus faecium,5D,17,VRE-vanA,Ef17-A1,W5D
+M86369,P6,2018-05-31,Patient,Enterococcus faecium,4BR,1421,VRE-vanA,NA,W4BR
+M86370,P7,2018-05-31,Patient,Enterococcus faecium,5D,80,VRE-vanA,NA,W5D
+M86375,P8,2018-06-11,Patient,Enterococcus faecium,5D,1421,VRE-vanA,Ef1421-A5,W5D
+M86340,P9,2018-06-18,Patient,Enterococcus faecium,5D,1421,VRE-vanA,Ef1421-A5,W5D
+M86377,P10,2018-06-18,Patient,Enterococcus faecium,5D,1421,VRE-vanA,Ef1421-A5,W5D
+M86439,P11,2018-06-29,Patient,Enterococcus faecium,4BT,1421,VRE-vanA,NA,W4BT
+M86438,P12,2018-06-29,Patient,Enterococcus faecium,ICU,1421,VRE-vanA,Ef1421-A5,WICU
+M86159,P13,2018-06-30,Patient,Enterococcus faecium,5D,78,VRE-vanB,NA,W5D
+M86441,P14,2018-07-02,Patient,Enterococcus faecium,5D,203,VRE-vanA,NA,W5D
+M86440,P15,2018-07-02,Patient,Enterococcus faecium,5D,1421,VRE-vanA,Ef1421-A5,W5D
+M86442,P16,2018-07-05,Patient,Enterococcus faecium,ICU,1421,VRE-vanA,Ef1421-A5,WICU
+M86928,P17,2018-07-07,Patient,Enterococcus faecium,5D,1421,VRE-vanB,Ef1421-A5,W5D
+M86927,P18,2018-07-14,Patient,Enterococcus faecium,Bank,1421,VRE-vanA,Ef1421-A5,Bank
+M86937,P19,2018-07-16,Patient,Enterococcus faecium,5D,555,VRE-vanB,NA,W5D
+M87335,P20,2018-07-23,Patient,Enterococcus faecium,5D,1421,VRE-vanA,Ef1421-A5,W5D
+M87137,P21,2018-07-24,Patient,Enterococcus faecium,2E,203,VRE-vanB,NA,W2E
+M87138,P22,2018-07-27,Patient,Enterococcus faecium,4C,203,VRE-vanB,NA,W4C
+M87672,P23,2018-08-05,Patient,Enterococcus faecium,5D,17,VRE-vanA,Ef17-A1,W5D
+M87673,P24,2018-08-07,Patient,Enterococcus faecium,ICU,1424,VRE-vanA,Ef1424-A3,WICU
+M87674,P25,2018-08-13,Patient,Enterococcus faecium,5D,1421,VRE-vanA,Ef1421-A5,W5D
+M87880,P24,2018-08-13,Patient,Enterococcus faecium,ICU,1424,VRE-vanA,Ef1424-A3,WICU
+M88033,P26,2018-08-29,Patient,Enterococcus faecium,1C,17,VRE-vanB,Ef17-A1,W1C
+M88655,P27,2018-09-17,Patient,Enterococcus faecium,5D,203,VRE-vanB,NA,W5D
+M89669,P28,2018-10-18,Patient,Enterococcus faecium,5D ,1421,VRE-vanA,Ef1421-A4,5D Infectious Diseases 
+M89914,P29,2018-10-25,Patient,Enterococcus faecium,5D ,1421,VRE-vanA,Ef1421-A5,5D Infectious Diseases 
+M89915,P30,2018-10-29,Patient,Enterococcus faecium,ICU ,17,VRE-vanB,Ef17-A1,Intensive Care 
+M810156,P31,2018-11-04,Patient,Enterococcus faecium,5D ,1421,VRE-vanA,Ef1421-A4,5D Infectious Diseases 
+M810157,P32,2018-11-04,Patient,Enterococcus faecium,4BT ,17,VRE-vanB,NA,4B Transplant 
+M810154,P33,2018-11-07,Patient,Enterococcus faecium,4BT ,78,VRE-vanB,Ef78-A4,4B Transplant 
+M810155,P34,2018-11-07,Patient,Enterococcus faecium,5D ,80,VRE-vanB,NA,5D Infectious Diseases 
+M810371,P35,2018-11-12,Patient,Enterococcus faecium,5D ,1421,VRE-vanA,Ef1421-A5,5D Infectious Diseases 
+M810373,P36,2018-11-12,Patient,Enterococcus faecium,5D ,80,VRE-vanA,NA,5D Infectious Diseases 
+M810370,P37,2018-11-12,Patient,Enterococcus faecium,5D ,17,VRE-vanB,NA,5D Infectious Diseases 
+M810372,P38,2018-11-12,Patient,Enterococcus faecium,5D ,1421,VRE-vanA,Ef1421-A5,5D Infectious Diseases 
+M810374,P39,2018-11-14,Patient,Enterococcus faecium,1C ,203,VRE-vanB,NA,1C Vascular 
+M810376,P40,2018-11-16,Patient,Enterococcus faecium,5D ,1421,VRE-vanA,Ef1421-A5,5D Infectious Diseases 
+M810375,P14,2018-11-16,Patient,Enterococcus faecium,5D ,203,VRE-vanA,NA,5D Infectious Diseases 
+M810622,P41,2018-11-16,Patient,Enterococcus faecium,5D ,1421,VRE-vanA,Ef1421-A5,5D Infectious Diseases 
+M810623,P42,2018-11-19,Patient,Enterococcus faecium,5D ,17,VRE-vanA,Ef17-A1,5D Infectious Diseases 
+M810377,P29,2018-11-20,Patient,Enterococcus faecium,5D ,1421,VRE-vanA,Ef1421-A5,5D Infectious Diseases 
+M810625,P43,2018-11-24,Patient,Enterococcus faecium,5D ,17,VRE-vanB,NA,5D Infectious Diseases 
+M810627,P44,2018-11-26,Patient,Enterococcus faecium,5D ,1421,VRE-vanA,Ef1421-A5,5D Infectious Diseases 
+M810881,P45,2018-11-26,Patient,Enterococcus faecium,1C ,17,VRE-vanB,NA,1C Vascular 
+M810626,P46,2018-11-26,Patient,Enterococcus faecium,5D ,1421,VRE-vanA,Ef1421-A5,5D Infectious Diseases 
+M810885,P47,2018-11-28,Patient,Enterococcus faecium,5D ,78,VRE-vanB,NA,5D Infectious Diseases 
+M810887,P48,2018-11-29,Patient,Enterococcus faecium,1C ,1421,VRE-vanA,Ef1421-A2,1C Vascular 
+M810888,P49,2018-12-02,Patient,Enterococcus faecium,4BT ,1421,VRE-vanA,Ef1421-A5,4B Transplant 
+M811152,P50,2018-12-03,Patient,Enterococcus faecium,4BAD ,80,VRE-vanA,Ef80-A3,4B Acute Dialysis 
+M811151,P51,2018-12-03,Patient,Enterococcus faecium,Med Assessment & Planning,341,VRE-vanB,NA,Med Assessment & Planning
+M811153,P52,2018-12-04,Patient,Enterococcus faecium,2A ,1421,VRE-vanB,Ef1421-A2,2A Orthopaedic 
+M811154,P53,2018-12-09,Patient,Enterococcus faecium,2B ,203,VRE-vanB,NA,2B Orthopaedic/Neurosurgery 
+M91418,P54,2018-12-31,Patient,Enterococcus faecium,4BR ,1421,VRE-vanA,Ef1421-A2,4B Renal 
+M91424,P55,2019-01-03,Patient,Enterococcus faecium,ICU ,1421,VRE-vanA,Ef1421-A5,Intensive Care 
+M91419,P56,2019-01-06,Patient,Enterococcus faecium,5D ,17,VRE-vanB,Ef17-A1,5D Infectious Diseases 
+M91420,P57,2019-01-08,Patient,Enterococcus faecium,5D ,17,VRE-vanA,Ef17-A1,5D Infectious Diseases 
+M91421,P58,2019-01-10,Patient,Enterococcus faecium,4BT ,1421,VRE-vanA,Ef1421-A1,4B Transplant 
+M01223,P59,2019-01-13,Patient,Enterococcus faecium,4C ,17,null,Ef17-A1,4C HPB Acute Surgery 
+M91422,P60,2019-01-14,Patient,Enterococcus faecium,5D ,17,VRE-vanB,Ef17-A1,5D Infectious Diseases 
+M91425,P61,2019-01-15,Patient,Enterococcus faecium,Haemodialysis ,80,VRE-vanB,NA,Haemodialysis 
+M91423,P62,2019-01-17,Patient,Enterococcus faecium,3C ,1421,VRE-vanA,Ef1421-A2,3C Cardiac Surgery 
+M91413,P63,2019-01-20,Patient,Enterococcus faecium,4BR ,1421,VRE-vanA,NA,4B Renal 
+M91414,P64,2019-01-24,Patient,Enterococcus faecium,ICU ,78,VRE-vanB,Ef78-A1,Intensive Care 
+M91417,P65,2019-01-28,Patient,Enterococcus faecium,ICU ,1424,VRE-vanA,NA,Intensive Care 
+M91866,P66,2019-02-01,Patient,Enterococcus faecium,ICU ,17,VRE-vanA,NA,Intensive Care 
+M01237,P67,2019-02-01,Patient,Enterococcus faecium,ICU ,17,null,NA,Intensive Care 
+M91867,P68,2019-02-02,Patient,Enterococcus faecium,4BR ,1421,VRE-vanA,NA,4B Renal 
+M01225_2,P69,2019-02-03,Patient,Enterococcus faecium,Emergency Department ,17,null,NA,Emergency Department 
+M92176,P70,2019-02-13,Patient,Enterococcus faecium,4BT ,1424,VRE-vanA,Ef1424-A3,4B Transplant 
+M92506,P71,2019-02-19,Patient,Enterococcus faecium,Med Assessment & Planning,203,VRE-vanB,NA,Med Assessment & Planning
+M92825,P72,2019-02-23,Patient,Enterococcus faecium,ICU ,1421,VRE-vanA,Ef1421-A3,Intensive Care 
+M92824,P73,2019-02-24,Patient,Enterococcus faecium,4E ,203,VRE-vanB,NA,4E Colorectal/Gastro 
+M92833,P74,2019-02-25,Patient,Enterococcus faecium,4BT ,17,VRE-vanB,NA,4B Transplant 
+M93097,P75,2019-03-04,Patient,Enterococcus faecium,ICU ,555,VRE-vanB,Ef555-A1,Intensive Care 
+M93098,P76,2019-03-05,Patient,Enterococcus faecium,4BT ,992,VRE-vanB,NA,4B Transplant 
+M01224_2,P77,2019-03-06,Patient,Enterococcus faecium,4E ,992,null,NA,4E Colorectal/Gastro 
+M01228_1,P78,2019-03-10,Patient,Enterococcus faecium,ICU ,1108,null,NA,Intensive Care 
+M01227_1,P79,2019-03-10,Patient,Enterococcus faecium,ED - Awaiting Admission ,17,null,NA,ED - Awaiting Admission 
+M93370,P80,2019-03-12,Patient,Enterococcus faecium,4A ,78,VRE-vanB,NA,4A Urology 
+M93373,P79,2019-03-12,Patient,Enterococcus faecium,4E ,1421,VRE-vanA,Ef1421-A3,4E Colorectal/Gastro 
+M93369,P81,2019-03-14,Patient,Enterococcus faecium,4E ,1421,VRE-vanA,Ef1421-A3,4E Colorectal/Gastro 
+M93669,P77,2019-03-19,Patient,Enterococcus faecium,4E ,1421,VRE-vanA,Ef1421-A3,4E Colorectal/Gastro 
+M01226,P82,2019-03-21,Patient,Enterococcus faecium,Ward Peritoneal Dialysis ,361,null,NA,Ward Peritoneal Dialysis 
+M93924,P83,2019-03-23,Patient,Enterococcus faecium,4A ,78,VRE-vanB,NA,4A Urology 
+M93925,P84,2019-03-25,Patient,Enterococcus faecium,5D ,80,VRE-vanA,NA,5D Infectious Diseases 
+M93926,P85,2019-03-27,Patient,Enterococcus faecium,1C ,1424,VRE-vanA,Ef1424-A3,1C Vascular 
+M94211,P86,2019-03-31,Patient,Enterococcus faecium,4BR ,78,VRE-vanB,NA,4B Renal 
+M94208,P87,2019-04-01,Patient,Enterococcus faecium,1C ,1424,VRE-vanA,Ef1424-A3,1C Vascular 
+M94223,P88,2019-04-01,Patient,Enterococcus faecium,1C ,1424,VRE-vanA,Ef1424-A3,1C Vascular 
+M94926,P89,2019-04-21,Patient,Enterococcus faecium,2E ,78,VRE-vanB,NA,2E Oncology/Haematology Unit 
+M94927,P90,2019-04-23,Patient,Enterococcus faecium,2E ,78,VRE-vanB,NA,2E Oncology/Haematology Unit 
+M94929,P91,2019-04-25,Patient,Enterococcus faecium,4BR ,80,VRE-vanA,Ef80-A3,4B Renal 
+M94928,P92,2019-04-25,Patient,Enterococcus faecium,2D ,39,VRE-vanA,NA,2D Respiratory 
+M95129,P93,2019-04-29,Patient,Enterococcus faecium,5D ,NF,VRE-vanA,NA,5D Infectious Diseases 
+M95128,P94,2019-04-29,Patient,Enterococcus faecium,5D ,623,VRE-vanA,NA,5D Infectious Diseases 
+M95130,P95,2019-05-01,Patient,Enterococcus faecium,ICU ,555,VRE-vanA,Ef555-A1,Intensive Care 
+M95526,P96,2019-05-07,Patient,Enterococcus faecium,4BAD ,17,VRE-vanB,Ef17-A1,4B Acute Dialysis 
+M95525,P97,2019-05-07,Patient,Enterococcus faecium,5D ,262,VRE-vanA,NA,5D Infectious Diseases 
+M95763,P98,2019-05-15,Patient,Enterococcus faecium,4BT ,17,VRE-vanB,Ef17-A1,4B Transplant 
+M95764,P99,2019-05-15,Patient,Enterococcus faecium,2E ,555,VRE-vanB,Ef555-A1,2E Oncology/Haematology Unit 
+M95765,P100,2019-05-16,Patient,Enterococcus faecium,4BR ,555,VRE-vanB,Ef555-A1,4B Renal 
+M95769,P101,2019-05-17,Patient,Enterococcus faecium,4BR ,555,VRE-vanB,Ef555-A1,4B Renal 
+M95748,P102,2019-05-18,Patient,Enterococcus faecium,4BT ,17,VRE-vanB,NA,4B Transplant 
+M95768,P103,2019-05-18,Patient,Enterococcus faecium,1D ,78,VRE-vanB,Ef78-A2,1D ENT/Plastics/Burns 
+M96008,P104,2019-05-20,Patient,Enterococcus faecium,5D ,80,VRE-vanB,NA,5D Infectious Diseases 
+M96009,P105,2019-05-21,Patient,Enterococcus faecium,5D ,1421,VRE-vanA,Ef1421-A3,5D Infectious Diseases 
+M96011,P106,2019-05-22,Patient,Enterococcus faecium,Burke St - Hepatology Clinic,78,VRE-vanB,NA,Burke St - Hepatology Clinic
+M96020,P107,2019-05-24,Patient,Enterococcus faecium,Emergency Department ,203,VRE-vanB,NA,Emergency Department 
+M96253,P108,2019-06-03,Patient,Enterococcus faecium,ICU ,203,VRE-vanB,NA,Intensive Care 
+M96254,P109,2019-06-03,Patient,Enterococcus faecium,5D ,1424,VRE-vanA,Ef1424-A3,5D Infectious Diseases 
+M01230,P110,2019-06-12,Patient,Enterococcus faecium,Emergency Department ,NF,null,NA,Emergency Department 
+M97075,P111,2019-06-26,Patient,Enterococcus faecium,4E ,80,VRE-vanA,Ef80-A2,4E Colorectal/Gastro 
+M97074,P112,2019-06-26,Patient,Enterococcus faecium,4BT ,17,VRE-vanB,Ef17-A1,4B Transplant 
+M97298,P113,2019-07-02,Patient,Enterococcus faecium,ICU ,761,VRE-vanA,NA,Intensive Care 
+M01229_2,P114,2019-07-10,Patient,Enterococcus faecium,2E ,1424,null,Ef1424-A1,2E Oncology/Haematology Unit 
+M97749,P115,2019-07-16,Patient,Enterococcus faecium,1C ,1421,VRE-vanB,Ef1421-A2,1C Vascular 
+M97750,P116,2019-07-16,Patient,Enterococcus faecium,Coronary Care Unit ,78,VRE-vanB,Ef78-A2,Coronary Care Unit 
+M97943_2,P116,2019-07-19,Patient,Enterococcus faecium,5D ,1421,VRE-vanA,Ef1421-A1,5D Infectious Diseases 
+M97944,P117,2019-07-21,Patient,Enterococcus faecium,5D ,78,VRE-vanB,Ef78-A2,5D Infectious Diseases 
+M97945,P118,2019-07-22,Patient,Enterococcus faecium,5D ,78,VRE-vanB,Ef78-A2,5D Infectious Diseases 
+M98146,P119,2019-07-26,Patient,Enterococcus faecium,2A ,78,VRE-vanB,Ef78-A2,2A Orthopaedic 
+M01215,P120,2019-07-27,Patient,Enterococcus faecium,2B ,17,null,Ef17-A1,2B Orthopaedic/Neurosurgery 
+M01216_1,P121,2019-07-28,Patient,Enterococcus faecium,4E ,1693,null,NA,4E Colorectal/Gastro 
+M98147,P122,2019-07-30,Patient,Enterococcus faecium,2E ,78,VRE-vanB,Ef78-A2,2E Oncology/Haematology Unit 
+M98148,P123,2019-07-31,Patient,Enterococcus faecium,4C ,203,VRE-vanB,NA,4C HPB Acute Surgery 
+M98344,P124,2019-08-05,Patient,Enterococcus faecium,5D ,1421,VRE-vanA,Ef1421-A1,5D Infectious Diseases 
+M98508,P125,2019-08-11,Patient,Enterococcus faecium,4BR ,17,VRE-vanB,Ef17-A1,4B Renal 
+M98515,P126,2019-08-12,Patient,Enterococcus faecium,Med Assessment & Planning,80,VRE-vanA,NA,Med Assessment & Planning
+M98507,P127,2019-08-14,Patient,Enterococcus faecium,4A ,17,null,Ef17-A1,4A Urology 
+M98511,P128,2019-08-15,Patient,Enterococcus faecium,4BR ,17,null,Ef17-A1,4B Renal 
+M98525,P129,2019-08-16,Patient,Enterococcus faecium,4BT ,17,VRE-vanA,NA,4B Transplant 
+M98516,P130,2019-08-17,Patient,Enterococcus faecium,4BT ,78,VRE-vanB,Ef78-A2,4B Transplant 
+M98703,P131,2019-08-19,Patient,Enterococcus faecium,Spinal Injuries Unit ,78,VRE-vanB,Ef78-A2,Spinal Injuries Unit 
+M98888,P132,2019-08-24,Patient,Enterococcus faecium,5A ,761,VRE-vanA,NA,5A Internal Med HTN 
+M98889,P133,2019-08-26,Patient,Enterococcus faecium,4BR ,78,VRE-vanB,Ef78-A2,4B Renal 
+M98884,P134,2019-08-27,Patient,Enterococcus faecium,2E ,78,VRE-vanB,Ef78-A2,2E Oncology/Haematology Unit 
+M910052,P135,2019-08-29,Patient,Enterococcus faecium,4BT ,17,Other,Ef17-A1,4B Transplant 
+M99055,P136,2019-09-03,Patient,Enterococcus faecium,4E ,80,VRE-vanA,NA,4E Colorectal/Gastro 
+M99056,P137,2019-09-05,Patient,Enterococcus faecium,4E ,203,VRE-vanB,NA,4E Colorectal/Gastro 
+M99249,P138,2019-09-09,Patient,Enterococcus faecium,5D ,1424,VRE-vanB,Ef1424-A1,5D Infectious Diseases 
+M99250,P139,2019-09-09,Patient,Enterococcus faecium,ICU ,78,VRE-vanB,Ef78-A2,Intensive Care 
+M910051,P140,2019-09-10,Patient,Enterococcus faecium,4C ,17,Other,Ef17-A1,4C HPB Acute Surgery 
+M99390,P141,2019-09-16,Patient,Enterococcus faecium,5D ,262,VRE-vanA,NA,5D Infectious Diseases 
+M910049,P142,2019-09-17,Patient,Enterococcus faecium,4BT ,17,Other,Ef17-A1,4B Transplant 
+M910050,P130,2019-09-17,Patient,Enterococcus faecium,5B ,78,VRE-vanB,Ef78-A2,5B Internal Med Ophth 
+M99391,P143,2019-09-20,Patient,Enterococcus faecium,Transit Lounge (Adm/Disch) ,17,VRE-vanB,NA,Transit Lounge (Adm/Disch) 
+M910048,P144,2019-09-21,Patient,Enterococcus faecium,4A ,17,Other,Ef17-A1,4A Urology 
+M99402,P145,2019-09-22,Patient,Enterococcus faecium,ICU ,78,VRE-vanB,Ef78-A2,Intensive Care 
+M99401,P146,2019-09-23,Patient,Enterococcus faecium,ICU ,1424,VRE-vanB,Ef1424-A1,Intensive Care 
+M99616,P147,2019-09-23,Patient,Enterococcus faecium,5D ,17,VRE-vanB,Ef17-A1,5D Infectious Diseases 
+M99624,P148,2019-09-26,Patient,Enterococcus faecium,4E ,78,VRE-vanB,Ef78-A3,4E Colorectal/Gastro 
+M99825,P149,2019-10-02,Patient,Enterococcus faecium,Bunya ,78,VRE-vanB,Ef78-A2,Bunya 
+M99826,P150,2019-10-03,Patient,Enterococcus faecium,ICU ,78,VRE-vanB,Ef78-A1,Intensive Care 
+M99827,P151,2019-10-03,Patient,Enterococcus faecium,5D ,1421,VRE-vanA,Ef1421-A6,5D Infectious Diseases 
+M01217,P152,2019-10-03,Patient,Enterococcus faecium,Emergency Department ,80,null,NA,Emergency Department 
+M910274,P153,2019-10-15,Patient,Enterococcus faecium,NA,1424,VRE-vanA,NA,NA
+M910272,P154,2019-10-17,Patient,Enterococcus faecium,2E ,1424,VRE-vanA,Ef1424-A2,2E Oncology/Haematology Unit 
+M910273,P155,2019-10-17,Patient,Enterococcus faecium,5D ,1424,VRE-vanA,Ef1424-A2,5D Infectious Diseases 
+M910882,P156,2019-10-22,Patient,Enterococcus faecium,5C ,78,VRE-vanB,Ef78-A1,5C Internal Med DiabEndo 
+M910479,P157,2019-10-23,Patient,Enterococcus faecium,5D ,78,VRE-vanB,Ef78-A2,5D Infectious Diseases 
+M910478,P158,2019-10-23,Patient,Enterococcus faecium,4BR ,78,VRE-vanB,Ef78-A2,4B Renal 
+M910480_2,P119,2019-10-24,Patient,Enterococcus faecium,5D ,78,VRE-vanB,Ef78-A2,5D Infectious Diseases 
+M910481,P159,2019-10-26,Patient,Enterococcus faecium,5D ,203,VRE-vanB,NA,5D Infectious Diseases 
+M910675,P160,2019-10-26,Patient,Enterococcus faecium,4C ,17,null,Ef17-A1,4C HPB Acute Surgery 
+M910673,P161,2019-10-28,Patient,Enterococcus faecium,3C ,203,VRE-vanB,NA,3C Cardiac Surgery 
+M910674,P162,2019-10-30,Patient,Enterococcus faecium,2A ,17,null,Ef17-A1,2A Orthopaedic 
+M910881,P163,2019-10-30,Patient,Enterococcus faecium,4BT ,78,VRE-vanB,Ef78-A2,4B Transplant 
+M910877,P164,2019-11-04,Patient,Enterococcus faecium,Infusion ,1421,VRE-vanA,Ef1421-A6,Infusion 
+M910888,P165,2019-11-04,Patient,Enterococcus faecium,ICU ,78,VRE-vanB,Ef78-A2,Intensive Care 
+M911374,P166,2019-11-07,Patient,Enterococcus faecium,Haemodialysis ,78,null,Ef78-A2,Haemodialysis 
+M911142,P167,2019-11-07,Patient,Enterococcus faecium,4BT ,78,VRE-vanB,Ef78-A2,4B Transplant 
+M910940,P168,2019-11-08,Patient,Enterococcus faecium,4BT ,1693,VRE-vanA,NA,4B Transplant 
+M911140,P169,2019-11-12,Environmental,Enterococcus faecium,5D ,78,Other,Ef78-A2,5D Infectious Diseases 
+M911163,P170,2019-11-12,Environmental,Enterococcus faecium,2E ,328,Other,NA,2E Oncology/Haematology Unit 
+M911141,P171,2019-11-12,Environmental,Enterococcus faecium,2E ,800,Other,NA,2E Oncology/Haematology Unit 
+M911146,P172,2019-11-12,Patient,Enterococcus faecium,2E ,78,VRE-vanB,Ef78-A2,2E Oncology/Haematology Unit 
+M911143,P173,2019-11-12,Patient,Enterococcus faecium,4C ,80,VRE-vanA,NA,4C HPB Acute Surgery 
+M911144,P174,2019-11-14,Patient,Enterococcus faecium,ICU ,78,VRE-vanB,Ef78-A2,Intensive Care 
+M911375,P175,2019-11-18,Patient,Enterococcus faecium,ICU ,78,null,Ef78-A2,Intensive Care 
+M911362,P176,2019-11-18,Patient,Enterococcus faecium,4C ,78,null,Ef78-A2,4C HPB Acute Surgery 
+M911363,P177,2019-11-18,Patient,Enterococcus faecium,4C ,1424,null,Ef1424-A1,4C HPB Acute Surgery 
+M911373,P178,2019-11-18,Patient,Enterococcus faecium,4C ,78,null,Ef78-A2,4C HPB Acute Surgery 
+M911618,P179,2019-11-20,Environmental,Enterococcus faecium,4BT ,1283,Other,NA,4B Transplant 
+M01218,P180,2019-11-20,Patient,Enterococcus faecium,ICU ,17,null,Ef17-A1,Intensive Care 
+M911364,P181,2019-11-21,Patient,Enterococcus faecium,2A ,78,null,Ef78-A2,2A Orthopaedic 
+M911620,P182,2019-11-25,Patient,Enterococcus faecium,4BR ,78,VRE-vanB,Ef78-A2,4B Renal 
+M911619,P183,2019-11-27,Patient,Enterococcus faecium,ICU ,78,VRE-vanB,Ef78-A2,Intensive Care 
+M911842,P184,2019-12-06,Patient,Enterococcus faecium,5D ,78,VRE-vanB,Ef78-A2,5D Infectious Diseases 
+M912101,P185,2019-12-09,Patient,Enterococcus faecium,4E ,17,VRE-vanB,Ef17-A1,4E Colorectal/Gastro 
+M912107,P186,2019-12-10,Patient,Enterococcus faecium,1C ,761,Other,NA,1C Vascular 
+M912106,P187,2019-12-11,Patient,Enterococcus faecium,4BT ,78,VRE-vanB,Ef78-A4,4B Transplant 
+M912102,P188,2019-12-11,Patient,Enterococcus faecium,4BT ,78,VRE-vanB,Ef78-A4,4B Transplant 
+M912103,P189,2019-12-11,Patient,Enterococcus faecium,2A ,78,VRE-vanB,Ef78-A2,2A Orthopaedic 
+M01219_3,P190,2019-12-12,Patient,Enterococcus faecium,ICU ,80,null,NA,Intensive Care 
+M00066,P191,2019-12-16,Patient,Enterococcus faecium,4E ,78,VRE-vanB,Ef78-A1,4E Colorectal/Gastro 
+M00065,P192,2019-12-16,Patient,Enterococcus faecium,4E ,78,VRE-vanB,NA,4E Colorectal/Gastro 
+M00067,P193,2019-12-17,Patient,Enterococcus faecium,5D ,80,VRE-vanA,Ef80-A1,5D Infectious Diseases 
+M00064,P194,2019-12-18,Patient,Enterococcus faecium,4BT ,80,VRE-vanA,NA,4B Transplant 
+M00062,P195,2019-12-20,Patient,Enterococcus faecium,2E ,17,Other,Ef17-A1,2E Oncology/Haematology Unit 
+M00059,P196,2019-12-22,Patient,Enterococcus faecium,5D ,1421,VRE-vanA,Ef1421-A6,5D Infectious Diseases 
+M00060,P197,2019-12-25,Patient,Enterococcus faecium,4BT ,17,VRE-vanB,Ef17-A1,4B Transplant 
+M00365,P198,2019-12-30,Patient,Enterococcus faecium,ICU ,1424,VRE-vanB,NA,Intensive Care 
+M00363,P199,2019-12-31,Patient,Enterococcus faecium,1C ,78,VRE-vanB,Ef78-A2,1C Vascular 
+M00364,P200,2019-12-31,Patient,Enterococcus faecium,5D ,1421,VRE-vanA,Ef1421-A6,5D Infectious Diseases 
+M00362,P201,2020-01-01,Patient,Enterococcus faecium,4BT ,78,VRE-vanB,Ef78-A4,4B Transplant 
+M00366,P202,2020-01-04,Patient,Enterococcus faecium,5D ,1421,VRE-vanA,Ef1421-A6,5D Infectious Diseases 
+M00680,P203,2020-01-05,Patient,Enterococcus faecium,4BR ,78,VRE-vanB,Ef78-A2,4B Renal 
+M00943,P204,2020-01-08,Patient,Enterococcus faecium,4BT ,78,VRE-vanB,Ef78-A4,4B Transplant 
+M00944,P205,2020-01-11,Patient,Enterococcus faecium,Emergency Department ,1421,VRE-vanA,Ef1421-A6,Emergency Department 
+M00969,P206,2020-01-12,Patient,Enterococcus faecium,4BR ,80,VRE-vanA,Ef80-A1,4B Renal 
+M00945,P207,2020-01-12,Patient,Enterococcus faecium,4BR ,78,VRE-vanB,Ef78-A2,4B Renal 
+M01235,P208,2020-01-15,Patient,Enterococcus faecium,Haemodialysis ,78,VRE-vanB,Ef78-A2,Haemodialysis 
+M01238,P209,2020-01-15,Patient,Enterococcus faecium,4BT ,1424,VRE-vanB,Ef1424-A1,4B Transplant 
+M01236,P210,2020-01-16,Patient,Enterococcus faecium,4BR ,78,VRE-vanB,NA,4B Renal 
+M01234,P211,2020-01-17,Patient,Enterococcus faecium,5D ,78,VRE-vanB,Ef78-A2,5D Infectious Diseases 

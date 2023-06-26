@@ -1,0 +1,1 @@
+{"ast":null,"code":"import PropTypes from 'prop-types';\nexport var storeShape = PropTypes.shape({\n  subscribe: PropTypes.func.isRequired,\n  setState: PropTypes.func.isRequired,\n  getState: PropTypes.func.isRequired\n});","map":null,"metadata":{},"sourceType":"module"}

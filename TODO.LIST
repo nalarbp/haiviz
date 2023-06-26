@@ -1,0 +1,113 @@
+#CLEANING
+## Useless modules:
+x dom-to-image
+x file-saver
+x ajv
+x fs
+#CHECKPOINT PER MODULE
+## Dataset overview module
+x change piechart to be more proportionate
+
+## Color key module (OK)
+x Change color legend/picker into scrollable list
+x Change the icon to paint palette
+- Add movement location into the palette
+
+## Simulated map module (OK)
+x Add switchable piechart or individual view on setting
+x Add show location label checkbox on setting
+x Find why cannot zoom at the first time
+
+## Floorplan module (OK)
+x Add piechart mode
+x Piechart: only show piechart that has location on the map
+x Add show location label
+
+## Create map app
+x Fix loading xml file to create page map
+x add update functionality
+x fix selected node indicator
+x add submit map to HAIviz app directly (error in reading back the xml object)
+x add remove active/selected node button 
+
+## Phylogenetic tree
+x Add align nodes on phylotree
+x Add radial layout on phylotree
+x selected leaf not all branches is selected; change selected to highlighted
+x change label font size (or hide it till we make it)
+x scale (need to check the accuracy)
+x select multiple leaf with command key (skipped: optional future feature)
+- Add phylogenetic tree validation (no duplicated nodes)
+~ remove tooltip (bug in the phylocanvas itself)ß
+
+## PhyloTreeGanttChart
+x Add extension line
+x Add strip keys 
+x Add response when selected data and color is changed
+x fix indexing in bottom
+x fix coloring on the gantt panel, make it identical with the ward movement module.
+
+## Movement timeline
+x Add zoom function  
+x Pointer in overlapping link
+- Add admission and discharge feature
+- Export overlapping day to a table or show 
+
+## Transmission graph
+x Change to cytoscope.js as graph enggine
+~ Fix transition between isolate and host layout on transGraph (auto detected, not necessary)
+x Distinguish selected  from unselected nodes
+x Click to select 
+x Detect wether its host or isolates 
+x host layout should shows piechart (not needed)
+- bug: box selection wont work seamlesly, because cytoscape return individual event for each selected node 
+  using boxend event didnt work, because it reads previous selected state, not on the end box selection
+  ! potential solution is using asynchronus approach to wait and acumulate the event before sending it to 
+  setSelectedData. 
+  ! now, we just disable box selection feature
+- multiselection using shift+click doesnt work yet
+
+## Metadata table
+x add search function
+x add overflow vertical or change layout height on smaller screen
+x search multiple query
+- search exact match
+
+## Temporal distribution module (OK-ish)
+x Bug: selection is error: when not select any bar, it return all isolates: update selectedData only when selectedData is not empty 
+x Bug: when animation selection should be made even when the box is on the middle of the chart: change > to >= and < to <= on selectionDate
+x Bug: flicker when brushStart the brush area (its a tricky bug, need to be able
+  to differentiate which click, which brushStart): removed brush handler
+x Fix bugs on timeline (the animation not playing till the last date)
+~ Fix animation bug: solution create app-level isAnimationPlaying state ?
+  //not working, because the component is updated while the set interval keep running
+  //on the background. Try using useRef to push all setInterval, so we can delete all
+  //when pause or stop the animation
+  //problem when switch between dataset while the interval still running, need to app-level isAnimationPlaying
+
+## Menu nav
+x Change main navigation menu into responsive humberger icon
+- documentation route should be able to differentiate
+
+## Visualization report functionality
+x Download individual chart as svg  * highlighted problem with AI is because sans-serif font-family
+~ Create visualization report: compile all available svg into a multi page pdf (future feature)
+~ using pdfkit from npm didnt work, installed brfs also didnt work
+
+#Documentation
+x Add video player for tutorial videos page: playing video from youtube url
+x Add logo on major libraries (not necessary)
+x Test browser compatibility
+x Create quick start guide and video
+
+
+#Working on loading when they are drawing is not sucessful (in trans-graph), problem was
+during redraw, it wont switch to isDrawingCompleted or not. 
+
+
+#Google Analytics
+- Don't use it until you have can configure it properly!
+- Ask user their consent: if yes, track, otherwise don't do it.
+
+#Input files 
+x Metadata: bugs when color is invalid, automatically convert it to black

@@ -1,0 +1,50 @@
+#transgraph-zoomButton-container {
+  position: absolute;
+  width: 50px;
+  height: 150px;
+  margin: 10px 0 0 10px;
+}
+#transgraph-pieChart-container {
+  position: absolute;
+  float: right;
+  background-color: thistle;
+}
+#transgraph-zoomIn {
+  background-color: #ccc;
+  margin-bottom: 2px;
+}
+#transgraph-zoomOut {
+  background-color: #ccc;
+  margin-bottom: 7px;
+}
+
+#transgraph-setting {
+  background-color: #1eb776;
+  color: white;
+  border-color: #1eb776;
+}
+#transgraph-clearSelection {
+  background-color: #1eb776;
+  margin: 2px 0;
+  color: white;
+}
+.transGraph-drawer-subsettings-p {
+  font-size: 9pt;
+  margin: 0px;
+}
+.#divider-bottom-tight {
+  margin-bottom: 0px;
+}
+#transgraph-loading {
+  text-align: center;
+  z-index: 2000;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+#transmission-cy-pie {
+  background-color: thistle;
+}
+#transmission-cy- {
+  background-color: wheat;
+}

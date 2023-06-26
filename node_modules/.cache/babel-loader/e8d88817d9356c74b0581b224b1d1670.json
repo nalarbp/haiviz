@@ -1,0 +1,1 @@
+{"ast":null,"code":"/*jslint node:true */\nvar xml2js = require('./xml2js');\n\nvar xml2json = require('./xml2json');\n\nvar js2xml = require('./js2xml');\n\nvar json2xml = require('./json2xml');\n\nmodule.exports = {\n  xml2js: xml2js,\n  xml2json: xml2json,\n  js2xml: js2xml,\n  json2xml: json2xml\n};","map":null,"metadata":{},"sourceType":"script"}

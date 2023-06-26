@@ -1,0 +1,2001 @@
+isolate_name,isolate_species,isolate_colDate,isolate_colLocation,isolate_sourceType,isolate_sourceName,profile_1,profile_2,profile_3
+Isolate1,Species2,2019-05-01,Ward 1,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate2,Species1,2018-03-28,Ward 1,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate3,Species1,2018-08-05,Ward 1,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate4,Species1,2019-08-16,Ward 1,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate5,Species1,2018-01-27,Ward 1,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate6,Species1,2019-12-17,Ward 1,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate7,Species1,2020-01-12,Ward 1,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate8,Species1,2019-11-20,Ward 1,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate9,Species1,2019-11-12,Ward 1,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate10,Species1,2019-12-20,Ward 1,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate11,Species2,2019-09-22,Ward 1,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate12,Species2,2019-12-17,Ward 1,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate13,Species2,2019-04-06,Ward 1,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate14,Species2,2019-09-02,Ward 1,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate15,Species2,2019-04-28,Ward 1,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate16,Species2,2019-11-20,Ward 1,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate17,Species2,2019-09-24,Ward 1,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate18,Species2,2019-09-28,Ward 1,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate19,Species2,2019-04-29,Ward 1,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate20,Species2,2019-05-01,Ward 1,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate21,Species1,2018-03-28,Ward 1,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate22,Species1,2018-08-05,Ward 1,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate23,Species1,2019-08-16,Ward 1,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate24,Species1,2018-01-27,Ward 1,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate25,Species1,2019-12-17,Ward 1,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate26,Species1,2020-01-12,Ward 1,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate27,Species1,2019-11-20,Ward 1,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate28,Species1,2019-11-12,Ward 1,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate29,Species1,2019-12-20,Ward 1,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate30,Species2,2019-09-22,Ward 1,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate31,Species2,2019-12-17,Ward 1,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate32,Species2,2019-04-06,Ward 1,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate33,Species2,2019-09-02,Ward 1,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate34,Species2,2019-04-28,Ward 1,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate35,Species2,2019-11-20,Ward 1,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate36,Species2,2019-09-24,Ward 1,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate37,Species2,2019-09-28,Ward 1,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate38,Species2,2019-04-29,Ward 1,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate39,Species2,2019-05-01,Ward 1,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate40,Species1,2018-03-28,Ward 1,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate41,Species1,2018-08-05,Ward 1,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate42,Species1,2019-08-16,Ward 1,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate43,Species1,2018-01-27,Ward 1,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate44,Species1,2019-12-17,Ward 1,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate45,Species1,2020-01-12,Ward 1,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate46,Species1,2019-11-20,Ward 1,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate47,Species1,2019-11-12,Ward 1,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate48,Species1,2019-12-20,Ward 1,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate49,Species2,2019-09-22,Ward 1,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate50,Species2,2019-12-17,Ward 1,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate51,Species2,2019-04-06,Ward 1,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate52,Species2,2019-09-02,Ward 1,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate53,Species2,2019-04-28,Ward 1,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate54,Species2,2019-11-20,Ward 1,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate55,Species2,2019-09-24,Ward 1,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate56,Species2,2019-09-28,Ward 1,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate57,Species2,2019-04-29,Ward 1,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate58,Species2,2019-05-01,NA,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate59,Species1,2018-03-28,NA,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate60,Species1,2018-08-05,NA,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate61,Species1,2019-08-16,NA,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate62,Species1,2018-01-27,NA,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate63,Species1,2019-12-17,NA,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate64,Species1,2020-01-12,NA,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate65,Species1,2019-11-20,NA,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate66,Species1,2019-11-12,NA,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate67,Species1,2019-12-20,NA,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate68,Species2,2019-09-22,NA,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate69,Species2,2019-12-17,NA,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate70,Species2,2019-04-06,NA,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate71,Species2,2019-09-02,NA,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate72,Species2,2019-04-28,NA,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate73,Species2,2019-11-20,NA,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate74,Species2,2019-09-24,NA,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate75,Species2,2019-09-28,NA,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate76,Species2,2019-04-29,NA,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate77,Species2,2019-05-01,NA,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate78,Species1,2018-03-28,NA,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate79,Species1,2018-08-05,NA,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate80,Species1,2019-08-16,NA,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate81,Species1,2018-01-27,NA,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate82,Species1,2019-12-17,NA,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate83,Species1,2020-01-12,NA,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate84,Species1,2019-11-20,NA,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate85,Species1,2019-11-12,NA,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate86,Species1,2019-12-20,NA,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate87,Species2,2019-09-22,NA,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate88,Species2,2019-12-17,NA,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate89,Species2,2019-04-06,NA,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate90,Species2,2019-09-02,NA,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate91,Species2,2019-04-28,NA,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate92,Species2,2019-11-20,NA,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate93,Species2,2019-09-24,NA,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate94,Species2,2019-09-28,NA,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate95,Species2,2019-04-29,NA,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate96,Species2,2019-05-01,NA,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate97,Species1,2018-03-28,NA,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate98,Species1,2018-08-05,NA,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate99,Species1,2019-08-16,NA,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate100,Species1,2018-01-27,NA,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate101,Species1,2019-12-17,NA,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate102,Species1,2020-01-12,NA,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate103,Species1,2019-11-20,NA,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate104,Species1,2019-11-12,NA,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate105,Species1,2019-12-20,NA,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate106,Species2,2019-09-22,NA,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate107,Species2,2019-12-17,NA,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate108,Species2,2019-04-06,NA,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate109,Species2,2019-09-02,NA,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate110,Species2,2019-04-28,NA,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate111,Species2,2019-11-20,NA,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate112,Species2,2019-09-24,NA,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate113,Species2,2019-09-28,NA,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate114,Species2,2019-04-29,NA,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate115,Species2,2019-05-01,NA,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate116,Species1,2018-03-28,NA,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate117,Species1,2018-08-05,NA,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate118,Species1,2019-08-16,NA,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate119,Species1,2018-01-27,NA,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate120,Species1,2019-12-17,NA,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate121,Species1,2020-01-12,NA,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate122,Species1,2019-11-20,NA,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate123,Species1,2019-11-12,NA,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate124,Species1,2019-12-20,NA,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate125,Species2,2019-09-22,NA,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate126,Species2,2019-12-17,NA,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate127,Species2,2019-04-06,NA,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate128,Species2,2019-09-02,NA,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate129,Species2,2019-04-28,NA,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate130,Species2,2019-11-20,NA,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate131,Species2,2019-09-24,NA,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate132,Species2,2019-09-28,NA,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate133,Species2,2019-04-29,NA,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate134,Species2,2019-05-01,NA,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate135,Species1,2018-03-28,NA,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate136,Species1,2018-08-05,NA,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate137,Species1,2019-08-16,Ward 4,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate138,Species1,2018-01-27,Ward 4,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate139,Species1,2019-12-17,Ward 4,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate140,Species1,2020-01-12,Ward 4,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate141,Species1,2019-11-20,Ward 4,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate142,Species1,2019-11-12,Ward 4,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate143,Species1,2019-12-20,Ward 4,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate144,Species2,2019-09-22,Ward 4,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate145,Species2,2019-12-17,Ward 4,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate146,Species2,2019-04-06,Ward 4,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate147,Species2,2019-09-02,Ward 4,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate148,Species2,2019-04-28,Ward 4,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate149,Species2,2019-11-20,Ward 4,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate150,Species2,2019-09-24,Ward 4,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate151,Species2,2019-09-28,Ward 4,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate152,Species2,2019-04-29,Ward 4,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate153,Species2,2019-05-01,Ward 4,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate154,Species1,2018-03-28,Ward 4,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate155,Species1,2018-08-05,Ward 4,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate156,Species1,2019-08-16,Ward 4,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate157,Species1,2018-01-27,Ward 4,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate158,Species1,2019-12-17,Ward 4,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate159,Species1,2020-01-12,Ward 4,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate160,Species1,2019-11-20,Ward 4,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate161,Species1,2019-11-12,Ward 4,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate162,Species1,2019-12-20,Ward 4,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate163,Species2,2019-09-22,Ward 4,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate164,Species2,2019-12-17,Ward 4,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate165,Species2,2019-04-06,Ward 4,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate166,Species2,2019-09-02,Ward 4,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate167,Species2,2019-04-28,Ward 4,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate168,Species2,2019-11-20,Ward 4,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate169,Species2,2019-09-24,Ward 4,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate170,Species2,2019-09-28,Ward 4,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate171,Species2,2019-04-29,Ward 4,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate172,Species2,2019-05-01,Ward 4,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate173,Species1,2018-03-28,Ward 4,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate174,Species1,2018-08-05,NA,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate175,Species1,2019-08-16,NA,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate176,Species1,2018-01-27,NA,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate177,Species1,2019-12-17,NA,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate178,Species1,2020-01-12,NA,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate179,Species1,2019-11-20,NA,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate180,Species1,2019-11-12,NA,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate181,Species1,2019-12-20,NA,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate182,Species2,2019-09-22,NA,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate183,Species2,2019-12-17,NA,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate184,Species2,2019-04-06,NA,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate185,Species2,2019-09-02,Ward 5,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate186,Species2,2019-04-28,Ward 5,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate187,Species2,2019-11-20,Ward 5,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate188,Species2,2019-09-24,Ward 5,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate189,Species2,2019-09-28,Ward 5,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate190,Species2,2019-04-29,Ward 5,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate191,Species2,2019-05-01,Ward 5,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate192,Species1,2018-03-28,Ward 5,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate193,Species1,2018-08-05,Ward 5,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate194,Species1,2019-08-16,Ward 5,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate195,Species1,2018-01-27,Ward 5,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate196,Species1,2019-12-17,Ward 5,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate197,Species1,2020-01-12,Ward 5,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate198,Species1,2019-11-20,Ward 5,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate199,Species1,2019-11-12,Ward 5,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate200,Species1,2019-12-20,Ward 5,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate201,Species2,2019-09-22,Ward 5,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate202,Species2,2019-12-17,Ward 5,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate203,Species2,2019-04-06,Ward 5,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate204,Species2,2019-09-02,Ward 5,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate205,Species2,2019-04-28,Ward 5,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate206,Species2,2019-11-20,Ward 5,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate207,Species2,2019-09-24,Ward 5,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate208,Species2,2019-09-28,Ward 5,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate209,Species2,2019-04-29,Ward 5,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate210,Species2,2019-05-01,Ward 5,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate211,Species1,2018-03-28,Ward 5,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate212,Species1,2018-08-05,Ward 5,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate213,Species1,2019-08-16,Ward 5,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate214,Species1,2018-01-27,Ward 5,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate215,Species1,2019-12-17,Ward 5,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate216,Species1,2020-01-12,Ward 5,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate217,Species1,2019-11-20,Ward 5,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate218,Species1,2019-11-12,Ward 5,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate219,Species1,2019-12-20,Ward 5,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate220,Species2,2019-09-22,Ward 5,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate221,Species2,2019-12-17,Ward 5,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate222,Species2,2019-04-06,Ward 5,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate223,Species2,2019-09-02,Ward 5,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate224,Species2,2019-04-28,Ward 5,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate225,Species2,2019-11-20,Ward 5,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate226,Species2,2019-09-24,Ward 5,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate227,Species2,2019-09-28,Ward 5,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate228,Species2,2019-04-29,Ward 5,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate229,Species2,2019-05-01,Ward 5,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate230,Species1,2018-03-28,Ward 5,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate231,Species1,2018-08-05,Ward 5,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate232,Species1,2019-08-16,Ward 5,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate233,Species1,2018-01-27,Ward 5,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate234,Species1,2019-12-17,Ward 5,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate235,Species1,2020-01-12,NA,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate236,Species1,2019-11-20,NA,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate237,Species1,2019-11-12,NA,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate238,Species1,2019-12-20,NA,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate239,Species2,2019-09-22,NA,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate240,Species2,2019-12-17,NA,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate241,Species2,2019-04-06,NA,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate242,Species2,2019-09-02,NA,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate243,Species2,2019-04-28,NA,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate244,Species2,2019-11-20,NA,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate245,Species2,2019-09-24,NA,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate246,Species2,2019-09-28,NA,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate247,Species2,2019-04-29,NA,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate248,Species2,2019-05-01,NA,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate249,Species1,2018-03-28,NA,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate250,Species1,2018-08-05,NA,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate251,Species1,2019-08-16,NA,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate252,Species1,2018-01-27,NA,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate253,Species1,2019-12-17,NA,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate254,Species1,2020-01-12,NA,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate255,Species1,2019-11-20,NA,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate256,Species1,2019-11-12,NA,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate257,Species1,2019-12-20,NA,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate258,Species2,2019-09-22,NA,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate259,Species2,2019-12-17,NA,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate260,Species2,2019-04-06,NA,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate261,Species2,2019-09-02,NA,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate262,Species2,2019-04-28,NA,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate263,Species2,2019-11-20,NA,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate264,Species2,2019-09-24,NA,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate265,Species2,2019-09-28,NA,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate266,Species2,2019-04-29,NA,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate267,Species2,2019-05-01,Ward 6,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate268,Species1,2018-03-28,Ward 6,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate269,Species1,2018-08-05,Ward 6,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate270,Species1,2019-08-16,Ward 6,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate271,Species1,2018-01-27,Ward 6,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate272,Species1,2019-12-17,Ward 6,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate273,Species1,2020-01-12,Ward 6,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate274,Species1,2019-11-20,Ward 6,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate275,Species1,2019-11-12,Ward 6,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate276,Species1,2019-12-20,Ward 6,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate277,Species2,2019-09-22,Ward 6,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate278,Species2,2019-12-17,Ward 6,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate279,Species2,2019-04-06,Ward 6,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate280,Species2,2019-09-02,Ward 6,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate281,Species2,2019-04-28,Ward 6,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate282,Species2,2019-11-20,Ward 6,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate283,Species2,2019-09-24,Ward 6,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate284,Species2,2019-09-28,Ward 6,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate285,Species2,2019-04-29,Ward 6,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate286,Species2,2019-05-01,Ward 6,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate287,Species1,2018-03-28,Ward 6,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate288,Species1,2018-08-05,Ward 6,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate289,Species1,2019-08-16,Ward 6,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate290,Species1,2018-01-27,Ward 6,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate291,Species1,2019-12-17,Ward 6,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate292,Species1,2020-01-12,Ward 6,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate293,Species1,2019-11-20,Ward 6,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate294,Species1,2019-11-12,Ward 6,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate295,Species1,2019-12-20,Ward 6,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate296,Species2,2019-09-22,Ward 6,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate297,Species2,2019-12-17,Ward 6,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate298,Species2,2019-04-06,Ward 6,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate299,Species2,2019-09-02,Ward 6,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate300,Species2,2019-04-28,Ward 6,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate301,Species2,2019-11-20,Ward 6,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate302,Species2,2019-09-24,Ward 6,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate303,Species2,2019-09-28,Ward 6,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate304,Species2,2019-04-29,Ward 6,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate305,Species2,2019-05-01,Ward 6,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate306,Species1,2018-03-28,Ward 6,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate307,Species1,2018-08-05,Ward 6,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate308,Species1,2019-08-16,Ward 6,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate309,Species1,2018-01-27,Ward 6,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate310,Species1,2019-12-17,Ward 6,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate311,Species1,2020-01-12,Ward 6,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate312,Species1,2019-11-20,Ward 6,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate313,Species1,2019-11-12,Ward 6,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate314,Species1,2019-12-20,Ward 6,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate315,Species2,2019-09-22,Ward 6,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate316,Species2,2019-12-17,Ward 6,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate317,Species2,2019-04-06,Ward 6,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate318,Species2,2019-09-02,Ward 6,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate319,Species2,2019-04-28,Ward 6,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate320,Species2,2019-11-20,Ward 6,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate321,Species2,2019-09-24,Ward 6,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate322,Species2,2019-09-28,Ward 6,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate323,Species2,2019-04-29,Ward 6,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate324,Species2,2019-05-01,Ward 6,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate325,Species1,2018-03-28,Ward 6,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate326,Species1,2018-08-05,Ward 6,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate327,Species1,2019-08-16,Ward 6,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate328,Species1,2018-01-27,Ward 6,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate329,Species1,2019-12-17,Ward 6,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate330,Species1,2020-01-12,Ward 6,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate331,Species1,2019-11-20,Ward 6,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate332,Species1,2019-11-12,Ward 6,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate333,Species1,2019-12-20,Ward 6,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate334,Species2,2019-09-22,Ward 6,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate335,Species2,2019-12-17,NA,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate336,Species2,2019-04-06,NA,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate337,Species2,2019-09-02,NA,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate338,Species2,2019-04-28,NA,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate339,Species2,2019-11-20,NA,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate340,Species2,2019-09-24,NA,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate341,Species2,2019-09-28,Ward 7,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate342,Species2,2019-04-29,Ward 7,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate343,Species2,2019-05-01,Ward 7,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate344,Species1,2018-03-28,Ward 7,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate345,Species1,2018-08-05,Ward 7,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate346,Species1,2019-08-16,Ward 7,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate347,Species1,2018-01-27,Ward 7,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate348,Species1,2019-12-17,Ward 7,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate349,Species1,2020-01-12,Ward 7,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate350,Species1,2019-11-20,Ward 7,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate351,Species2,2019-05-01,Ward 7,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate352,Species1,2018-03-28,Ward 7,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate353,Species1,2018-08-05,Ward 7,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate354,Species1,2019-08-16,Ward 7,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate355,Species1,2018-01-27,Ward 7,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate356,Species1,2019-12-17,Ward 7,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate357,Species1,2020-01-12,Ward 7,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate358,Species1,2019-11-20,Ward 7,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate359,Species1,2019-11-12,Ward 7,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate360,Species1,2019-12-20,Ward 7,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate361,Species2,2019-09-22,Ward 7,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate362,Species2,2019-12-17,Ward 7,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate363,Species2,2019-04-06,Ward 7,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate364,Species2,2019-09-02,Ward 7,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate365,Species2,2019-04-28,Ward 7,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate366,Species2,2019-11-20,Ward 7,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate367,Species2,2019-09-24,Ward 7,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate368,Species2,2019-09-28,Ward 7,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate369,Species2,2019-04-29,Ward 7,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate370,Species2,2019-05-01,Ward 7,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate371,Species1,2018-03-28,Ward 7,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate372,Species1,2018-08-05,Ward 7,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate373,Species1,2019-08-16,Ward 7,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate374,Species1,2018-01-27,Ward 7,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate375,Species1,2019-12-17,Ward 7,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate376,Species1,2020-01-12,Ward 7,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate377,Species1,2019-11-20,Ward 7,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate378,Species1,2019-11-12,Ward 7,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate379,Species1,2019-12-20,Ward 7,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate380,Species2,2019-09-22,NA,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate381,Species2,2019-12-17,NA,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate382,Species2,2019-04-06,Ward 9,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate383,Species2,2019-09-02,Ward 9,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate384,Species2,2019-04-28,Ward 9,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate385,Species2,2019-11-20,Ward 9,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate386,Species2,2019-09-24,Ward 9,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate387,Species2,2019-09-28,Ward 9,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate388,Species2,2019-04-29,Ward 9,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate389,Species2,2019-05-01,Ward 9,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate390,Species1,2018-03-28,Ward 9,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate391,Species1,2018-08-05,Ward 9,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate392,Species1,2019-08-16,Ward 9,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate393,Species1,2018-01-27,Ward 9,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate394,Species1,2019-12-17,Ward 9,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate395,Species1,2020-01-12,Ward 9,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate396,Species1,2019-11-20,Ward 9,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate397,Species1,2019-11-12,Ward 9,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate398,Species1,2019-12-20,Ward 9,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate399,Species2,2019-09-22,Ward 9,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate400,Species2,2019-12-17,Ward 9,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate401,Species2,2019-04-06,Ward 9,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate402,Species2,2019-09-02,Ward 9,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate403,Species2,2019-04-28,Ward 9,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate404,Species2,2019-11-20,Ward 9,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate405,Species2,2019-09-24,Ward 9,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate406,Species2,2019-09-28,Ward 9,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate407,Species2,2019-04-29,Ward 9,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate408,Species2,2019-05-01,Ward 9,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate409,Species1,2018-03-28,Ward 9,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate410,Species1,2018-08-05,Ward 9,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate411,Species1,2019-08-16,Ward 9,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate412,Species1,2018-01-27,Ward 9,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate413,Species1,2019-12-17,Ward 9,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate414,Species1,2020-01-12,Ward 9,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate415,Species1,2019-11-20,Ward 9,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate416,Species1,2019-11-12,Ward 9,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate417,Species1,2019-12-20,Ward 9,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate418,Species2,2019-09-22,Ward 9,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate419,Species2,2019-12-17,Ward 9,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate420,Species2,2019-04-06,NA,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate421,Species2,2019-09-02,NA,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate422,Species2,2019-04-28,NA,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate423,Species2,2019-11-20,NA,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate424,Species2,2019-09-24,NA,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate425,Species2,2019-09-28,NA,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate426,Species2,2019-04-29,NA,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate427,Species2,2019-05-01,NA,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate428,Species1,2018-03-28,NA,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate429,Species1,2018-08-05,NA,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate430,Species1,2019-08-16,NA,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate431,Species1,2018-01-27,NA,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate432,Species1,2019-12-17,NA,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate433,Species1,2020-01-12,NA,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate434,Species1,2019-11-20,NA,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate435,Species1,2019-11-12,NA,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate436,Species1,2019-12-20,NA,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate437,Species2,2019-09-22,NA,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate438,Species2,2019-12-17,NA,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate439,Species2,2019-04-06,NA,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate440,Species2,2019-09-02,NA,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate441,Species2,2019-04-28,NA,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate442,Species2,2019-11-20,Ward 35,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate443,Species2,2019-09-24,Ward 35,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate444,Species2,2019-09-28,Ward 35,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate445,Species2,2019-04-29,Ward 35,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate446,Species2,2019-05-01,Ward 35,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate447,Species1,2018-03-28,Ward 35,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate448,Species1,2018-08-05,Ward 35,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate449,Species1,2019-08-16,Ward 35,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate450,Species1,2018-01-27,Ward 35,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate451,Species1,2019-12-17,Ward 35,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate452,Species1,2020-01-12,Ward 35,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate453,Species1,2019-11-20,Ward 35,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate454,Species1,2019-11-12,Ward 35,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate455,Species1,2019-12-20,Ward 35,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate456,Species2,2019-09-22,Ward 35,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate457,Species2,2019-12-17,Ward 35,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate458,Species2,2019-04-06,Ward 35,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate459,Species2,2019-09-02,Ward 35,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate460,Species2,2019-04-28,Ward 35,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate461,Species2,2019-11-20,Ward 35,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate462,Species2,2019-09-24,Ward 35,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate463,Species2,2019-09-28,Ward 35,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate464,Species2,2019-04-29,Ward 35,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate465,Species2,2019-05-01,Ward 35,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate466,Species1,2018-03-28,Ward 35,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate467,Species1,2018-08-05,Ward 35,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate468,Species1,2019-08-16,Ward 35,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate469,Species1,2018-01-27,Ward 35,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate470,Species1,2019-12-17,Ward 35,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate471,Species1,2020-01-12,Ward 35,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate472,Species1,2019-11-20,Ward 35,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate473,Species1,2019-11-12,Ward 35,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate474,Species1,2019-12-20,NA,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate475,Species2,2019-09-22,NA,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate476,Species2,2019-12-17,NA,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate477,Species2,2019-04-06,NA,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate478,Species2,2019-09-02,NA,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate479,Species2,2019-04-28,NA,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate480,Species2,2019-11-20,NA,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate481,Species2,2019-09-24,NA,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate482,Species2,2019-09-28,NA,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate483,Species2,2019-04-29,NA,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate484,Species2,2019-05-01,NA,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate485,Species1,2018-03-28,NA,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate486,Species1,2018-08-05,NA,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate487,Species1,2019-08-16,NA,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate488,Species1,2018-01-27,NA,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate489,Species1,2019-12-17,NA,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate490,Species1,2020-01-12,NA,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate491,Species1,2019-11-20,NA,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate492,Species1,2019-11-12,NA,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate493,Species1,2019-12-20,NA,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate494,Species2,2019-09-22,NA,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate495,Species2,2019-12-17,NA,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate496,Species2,2019-04-06,NA,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate497,Species2,2019-09-02,NA,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate498,Species2,2019-04-28,NA,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate499,Species2,2019-11-20,NA,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate500,Species2,2019-09-24,NA,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate501,Species2,2019-09-28,NA,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate502,Species2,2019-04-29,NA,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate503,Species2,2019-05-01,NA,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate504,Species1,2018-03-28,NA,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate505,Species1,2018-08-05,NA,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate506,Species1,2019-08-16,NA,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate507,Species1,2018-01-27,NA,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate508,Species1,2019-12-17,NA,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate509,Species1,2020-01-12,NA,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate510,Species1,2019-11-20,NA,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate511,Species2,2019-05-01,NA,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate512,Species1,2018-03-28,NA,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate513,Species1,2018-08-05,NA,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate514,Species1,2019-08-16,NA,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate515,Species1,2018-01-27,NA,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate516,Species1,2019-12-17,NA,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate517,Species1,2020-01-12,NA,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate518,Species1,2019-11-20,NA,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate519,Species1,2019-11-12,NA,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate520,Species1,2019-12-20,NA,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate521,Species2,2019-09-22,NA,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate522,Species2,2019-12-17,Ward 56,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate523,Species2,2019-04-06,Ward 56,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate524,Species2,2019-09-02,Ward 56,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate525,Species2,2019-04-28,Ward 56,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate526,Species2,2019-11-20,Ward 56,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate527,Species2,2019-09-24,Ward 56,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate528,Species2,2019-09-28,Ward 56,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate529,Species2,2019-04-29,Ward 56,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate530,Species2,2019-05-01,Ward 56,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate531,Species1,2018-03-28,Ward 56,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate532,Species1,2018-08-05,Ward 56,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate533,Species1,2019-08-16,Ward 56,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate534,Species1,2018-01-27,Ward 56,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate535,Species1,2019-12-17,Ward 56,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate536,Species1,2020-01-12,Ward 56,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate537,Species1,2019-11-20,Ward 56,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate538,Species1,2019-11-12,Ward 56,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate539,Species1,2019-12-20,Ward 56,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate540,Species2,2019-09-22,Ward 56,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate541,Species2,2019-12-17,Ward 56,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate542,Species2,2019-04-06,Ward 56,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate543,Species2,2019-09-02,Ward 56,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate544,Species2,2019-04-28,Ward 56,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate545,Species2,2019-11-20,Ward 56,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate546,Species2,2019-09-24,Ward 56,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate547,Species2,2019-09-28,Ward 56,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate548,Species2,2019-04-29,Ward 56,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate549,Species2,2019-05-01,Ward 56,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate550,Species1,2018-03-28,Ward 56,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate551,Species1,2018-08-05,Ward 56,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate552,Species1,2019-08-16,Ward 56,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate553,Species1,2018-01-27,Ward 56,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate554,Species1,2019-12-17,Ward 56,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate555,Species1,2020-01-12,Ward 56,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate556,Species1,2019-11-20,Ward 56,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate557,Species1,2019-11-12,Ward 56,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate558,Species1,2019-12-20,Ward 56,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate559,Species2,2019-09-22,Ward 56,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate560,Species2,2019-12-17,Ward 56,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate561,Species2,2019-04-06,NA,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate562,Species2,2019-09-02,NA,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate563,Species2,2019-04-28,NA,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate564,Species2,2019-11-20,NA,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate565,Species2,2019-09-24,NA,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate566,Species2,2019-09-28,NA,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate567,Species2,2019-04-29,NA,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate568,Species2,2019-05-01,NA,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate569,Species1,2018-03-28,NA,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate570,Species1,2018-08-05,NA,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate571,Species1,2019-08-16,NA,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate572,Species1,2018-01-27,NA,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate573,Species1,2019-12-17,NA,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate574,Species1,2020-01-12,NA,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate575,Species1,2019-11-20,NA,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate576,Species1,2019-11-12,NA,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate577,Species1,2019-12-20,NA,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate578,Species2,2019-09-22,NA,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate579,Species2,2019-12-17,NA,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate580,Species2,2019-04-06,NA,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate581,Species2,2019-09-02,NA,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate582,Species2,2019-04-28,NA,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate583,Species2,2019-11-20,NA,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate584,Species2,2019-09-24,NA,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate585,Species2,2019-09-28,NA,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate586,Species2,2019-04-29,NA,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate587,Species2,2019-05-01,NA,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate588,Species1,2018-03-28,NA,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate589,Species1,2018-08-05,NA,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate590,Species1,2019-08-16,Ward 36,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate591,Species1,2018-01-27,Ward 36,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate592,Species1,2019-12-17,Ward 36,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate593,Species1,2020-01-12,Ward 36,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate594,Species1,2019-11-20,Ward 36,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate595,Species1,2019-11-12,Ward 36,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate596,Species1,2019-12-20,Ward 36,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate597,Species2,2019-09-22,Ward 36,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate598,Species2,2019-12-17,Ward 36,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate599,Species2,2019-04-06,Ward 36,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate600,Species2,2019-09-02,Ward 36,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate601,Species2,2019-04-28,Ward 36,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate602,Species2,2019-11-20,Ward 36,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate603,Species2,2019-09-24,Ward 36,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate604,Species2,2019-09-28,Ward 36,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate605,Species2,2019-04-29,Ward 36,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate606,Species2,2019-05-01,Ward 36,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate607,Species1,2018-03-28,Ward 36,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate608,Species1,2018-08-05,Ward 36,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate609,Species1,2019-08-16,Ward 36,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate610,Species1,2018-01-27,Ward 36,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate611,Species1,2019-12-17,Ward 36,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate612,Species1,2020-01-12,Ward 36,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate613,Species1,2019-11-20,Ward 36,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate614,Species1,2019-11-12,Ward 36,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate615,Species1,2019-12-20,Ward 36,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate616,Species2,2019-09-22,Ward 36,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate617,Species2,2019-12-17,Ward 36,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate618,Species2,2019-04-06,Ward 36,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate619,Species2,2019-09-02,Ward 36,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate620,Species2,2019-04-28,Ward 36,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate621,Species2,2019-11-20,Ward 36,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate622,Species2,2019-09-24,Ward 36,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate623,Species2,2019-09-28,Ward 36,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate624,Species2,2019-04-29,Ward 36,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate625,Species2,2019-05-01,Ward 36,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate626,Species1,2018-03-28,Ward 36,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate627,Species1,2018-08-05,Ward 36,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate628,Species1,2019-08-16,Ward 36,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate629,Species1,2018-01-27,NA,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate630,Species1,2019-12-17,Ward 95,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate631,Species1,2020-01-12,Ward 95,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate632,Species1,2019-11-20,Ward 95,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate633,Species1,2019-11-12,Ward 95,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate634,Species1,2019-12-20,Ward 95,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate635,Species2,2019-09-22,Ward 95,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate636,Species2,2019-12-17,Ward 95,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate637,Species2,2019-04-06,Ward 95,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate638,Species2,2019-09-02,Ward 95,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate639,Species2,2019-04-28,Ward 95,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate640,Species2,2019-11-20,Ward 95,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate641,Species2,2019-09-24,Ward 95,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate642,Species2,2019-09-28,Ward 95,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate643,Species2,2019-04-29,Ward 95,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate644,Species2,2019-05-01,Ward 95,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate645,Species1,2018-03-28,Ward 95,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate646,Species1,2018-08-05,Ward 95,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate647,Species1,2019-08-16,Ward 95,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate648,Species1,2018-01-27,Ward 95,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate649,Species1,2019-12-17,Ward 95,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate650,Species1,2020-01-12,Ward 95,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate651,Species1,2019-11-20,Ward 95,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate652,Species1,2019-11-12,Ward 95,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate653,Species1,2019-12-20,Ward 95,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate654,Species2,2019-09-22,Ward 95,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate655,Species2,2019-12-17,Ward 95,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate656,Species2,2019-04-06,Ward 95,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate657,Species2,2019-09-02,Ward 95,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate658,Species2,2019-04-28,Ward 95,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate659,Species2,2019-11-20,Ward 95,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate660,Species2,2019-09-24,Ward 95,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate661,Species2,2019-09-28,Ward 95,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate662,Species2,2019-04-29,Ward 95,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate663,Species2,2019-05-01,Ward 95,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate664,Species1,2018-03-28,Ward 95,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate665,Species1,2018-08-05,Ward 95,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate666,Species1,2019-08-16,Ward 95,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate667,Species1,2018-01-27,Ward 95,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate668,Species1,2019-12-17,Ward 95,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate669,Species1,2020-01-12,Ward 95,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate670,Species1,2019-11-20,Ward 95,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate671,Species2,2019-05-01,Ward 95,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate672,Species1,2018-03-28,Ward 95,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate673,Species1,2018-08-05,NA,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate674,Species1,2019-08-16,NA,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate675,Species1,2018-01-27,NA,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate676,Species1,2019-12-17,NA,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate677,Species1,2020-01-12,NA,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate678,Species1,2019-11-20,NA,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate679,Species1,2019-11-12,NA,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate680,Species1,2019-12-20,NA,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate681,Species2,2019-09-22,NA,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate682,Species2,2019-12-17,Ward 78,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate683,Species2,2019-04-06,Ward 78,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate684,Species2,2019-09-02,Ward 78,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate685,Species2,2019-04-28,Ward 78,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate686,Species2,2019-11-20,Ward 78,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate687,Species2,2019-09-24,Ward 78,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate688,Species2,2019-09-28,Ward 78,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate689,Species2,2019-04-29,Ward 78,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate690,Species2,2019-05-01,Ward 78,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate691,Species1,2018-03-28,Ward 78,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate692,Species1,2018-08-05,Ward 78,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate693,Species1,2019-08-16,Ward 78,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate694,Species1,2018-01-27,Ward 78,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate695,Species1,2019-12-17,Ward 78,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate696,Species1,2020-01-12,Ward 78,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate697,Species1,2019-11-20,Ward 78,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate698,Species1,2019-11-12,Ward 78,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate699,Species1,2019-12-20,Ward 78,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate700,Species2,2019-09-22,Ward 78,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate701,Species2,2019-12-17,Ward 78,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate702,Species2,2019-04-06,Ward 78,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate703,Species2,2019-09-02,Ward 78,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate704,Species2,2019-04-28,Ward 78,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate705,Species2,2019-11-20,Ward 78,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate706,Species2,2019-09-24,Ward 78,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate707,Species2,2019-09-28,Ward 78,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate708,Species2,2019-04-29,Ward 78,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate709,Species2,2019-05-01,Ward 78,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate710,Species1,2018-03-28,Ward 78,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate711,Species1,2018-08-05,Ward 78,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate712,Species1,2019-08-16,Ward 78,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate713,Species1,2018-01-27,Ward 78,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate714,Species1,2019-12-17,Ward 78,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate715,Species1,2020-01-12,Ward 78,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate716,Species1,2019-11-20,Ward 78,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate717,Species1,2019-11-12,Ward 78,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate718,Species1,2019-12-20,Ward 78,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate719,Species2,2019-09-22,Ward 78,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate720,Species2,2019-12-17,Ward 78,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate721,Species2,2019-04-06,Ward 78,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate722,Species2,2019-09-02,Ward 78,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate723,Species2,2019-04-28,Ward 78,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate724,Species2,2019-11-20,Ward 78,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate725,Species2,2019-09-24,Ward 78,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate726,Species2,2019-09-28,NA,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate727,Species2,2019-04-29,Ward 57,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate728,Species2,2019-05-01,Ward 57,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate729,Species1,2018-03-28,Ward 57,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate730,Species1,2018-08-05,Ward 57,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate731,Species1,2019-08-16,Ward 57,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate732,Species1,2018-01-27,Ward 57,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate733,Species1,2019-12-17,Ward 57,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate734,Species1,2020-01-12,Ward 57,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate735,Species1,2019-11-20,Ward 57,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate736,Species1,2019-11-12,Ward 57,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate737,Species1,2019-12-20,Ward 57,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate738,Species2,2019-09-22,Ward 57,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate739,Species2,2019-12-17,Ward 57,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate740,Species2,2019-04-06,Ward 57,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate741,Species2,2019-09-02,Ward 57,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate742,Species2,2019-04-28,Ward 57,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate743,Species2,2019-11-20,Ward 57,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate744,Species2,2019-09-24,Ward 57,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate745,Species2,2019-09-28,Ward 57,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate746,Species2,2019-04-29,Ward 57,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate747,Species2,2019-05-01,Ward 57,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate748,Species1,2018-03-28,Ward 57,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate749,Species1,2018-08-05,Ward 57,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate750,Species1,2019-08-16,Ward 57,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate751,Species1,2018-01-27,Ward 57,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate752,Species1,2019-12-17,Ward 57,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate753,Species1,2020-01-12,Ward 57,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate754,Species1,2019-11-20,Ward 57,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate755,Species1,2019-11-12,Ward 57,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate756,Species1,2019-12-20,Ward 57,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate757,Species2,2019-09-22,Ward 57,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate758,Species2,2019-12-17,Ward 57,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate759,Species2,2019-04-06,Ward 57,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate760,Species2,2019-09-02,Ward 57,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate761,Species2,2019-04-28,Ward 57,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate762,Species2,2019-11-20,Ward 57,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate763,Species2,2019-09-24,Ward 57,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate764,Species2,2019-09-28,Ward 57,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate765,Species2,2019-04-29,Ward 57,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate766,Species2,2019-05-01,Ward 57,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate767,Species1,2018-03-28,Ward 57,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate768,Species1,2018-08-05,Ward 57,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate769,Species1,2019-08-16,Ward 57,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate770,Species1,2018-01-27,Ward 57,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate771,Species1,2019-12-17,Ward 57,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate772,Species1,2020-01-12,Ward 57,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate773,Species1,2019-11-20,Ward 57,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate774,Species1,2019-11-12,Ward 57,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate775,Species1,2019-12-20,Ward 57,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate776,Species2,2019-09-22,NA,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate777,Species2,2019-12-17,NA,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate778,Species2,2019-04-06,NA,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate779,Species2,2019-09-02,NA,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate780,Species2,2019-04-28,Ward 39,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate781,Species2,2019-11-20,Ward 39,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate782,Species2,2019-09-24,Ward 39,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate783,Species2,2019-09-28,Ward 39,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate784,Species2,2019-04-29,Ward 39,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate785,Species2,2019-05-01,Ward 39,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate786,Species1,2018-03-28,Ward 39,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate787,Species1,2018-08-05,Ward 39,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate788,Species1,2019-08-16,Ward 39,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate789,Species1,2018-01-27,Ward 39,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate790,Species1,2019-12-17,Ward 39,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate791,Species1,2020-01-12,Ward 39,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate792,Species1,2019-11-20,Ward 39,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate793,Species1,2019-11-12,Ward 39,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate794,Species1,2019-12-20,Ward 39,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate795,Species2,2019-09-22,Ward 39,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate796,Species2,2019-12-17,Ward 39,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate797,Species2,2019-04-06,Ward 39,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate798,Species2,2019-09-02,Ward 39,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate799,Species2,2019-04-28,Ward 39,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate800,Species2,2019-11-20,Ward 39,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate801,Species2,2019-09-24,Ward 39,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate802,Species2,2019-09-28,Ward 39,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate803,Species2,2019-04-29,Ward 39,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate804,Species2,2019-05-01,Ward 39,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate805,Species1,2018-03-28,Ward 39,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate806,Species1,2018-08-05,Ward 39,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate807,Species1,2019-08-16,Ward 39,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate808,Species1,2018-01-27,Ward 39,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate809,Species1,2019-12-17,Ward 39,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate810,Species1,2020-01-12,Ward 39,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate811,Species1,2019-11-20,Ward 39,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate812,Species1,2019-11-12,Ward 39,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate813,Species1,2019-12-20,Ward 39,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate814,Species2,2019-09-22,Ward 39,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate815,Species2,2019-12-17,Ward 39,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate816,Species2,2019-04-06,Ward 39,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate817,Species2,2019-09-02,Ward 39,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate818,Species2,2019-04-28,Ward 39,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate819,Species2,2019-11-20,Ward 39,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate820,Species2,2019-09-24,Ward 39,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate821,Species2,2019-09-28,Ward 39,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate822,Species2,2019-04-29,Ward 39,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate823,Species2,2019-05-01,Ward 39,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate824,Species1,2018-03-28,Ward 39,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate825,Species1,2018-08-05,Ward 39,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate826,Species1,2019-08-16,Ward 39,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate827,Species1,2018-01-27,Ward 39,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate828,Species1,2019-12-17,Ward 39,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate829,Species1,2020-01-12,Ward 39,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate830,Species1,2019-11-20,Ward 39,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate831,Species2,2019-05-01,Ward 39,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate832,Species1,2018-03-28,Ward 39,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate833,Species1,2018-08-05,Ward 39,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate834,Species1,2019-08-16,Ward 39,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate835,Species1,2018-01-27,Ward 39,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate836,Species1,2019-12-17,Ward 39,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate837,Species1,2020-01-12,Ward 39,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate838,Species1,2019-11-20,Ward 39,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate839,Species1,2019-11-12,Ward 39,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate840,Species1,2019-12-20,NA,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate841,Species2,2019-09-22,NA,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate842,Species2,2019-12-17,Ward 75,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate843,Species2,2019-04-06,Ward 75,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate844,Species2,2019-09-02,Ward 75,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate845,Species2,2019-04-28,Ward 75,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate846,Species2,2019-11-20,Ward 75,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate847,Species2,2019-09-24,Ward 75,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate848,Species2,2019-09-28,Ward 75,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate849,Species2,2019-04-29,Ward 75,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate850,Species2,2019-05-01,Ward 75,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate851,Species1,2018-03-28,Ward 75,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate852,Species1,2018-08-05,Ward 75,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate853,Species1,2019-08-16,Ward 75,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate854,Species1,2018-01-27,Ward 75,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate855,Species1,2019-12-17,Ward 75,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate856,Species1,2020-01-12,Ward 75,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate857,Species1,2019-11-20,Ward 75,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate858,Species1,2019-11-12,Ward 75,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate859,Species1,2019-12-20,Ward 75,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate860,Species2,2019-09-22,Ward 75,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate861,Species2,2019-12-17,Ward 75,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate862,Species2,2019-04-06,Ward 75,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate863,Species2,2019-09-02,Ward 75,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate864,Species2,2019-04-28,Ward 75,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate865,Species2,2019-11-20,Ward 75,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate866,Species2,2019-09-24,Ward 75,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate867,Species2,2019-09-28,Ward 75,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate868,Species2,2019-04-29,Ward 75,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate869,Species2,2019-05-01,Ward 75,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate870,Species1,2018-03-28,Ward 75,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate871,Species1,2018-08-05,Ward 75,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate872,Species1,2019-08-16,Ward 75,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate873,Species1,2018-01-27,Ward 75,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate874,Species1,2019-12-17,Ward 75,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate875,Species1,2020-01-12,Ward 75,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate876,Species1,2019-11-20,Ward 75,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate877,Species1,2019-11-12,Ward 75,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate878,Species1,2019-12-20,Ward 75,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate879,Species2,2019-09-22,Ward 75,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate880,Species2,2019-12-17,Ward 75,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate881,Species2,2019-04-06,Ward 75,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate882,Species2,2019-09-02,Ward 75,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate883,Species2,2019-04-28,Ward 75,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate884,Species2,2019-11-20,Ward 75,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate885,Species2,2019-09-24,Ward 75,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate886,Species2,2019-09-28,Ward 75,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate887,Species2,2019-04-29,Ward 75,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate888,Species2,2019-05-01,Ward 75,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate889,Species1,2018-03-28,Ward 75,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate890,Species1,2018-08-05,Ward 75,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate891,Species1,2019-08-16,Ward 75,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate892,Species1,2018-01-27,Ward 75,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate893,Species1,2019-12-17,Ward 75,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate894,Species1,2020-01-12,Ward 75,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate895,Species1,2019-11-20,NA,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate896,Species1,2019-11-12,NA,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate897,Species1,2019-12-20,NA,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate898,Species2,2019-09-22,NA,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate899,Species2,2019-12-17,NA,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate900,Species2,2019-04-06,NA,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate901,Species2,2019-09-02,NA,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate902,Species2,2019-04-28,NA,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate903,Species2,2019-11-20,NA,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate904,Species2,2019-09-24,NA,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate905,Species2,2019-09-28,NA,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate906,Species2,2019-04-29,Ward 47,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate907,Species2,2019-05-01,Ward 47,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate908,Species1,2018-03-28,Ward 47,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate909,Species1,2018-08-05,Ward 47,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate910,Species1,2019-08-16,Ward 47,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate911,Species1,2018-01-27,Ward 47,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate912,Species1,2019-12-17,Ward 47,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate913,Species1,2020-01-12,Ward 47,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate914,Species1,2019-11-20,Ward 47,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate915,Species1,2019-11-12,Ward 47,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate916,Species1,2019-12-20,Ward 47,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate917,Species2,2019-09-22,Ward 47,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate918,Species2,2019-12-17,Ward 47,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate919,Species2,2019-04-06,Ward 47,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate920,Species2,2019-09-02,Ward 47,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate921,Species2,2019-04-28,Ward 47,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate922,Species2,2019-11-20,Ward 47,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate923,Species2,2019-09-24,Ward 47,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate924,Species2,2019-09-28,Ward 47,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate925,Species2,2019-04-29,Ward 47,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate926,Species2,2019-05-01,Ward 47,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate927,Species1,2018-03-28,Ward 47,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate928,Species1,2018-08-05,Ward 47,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate929,Species1,2019-08-16,Ward 47,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate930,Species1,2018-01-27,Ward 47,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate931,Species1,2019-12-17,Ward 47,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate932,Species1,2020-01-12,Ward 47,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate933,Species1,2019-11-20,Ward 47,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate934,Species1,2019-11-12,Ward 47,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate935,Species1,2019-12-20,Ward 47,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate936,Species2,2019-09-22,Ward 47,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate937,Species2,2019-12-17,Ward 47,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate938,Species2,2019-04-06,Ward 47,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate939,Species2,2019-09-02,Ward 47,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate940,Species2,2019-04-28,Ward 47,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate941,Species2,2019-11-20,Ward 47,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate942,Species2,2019-09-24,Ward 47,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate943,Species2,2019-09-28,Ward 47,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate944,Species2,2019-04-29,Ward 47,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate945,Species2,2019-05-01,Ward 47,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate946,Species1,2018-03-28,Ward 47,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate947,Species1,2018-08-05,Ward 47,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate948,Species1,2019-08-16,Ward 47,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate949,Species1,2018-01-27,Ward 47,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate950,Species1,2019-12-17,Ward 47,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate951,Species1,2020-01-12,Ward 47,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate952,Species1,2019-11-20,Ward 47,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate953,Species1,2019-11-12,Ward 47,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate954,Species1,2019-12-20,Ward 47,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate955,Species2,2019-09-22,NA,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate956,Species2,2019-12-17,NA,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate957,Species2,2019-04-06,NA,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate958,Species2,2019-09-02,NA,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate959,Species2,2019-04-28,NA,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate960,Species2,2019-11-20,Ward 34,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate961,Species2,2019-09-24,Ward 34,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate962,Species2,2019-09-28,Ward 34,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate963,Species2,2019-04-29,Ward 34,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate964,Species2,2019-05-01,Ward 34,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate965,Species1,2018-03-28,Ward 34,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate966,Species1,2018-08-05,Ward 34,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate967,Species1,2019-08-16,Ward 34,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate968,Species1,2018-01-27,Ward 34,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate969,Species1,2019-12-17,Ward 34,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate970,Species1,2020-01-12,Ward 34,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate971,Species1,2019-11-20,Ward 34,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate972,Species1,2019-11-12,Ward 34,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate973,Species1,2019-12-20,Ward 34,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate974,Species2,2019-09-22,Ward 34,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate975,Species2,2019-12-17,Ward 34,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate976,Species2,2019-04-06,Ward 34,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate977,Species2,2019-09-02,Ward 34,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate978,Species2,2019-04-28,Ward 34,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate979,Species2,2019-11-20,Ward 34,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate980,Species2,2019-09-24,Ward 34,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate981,Species2,2019-09-28,Ward 34,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate982,Species2,2019-04-29,Ward 34,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate983,Species2,2019-05-01,Ward 34,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate984,Species1,2018-03-28,Ward 34,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate985,Species1,2018-08-05,Ward 34,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate986,Species1,2019-08-16,Ward 34,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate987,Species1,2018-01-27,Ward 34,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate988,Species1,2019-12-17,Ward 34,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate989,Species1,2020-01-12,Ward 34,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate990,Species1,2019-11-20,Ward 34,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate991,Species1,2018-11-19,Ward 11,Environment,Env5,Sp1 NF,ResGeneB,NA
+Isolate992,Species1,2019-01-08,Ward 11,Patient,P5,Sp1 ST 17,ResGeneB,NA
+Isolate993,Species1,2019-12-13,Ward 11,Environment,Env12,Sp1 ST 78,ResGeneE,NA
+Isolate994,Species1,2019-09-17,Ward 11,Environment,Env25,Sp1 NF,ResGeneC,NA
+Isolate995,Species1,2019-09-20,Ward 11,Environment,Env27,Sp1 NF,ResGeneE,NA
+Isolate996,Species1,2019-09-21,Ward 11,Patient,P12,Sp1 ST 78,ResGeneC,NA
+Isolate997,Species2,2019-08-16,Ward 11,Environment,Env32,Sp2 ST 761,ResGeneC,NA
+Isolate998,Species2,2019-09-21,Ward 11,Environment,Env48,Sp2 ST 17,ResGeneC,NA
+Isolate999,Species2,2019-09-22,Ward 11,Environment,Env51,Sp2 ST 19,ResGeneC,NA
+Isolate1000,Species2,2019-04-30,Ward 11,Environment,Env56,Sp2 ST 800,ResGeneE,NA
+Isolate1001,Species1,2018-11-19,Ward 11,Environment,Env5,Sp1 NF,ResGeneB,NA
+Isolate1002,Species1,2019-01-08,Ward 11,Patient,P5,Sp1 ST 17,ResGeneB,NA
+Isolate1003,Species1,2019-12-13,Ward 11,Environment,Env12,Sp1 ST 78,ResGeneE,NA
+Isolate1004,Species1,2019-09-17,Ward 11,Environment,Env25,Sp1 NF,ResGeneC,NA
+Isolate1005,Species1,2019-09-20,Ward 11,Environment,Env27,Sp1 NF,ResGeneE,NA
+Isolate1006,Species1,2019-09-21,Ward 11,Patient,P12,Sp1 ST 78,ResGeneC,NA
+Isolate1007,Species2,2019-08-16,Ward 11,Environment,Env32,Sp2 ST 761,ResGeneC,NA
+Isolate1008,Species2,2019-09-21,Ward 11,Environment,Env48,Sp2 ST 17,ResGeneC,NA
+Isolate1009,Species2,2019-09-22,Ward 11,Environment,Env51,Sp2 ST 19,ResGeneC,NA
+Isolate1010,Species2,2019-04-30,Ward 11,Environment,Env56,Sp2 ST 800,ResGeneE,NA
+Isolate1011,Species1,2018-11-19,Ward 11,Environment,Env5,Sp1 NF,ResGeneB,NA
+Isolate1012,Species1,2019-01-08,Ward 11,Patient,P5,Sp1 ST 17,ResGeneB,NA
+Isolate1013,Species1,2019-12-13,Ward 11,Environment,Env12,Sp1 ST 78,ResGeneE,NA
+Isolate1014,Species1,2019-09-17,Ward 11,Environment,Env25,Sp1 NF,ResGeneC,NA
+Isolate1015,Species1,2019-09-20,Ward 11,Environment,Env27,Sp1 NF,ResGeneE,NA
+Isolate1016,Species1,2019-09-21,Ward 11,Patient,P12,Sp1 ST 78,ResGeneC,NA
+Isolate1017,Species2,2019-08-16,Ward 11,Environment,Env32,Sp2 ST 761,ResGeneC,NA
+Isolate1018,Species2,2019-09-21,Ward 11,Environment,Env48,Sp2 ST 17,ResGeneC,NA
+Isolate1019,Species2,2019-09-22,Ward 11,Environment,Env51,Sp2 ST 19,ResGeneC,NA
+Isolate1020,Species2,2019-04-30,Ward 11,Environment,Env56,Sp2 ST 800,ResGeneE,NA
+Isolate1021,Species1,2018-11-19,Ward 11,Environment,Env5,Sp1 NF,ResGeneB,NA
+Isolate1022,Species1,2019-01-08,Ward 11,Patient,P5,Sp1 ST 17,ResGeneB,NA
+Isolate1023,Species1,2019-12-13,Ward 11,Environment,Env12,Sp1 ST 78,ResGeneE,NA
+Isolate1024,Species1,2019-09-17,Ward 11,Environment,Env25,Sp1 NF,ResGeneC,NA
+Isolate1025,Species1,2019-09-20,Ward 11,Environment,Env27,Sp1 NF,ResGeneE,NA
+Isolate1026,Species1,2019-09-21,Ward 11,Patient,P12,Sp1 ST 78,ResGeneC,NA
+Isolate1027,Species2,2019-08-16,Ward 11,Environment,Env32,Sp2 ST 761,ResGeneC,NA
+Isolate1028,Species2,2019-09-21,Ward 11,Environment,Env48,Sp2 ST 17,ResGeneC,NA
+Isolate1029,Species2,2019-09-22,Ward 11,Environment,Env51,Sp2 ST 19,ResGeneC,NA
+Isolate1030,Species2,2019-04-30,Ward 11,Environment,Env56,Sp2 ST 800,ResGeneE,NA
+Isolate1031,Species1,2018-11-19,Ward 11,Environment,Env5,Sp1 NF,ResGeneB,NA
+Isolate1032,Species1,2019-01-08,Ward 11,Patient,P5,Sp1 ST 17,ResGeneB,NA
+Isolate1033,Species1,2019-12-13,Ward 11,Environment,Env12,Sp1 ST 78,ResGeneE,NA
+Isolate1034,Species1,2019-09-17,Ward 11,Environment,Env25,Sp1 NF,ResGeneC,NA
+Isolate1035,Species1,2019-09-20,Ward 11,Environment,Env27,Sp1 NF,ResGeneE,NA
+Isolate1036,Species1,2019-09-21,Ward 11,Patient,P12,Sp1 ST 78,ResGeneC,NA
+Isolate1037,Species2,2019-08-16,Ward 11,Environment,Env32,Sp2 ST 761,ResGeneC,NA
+Isolate1038,Species2,2019-09-21,Ward 11,Environment,Env48,Sp2 ST 17,ResGeneC,NA
+Isolate1039,Species2,2019-09-22,Ward 11,Environment,Env51,Sp2 ST 19,ResGeneC,NA
+Isolate1040,Species2,2019-04-30,Ward 11,Environment,Env56,Sp2 ST 800,ResGeneE,NA
+Isolate1041,Species1,2018-11-19,Ward 11,Environment,Env5,Sp1 NF,ResGeneB,NA
+Isolate1042,Species1,2019-01-08,Ward 11,Patient,P5,Sp1 ST 17,ResGeneB,NA
+Isolate1043,Species1,2019-12-13,Ward 11,Environment,Env12,Sp1 ST 78,ResGeneE,NA
+Isolate1044,Species1,2019-09-17,Ward 11,Environment,Env25,Sp1 NF,ResGeneC,NA
+Isolate1045,Species1,2019-09-20,Ward 11,Environment,Env27,Sp1 NF,ResGeneE,NA
+Isolate1046,Species1,2019-09-21,Ward 11,Patient,P12,Sp1 ST 78,ResGeneC,NA
+Isolate1047,Species2,2019-08-16,Ward 11,Environment,Env32,Sp2 ST 761,ResGeneC,NA
+Isolate1048,Species2,2019-09-21,Ward 11,Environment,Env48,Sp2 ST 17,ResGeneC,NA
+Isolate1049,Species2,2019-09-22,Ward 11,Environment,Env51,Sp2 ST 19,ResGeneC,NA
+Isolate1050,Species2,2019-04-30,Ward 11,Environment,Env56,Sp2 ST 800,ResGeneE,NA
+Isolate1051,Species1,2018-11-19,Ward 11,Environment,Env5,Sp1 NF,ResGeneB,NA
+Isolate1052,Species1,2019-01-08,Ward 11,Patient,P5,Sp1 ST 17,ResGeneB,NA
+Isolate1053,Species1,2019-12-13,Ward 11,Environment,Env12,Sp1 ST 78,ResGeneE,NA
+Isolate1054,Species1,2019-09-17,Ward 11,Environment,Env25,Sp1 NF,ResGeneC,NA
+Isolate1055,Species1,2019-09-20,Ward 11,Environment,Env27,Sp1 NF,ResGeneE,NA
+Isolate1056,Species1,2019-09-21,Ward 11,Patient,P12,Sp1 ST 78,ResGeneC,NA
+Isolate1057,Species2,2019-08-16,Ward 11,Environment,Env32,Sp2 ST 761,ResGeneC,NA
+Isolate1058,Species2,2019-09-21,Ward 11,Environment,Env48,Sp2 ST 17,ResGeneC,NA
+Isolate1059,Species2,2019-09-22,Ward 11,Environment,Env51,Sp2 ST 19,ResGeneC,NA
+Isolate1060,Species2,2019-04-30,Ward 11,Environment,Env56,Sp2 ST 800,ResGeneE,NA
+Isolate1061,Species1,2018-11-19,Ward 11,Environment,Env5,Sp1 NF,ResGeneB,NA
+Isolate1062,Species1,2019-01-08,Ward 11,Patient,P5,Sp1 ST 17,ResGeneB,NA
+Isolate1063,Species1,2019-12-13,Ward 11,Environment,Env12,Sp1 ST 78,ResGeneE,NA
+Isolate1064,Species1,2019-09-17,Ward 11,Environment,Env25,Sp1 NF,ResGeneC,NA
+Isolate1065,Species1,2019-09-20,Ward 11,Environment,Env27,Sp1 NF,ResGeneE,NA
+Isolate1066,Species1,2019-09-21,Ward 11,Patient,P12,Sp1 ST 78,ResGeneC,NA
+Isolate1067,Species2,2019-08-16,Ward 11,Environment,Env32,Sp2 ST 761,ResGeneC,NA
+Isolate1068,Species2,2019-09-21,Ward 11,Environment,Env48,Sp2 ST 17,ResGeneC,NA
+Isolate1069,Species2,2019-09-22,Ward 11,Environment,Env51,Sp2 ST 19,ResGeneC,NA
+Isolate1070,Species2,2019-04-30,Ward 11,Environment,Env56,Sp2 ST 800,ResGeneE,NA
+Isolate1071,Species1,2018-11-19,Ward 11,Environment,Env5,Sp1 NF,ResGeneB,NA
+Isolate1072,Species1,2019-01-08,Ward 11,Patient,P5,Sp1 ST 17,ResGeneB,NA
+Isolate1073,Species1,2019-12-13,Ward 11,Environment,Env12,Sp1 ST 78,ResGeneE,NA
+Isolate1074,Species1,2019-09-17,Ward 11,Environment,Env25,Sp1 NF,ResGeneC,NA
+Isolate1075,Species1,2019-09-20,Ward 11,Environment,Env27,Sp1 NF,ResGeneE,NA
+Isolate1076,Species1,2019-09-21,Ward 11,Patient,P12,Sp1 ST 78,ResGeneC,NA
+Isolate1077,Species2,2019-08-16,Ward 11,Environment,Env32,Sp2 ST 761,ResGeneC,NA
+Isolate1078,Species2,2019-09-21,Ward 11,Environment,Env48,Sp2 ST 17,ResGeneC,NA
+Isolate1079,Species2,2019-09-22,Ward 11,Environment,Env51,Sp2 ST 19,ResGeneC,NA
+Isolate1080,Species2,2019-04-30,Ward 11,Environment,Env56,Sp2 ST 800,ResGeneE,NA
+Isolate1081,Species1,2018-11-19,Ward 11,Environment,Env5,Sp1 NF,ResGeneB,NA
+Isolate1082,Species1,2019-01-08,Ward 11,Patient,P5,Sp1 ST 17,ResGeneB,NA
+Isolate1083,Species1,2019-12-13,Ward 11,Environment,Env12,Sp1 ST 78,ResGeneE,NA
+Isolate1084,Species1,2019-09-17,Ward 11,Environment,Env25,Sp1 NF,ResGeneC,NA
+Isolate1085,Species1,2019-09-20,Ward 11,Environment,Env27,Sp1 NF,ResGeneE,NA
+Isolate1086,Species1,2019-09-21,Ward 11,Patient,P12,Sp1 ST 78,ResGeneC,NA
+Isolate1087,Species2,2019-08-16,Ward 11,Environment,Env32,Sp2 ST 761,ResGeneC,NA
+Isolate1088,Species2,2019-09-21,Ward 11,Environment,Env48,Sp2 ST 17,ResGeneC,NA
+Isolate1089,Species2,2019-09-22,Ward 11,Environment,Env51,Sp2 ST 19,ResGeneC,NA
+Isolate1090,Species2,2019-04-30,Ward 11,Environment,Env56,Sp2 ST 800,ResGeneE,NA
+Isolate1091,Species1,2018-11-19,Ward 11,Environment,Env5,Sp1 NF,ResGeneB,NA
+Isolate1092,Species1,2019-01-08,Ward 11,Patient,P5,Sp1 ST 17,ResGeneB,NA
+Isolate1093,Species1,2019-12-13,Ward 11,Environment,Env12,Sp1 ST 78,ResGeneE,NA
+Isolate1094,Species1,2019-09-17,Ward 11,Environment,Env25,Sp1 NF,ResGeneC,NA
+Isolate1095,Species1,2019-09-20,Ward 11,Environment,Env27,Sp1 NF,ResGeneE,NA
+Isolate1096,Species1,2019-09-21,Ward 11,Patient,P12,Sp1 ST 78,ResGeneC,NA
+Isolate1097,Species2,2019-08-16,Ward 11,Environment,Env32,Sp2 ST 761,ResGeneC,NA
+Isolate1098,Species2,2019-09-21,Ward 11,Environment,Env48,Sp2 ST 17,ResGeneC,NA
+Isolate1099,Species2,2019-09-22,Ward 11,Environment,Env51,Sp2 ST 19,ResGeneC,NA
+Isolate1100,Species2,2019-04-30,Ward 11,Environment,Env56,Sp2 ST 800,ResGeneE,NA
+Isolate1101,Species1,2018-11-19,Ward 11,Environment,Env5,Sp1 NF,ResGeneB,NA
+Isolate1102,Species1,2019-01-08,Ward 11,Patient,P5,Sp1 ST 17,ResGeneB,NA
+Isolate1103,Species1,2019-12-13,Ward 11,Environment,Env12,Sp1 ST 78,ResGeneE,NA
+Isolate1104,Species1,2019-09-17,Ward 11,Environment,Env25,Sp1 NF,ResGeneC,NA
+Isolate1105,Species1,2019-09-20,Ward 11,Environment,Env27,Sp1 NF,ResGeneE,NA
+Isolate1106,Species1,2019-09-21,Ward 11,Patient,P12,Sp1 ST 78,ResGeneC,NA
+Isolate1107,Species2,2019-08-16,Ward 11,Environment,Env32,Sp2 ST 761,ResGeneC,NA
+Isolate1108,Species2,2019-09-21,Ward 11,Environment,Env48,Sp2 ST 17,ResGeneC,NA
+Isolate1109,Species2,2019-09-22,Ward 11,Environment,Env51,Sp2 ST 19,ResGeneC,NA
+Isolate1110,Species2,2019-04-30,Ward 11,Environment,Env56,Sp2 ST 800,ResGeneE,NA
+Isolate1111,Species1,2018-11-19,Ward 11,Environment,Env5,Sp1 NF,ResGeneB,NA
+Isolate1112,Species1,2019-01-08,Ward 11,Patient,P5,Sp1 ST 17,ResGeneB,NA
+Isolate1113,Species1,2019-12-13,Ward 11,Environment,Env12,Sp1 ST 78,ResGeneE,NA
+Isolate1114,Species1,2019-09-17,Ward 11,Environment,Env25,Sp1 NF,ResGeneC,NA
+Isolate1115,Species1,2019-09-20,Ward 11,Environment,Env27,Sp1 NF,ResGeneE,NA
+Isolate1116,Species1,2019-09-21,Ward 11,Patient,P12,Sp1 ST 78,ResGeneC,NA
+Isolate1117,Species2,2019-08-16,Ward 11,Environment,Env32,Sp2 ST 761,ResGeneC,NA
+Isolate1118,Species2,2019-09-21,Ward 11,Environment,Env48,Sp2 ST 17,ResGeneC,NA
+Isolate1119,Species2,2019-09-22,Ward 11,Environment,Env51,Sp2 ST 19,ResGeneC,NA
+Isolate1120,Species2,2019-04-30,Ward 11,Environment,Env56,Sp2 ST 800,ResGeneE,NA
+Isolate1121,Species1,2018-11-19,Ward 11,Environment,Env5,Sp1 NF,ResGeneB,NA
+Isolate1122,Species1,2019-01-08,Ward 11,Patient,P5,Sp1 ST 17,ResGeneB,NA
+Isolate1123,Species1,2019-12-13,Ward 11,Environment,Env12,Sp1 ST 78,ResGeneE,NA
+Isolate1124,Species1,2019-09-17,Ward 11,Environment,Env25,Sp1 NF,ResGeneC,NA
+Isolate1125,Species1,2019-09-20,Ward 11,Environment,Env27,Sp1 NF,ResGeneE,NA
+Isolate1126,Species1,2019-09-21,Ward 11,Patient,P12,Sp1 ST 78,ResGeneC,NA
+Isolate1127,Species2,2019-08-16,Ward 11,Environment,Env32,Sp2 ST 761,ResGeneC,NA
+Isolate1128,Species2,2019-09-21,Ward 11,Environment,Env48,Sp2 ST 17,ResGeneC,NA
+Isolate1129,Species2,2019-09-22,Ward 11,Environment,Env51,Sp2 ST 19,ResGeneC,NA
+Isolate1130,Species2,2019-04-30,Ward 11,Environment,Env56,Sp2 ST 800,ResGeneE,NA
+Isolate1131,Species1,2018-11-19,Ward 11,Environment,Env5,Sp1 NF,ResGeneB,NA
+Isolate1132,Species1,2019-01-08,Ward 11,Patient,P5,Sp1 ST 17,ResGeneB,NA
+Isolate1133,Species1,2019-12-13,Ward 11,Environment,Env12,Sp1 ST 78,ResGeneE,NA
+Isolate1134,Species1,2019-09-17,Ward 11,Environment,Env25,Sp1 NF,ResGeneC,NA
+Isolate1135,Species1,2019-09-20,Ward 11,Environment,Env27,Sp1 NF,ResGeneE,NA
+Isolate1136,Species1,2019-09-21,Ward 11,Patient,P12,Sp1 ST 78,ResGeneC,NA
+Isolate1137,Species2,2019-08-16,Ward 11,Environment,Env32,Sp2 ST 761,ResGeneC,NA
+Isolate1138,Species2,2019-09-21,Ward 11,Environment,Env48,Sp2 ST 17,ResGeneC,NA
+Isolate1139,Species2,2019-09-22,Ward 11,Environment,Env51,Sp2 ST 19,ResGeneC,NA
+Isolate1140,Species2,2019-04-30,Ward 11,Environment,Env56,Sp2 ST 800,ResGeneE,NA
+Isolate1141,Species1,2018-11-19,Ward 11,Environment,Env5,Sp1 NF,ResGeneB,NA
+Isolate1142,Species1,2019-01-08,Ward 11,Patient,P5,Sp1 ST 17,ResGeneB,NA
+Isolate1143,Species1,2019-12-13,Ward 11,Environment,Env12,Sp1 ST 78,ResGeneE,NA
+Isolate1144,Species1,2019-09-17,Ward 11,Environment,Env25,Sp1 NF,ResGeneC,NA
+Isolate1145,Species1,2019-09-20,Ward 11,Environment,Env27,Sp1 NF,ResGeneE,NA
+Isolate1146,Species1,2019-09-21,Ward 11,Patient,P12,Sp1 ST 78,ResGeneC,NA
+Isolate1147,Species2,2019-08-16,Ward 11,Environment,Env32,Sp2 ST 761,ResGeneC,NA
+Isolate1148,Species2,2019-09-21,Ward 11,Environment,Env48,Sp2 ST 17,ResGeneC,NA
+Isolate1149,Species2,2019-09-22,Ward 11,Environment,Env51,Sp2 ST 19,ResGeneC,NA
+Isolate1150,Species2,2019-04-30,Ward 11,Environment,Env56,Sp2 ST 800,ResGeneE,NA
+Isolate1151,Species1,2018-11-19,Ward 11,Environment,Env5,Sp1 NF,ResGeneB,NA
+Isolate1152,Species1,2019-01-08,Ward 11,Patient,P5,Sp1 ST 17,ResGeneB,NA
+Isolate1153,Species1,2019-12-13,Ward 11,Environment,Env12,Sp1 ST 78,ResGeneE,NA
+Isolate1154,Species1,2019-09-17,Ward 11,Environment,Env25,Sp1 NF,ResGeneC,NA
+Isolate1155,Species1,2019-09-20,Ward 11,Environment,Env27,Sp1 NF,ResGeneE,NA
+Isolate1156,Species1,2019-09-21,Ward 11,Patient,P12,Sp1 ST 78,ResGeneC,NA
+Isolate1157,Species2,2019-08-16,Ward 11,Environment,Env32,Sp2 ST 761,ResGeneC,NA
+Isolate1158,Species2,2019-09-21,Ward 11,Environment,Env48,Sp2 ST 17,ResGeneC,NA
+Isolate1159,Species2,2019-09-22,Ward 11,Environment,Env51,Sp2 ST 19,ResGeneC,NA
+Isolate1160,Species2,2019-04-30,Ward 11,Environment,Env56,Sp2 ST 800,ResGeneE,NA
+Isolate1161,Species1,2018-11-19,Ward 11,Environment,Env5,Sp1 NF,ResGeneB,NA
+Isolate1162,Species1,2019-01-08,Ward 11,Patient,P5,Sp1 ST 17,ResGeneB,NA
+Isolate1163,Species1,2019-12-13,Ward 11,Environment,Env12,Sp1 ST 78,ResGeneE,NA
+Isolate1164,Species1,2019-09-17,Ward 11,Environment,Env25,Sp1 NF,ResGeneC,NA
+Isolate1165,Species1,2019-09-20,Ward 11,Environment,Env27,Sp1 NF,ResGeneE,NA
+Isolate1166,Species1,2019-09-21,Ward 11,Patient,P12,Sp1 ST 78,ResGeneC,NA
+Isolate1167,Species2,2019-08-16,Ward 11,Environment,Env32,Sp2 ST 761,ResGeneC,NA
+Isolate1168,Species2,2019-09-21,Ward 11,Environment,Env48,Sp2 ST 17,ResGeneC,NA
+Isolate1169,Species2,2019-09-22,Ward 11,Environment,Env51,Sp2 ST 19,ResGeneC,NA
+Isolate1170,Species2,2019-04-30,Ward 11,Environment,Env56,Sp2 ST 800,ResGeneE,NA
+Isolate1171,Species1,2018-11-19,Ward 11,Environment,Env5,Sp1 NF,ResGeneB,NA
+Isolate1172,Species1,2019-01-08,Ward 11,Patient,P5,Sp1 ST 17,ResGeneB,NA
+Isolate1173,Species1,2019-12-13,Ward 11,Environment,Env12,Sp1 ST 78,ResGeneE,NA
+Isolate1174,Species1,2018-11-19,Ward 11,Environment,Env5,Sp1 NF,ResGeneB,NA
+Isolate1175,Species1,2019-01-08,Ward 11,Patient,P5,Sp1 ST 17,ResGeneB,NA
+Isolate1176,Species1,2019-12-13,Ward 11,Environment,Env12,Sp1 ST 78,ResGeneE,NA
+Isolate1177,Species1,2019-09-17,Ward 11,Environment,Env25,Sp1 NF,ResGeneC,NA
+Isolate1178,Species1,2019-09-20,Ward 11,Environment,Env27,Sp1 NF,ResGeneE,NA
+Isolate1179,Species1,2019-09-21,Ward 11,Patient,P12,Sp1 ST 78,ResGeneC,NA
+Isolate1180,Species2,2019-08-16,Ward 11,Environment,Env32,Sp2 ST 761,ResGeneC,NA
+Isolate1181,Species2,2019-09-21,Ward 11,Environment,Env48,Sp2 ST 17,ResGeneC,NA
+Isolate1182,Species2,2019-09-22,Ward 11,Environment,Env51,Sp2 ST 19,ResGeneC,NA
+Isolate1183,Species2,2019-04-30,Ward 11,Environment,Env56,Sp2 ST 800,ResGeneE,NA
+Isolate1184,Species1,2018-11-19,Ward 11,Environment,Env5,Sp1 NF,ResGeneB,NA
+Isolate1185,Species1,2019-01-08,Ward 11,Patient,P5,Sp1 ST 17,ResGeneB,NA
+Isolate1186,Species1,2019-12-13,Ward 11,Environment,Env12,Sp1 ST 78,ResGeneE,NA
+Isolate1187,Species1,2019-09-17,Ward 11,Environment,Env25,Sp1 NF,ResGeneC,NA
+Isolate1188,Species1,2019-09-20,Ward 11,Environment,Env27,Sp1 NF,ResGeneE,NA
+Isolate1189,Species1,2019-09-21,Ward 11,Patient,P12,Sp1 ST 78,ResGeneC,NA
+Isolate1190,Species2,2019-05-01,Ward 1,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate1191,Species1,2018-03-28,Ward 1,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate1192,Species1,2018-08-05,Ward 1,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate1193,Species1,2019-08-16,Ward 1,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate1194,Species1,2018-01-27,Ward 1,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate1195,Species1,2019-12-17,Ward 1,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate1196,Species1,2020-01-12,Ward 1,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate1197,Species1,2019-11-20,Ward 1,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate1198,Species1,2019-11-12,Ward 1,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate1199,Species1,2019-12-20,Ward 1,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate1200,Species2,2019-09-22,Ward 1,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate1201,Species2,2019-12-17,Ward 1,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate1202,Species2,2019-04-06,Ward 1,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate1203,Species2,2019-09-02,Ward 1,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate1204,Species2,2019-04-28,Ward 1,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate1205,Species2,2019-11-20,Ward 1,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate1206,Species2,2019-09-24,Ward 1,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate1207,Species2,2019-09-28,Ward 1,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate1208,Species2,2019-04-29,Ward 1,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate1209,Species2,2019-05-01,Ward 1,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate1210,Species1,2018-03-28,Ward 1,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate1211,Species1,2018-08-05,Ward 1,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate1212,Species1,2019-08-16,Ward 1,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate1213,Species1,2018-01-27,Ward 1,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate1214,Species1,2019-12-17,Ward 1,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate1215,Species1,2020-01-12,Ward 1,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate1216,Species1,2019-11-20,Ward 1,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate1217,Species1,2019-11-12,Ward 1,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate1218,Species1,2019-12-20,Ward 1,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate1219,Species2,2019-09-22,Ward 1,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate1220,Species2,2019-12-17,Ward 1,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate1221,Species2,2019-04-06,Ward 1,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate1222,Species2,2019-09-02,Ward 1,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate1223,Species2,2019-04-28,Ward 1,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate1224,Species2,2019-11-20,Ward 1,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate1225,Species2,2019-09-24,Ward 1,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate1226,Species2,2019-09-28,Ward 1,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate1227,Species2,2019-04-29,Ward 1,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate1228,Species2,2019-05-01,Ward 1,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate1229,Species1,2018-03-28,Ward 1,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate1230,Species1,2018-08-05,Ward 1,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate1231,Species1,2019-08-16,Ward 1,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate1232,Species1,2018-01-27,Ward 1,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate1233,Species1,2019-12-17,Ward 1,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate1234,Species1,2020-01-12,Ward 1,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate1235,Species1,2019-11-20,Ward 1,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate1236,Species1,2019-11-12,Ward 1,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate1237,Species1,2019-12-20,Ward 1,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate1238,Species2,2019-09-22,Ward 1,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate1239,Species2,2019-12-17,Ward 1,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate1240,Species2,2019-04-06,Ward 1,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate1241,Species2,2019-09-02,Ward 1,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate1242,Species2,2019-04-28,Ward 1,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate1243,Species2,2019-11-20,Ward 1,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate1244,Species2,2019-09-24,Ward 1,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate1245,Species2,2019-09-28,Ward 1,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate1246,Species2,2019-04-29,Ward 1,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate1247,Species2,2019-05-01,NA,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate1248,Species1,2018-03-28,NA,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate1249,Species1,2018-08-05,NA,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate1250,Species1,2019-08-16,NA,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate1251,Species1,2018-01-27,NA,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate1252,Species1,2019-12-17,NA,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate1253,Species1,2020-01-12,NA,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate1254,Species1,2019-11-20,NA,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate1255,Species1,2019-11-12,NA,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate1256,Species1,2019-12-20,NA,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate1257,Species2,2019-09-22,NA,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate1258,Species2,2019-12-17,NA,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate1259,Species2,2019-04-06,NA,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate1260,Species2,2019-09-02,NA,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate1261,Species2,2019-04-28,NA,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate1262,Species2,2019-11-20,NA,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate1263,Species2,2019-09-24,NA,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate1264,Species2,2019-09-28,NA,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate1265,Species2,2019-04-29,NA,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate1266,Species2,2019-05-01,NA,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate1267,Species1,2018-03-28,NA,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate1268,Species1,2018-08-05,NA,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate1269,Species1,2019-08-16,NA,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate1270,Species1,2018-01-27,NA,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate1271,Species1,2019-12-17,NA,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate1272,Species1,2020-01-12,NA,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate1273,Species1,2019-11-20,NA,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate1274,Species1,2019-11-12,NA,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate1275,Species1,2019-12-20,NA,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate1276,Species2,2019-09-22,NA,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate1277,Species2,2019-12-17,NA,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate1278,Species2,2019-04-06,NA,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate1279,Species2,2019-09-02,NA,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate1280,Species2,2019-04-28,NA,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate1281,Species2,2019-11-20,NA,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate1282,Species2,2019-09-24,NA,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate1283,Species2,2019-09-28,NA,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate1284,Species2,2019-04-29,NA,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate1285,Species2,2019-05-01,NA,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate1286,Species1,2018-03-28,NA,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate1287,Species1,2018-08-05,NA,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate1288,Species1,2019-08-16,NA,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate1289,Species1,2018-01-27,NA,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate1290,Species1,2019-12-17,NA,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate1291,Species1,2020-01-12,NA,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate1292,Species1,2019-11-20,NA,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate1293,Species1,2019-11-12,NA,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate1294,Species1,2019-12-20,NA,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate1295,Species2,2019-09-22,NA,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate1296,Species2,2019-12-17,NA,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate1297,Species2,2019-04-06,NA,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate1298,Species2,2019-09-02,NA,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate1299,Species2,2019-04-28,NA,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate1300,Species2,2019-11-20,NA,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate1301,Species2,2019-09-24,NA,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate1302,Species2,2019-09-28,NA,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate1303,Species2,2019-04-29,NA,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate1304,Species2,2019-05-01,NA,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate1305,Species1,2018-03-28,NA,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate1306,Species1,2018-08-05,NA,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate1307,Species1,2019-08-16,NA,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate1308,Species1,2018-01-27,NA,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate1309,Species1,2019-12-17,NA,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate1310,Species1,2020-01-12,NA,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate1311,Species1,2019-11-20,NA,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate1312,Species1,2019-11-12,NA,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate1313,Species1,2019-12-20,NA,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate1314,Species2,2019-09-22,NA,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate1315,Species2,2019-12-17,NA,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate1316,Species2,2019-04-06,NA,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate1317,Species2,2019-09-02,NA,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate1318,Species2,2019-04-28,NA,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate1319,Species2,2019-11-20,NA,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate1320,Species2,2019-09-24,NA,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate1321,Species2,2019-09-28,NA,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate1322,Species2,2019-04-29,NA,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate1323,Species2,2019-05-01,NA,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate1324,Species1,2018-03-28,NA,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate1325,Species1,2018-08-05,NA,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate1326,Species1,2019-08-16,Ward 4,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate1327,Species1,2018-01-27,Ward 4,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate1328,Species1,2019-12-17,Ward 4,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate1329,Species1,2020-01-12,Ward 4,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate1330,Species1,2019-11-20,Ward 4,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate1331,Species1,2019-11-12,Ward 4,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate1332,Species1,2019-12-20,Ward 4,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate1333,Species2,2019-09-22,Ward 4,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate1334,Species2,2019-12-17,Ward 4,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate1335,Species2,2019-04-06,Ward 4,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate1336,Species2,2019-09-02,Ward 4,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate1337,Species2,2019-04-28,Ward 4,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate1338,Species2,2019-11-20,Ward 4,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate1339,Species2,2019-09-24,Ward 4,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate1340,Species2,2019-09-28,Ward 4,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate1341,Species2,2019-04-29,Ward 4,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate1342,Species2,2019-05-01,Ward 4,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate1343,Species1,2018-03-28,Ward 4,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate1344,Species1,2018-08-05,Ward 4,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate1345,Species1,2019-08-16,Ward 4,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate1346,Species1,2018-01-27,Ward 4,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate1347,Species1,2019-12-17,Ward 4,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate1348,Species1,2020-01-12,Ward 4,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate1349,Species1,2019-11-20,Ward 4,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate1350,Species1,2019-11-12,Ward 4,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate1351,Species1,2019-12-20,Ward 4,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate1352,Species2,2019-09-22,Ward 4,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate1353,Species2,2019-12-17,Ward 4,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate1354,Species2,2019-04-06,Ward 4,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate1355,Species2,2019-09-02,Ward 4,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate1356,Species2,2019-04-28,Ward 4,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate1357,Species2,2019-11-20,Ward 4,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate1358,Species2,2019-09-24,Ward 4,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate1359,Species2,2019-09-28,Ward 4,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate1360,Species2,2019-04-29,Ward 4,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate1361,Species2,2019-05-01,Ward 4,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate1362,Species1,2018-03-28,Ward 4,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate1363,Species1,2018-08-05,NA,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate1364,Species1,2019-08-16,NA,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate1365,Species1,2018-01-27,NA,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate1366,Species1,2019-12-17,NA,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate1367,Species1,2020-01-12,NA,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate1368,Species1,2019-11-20,NA,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate1369,Species1,2019-11-12,NA,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate1370,Species1,2019-12-20,NA,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate1371,Species2,2019-09-22,NA,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate1372,Species2,2019-12-17,NA,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate1373,Species2,2019-04-06,NA,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate1374,Species2,2019-09-02,Ward 5,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate1375,Species2,2019-04-28,Ward 5,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate1376,Species2,2019-11-20,Ward 5,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate1377,Species2,2019-09-24,Ward 5,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate1378,Species2,2019-09-28,Ward 5,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate1379,Species2,2019-04-29,Ward 5,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate1380,Species2,2019-05-01,Ward 5,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate1381,Species1,2018-03-28,Ward 5,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate1382,Species1,2018-08-05,Ward 5,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate1383,Species1,2019-08-16,Ward 5,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate1384,Species2,2019-05-01,Ward 1,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate1385,Species1,2018-03-28,Ward 1,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate1386,Species1,2018-08-05,Ward 1,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate1387,Species1,2019-08-16,Ward 1,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate1388,Species1,2018-01-27,Ward 1,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate1389,Species1,2019-12-17,Ward 1,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate1390,Species1,2020-01-12,Ward 1,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate1391,Species1,2019-11-20,Ward 1,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate1392,Species1,2019-11-12,Ward 1,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate1393,Species1,2019-12-20,Ward 1,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate1394,Species2,2019-09-22,Ward 1,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate1395,Species2,2019-12-17,Ward 1,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate1396,Species2,2019-04-06,Ward 1,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate1397,Species2,2019-09-02,Ward 1,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate1398,Species2,2019-04-28,Ward 1,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate1399,Species2,2019-11-20,Ward 1,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate1400,Species2,2019-09-24,Ward 1,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate1401,Species2,2019-09-28,Ward 1,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate1402,Species2,2019-04-29,Ward 1,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate1403,Species2,2019-05-01,Ward 1,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate1404,Species1,2018-03-28,Ward 1,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate1405,Species1,2018-08-05,Ward 1,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate1406,Species1,2019-08-16,Ward 1,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate1407,Species1,2018-01-27,Ward 1,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate1408,Species1,2019-12-17,Ward 1,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate1409,Species1,2020-01-12,Ward 1,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate1410,Species1,2019-11-20,Ward 1,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate1411,Species1,2019-11-12,Ward 1,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate1412,Species1,2019-12-20,Ward 1,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate1413,Species2,2019-09-22,Ward 1,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate1414,Species2,2019-12-17,Ward 1,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate1415,Species2,2019-04-06,Ward 1,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate1416,Species2,2019-09-02,Ward 1,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate1417,Species2,2019-04-28,Ward 1,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate1418,Species2,2019-11-20,Ward 1,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate1419,Species2,2019-09-24,Ward 1,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate1420,Species2,2019-09-28,Ward 1,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate1421,Species2,2019-04-29,Ward 1,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate1422,Species2,2019-05-01,Ward 1,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate1423,Species1,2018-03-28,Ward 1,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate1424,Species1,2018-08-05,Ward 1,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate1425,Species1,2019-08-16,Ward 1,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate1426,Species1,2018-01-27,Ward 1,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate1427,Species1,2019-12-17,Ward 1,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate1428,Species1,2020-01-12,Ward 1,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate1429,Species1,2019-11-20,Ward 1,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate1430,Species1,2019-11-12,Ward 1,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate1431,Species1,2019-12-20,Ward 1,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate1432,Species2,2019-09-22,Ward 1,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate1433,Species2,2019-12-17,Ward 1,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate1434,Species2,2019-04-06,Ward 1,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate1435,Species2,2019-09-02,Ward 1,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate1436,Species2,2019-04-28,Ward 1,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate1437,Species2,2019-11-20,Ward 1,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate1438,Species2,2019-09-24,Ward 1,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate1439,Species2,2019-09-28,Ward 1,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate1440,Species2,2019-04-29,Ward 1,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate1441,Species2,2019-05-01,NA,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate1442,Species1,2018-03-28,NA,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate1443,Species1,2018-08-05,NA,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate1444,Species1,2019-08-16,NA,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate1445,Species1,2018-01-27,NA,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate1446,Species1,2019-12-17,NA,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate1447,Species1,2020-01-12,NA,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate1448,Species1,2019-11-20,NA,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate1449,Species1,2019-11-12,NA,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate1450,Species1,2019-12-20,NA,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate1451,Species2,2019-09-22,NA,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate1452,Species2,2019-12-17,NA,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate1453,Species2,2019-04-06,NA,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate1454,Species2,2019-09-02,NA,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate1455,Species2,2019-04-28,NA,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate1456,Species2,2019-11-20,NA,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate1457,Species2,2019-09-24,NA,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate1458,Species2,2019-09-28,NA,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate1459,Species2,2019-04-29,NA,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate1460,Species2,2019-05-01,NA,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate1461,Species1,2018-03-28,NA,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate1462,Species1,2018-08-05,NA,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate1463,Species1,2019-08-16,NA,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate1464,Species1,2018-01-27,NA,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate1465,Species1,2019-12-17,NA,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate1466,Species1,2020-01-12,NA,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate1467,Species1,2019-11-20,NA,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate1468,Species1,2019-11-12,NA,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate1469,Species1,2019-12-20,NA,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate1470,Species2,2019-09-22,NA,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate1471,Species2,2019-12-17,NA,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate1472,Species2,2019-04-06,NA,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate1473,Species2,2019-09-02,NA,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate1474,Species2,2019-04-28,NA,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate1475,Species2,2019-11-20,NA,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate1476,Species2,2019-09-24,NA,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate1477,Species2,2019-09-28,NA,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate1478,Species2,2019-04-29,NA,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate1479,Species2,2019-05-01,NA,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate1480,Species1,2018-03-28,NA,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate1481,Species1,2018-08-05,NA,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate1482,Species1,2019-08-16,NA,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate1483,Species1,2018-01-27,NA,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate1484,Species1,2019-12-17,NA,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate1485,Species1,2020-01-12,NA,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate1486,Species1,2019-11-20,NA,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate1487,Species1,2019-11-12,NA,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate1488,Species1,2019-12-20,NA,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate1489,Species2,2019-09-22,NA,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate1490,Species2,2019-12-17,NA,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate1491,Species2,2019-04-06,NA,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate1492,Species2,2019-09-02,NA,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate1493,Species2,2019-04-28,NA,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate1494,Species2,2019-11-20,NA,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate1495,Species2,2019-09-24,NA,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate1496,Species2,2019-09-28,NA,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate1497,Species2,2019-04-29,NA,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate1498,Species2,2019-05-01,NA,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate1499,Species1,2018-03-28,NA,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate1500,Species1,2018-08-05,NA,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate1501,Species1,2019-08-16,NA,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate1502,Species1,2018-01-27,NA,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate1503,Species1,2019-12-17,NA,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate1504,Species1,2020-01-12,NA,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate1505,Species1,2019-11-20,NA,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate1506,Species1,2019-11-12,NA,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate1507,Species1,2019-12-20,NA,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate1508,Species2,2019-09-22,NA,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate1509,Species2,2019-12-17,NA,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate1510,Species2,2019-04-06,NA,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate1511,Species2,2019-09-02,NA,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate1512,Species2,2019-04-28,NA,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate1513,Species2,2019-11-20,NA,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate1514,Species2,2019-09-24,NA,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate1515,Species2,2019-09-28,NA,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate1516,Species2,2019-04-29,NA,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate1517,Species2,2019-05-01,NA,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate1518,Species1,2018-03-28,NA,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate1519,Species1,2018-08-05,NA,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate1520,Species1,2019-08-16,Ward 4,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate1521,Species1,2018-01-27,Ward 4,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate1522,Species1,2019-12-17,Ward 4,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate1523,Species1,2020-01-12,Ward 4,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate1524,Species1,2019-11-20,Ward 4,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate1525,Species1,2019-11-12,Ward 4,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate1526,Species1,2019-12-20,Ward 4,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate1527,Species2,2019-09-22,Ward 4,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate1528,Species2,2019-12-17,Ward 4,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate1529,Species2,2019-04-06,Ward 4,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate1530,Species2,2019-09-02,Ward 4,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate1531,Species2,2019-04-28,Ward 4,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate1532,Species2,2019-11-20,Ward 4,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate1533,Species2,2019-09-24,Ward 4,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate1534,Species2,2019-09-28,Ward 4,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate1535,Species2,2019-04-29,Ward 4,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate1536,Species2,2019-05-01,Ward 4,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate1537,Species1,2018-03-28,Ward 4,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate1538,Species1,2018-08-05,Ward 4,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate1539,Species1,2019-08-16,Ward 4,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate1540,Species1,2018-01-27,Ward 4,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate1541,Species1,2019-12-17,Ward 4,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate1542,Species1,2020-01-12,Ward 4,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate1543,Species1,2019-11-20,Ward 4,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate1544,Species1,2019-11-12,Ward 4,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate1545,Species1,2019-12-20,Ward 4,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate1546,Species2,2019-09-22,Ward 4,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate1547,Species2,2019-12-17,Ward 4,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate1548,Species2,2019-04-06,Ward 4,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate1549,Species2,2019-09-02,Ward 4,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate1550,Species2,2019-04-28,Ward 4,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate1551,Species2,2019-11-20,Ward 4,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate1552,Species2,2019-09-24,Ward 4,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate1553,Species2,2019-09-28,Ward 4,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate1554,Species2,2019-04-29,Ward 4,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate1555,Species2,2019-05-01,Ward 4,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate1556,Species1,2018-03-28,Ward 4,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate1557,Species1,2018-08-05,NA,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate1558,Species1,2019-08-16,NA,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate1559,Species1,2018-01-27,NA,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate1560,Species1,2019-12-17,NA,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate1561,Species1,2020-01-12,NA,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate1562,Species1,2019-11-20,NA,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate1563,Species1,2019-11-12,NA,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate1564,Species1,2019-12-20,NA,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate1565,Species2,2019-09-22,NA,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate1566,Species2,2019-12-17,NA,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate1567,Species2,2019-04-06,NA,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate1568,Species2,2019-09-02,Ward 5,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate1569,Species2,2019-04-28,Ward 5,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate1570,Species2,2019-11-20,Ward 5,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate1571,Species2,2019-09-24,Ward 5,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate1572,Species2,2019-09-28,Ward 5,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate1573,Species2,2019-04-29,Ward 5,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate1574,Species2,2019-05-01,Ward 5,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate1575,Species1,2018-03-28,Ward 5,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate1576,Species1,2018-08-05,Ward 5,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate1577,Species1,2019-08-16,Ward 5,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate1578,Species2,2019-05-01,Ward 7,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate1579,Species1,2018-03-28,Ward 7,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate1580,Species1,2018-08-05,Ward 7,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate1581,Species1,2019-08-16,Ward 7,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate1582,Species1,2018-01-27,Ward 7,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate1583,Species1,2019-12-17,Ward 7,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate1584,Species1,2020-01-12,Ward 7,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate1585,Species1,2019-11-20,Ward 7,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate1586,Species1,2019-11-12,Ward 7,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate1587,Species1,2019-12-20,Ward 7,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate1588,Species2,2019-09-22,NA,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate1589,Species2,2019-12-17,NA,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate1590,Species2,2019-04-06,Ward 9,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate1591,Species2,2019-09-02,Ward 9,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate1592,Species2,2019-04-28,Ward 9,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate1593,Species2,2019-11-20,Ward 9,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate1594,Species2,2019-09-24,Ward 9,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate1595,Species2,2019-09-28,Ward 9,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate1596,Species2,2019-04-29,Ward 9,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate1597,Species2,2019-05-01,Ward 9,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate1598,Species1,2018-03-28,Ward 9,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate1599,Species1,2018-08-05,Ward 9,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate1600,Species1,2019-08-16,Ward 9,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate1601,Species1,2018-01-27,Ward 9,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate1602,Species1,2019-12-17,Ward 9,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate1603,Species1,2020-01-12,Ward 9,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate1604,Species1,2019-11-20,Ward 9,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate1605,Species1,2019-11-12,Ward 9,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate1606,Species1,2019-12-20,Ward 9,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate1607,Species2,2019-09-22,Ward 9,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate1608,Species2,2019-12-17,Ward 9,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate1609,Species2,2019-04-06,Ward 9,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate1610,Species2,2019-09-02,Ward 9,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate1611,Species2,2019-04-28,Ward 9,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate1612,Species2,2019-11-20,Ward 9,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate1613,Species2,2019-09-24,Ward 9,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate1614,Species2,2019-09-28,Ward 9,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate1615,Species2,2019-04-29,Ward 9,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate1616,Species2,2019-05-01,Ward 9,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate1617,Species1,2018-03-28,Ward 9,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate1618,Species1,2018-08-05,Ward 9,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate1619,Species1,2019-08-16,Ward 9,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate1620,Species1,2018-01-27,Ward 9,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate1621,Species1,2019-12-17,Ward 9,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate1622,Species1,2020-01-12,Ward 9,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate1623,Species1,2019-11-20,Ward 9,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate1624,Species1,2019-11-12,Ward 9,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate1625,Species1,2019-12-20,Ward 9,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate1626,Species2,2019-09-22,Ward 9,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate1627,Species2,2019-12-17,Ward 9,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate1628,Species2,2019-04-06,NA,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate1629,Species2,2019-09-02,NA,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate1630,Species2,2019-04-28,NA,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate1631,Species2,2019-11-20,NA,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate1632,Species2,2019-09-24,NA,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate1633,Species2,2019-09-28,NA,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate1634,Species2,2019-04-29,NA,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate1635,Species2,2019-05-01,NA,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate1636,Species1,2018-03-28,NA,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate1637,Species1,2018-08-05,NA,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate1638,Species1,2019-08-16,NA,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate1639,Species1,2018-01-27,NA,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate1640,Species1,2019-12-17,NA,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate1641,Species1,2020-01-12,NA,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate1642,Species1,2019-11-20,NA,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate1643,Species1,2019-11-12,NA,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate1644,Species1,2019-12-20,NA,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate1645,Species2,2019-09-22,NA,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate1646,Species2,2019-12-17,NA,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate1647,Species2,2019-04-06,NA,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate1648,Species2,2019-09-02,NA,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate1649,Species2,2019-04-28,NA,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate1650,Species2,2019-11-20,Ward 35,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate1651,Species2,2019-09-24,Ward 35,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate1652,Species2,2019-09-28,Ward 35,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate1653,Species2,2019-04-29,Ward 35,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate1654,Species2,2019-05-01,Ward 35,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate1655,Species1,2018-03-28,Ward 35,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate1656,Species1,2018-08-05,Ward 35,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate1657,Species1,2019-08-16,Ward 35,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate1658,Species1,2018-01-27,Ward 35,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate1659,Species1,2019-12-17,Ward 35,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate1660,Species1,2020-01-12,Ward 35,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate1661,Species1,2019-11-20,Ward 35,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate1662,Species1,2019-11-12,Ward 35,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate1663,Species1,2019-12-20,Ward 35,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate1664,Species2,2019-09-22,Ward 35,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate1665,Species2,2019-12-17,Ward 35,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate1666,Species2,2019-04-06,Ward 35,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate1667,Species2,2019-09-02,Ward 35,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate1668,Species2,2019-04-28,Ward 35,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate1669,Species2,2019-11-20,Ward 35,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate1670,Species2,2019-09-24,Ward 35,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate1671,Species2,2019-09-28,Ward 35,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate1672,Species2,2019-04-29,Ward 35,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate1673,Species2,2019-05-01,Ward 35,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate1674,Species1,2018-03-28,Ward 35,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate1675,Species1,2018-08-05,Ward 35,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate1676,Species1,2019-08-16,Ward 35,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate1677,Species1,2018-01-27,Ward 35,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate1678,Species1,2019-12-17,Ward 35,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate1679,Species1,2020-01-12,Ward 35,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate1680,Species1,2019-11-20,Ward 35,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate1681,Species1,2019-11-12,Ward 35,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate1682,Species1,2019-12-20,NA,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate1683,Species2,2019-09-22,NA,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate1684,Species2,2019-12-17,NA,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate1685,Species2,2019-04-06,NA,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate1686,Species2,2019-09-02,NA,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate1687,Species2,2019-04-28,NA,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate1688,Species2,2019-11-20,NA,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate1689,Species2,2019-09-24,NA,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate1690,Species2,2019-09-02,Ward 5,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate1691,Species2,2019-04-28,Ward 5,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate1692,Species2,2019-11-20,Ward 5,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate1693,Species2,2019-09-24,Ward 5,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate1694,Species2,2019-09-28,Ward 5,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate1695,Species2,2019-04-29,Ward 5,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate1696,Species2,2019-05-01,Ward 5,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate1697,Species1,2018-03-28,Ward 5,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate1698,Species1,2018-08-05,Ward 5,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate1699,Species1,2019-08-16,Ward 5,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate1700,Species2,2019-05-01,Ward 7,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate1701,Species1,2018-03-28,Ward 7,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate1702,Species1,2018-08-05,Ward 7,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate1703,Species1,2019-08-16,Ward 7,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate1704,Species1,2018-01-27,Ward 7,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate1705,Species1,2019-12-17,Ward 7,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate1706,Species1,2020-01-12,Ward 7,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate1707,Species1,2019-11-20,Ward 7,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate1708,Species1,2019-11-12,Ward 7,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate1709,Species1,2019-12-20,Ward 7,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate1710,Species2,2019-09-22,NA,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate1711,Species2,2019-12-17,NA,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate1712,Species2,2019-09-02,Ward 5,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate1713,Species2,2019-04-28,Ward 5,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate1714,Species2,2019-11-20,Ward 5,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate1715,Species2,2019-09-24,Ward 5,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate1716,Species2,2019-09-28,Ward 5,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate1717,Species2,2019-04-29,Ward 5,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate1718,Species2,2019-05-01,Ward 5,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate1719,Species1,2018-03-28,Ward 5,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate1720,Species1,2018-08-05,Ward 5,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate1721,Species1,2019-08-16,Ward 5,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate1722,Species1,2018-01-27,Ward 5,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate1723,Species1,2019-12-17,Ward 5,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate1724,Species1,2020-01-12,Ward 5,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate1725,Species1,2019-11-20,Ward 5,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate1726,Species1,2019-11-12,Ward 5,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate1727,Species1,2019-12-20,Ward 5,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate1728,Species2,2019-09-22,Ward 5,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate1729,Species2,2019-12-17,Ward 5,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate1730,Species2,2019-04-06,Ward 5,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate1731,Species2,2019-09-02,Ward 5,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate1732,Species2,2019-04-28,Ward 5,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate1733,Species2,2019-11-20,Ward 5,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate1734,Species2,2019-09-24,Ward 5,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate1735,Species2,2019-09-28,Ward 5,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate1736,Species2,2019-04-29,Ward 5,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate1737,Species2,2019-05-01,Ward 5,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate1738,Species1,2018-03-28,Ward 5,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate1739,Species1,2018-08-05,Ward 5,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate1740,Species1,2019-08-16,Ward 5,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate1741,Species1,2018-01-27,Ward 5,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate1742,Species1,2019-12-17,Ward 5,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate1743,Species1,2020-01-12,Ward 5,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate1744,Species1,2019-11-20,Ward 5,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate1745,Species1,2019-11-12,Ward 5,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate1746,Species1,2019-12-20,Ward 5,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate1747,Species2,2019-09-22,Ward 5,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate1748,Species2,2019-12-17,Ward 5,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate1749,Species2,2019-04-06,Ward 5,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate1750,Species2,2019-09-02,Ward 5,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate1751,Species2,2019-04-28,Ward 5,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate1752,Species2,2019-11-20,Ward 5,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate1753,Species2,2019-09-24,Ward 5,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate1754,Species2,2019-09-28,Ward 5,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate1755,Species2,2019-04-29,Ward 5,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate1756,Species2,2019-05-01,Ward 5,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate1757,Species1,2018-03-28,Ward 5,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate1758,Species1,2018-08-05,Ward 5,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate1759,Species1,2019-08-16,Ward 5,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate1760,Species1,2018-01-27,Ward 5,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate1761,Species1,2019-12-17,Ward 5,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate1762,Species1,2020-01-12,NA,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate1763,Species1,2019-11-20,NA,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate1764,Species1,2019-11-12,NA,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate1765,Species1,2019-12-20,NA,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate1766,Species2,2019-09-22,NA,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate1767,Species2,2019-12-17,NA,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate1768,Species2,2019-04-06,NA,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate1769,Species2,2019-09-02,NA,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate1770,Species2,2019-04-28,NA,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate1771,Species2,2019-11-20,NA,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate1772,Species2,2019-09-24,NA,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate1773,Species2,2019-09-28,NA,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate1774,Species2,2019-04-29,NA,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate1775,Species2,2019-05-01,NA,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate1776,Species1,2018-03-28,NA,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate1777,Species1,2018-08-05,NA,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate1778,Species1,2019-08-16,NA,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate1779,Species1,2018-01-27,NA,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate1780,Species1,2019-12-17,NA,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate1781,Species1,2020-01-12,NA,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate1782,Species1,2019-11-20,NA,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate1783,Species1,2019-11-12,NA,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate1784,Species1,2019-12-20,NA,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate1785,Species2,2019-09-22,NA,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate1786,Species2,2019-12-17,NA,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate1787,Species2,2019-04-06,NA,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate1788,Species2,2019-09-02,NA,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate1789,Species2,2019-04-28,NA,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate1790,Species2,2019-11-20,NA,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate1791,Species2,2019-09-24,NA,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate1792,Species2,2019-09-28,NA,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate1793,Species2,2019-04-29,NA,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate1794,Species2,2019-05-01,Ward 6,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate1795,Species1,2018-03-28,Ward 6,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate1796,Species1,2018-08-05,Ward 6,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate1797,Species1,2019-08-16,Ward 6,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate1798,Species1,2018-01-27,Ward 6,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate1799,Species1,2019-12-17,Ward 6,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate1800,Species1,2020-01-12,Ward 6,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate1801,Species1,2019-11-20,Ward 6,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate1802,Species1,2019-11-12,Ward 6,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate1803,Species1,2019-12-20,Ward 6,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate1804,Species2,2019-09-22,Ward 6,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate1805,Species2,2019-12-17,Ward 6,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate1806,Species2,2019-04-06,Ward 6,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate1807,Species2,2019-09-02,Ward 6,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate1808,Species2,2019-04-28,Ward 6,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate1809,Species2,2019-11-20,Ward 6,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate1810,Species2,2019-09-24,Ward 6,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate1811,Species2,2019-09-28,Ward 6,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate1812,Species2,2019-04-29,Ward 6,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate1813,Species2,2019-05-01,Ward 6,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate1814,Species1,2018-03-28,Ward 6,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate1815,Species1,2018-08-05,Ward 6,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate1816,Species1,2019-08-16,Ward 6,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate1817,Species1,2018-01-27,Ward 6,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate1818,Species1,2019-12-17,Ward 6,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate1819,Species1,2020-01-12,Ward 6,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate1820,Species1,2019-11-20,Ward 6,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate1821,Species1,2019-11-12,Ward 6,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate1822,Species1,2019-12-20,Ward 6,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate1823,Species2,2019-09-22,Ward 6,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate1824,Species2,2019-12-17,Ward 6,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate1825,Species2,2019-04-06,Ward 6,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate1826,Species2,2019-09-02,Ward 6,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate1827,Species2,2019-04-28,Ward 6,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate1828,Species2,2019-11-20,Ward 6,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate1829,Species2,2019-09-24,Ward 6,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate1830,Species2,2019-09-28,Ward 6,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate1831,Species2,2019-04-29,Ward 6,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate1832,Species2,2019-05-01,Ward 6,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate1833,Species1,2018-03-28,Ward 6,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate1834,Species1,2018-08-05,Ward 6,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate1835,Species1,2019-08-16,Ward 6,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate1836,Species1,2018-01-27,Ward 6,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate1837,Species1,2019-12-17,Ward 6,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate1838,Species1,2020-01-12,Ward 6,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate1839,Species1,2019-11-20,Ward 6,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate1840,Species1,2019-11-12,Ward 6,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate1841,Species1,2019-12-20,Ward 6,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate1842,Species2,2019-09-22,Ward 6,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate1843,Species2,2019-12-17,Ward 6,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate1844,Species2,2019-04-06,Ward 6,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate1845,Species2,2019-09-02,Ward 6,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate1846,Species2,2019-04-28,Ward 6,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate1847,Species2,2019-11-20,Ward 6,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate1848,Species1,2019-12-20,NA,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate1849,Species2,2019-09-22,NA,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate1850,Species2,2019-12-17,NA,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate1851,Species2,2019-04-06,NA,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate1852,Species2,2019-09-02,NA,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate1853,Species2,2019-04-28,NA,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate1854,Species2,2019-11-20,NA,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate1855,Species2,2019-09-24,NA,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate1856,Species2,2019-09-02,Ward 5,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate1857,Species2,2019-04-28,Ward 5,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate1858,Species2,2019-11-20,Ward 5,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate1859,Species2,2019-09-24,Ward 5,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate1860,Species2,2019-09-28,Ward 5,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate1861,Species2,2019-04-29,Ward 5,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate1862,Species2,2019-05-01,Ward 5,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate1863,Species1,2018-03-28,Ward 5,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate1864,Species1,2018-08-05,Ward 5,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate1865,Species1,2019-08-16,Ward 5,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate1866,Species2,2019-05-01,Ward 7,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate1867,Species1,2018-03-28,Ward 7,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate1868,Species1,2018-08-05,Ward 7,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate1869,Species1,2019-08-16,Ward 7,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate1870,Species1,2018-01-27,Ward 7,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate1871,Species1,2019-12-17,Ward 7,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate1872,Species1,2020-01-12,Ward 7,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate1873,Species1,2019-11-20,Ward 7,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate1874,Species1,2019-11-12,Ward 7,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate1875,Species1,2019-12-20,Ward 7,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate1876,Species2,2019-09-22,NA,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate1877,Species2,2019-12-17,NA,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate1878,Species2,2019-09-02,Ward 5,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate1879,Species2,2019-04-28,Ward 5,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate1880,Species2,2019-11-20,Ward 5,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate1881,Species2,2019-09-24,Ward 5,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate1882,Species2,2019-09-28,Ward 5,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate1883,Species2,2019-04-29,Ward 5,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate1884,Species2,2019-05-01,Ward 5,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate1885,Species1,2018-03-28,Ward 5,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate1886,Species1,2018-08-05,Ward 5,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate1887,Species1,2019-08-16,Ward 5,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate1888,Species1,2018-01-27,Ward 5,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate1889,Species1,2019-12-17,Ward 5,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate1890,Species1,2020-01-12,Ward 5,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate1891,Species1,2019-11-20,Ward 5,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate1892,Species1,2019-11-12,Ward 5,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate1893,Species1,2019-12-20,Ward 5,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate1894,Species2,2019-09-22,Ward 5,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate1895,Species2,2019-12-17,Ward 5,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate1896,Species2,2019-04-06,Ward 5,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate1897,Species2,2019-09-02,Ward 5,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate1898,Species2,2019-04-28,Ward 5,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate1899,Species2,2019-11-20,Ward 5,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate1900,Species2,2019-09-24,Ward 5,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate1901,Species2,2019-09-28,Ward 5,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate1902,Species2,2019-04-29,Ward 5,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate1903,Species2,2019-05-01,Ward 5,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate1904,Species1,2018-03-28,Ward 5,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate1905,Species1,2018-08-05,Ward 5,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate1906,Species1,2019-08-16,Ward 5,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate1907,Species2,2019-05-01,Ward 5,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate1908,Species1,2018-03-28,Ward 5,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate1909,Species1,2018-08-05,Ward 5,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate1910,Species1,2019-08-16,Ward 5,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate1911,Species1,2018-01-27,Ward 5,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate1912,Species1,2019-12-17,Ward 5,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate1913,Species1,2020-01-12,Ward 5,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate1914,Species1,2019-11-20,Ward 5,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate1915,Species1,2019-11-12,Ward 5,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate1916,Species1,2019-12-20,Ward 5,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate1917,Species2,2019-09-22,Ward 5,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate1918,Species2,2019-12-17,Ward 5,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate1919,Species2,2019-04-06,Ward 5,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate1920,Species2,2019-09-02,Ward 5,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate1921,Species2,2019-04-28,Ward 5,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate1922,Species2,2019-11-20,Ward 5,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate1923,Species2,2019-09-24,Ward 5,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate1924,Species2,2019-09-28,Ward 5,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate1925,Species2,2019-04-29,Ward 5,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate1926,Species2,2019-05-01,Ward 5,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate1927,Species1,2018-03-28,Ward 5,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate1928,Species1,2018-08-05,Ward 5,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate1929,Species1,2019-08-16,Ward 5,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate1930,Species1,2018-01-27,Ward 5,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate1931,Species1,2019-12-17,Ward 5,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate1932,Species1,2020-01-12,NA,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate1933,Species1,2019-11-20,NA,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate1934,Species1,2019-11-12,NA,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate1935,Species1,2019-12-20,NA,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate1936,Species2,2019-09-22,NA,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate1937,Species2,2019-12-17,NA,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate1938,Species2,2019-04-06,NA,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate1939,Species1,2018-03-28,Ward 5,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate1940,Species1,2018-08-05,Ward 5,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate1941,Species1,2019-08-16,Ward 5,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate1942,Species2,2019-05-01,Ward 7,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate1943,Species1,2018-03-28,Ward 7,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate1944,Species1,2018-08-05,Ward 7,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate1945,Species1,2019-08-16,Ward 7,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate1946,Species1,2018-01-27,Ward 7,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate1947,Species1,2019-12-17,Ward 7,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate1948,Species1,2020-01-12,Ward 7,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate1949,Species1,2019-11-20,Ward 7,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate1950,Species1,2019-11-12,Ward 7,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate1951,Species1,2019-12-20,Ward 7,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate1952,Species2,2019-09-22,NA,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate1953,Species2,2019-12-17,NA,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate1954,Species2,2019-09-02,Ward 5,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate1955,Species2,2019-04-28,Ward 5,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate1956,Species2,2019-11-20,Ward 5,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate1957,Species2,2019-09-24,Ward 5,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate1958,Species2,2019-09-28,Ward 5,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate1959,Species2,2019-04-29,Ward 5,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate1960,Species2,2019-05-01,Ward 5,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate1961,Species1,2018-03-28,Ward 5,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate1962,Species1,2018-08-05,Ward 5,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate1963,Species1,2019-08-16,Ward 5,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate1964,Species1,2018-01-27,Ward 5,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate1965,Species1,2019-12-17,Ward 5,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate1966,Species1,2020-01-12,Ward 5,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate1967,Species1,2019-11-20,Ward 5,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate1968,Species1,2019-11-12,Ward 5,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate1969,Species1,2019-12-20,Ward 5,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate1970,Species2,2019-09-22,Ward 5,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate1971,Species2,2019-12-17,Ward 5,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate1972,Species2,2019-04-06,Ward 5,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate1973,Species2,2019-09-02,Ward 5,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate1974,Species1,2019-11-12,NA,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate1975,Species1,2019-12-20,NA,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate1976,Species2,2019-09-22,NA,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate1977,Species2,2019-12-17,NA,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate1978,Species2,2019-04-06,NA,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate1979,Species2,2019-09-02,NA,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate1980,Species2,2019-04-28,NA,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate1981,Species2,2019-11-20,Ward 35,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate1982,Species2,2019-09-24,Ward 35,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate1983,Species2,2019-09-28,Ward 35,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate1984,Species2,2019-04-29,Ward 35,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate1985,Species2,2019-05-01,Ward 35,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate1986,Species1,2018-03-28,Ward 35,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate1987,Species1,2018-08-05,Ward 35,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate1988,Species1,2019-08-16,Ward 35,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate1989,Species1,2018-01-27,Ward 35,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate1990,Species1,2019-12-17,Ward 35,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate1991,Species1,2020-01-12,Ward 35,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate1992,Species1,2019-11-20,Ward 35,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate1993,Species1,2019-11-12,Ward 35,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate1994,Species1,2019-12-20,Ward 35,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate1995,Species2,2019-09-22,Ward 35,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate1996,Species2,2019-12-17,Ward 35,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate1997,Species2,2019-04-06,Ward 35,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate1998,Species2,2019-09-02,Ward 35,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate1999,Species2,2019-04-28,Ward 35,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate2000,Species2,2019-11-20,Ward 35,Others,NA,Sp2 ST 19,ResGeneE,NA

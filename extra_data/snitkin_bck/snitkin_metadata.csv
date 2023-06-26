@@ -1,0 +1,19 @@
+isolate_name,isolate_species,isolate_sourceName,isolate_sourceType,isolate_colDate,isolate_colLocation,profile_1,profile_2,profile_3
+Isolate_P1,Klebsiella pneumonia,1,Patient sample,2011-06-14,ICU,null,null,null
+Isolate_P2,Klebsiella pneumonia,2,Patient sample,2011-08-05,ICU,null,null,null
+Isolate_P3,Klebsiella pneumonia,3,Patient sample,2011-08-15,ICU,null,null,null
+Isolate_P4,Klebsiella pneumonia,4,Patient sample,2011-08-23,ICU,null,null,null
+Isolate_P5,Klebsiella pneumonia,5,Patient sample,2011-08-29,ICU,null,null,null
+Isolate_P6,Klebsiella pneumonia,6,Patient sample,2011-09-15,ICU,null,null,null
+Isolate_P7,Klebsiella pneumonia,7,Patient sample,2011-09-19,ICU,null,null,null
+Isolate_P8,Klebsiella pneumonia,8,Patient sample,2011-09-22,Ward B,null,null,null
+Isolate_P9,Klebsiella pneumonia,9,Patient sample,2011-09-26,ICU,null,null,null
+Isolate_P10,Klebsiella pneumonia,10,Patient sample,2011-10-06,ICU,null,null,null
+Isolate_P11,Klebsiella pneumonia,11,Patient sample,2011-10-17,ICU,null,null,null
+Isolate_P12,Klebsiella pneumonia,12,Patient sample,2011-10-17,ICU,null,null,null
+Isolate_P13,Klebsiella pneumonia,13,Patient sample,2011-11-03,ICU,null,null,null
+Isolate_P14,Klebsiella pneumonia,14,Patient sample,2011-11-10,ICU,null,null,null
+Isolate_P15,Klebsiella pneumonia,15,Patient sample,2011-11-17,Ward F,null,null,null
+Isolate_P16,Klebsiella pneumonia,16,Patient sample,2011-11-18,Ward F,null,null,null
+Isolate_P17,Klebsiella pneumonia,17,Patient sample,2011-11-27,Ward C,null,null,null
+Isolate_P18,Klebsiella pneumonia,18,Patient sample,2011-12-14,Ward C,null,null,null

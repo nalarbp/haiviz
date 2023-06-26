@@ -1,0 +1,36 @@
+#ganttChartContainer {
+  width: 100%;
+  height: 100%;
+}
+.ganttChart-svg_class {
+  font-family: Helvetica;
+}
+
+.card-head-icon {
+  fontsize: 16pt;
+}
+#movement-setting {
+  background-color: #1eb776;
+  color: white;
+  border-color: #1eb776;
+}
+#movement-buttons-container {
+  position: absolute;
+  width: 150px;
+  margin: 10px 0 0 10px;
+  text-align: center;
+}
+#movement-zoom-buttons {
+  width: 35px;
+  height: 80px;
+  margin: 10px 0 0 10px;
+  text-align: center;
+}
+#movement-zoomIn {
+  background-color: #ccc;
+  margin: 2px 0;
+}
+#movement-zoomOut {
+  background-color: #ccc;
+  margin: 2px 0;
+}

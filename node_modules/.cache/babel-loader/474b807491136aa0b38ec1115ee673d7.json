@@ -1,0 +1,1 @@
+{"ast":null,"code":"import * as React from 'react';\nexport default function FooterRow(props) {\n  return React.createElement(\"tr\", Object.assign({}, props));\n}","map":null,"metadata":{},"sourceType":"module"}

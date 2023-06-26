@@ -1,0 +1,31 @@
+id,isolate_name,isolate_species,isolate_colDate,isolate_colLocation,isolate_sourceType,isolate_sourceName,isolate_mlst
+1,Efm1,Enterococcus faecium,2019-12-20,Ward 1,Patient,P1,17
+2,Efm2,Enterococcus faecium,2019-09-21,Ward 2,Environment,P2,17
+3,Efm3,Enterococcus faecium,2019-09-17,Ward 3,Others,P3,17
+4,Efm4,Enterococcus faecium,2019-09-10,Ward 4,Patient,P4,17
+5,Efm5,Enterococcus faecium,2019-08-29,null,Environment,P5,null
+6,Efm6,Enterococcus faecium,2019-11-12,Ward 6,Others,P6,78
+7,Efm7,Enterococcus faecium,2019-11-12,Ward 7,Patient,P7,328
+8,Efm8,Enterococcus faecium,2019-12-10,Ward 8,Environment,P8,761
+9,Efm9,Enterococcus faecium,2019-11-12,Ward 9,Others,P9,800
+10,Efm10,Enterococcus faecium,2019-11-20,Ward 10,Patient,P1,null
+11,Efm11,Enterococcus faecium,2018-11-19,Ward 11,Environment,P11,17
+12,Efm12,Enterococcus faecium,2018-03-10,Ward 12,Others,P12,17
+13,Efm13,Enterococcus faecium,2018-03-28,null,Patient,P13,17
+14,Efm14,Enterococcus faecium,2018-05-19,Ward 14,Environment,P14,17
+15,Efm15,Enterococcus faecium,2018-08-05,Ward 5,Others,P15,17
+16,Efm16,Enterococcus faecium,2019-01-08,Ward 16,Patient,P16,17
+17,Efm17,Enterococcus faecium,2019-02-01,Ward 17,Environment,P17,17
+18,Efm18,Enterococcus faecium,2019-04-06,Ward 18,Others,P18,17
+19,Efm19,Enterococcus faecium,2019-08-16,null,Patient,P19,17
+20,Efm20,Enterococcus faecium,2019-09-02,Ward 20,Environment,P20,17
+21,Efm21,Enterococcus faecium,2019-04-25,Ward 18,Others,P21,null
+22,Efm22,Enterococcus faecium,2018-01-27,Ward 22,Patient,P3,60
+23,Efm23,Enterococcus faecium,2019-04-22,Ward 2,Environment,P23,78
+24,Efm24,Enterococcus faecium,2019-12-13,Ward 24,Others,P24,80
+25,Efm25,Enterococcus faecium,2019-12-18,Ward 25,Patient,P25,80
+26,Efm26,Enterococcus faecium,2019-12-17,Ward 6,Environment,P26,80
+27,Efm27,Enterococcus faecium,2020-01-03,Ward 27,Others,P27,null
+28,Efm28,Enterococcus faecium,2020-01-12,Ward 18,Patient,P5,80
+29,Efm29,Enterococcus faecium,2018-11-12,Ward 29,Environment,P29,80
+30,Efm30,Enterococcus faecium,2018-11-26,Ward 30,Others,P30,80

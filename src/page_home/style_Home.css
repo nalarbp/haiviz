@@ -1,0 +1,46 @@
+#carousel-placeholder {
+  text-align: center;
+}
+#content-header-row {
+  background: url("../img/bg_content_header.png") no-repeat fixed center,
+    linear-gradient(
+      122deg,
+      rgba(33, 209, 175, 1) 15%,
+      rgba(5, 204, 131, 1) 100%
+    );
+}
+#content-header {
+  font-family: "Nunito", sans-serif;
+  margin: auto;
+  padding: 50px;
+  text-align: center;
+  color: white;
+}
+#content-showcase-row {
+  background-color: white;
+}
+#content-showcase {
+  margin: auto;
+  padding: 50px;
+  text-align: center;
+}
+#carousel-container {
+  background-color: lightgray;
+  height: 200px;
+  width: 100%;
+}
+#showcase-buttons {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  width: 100%;
+}
+.showcase-meta-desc {
+  height: 100px;
+  overflow: auto;
+  scrollbar-width: none;
+}
+/*
+background-color: #1eb776;
+background: #1eb776 url("../img/bg_dummy.jpg") no-repeat fixed center;
+*/

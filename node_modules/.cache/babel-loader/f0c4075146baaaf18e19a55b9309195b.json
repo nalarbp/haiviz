@@ -1,0 +1,1 @@
+{"ast":null,"code":"import packageInfo from '../../package.json';\nexport default packageInfo.version;","map":null,"metadata":{},"sourceType":"module"}

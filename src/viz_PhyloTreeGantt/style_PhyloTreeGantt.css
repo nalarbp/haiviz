@@ -1,0 +1,25 @@
+#phylotreegantt-zoomButton-container {
+  position: absolute;
+  width: 50px;
+  height: 150px;
+  margin: 10px 0 0 10px;
+}
+#phylotreegantt-zoomIn {
+  background-color: #ccc;
+  margin-bottom: 2px;
+}
+#phylotreegantt-zoomOut {
+  background-color: #ccc;
+  margin-bottom: 7px;
+}
+
+#phylotreegantt-setting {
+  background-color: #1eb776;
+  color: white;
+  border-color: #1eb776;
+}
+#phylotreegantt-clearSelection {
+  background-color: #1eb776;
+  margin: 2px 0;
+  color: white;
+}

@@ -1,0 +1,20 @@
+#inputfiles-header {
+  background-color: white;
+  text-align: center;
+  margin: 40px 0;
+}
+
+#inputfiles-buttons {
+  background-color: white;
+  text-align: center;
+}
+
+.input-button {
+  height: auto;
+  text-align: center;
+  background-color: none;
+}
+
+.input_card {
+  margin-top: 10px
+}
