@@ -1,6 +1,6 @@
 {
   "name": "HAIviz",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "HAIviz: An interactive visualization tool to integrate your genomic epidemiology information",
   "author": "Budi Permana, Beatson Lab UQ, Australia",
   "private": true,
@@ -22,6 +22,7 @@
     "immutable": "3.8.2",
     "install": "^0.13.0",
     "jscrambler": "^5.5.18",
+    "jspdf": "^2.5.1",
     "lodash": "^4.17.15",
     "moment": "^2.25.3",
     "moment-range": "^4.0.2",

@@ -110,15 +110,7 @@ export const initialState = {
     textSize: 5,
     textOffset: 0,
   },
-  colorScale: {
-    colorType: "location",
-    byLocation: null,
-    bySpecies: null,
-    bySourceType: null,
-    byProfile1: null,
-    byProfile2: null,
-    byProfile3: null,
-  },
+  colorScale: {colorType:'isolate_colLocation', colorMap: null},
   colorscaleSettings: {
     isUserStartResize: false,
     nodeSize: 5,
@@ -151,8 +143,8 @@ export const initialState = {
   },
   temporalbarSettings: {
     isUserStartResize: false,
-    chartMode: "stackedBar",
-    scaleMode: "daily",
+    chartMode: "histogram",
+    scaleMode: "weekly",
     isAnimationPlaying: false,
   },
   mapEditor: {

@@ -32,7 +32,7 @@ const DeleteInput = (props) => {
         props.loadTreeData(null);
         break;
       case "network":
-        props.loadTransmissionData(null);
+        props.loadTransgraphData(null);
         break;
       case "gantt":
         props.loadMovementData(null);

@@ -4,8 +4,6 @@ import React, { useEffect, useState } from "react";
 import { Row, Col } from "antd";
 import {
   getIsolateCompositionByCategory,
-  getColorScale,
-  getColorTypeTitle,
 } from "../utils/utils";
 import PieChart from "./chart_Pie";
 import "./style_summary.css";
@@ -13,21 +11,21 @@ import "./style_summary.css";
 const SummaryChart = (props) => {
   //states
   const [data, setData] = useState(null);
-  const totalIsolates = props.data.size;
+  const totalIsolates = props.isolateData.size;
   const observedHeight = props.height - 80;
   const desc_cont_h = observedHeight * 0.2;
   const chart_cont_h = observedHeight * 0.8;
-  const currentColorScale = getColorScale(props.colorScale);
+  const currentColorScale = null
 
   useEffect(() => {
     if (props.colorScale.colorType) {
       const data = getIsolateCompositionByCategory(
         props.colorScale.colorType,
-        props.data
+        props.isolateData
       );
       setData(data);
     }
-  }, [props.data, props.colorScale]);
+  }, [props.isolateData, props.colorScale]);
 
   return (
     <React.Fragment>
@@ -55,7 +53,7 @@ const SummaryChart = (props) => {
             }}
           >
             <p>Total isolates: {totalIsolates}</p>
-            <p>Color index: {getColorTypeTitle(props.colorScale.colorType)}</p>
+            <p>Color index: {props.colorScale.colorType}</p>
           </div>
         </Col>
       </Row>
@@ -65,28 +63,3 @@ const SummaryChart = (props) => {
 
 export default SummaryChart;
 
-/*
-<Col
-  style={{
-    padding: "10px",
-    backgroundColor: "orange"
-  }}
-  xs={24}
-  md={8}
->
-  <Text
-    ellipsis={true}
-    style={{
-      fontWeight: "bold",
-      color: "#1eb776"
-    }}
-  >
-    {totalIsolates} isolates
-  </Text>
-  <p id="color-index-text">Color index:</p>
-  <span style={{ lineHeight: "12px" }} />
-  <p id="color-index-desc">
-    {getColorTypeTitle(props.colorScale.colorType)}
-  </p>
-</Col>
- */

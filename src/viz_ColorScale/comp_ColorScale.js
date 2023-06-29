@@ -15,12 +15,6 @@ import {
   changeColorResizeSignal,
   changeIsColorScaleDownloading,
   setColorScaleType,
-  setColorBySpecies,
-  setColorByLocation,
-  setColorBySourceType,
-  setColorByProfile1,
-  setColorByProfile2,
-  setColorByProfile3,
 } from "../action/index";
 import {
   DragOutlined,
@@ -70,92 +64,6 @@ const ColorScale = (props) => {
   const closeDrawerHandler = () => {
     setisDrawerVisible(false);
   };
-
-  const grayColorScaleStateHandler = () => {
-    grayColorScaleState(props.colorScale);
-  };
-
-  const resetColorScaleStateHandler = () => {
-    resetColorScaleState(props.colorScale);
-  };
-
-  //FUNCTIONS
-  function grayColorScaleState(scaleColor) {
-    switch (scaleColor.colorType) {
-      case "species":
-        let species_col = _.cloneDeep(scaleColor.bySpecies);
-        species_col.forEach((value, key, d) => {
-          d.set(key, "#808080");
-        });
-        props.setColorBySpecies(species_col);
-        break;
-      case "location":
-        let location_col = _.cloneDeep(scaleColor.byLocation);
-        location_col.forEach((value, key, d) => {
-          d.set(key, "#808080");
-        });
-        props.setColorByLocation(location_col);
-        break;
-      case "sourceType":
-        let sourceType_col = _.cloneDeep(scaleColor.bySourceType);
-        sourceType_col.forEach((value, key, d) => {
-          d.set(key, "#808080");
-        });
-        props.setColorBySourceType(sourceType_col);
-        break;
-      case "profile1":
-        let profile1_col = _.cloneDeep(scaleColor.byProfile1);
-        profile1_col.forEach((value, key, d) => {
-          d.set(key, "#808080");
-        });
-        props.setColorByProfile1(profile1_col);
-        break;
-      case "profile2":
-        let profile2_col = _.cloneDeep(scaleColor.byProfile2);
-        profile2_col.forEach((value, key, d) => {
-          d.set(key, "#808080");
-        });
-        props.setColorByProfile2(profile2_col);
-        break;
-      case "profile3":
-        let profile3_col = _.cloneDeep(scaleColor.byProfile3);
-        profile3_col.forEach((value, key, d) => {
-          d.set(key, "#808080");
-        });
-        props.setColorByProfile3(profile3_col);
-        break;
-      default:
-    }
-  }
-  function resetColorScaleState(scaleColor) {
-    switch (scaleColor.colorType) {
-      case "species":
-        let species_col = _.cloneDeep(scaleColor.bySpecies_ori);
-        props.setColorBySpecies(species_col);
-        break;
-      case "location":
-        let location_col = _.cloneDeep(scaleColor.byLocation_ori);
-        props.setColorByLocation(location_col);
-        break;
-      case "sourceType":
-        let sourceType_col = _.cloneDeep(scaleColor.bySourceType_ori);
-        props.setColorBySourceType(sourceType_col);
-        break;
-      case "profile1":
-        let profile1_col = _.cloneDeep(scaleColor.byProfile1_ori);
-        props.setColorByProfile1(profile1_col);
-        break;
-      case "profile2":
-        let profile2_col = _.cloneDeep(scaleColor.byProfile2_ori);
-        props.setColorByProfile2(profile2_col);
-        break;
-      case "profile3":
-        let profile3_col = _.cloneDeep(scaleColor.byProfile3_ori);
-        props.setColorByProfile3(profile3_col);
-        break;
-      default:
-    }
-  }
 
   return (
     <React.Fragment>
@@ -211,11 +119,10 @@ const ColorScale = (props) => {
             <div id="colorscale-drawer-settings">
               <ColorScaleSettings
                 isDrawerVisible={isDrawerVisible}
+                colorScale={props.colorScale}
                 closeDrawerHandler={closeDrawerHandler}
                 selectedCategory={selectedCategory}
                 setselectedCategory={setselectedCategory}
-                grayColorScaleStateHandler={grayColorScaleStateHandler}
-                resetColorScaleStateHandler={resetColorScaleStateHandler}
                 changeIsColorScaleDownloading={
                   props.changeIsColorScaleDownloading
                 }
@@ -230,12 +137,6 @@ const ColorScale = (props) => {
                 colorScale={props.colorScale}
                 colorscaleSettings={props.colorscaleSettings}
                 setColorScaleType={props.setColorScaleType}
-                setColorBySpecies={props.setColorBySpecies}
-                setColorByLocation={props.setColorByLocation}
-                setColorBySourceType={props.setColorBySourceType}
-                setColorByProfile1={props.setColorByProfile1}
-                setColorByProfile2={props.setColorByProfile2}
-                setColorByProfile3={props.setColorByProfile3}
                 changeIsColorScaleDownloading={
                   props.changeIsColorScaleDownloading
                 }
@@ -263,12 +164,6 @@ function mapDispatchToProps(dispatch) {
       changeColorResizeSignal: changeColorResizeSignal,
       changeIsColorScaleDownloading: changeIsColorScaleDownloading,
       setColorScaleType: setColorScaleType,
-      setColorBySpecies: setColorBySpecies,
-      setColorByLocation: setColorByLocation,
-      setColorBySourceType: setColorBySourceType,
-      setColorByProfile1: setColorByProfile1,
-      setColorByProfile2: setColorByProfile2,
-      setColorByProfile3: setColorByProfile3,
     },
     dispatch
   );

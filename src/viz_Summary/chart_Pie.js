@@ -42,7 +42,7 @@ const PieChart = (props) => {
           padAngle={1}
           cornerRadius={5}
           sortByValue={true}
-          colors={getColor}
+          //colors={getColor}
           borderWidth={1}
           borderColor={{ from: "color", modifiers: [["darker", 0.2]] }}
           radialLabelsSkipAngle={10}

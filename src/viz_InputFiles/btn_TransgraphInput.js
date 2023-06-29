@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { text } from "d3-fetch";
-import { Card, Empty, Spin, Upload } from "antd";
+import DeleteInput from "./btn_DeleteInput";
+import { Card, Row, Col, Spin, Upload } from "antd";
 import { CheckCircleTwoTone } from "@ant-design/icons";
 import { parseDOTtoCytoscape, isIsolateOrHost } from "../utils/utils";
 import { TransgraphInputSVG } from "../utils/customIcons";
@@ -15,33 +16,13 @@ const TransgraphInput = (props) => {
 
   //functions
   async function parseGraph(fileURL) {
-    const isolateDataCloned = _.cloneDeep(
-      Array.from(props.isolateData.values())
-    );
     let graph_promise = await text(fileURL).then(function(result) {
       return result;
     });
     //const graph = parseDOTtoJSON(graph_promise);
     const graph = parseDOTtoCytoscape(graph_promise);
     if (graph) {
-      const nodeLabels = graph.nodeLabels;
-      const graphData = graph.data;
-      const isolateName_list = [];
-      const sourceName_list = [];
-      isolateDataCloned.forEach(function(d) {
-        isolateName_list.push(d.isolate_name);
-        sourceName_list.push(d.isolate_sourceName);
-      });
-      if (graphData) {
-        //add layout detection here
-        let graph_key = isIsolateOrHost(
-          nodeLabels,
-          isolateName_list,
-          sourceName_list
-        );
-        let graphWithValidation = { graphKey: graph_key, graphData: graphData };
-        props.loadTransgraphData(graphWithValidation);
-      }
+      props.loadTransgraphData(graph);
     } else {
       setisLoading(false);
       return;
@@ -69,18 +50,12 @@ const TransgraphInput = (props) => {
   return (
     <React.Fragment>
       <Card
-        title={"Transmission graph"}
+        title={"Graph"}
         style={{ height: "100%" }}
         headStyle={{ textAlign: "left" }}
         bodyStyle={{ margin: "0px", padding: "5px" }}
       >
-        {!props.isolateData && (
-          <Empty
-            image={Empty.PRESENTED_IMAGE_SIMPLE}
-            description={"Please load the metadata first"}
-          />
-        )}
-        {props.isolateData && !isLoading && !props.transgraphData && (
+        {!isLoading && !props.transgraphData && (
           <React.Fragment>
             <Dragger
               accept={".gv, .dot"}
@@ -96,17 +71,24 @@ const TransgraphInput = (props) => {
             </Dragger>
           </React.Fragment>
         )}
-        {props.isolateData && isLoading && !props.transgraphData && <Spin />}
-        {props.isolateData && !isLoading && props.transgraphData && (
+        {isLoading && !props.transgraphData && <Spin />}
+        {!isLoading && props.transgraphData && (
           <React.Fragment>
-            <div style={{ padding: "10px" }}>
+            <Row justify="center" className="input_card"> 
+              <Col>
               <CheckCircleTwoTone
                 twoToneColor="#52c41a"
                 style={{ fontSize: "20pt" }}
               />
-              <p>Loaded!</p>
-            </div>
-          </React.Fragment>
+                <p>Loaded!</p>
+              </Col>
+            </Row>
+            <Row justify="center">
+              <Col>
+                <DeleteInput id={'network'}/>
+              </Col>
+            </Row>
+        </React.Fragment>
         )}
       </Card>
     </React.Fragment>

@@ -65,15 +65,15 @@ const TemporalStackedBar = (props) => {
     }
   }, [props.selectedData]);
 
-  useEffect(() => {
-    if (props.colorScale.colorType) {
-      svg.selectAll(".temporal-bar-rectangle").attr("fill", (e) => {
-        let obj = props.isolateData.get(e.isolate_name);
-        let col = getColorScaleByObject(obj, props.colorScale);
-        return col;
-      });
-    }
-  }, [props.colorScale]);
+  // useEffect(() => {
+  //   if (props.colorScale.colorType) {
+  //     svg.selectAll(".temporal-bar-rectangle").attr("fill", (e) => {
+  //       let obj = props.isolateData.get(e.isolate_name);
+  //       let col = getColorScaleByObject(obj, props.colorScale);
+  //       return col;
+  //     });
+  //   }
+  // }, [props.colorScale]);
 
   useEffect(() => {
     if (selectionDate) {
@@ -151,7 +151,6 @@ const TemporalStackedBar = (props) => {
         [temporalbar_w, temporalbar_h],
       ]) // brush region from top left corner 0, 0 to 900, 40
       .on("start", brushStart)
-      .on("brush", brushed)
       .on("end", brushEnd);
 
     //make group root of svg for transformation purpose
@@ -192,14 +191,12 @@ const TemporalStackedBar = (props) => {
       .attr("stroke", "black")
       .attr("stroke-width", "0.5")
       .style("opacity", 1)
-      .attr("fill", (e) => {
-        let obj = props.isolateData.get(e.isolate_name);
-        let col = getColorScaleByObject(obj, props.colorScale);
-        return col;
-      });
-    // .on("click", (e) => {
-    //   props.setSelectedData([e.isolate_name]); //not needed
-    // });
+      // .attr("fill", (e) => {
+      //   let obj = props.isolateData.get(e.isolate_name);
+      //   let col = getColorScaleByObject(obj, props.colorScale);
+      //   return col;
+      // });
+
 
     if (scaleMode === "daily") {
       stackedBars
@@ -239,47 +236,15 @@ const TemporalStackedBar = (props) => {
       .attr("class", "temporal-brushArea")
       .call(brush);
 
-    // function brushHandle(g, selection) {
-    //   g.selectAll(".handle--custom")
-    //     .data([{ type: "w" }, { type: "e" }])
-    //     .join((enter) =>
-    //       enter
-    //         .append("path")
-    //         .attr("class", "handle--custom")
-    //         .attr("fill", "#666")
-    //         .attr("fill-opacity", 0)
-    //         .attr("stroke", "#000")
-    //         .attr("stroke-width", 1.5)
-    //         .attr("cursor", "ew-resize")
-    //         .attr("d", (d) => brushResizePath(d, temporalbar_h))
-    //     )
-    //     .attr(
-    //       "transform",
-    //       selection.length === 0
-    //         ? null
-    //         : (d, i) => `translate(${selection[i]},${temporalbar_h / 4})`
-    //     );
-    // }
 
     function brushStart() {
-      //hide handle
       if (currentEvent.sourceEvent !== null && animIsPlaying.current) {
         animPlayer.current.forEach(clearInterval);
         pointInInterval = 0;
         animIsPlaying.current = false;
       }
-      //let selection = currentEvent.selection;
-      // if (selection[0] - selection[1] === 0) {
-      //   brushAreaGroup.selectAll(".handle--custom").attr("display", "none");
-      // }
     }
 
-    function brushed() {
-      //move handle and highlight selected bar
-      //brushAreaGroup.selectAll(".handle--custom").attr("display", "true");
-      //let selection = currentEvent.selection;
-      //select(this).call(brushHandle, selection); //move brush handle based on selection
-    }
 
     function brushEnd() {
       //when brush is end, do logic here (e.g., filter data)
@@ -314,7 +279,6 @@ const TemporalStackedBar = (props) => {
     const cont = select(temporalbarContainerRef.current);
     cont.select("#playBtn").on("click", () => {
       if (!animIsPlaying.current) {
-        //jika animasi tidak saat dijalankan = FALSE
         playAnimation();
       } else {
         pauseAnimation();
@@ -327,27 +291,20 @@ const TemporalStackedBar = (props) => {
       }
     });
 
-    //when animation is playing never make new set interval
-
     function playAnimation() {
       let animPlayer_interval = setInterval(function() {
         movingBrush();
       }, 1000);
       animPlayer.current.push(animPlayer_interval);
-      //set animation is playing = TRUE
-      //change the state on anim is playing
-      //props.changeTempIsAnimationPlaying(true);
       animIsPlaying.current = true;
     }
 
     function pauseAnimation() {
       animPlayer.current.forEach(clearInterval);
-      //props.changeTempIsAnimationPlaying(false);
       animIsPlaying.current = false;
     }
 
     function movingBrush() {
-      //console.log("moving");
       if (animIsPlaying.current && pointInInterval < animDateInterval.length) {
         var currentDate =
           pointInInterval === animDateInterval.length - 1
@@ -363,9 +320,7 @@ const TemporalStackedBar = (props) => {
     function stopAnimation() {
       animPlayer.current.forEach(clearInterval);
       pointInInterval = 0;
-      //props.changeTempIsAnimationPlaying(false);
       animIsPlaying.current = false;
-      //console.log(scale_x.range());
       brushAreaGroup.call(brush.move, scale_x.range());
     }
 

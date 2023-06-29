@@ -2,6 +2,7 @@
 .haiviz-row {
   padding: 20px;
 }
+
 .haiviz-img-responsive {
   width: 100%;
   height: auto;
@@ -13,6 +14,7 @@
   padding: 20px 0 0 0;
   min-height: 85vh;
 }
+
 .haiviz-menu-icon {
   background-color: none;
   width: 50px;
@@ -20,6 +22,7 @@
   margin: 5px auto;
   text-align: center;
 }
+
 .haiviz-button-icon {
   border: none;
   background-color: #333;
@@ -30,4 +33,26 @@
 #haiviz-side-dashboard {
   background-color: #fff;
   padding: 0 10px;
+}
+
+/*  Input title and text */
+#inputfiles-header {
+  background-color: white;
+  text-align: center;
+  margin: 40px 0;
+}
+
+#inputfiles-buttons {
+  background-color: white;
+  text-align: center;
+}
+
+.input-button {
+  height: auto;
+  text-align: center;
+  background-color: none;
+}
+
+.input_card {
+  margin-top: 10px
 }

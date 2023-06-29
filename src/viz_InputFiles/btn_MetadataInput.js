@@ -74,8 +74,6 @@ const MetadataInput = (props) => {
               <DeleteInput id={'metadata'}/>
               </Col>
               </Row>
-              
-            
           </React.Fragment>
         )}
       </Card>

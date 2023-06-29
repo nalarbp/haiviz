@@ -6,7 +6,6 @@ import ReactGridLayout, { WidthProvider } from "react-grid-layout";
 import "react-grid-layout/css/styles.css";
 import "react-resizable/css/styles.css";
 import PatientMovement from "../viz_Movement/comp_Movement";
-import InputFIles from "../viz_InputFiles/comp_InputFiles";
 import DataTable from "../viz_DataTable/comp_DataTable";
 import TransGraph from "../viz_TransGraph/comp_TransGraph";
 import PhyloTree from "../viz_PhyloTree/comp_PhyloTree";
@@ -27,6 +26,7 @@ import { changeTreeResizeSignal } from "../action/phyloTree_actions";
 import { changeTempResizeSignal } from "../action/temporalBar_actions";
 import { changeLocalmapResizeSignal } from "../action/localMap_actions";
 import { changeTreeGanttResizeSignal } from "../action/phyloTreeGantt_actions";
+import { Empty } from "antd";
 const GridLayout = WidthProvider(ReactGridLayout);
 //const dimensions = ["width", "height"];
 //const Mea = withMeasure(dimensions)(PatientMovement);
@@ -149,7 +149,7 @@ const Dashboard = props => {
 
   return (
     <React.Fragment>
-      {activeCharts.length === 0 && <InputFIles />}
+      {activeCharts.length === 0 && <Empty description={"No active charts: Load input file and click the chart icon in the side menu to create a chart."} />}
       {activeCharts.length > 0 && (
         <div id="dashboard">
           <GridLayout

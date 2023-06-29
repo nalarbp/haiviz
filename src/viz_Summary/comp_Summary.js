@@ -67,7 +67,7 @@ const SummaryCard = (props) => {
             <SummaryChart
               width={props.width}
               height={props.height}
-              data={props.isolateData}
+              isolateData={props.isolateData}
               colorScale={props.colorScale}
             />
           )}

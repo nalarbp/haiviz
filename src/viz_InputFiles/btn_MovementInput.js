@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { csv } from "d3-fetch";
-import { Card, Empty, Spin, Upload } from "antd";
 import { CheckCircleTwoTone } from "@ant-design/icons";
 import { MovementInputSVG } from "../utils/customIcons";
-
 import Moment from "moment";
 import { extendMoment } from "moment-range";
 import { color } from "d3-color";
+import DeleteInput from "./btn_DeleteInput";
+import { Card, Row, Col, Spin, Upload } from "antd";
 
 const moment = extendMoment(Moment);
 const { Dragger } = Upload;
@@ -100,18 +100,12 @@ const MovementInput = (props) => {
   return (
     <React.Fragment>
       <Card
-        title={"Movement data"}
+        title={"Gantt"}
         style={{ height: "100%" }}
         headStyle={{ textAlign: "left" }}
         bodyStyle={{ margin: "0px", padding: "5px" }}
       >
-        {!props.isolateData && (
-          <Empty
-            image={Empty.PRESENTED_IMAGE_SIMPLE}
-            description={"Please load the metadata first"}
-          />
-        )}
-        {props.isolateData && !isLoading && !props.movementData && (
+        {!isLoading && !props.movementData && (
           <React.Fragment>
             <Dragger
               accept={".csv"}
@@ -127,17 +121,24 @@ const MovementInput = (props) => {
             </Dragger>
           </React.Fragment>
         )}
-        {props.isolateData && isLoading && !props.movementData && <Spin />}
-        {props.isolateData && !isLoading && props.movementData && (
+        {isLoading && !props.movementData && <Spin />}
+        {!isLoading && props.movementData && (
           <React.Fragment>
-            <div style={{ padding: "10px" }}>
-              <CheckCircleTwoTone
-                twoToneColor="#52c41a"
-                style={{ fontSize: "20pt" }}
-              />
+          <Row justify="center" className="input_card"> 
+            <Col>
+            <CheckCircleTwoTone
+              twoToneColor="#52c41a"
+              style={{ fontSize: "20pt" }}
+            />
               <p>Loaded!</p>
-            </div>
-          </React.Fragment>
+            </Col>
+          </Row>
+          <Row justify="center">
+            <Col>
+              <DeleteInput id={'gantt'}/>
+            </Col>
+          </Row>
+      </React.Fragment>
         )}
       </Card>
     </React.Fragment>

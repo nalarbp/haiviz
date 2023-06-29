@@ -25,6 +25,7 @@ const Home = (props) => {
     <React.Fragment>
       <Layout style={{ marginTop: "20px" }}>
         <Content>
+          <Showcases changeNavLocation={props.changeNavLocation} />
           <Row id="content-header-row" justify="center">
             <Col>
               <Modal
@@ -54,7 +55,7 @@ const Home = (props) => {
                   margin: "0px auto",
                 }}
               >
-                HAIviz v.0.3
+                HAIviz v.0.4
               </p>
               <br />
               <p
@@ -108,7 +109,7 @@ const Home = (props) => {
               </NavLink>
             </Col>
           </Row>
-          <Showcases changeNavLocation={props.changeNavLocation} />
+          
         </Content>
 
         <Footer style={{ position: "sticky", margin: "50px 0 0 0" }}>
@@ -119,17 +120,9 @@ const Home = (props) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                HAIviz v.0.3
+                HAIviz v.0.4
               </a>{" "}
               | built.2021-09-23
-              <br /> HAIviz v.0.2 is available{" "}
-              <a
-                href="https://v02.haiviz.beatsonlab.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                here
-              </a>
               <br /> Developed by Budi Permana at{" "}
               <a
                 href="https://beatsonlab.com/"
@@ -159,23 +152,3 @@ function mapDispatchToProps(dispatch, ownProps) {
 }
 
 export default connect(null, mapDispatchToProps)(Home);
-
-/*
-<Link to="/haiviz-spa">
-                <Button
-                  style={{
-                    backgroundColor: "#9ff52f",
-                    border: "1px solid white",
-                    margin: "0 10px 10px 0",
-                    textAlign: "center",
-                  }}
-                  shape={"round"}
-                  size={"large"}
-                  onClick={() => {
-                    props.changeNavLocation("haivizApp");
-                  }}
-                >
-                  Let's get started
-                </Button>
-              </Link>
-              */

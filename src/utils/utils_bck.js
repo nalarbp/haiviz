@@ -110,212 +110,252 @@ export const childrenAccessorFn = ([, value]) => {
   return value.size && Array.from(value);
 };
 
-export function colorLUTFromUser(headerWithColor, data_promise_raw) {
-  let data_raw = _.cloneDeep(data_promise_raw);
-  let colorMap = new Map();
-  //iterate each row and set the map by sample_id and color
-  data_raw.forEach((r) => {
-    let col =
-      r[headerWithColor] && color(r[headerWithColor])
-        ? color(r[headerWithColor]).formatHex()
-        : color("lightgray").formatHex();
-    colorMap.set(r.sample_id, col);
-    colorMap.set(r.sample_id, 
-      {colorValue:col, 
-       colorAttribute: r[headerWithColor]});
-
-  });
-  return colorMap;
-}
-
-export function createColorLUT(raw_sampleJSON, colorIndex) {
-  //input list of sample object [{sample:MS2, vanType: vanA}, ... ], colorIndex e.g vanType
-  //output a Map of sample return color for single given colorIndex (Column)
-  let sampleJSON = _.cloneDeep(raw_sampleJSON);
-  let colorLUT = null;
-  if (Array.isArray(sampleJSON) && sampleJSON.length > 0) {
-    let groupsAll = [];
-    sampleJSON.forEach((d) => {
-      groupsAll.push(d[colorIndex]);
-    });
-    
-    let groups = groupsAll.filter(filterUnique); // array of unique element as the group (levels)
-    //d3Chroma.schemeSet3 only has 12 color, if you have 13 dateset, the 13th will be same as the 1st
-   
-    let colorInterpolatorOrd = scaleOrdinal(d3Chroma.schemeSet3).domain(groups);
-    let colorMap = new Map();
-    sampleJSON.forEach((d) => {
-      colorMap.set(d.sample, 
-        {colorValue:colorInterpolatorOrd(d[colorIndex]), 
-         colorAttribute: d[colorIndex]});
-    });
-    colorLUT = colorMap;
-  }
-  return colorLUT;
-}
-
 export async function getIsolateData(
   fileURL,
-  metadataToSTORE,
-  colorLUTtoSTORE,
-  treemapToSTORE,
+  loadIsolateData,
+  setColorScale,
+  loadSimulatedMap,
   setisLoading
 ) {
   let data_promise_raw = await csv(fileURL).then(function(result) {
     return result;
   });
-  //check if input data contain all the required headers
   const validHeaders = [
-    "id",
-    "date",
-    "location",
+    "isolate_name",
+    "isolate_species",
+    "isolate_colDate",
+    "isolate_colLocation",
+    "isolate_sourceType",
+    "isolate_sourceName",
+    "profile_1",
+    "profile_2",
+    "profile_3",
   ];
   const inputHeaders = Object.keys(data_promise_raw[0]);
-  for (let i = 0; i < validHeaders.length; i++) {
-    if (!inputHeaders.includes(validHeaders[i])) {
-      alert(
-        "Invalid data: input data must contain all the following headers: id, date, location"
-      );
-      setisLoading(false);
-      return;
+  let header_is_valid = true;
+  validHeaders.forEach((item) => {
+    if (inputHeaders.indexOf(item) === -1) {
+      header_is_valid = false;
     }
+  });
+
+  if (!header_is_valid) {
+    alert("Invalid headers");
+    setisLoading(false);
+    return;
   }
 
-  //check if no empty record in id and duplicated record in id
-  let isolate_id_invalid = false;
-  let isolate_id_duplicated = false;
-  let isolate_id_list = [];
-  data_promise_raw.forEach(function(d) {
-    d.id = d.id.replace(/\s*$/, "");
-    if (d.id === "") {
-      isolate_id_invalid = true;
-    }
-    if (isolate_id_list.includes(d.id)) {
-      isolate_id_duplicated = true;
-    }
-    isolate_id_list.push(d.id);
-  });
-  if (isolate_id_invalid) {
-    alert("Invalid data: empty record in column id");
+  // no duplicate in isolate name
+  const isolate_name = _.countBy(data_promise_raw, "isolate_name");
+  const duplicatedRecords = Object.keys(isolate_name)
+    .map((key) => {
+      return { name: key, count: isolate_name[key] };
+    })
+    .filter((d) => d.count > 1);
+
+  if (duplicatedRecords.length > 0) {
+    alert(
+      "Invalid data: duplicate record in column isolate name:" +
+        `${JSON.stringify(duplicatedRecords)}`
+    );
     setisLoading(false);
     return;
   }
-  if (isolate_id_duplicated) {
-    alert("Invalid data: duplicated record in column id");
+
+  // no empty record in isolate_name
+  const isolate_name_empty = isolate_name[""] ? true : false;
+
+  if (isolate_name_empty) {
+    alert("Invalid data: column isolate_name contain empty record");
     setisLoading(false);
     return;
   }
-  
-  //check if no empty record in date and invalid format in date
+
+  //console.log(data_promise_raw);
+
+  // no empty record or invalid format in collection date
   let isolate_date_invalid = false;
   data_promise_raw.forEach(function(d) {
-    d.date = d.date.replace(/\s*$/, "");
-    if (isoDateParser(d.date)) {
-      d.date = isoDateParser(d.date);
+    d.isolate_name = d.isolate_name.replace(/\s*$/, "");
+    d.isolate_colDate = d.isolate_colDate.replace(/\s*$/, "");
+    d.isolate_sourceType = d.isolate_sourceType.replace(/\s*$/, "");
+    d.isolate_sourceName = d.isolate_sourceName.replace(/\s*$/, "");
+    d.isolate_species = d.isolate_species.replace(/\s*$/, "");
+    d.isolate_colLocation = d.isolate_colLocation.replace(/\s*$/, "");
+    if (isoDateParser(d.isolate_colDate)) {
+      d["uid"] = d.isolate_name;
+      d.isolate_colDate = isoDateParser(d.isolate_colDate);
     } else {
       isolate_date_invalid = true;
     }
   });
+
+  let data_promise = data_promise_raw.map((d) => {
+    return {
+      uid: d.uid,
+      isolate_name: d.isolate_name,
+      isolate_colDate: d.isolate_colDate,
+      isolate_sourceType: d.isolate_sourceType,
+      isolate_sourceName: d.isolate_sourceName,
+      isolate_species: d.isolate_species,
+      isolate_colLocation: d.isolate_colLocation,
+      profile_1: d.profile_1,
+      profile_2: d.profile_2,
+      profile_3: d.profile_3,
+    };
+  });
+
   if (isolate_date_invalid) {
-    alert("Invalid data: invalid record or format in column date");
+    alert("Invalid data: wrong date format in column collection date");
     setisLoading(false);
     return;
   }
-
-  //convert any empty record in column location to "N/A"
-  data_promise_raw.forEach(function(d) {
-    d.location = d.location.replace(/\s*$/, "");
-    if (d.location === "") {
-      d.location = "N/A";
+  // Create initial color table =====================================
+  // check and extract user defined color in the metadata
+  let colHeaders = [];
+  inputHeaders.forEach((header) => {
+    if (header.split(":")[1] === "color") {
+      let headerColorObj = {
+        headerName: header,
+        isHeaderHasColor: true,
+      };
+      colHeaders.push(headerColorObj);
     }
   });
-
-  //comply with previous version
-  //transform headers: id to isolate_name, date to isolate_colDate, location to isolate_colLocation
-  data_promise_raw.forEach(function(d) {
-    d.isolate_name = d.id;
-    d.isolate_colDate = d.date;
-    d.isolate_colLocation = d.location;
-    delete d.id;
-    delete d.date;
-    delete d.location;
+  let colHeaders_Map = new Map();
+  colHeaders.forEach((d) => {
+    colHeaders_Map.set(d.headerName, d);
   });
 
-  //create a Map of metadata
-  let metadata_map = new Map();
-  data_promise_raw.forEach(function(d) {
-    metadata_map.set(d.isolate_name, d);
+  let species_list = data_promise
+    .map((d) => d.isolate_species)
+    .filter(filterUnique);
+  let location_list = data_promise
+    .map((d) => d.isolate_colLocation)
+    .filter(filterUnique);
+  let sourceType_list = data_promise
+    .map((d) => d.isolate_sourceType)
+    .filter(filterUnique);
+  let profile1_list = data_promise.map((d) => d.profile_1).filter(filterUnique);
+  let profile2_list = data_promise.map((d) => d.profile_2).filter(filterUnique);
+  let profile3_list = data_promise.map((d) => d.profile_3).filter(filterUnique);
+
+  // is predefined color for species true? if so extract the color (metadata, column name), if no generate initial color
+  const colorScale_bySpecies = colHeaders_Map.get("isolate_species:color")
+    ? getUserDefinedColor(
+        data_promise_raw,
+        species_list,
+        "isolate_species",
+        "isolate_species:color"
+      )
+    : colorOrdinalInterpolator(species_list, d3Chroma.interpolateRdYlBu);
+
+  const colorScale_byLocation = colHeaders_Map.get("isolate_colLocation:color")
+    ? getUserDefinedColor(
+        data_promise_raw,
+        location_list,
+        "isolate_colLocation",
+        "isolate_colLocation:color"
+      )
+    : colorOrdinalInterpolator(location_list, d3Chroma.interpolateSpectral);
+
+  const colorScale_bySourceType = colHeaders_Map.get("isolate_sourceType:color")
+    ? getUserDefinedColor(
+        data_promise_raw,
+        sourceType_list,
+        "isolate_sourceType",
+        "isolate_sourceType:color"
+      )
+    : colorOrdinalInterpolator(sourceType_list, d3Chroma.interpolateSpectral);
+
+  const colorScale_byProfile1 = colHeaders_Map.get("profile_1:color")
+    ? getUserDefinedColor(
+        data_promise_raw,
+        profile1_list,
+        "profile_1",
+        "profile_1:color"
+      )
+    : colorOrdinalInterpolator(profile1_list, d3Chroma.interpolateViridis);
+
+  const colorScale_byProfile2 = colHeaders_Map.get("profile_2:color")
+    ? getUserDefinedColor(
+        data_promise_raw,
+        profile2_list,
+        "profile_2",
+        "profile_2:color"
+      )
+    : colorOrdinalInterpolator(profile2_list, d3Chroma.interpolateViridis);
+
+  const colorScale_byProfile3 = colHeaders_Map.get("profile_3:color")
+    ? getUserDefinedColor(
+        data_promise_raw,
+        profile3_list,
+        "profile_3",
+        "profile_3:color"
+      )
+    : colorOrdinalInterpolator(profile3_list, d3Chroma.interpolateViridis);
+
+  let colorbySpecies_Map = new Map();
+  species_list.forEach((d) => {
+    colorbySpecies_Map.set(d, color(colorScale_bySpecies(d)).formatHex());
   });
-
-  //save metadata to store
-  metadataToSTORE(metadata_map);
-
-  //create simulated map (treemap) based on location using rollup
+  let colorbyLocation_Map = new Map();
+  location_list.forEach((d) => {
+    colorbyLocation_Map.set(d, color(colorScale_byLocation(d)).formatHex());
+  });
+  let colorbySourceType_Map = new Map();
+  sourceType_list.forEach((d) => {
+    colorbySourceType_Map.set(d, color(colorScale_bySourceType(d)).formatHex());
+  });
+  let colorbyProfile1_Map = new Map();
+  profile1_list.forEach((d) => {
+    colorbyProfile1_Map.set(d, color(colorScale_byProfile1(d)).formatHex());
+  });
+  let colorbyProfile2_Map = new Map();
+  profile2_list.forEach((d) => {
+    colorbyProfile2_Map.set(d, color(colorScale_byProfile2(d)).formatHex());
+  });
+  let colorbyProfile3_Map = new Map();
+  profile3_list.forEach((d) => {
+    colorbyProfile3_Map.set(d, color(colorScale_byProfile3(d)).formatHex());
+  });
+  const colorScale_init = {
+    colorType: "location",
+    byLocation: colorbyLocation_Map,
+    bySpecies: colorbySpecies_Map,
+    bySourceType: colorbySourceType_Map,
+    byProfile1: colorbyProfile1_Map,
+    byProfile2: colorbyProfile2_Map,
+    byProfile3: colorbyProfile3_Map,
+    byLocation_ori: colorbyLocation_Map,
+    bySpecies_ori: colorbySpecies_Map,
+    bySourceType_ori: colorbySourceType_Map,
+    byProfile1_ori: colorbyProfile1_Map,
+    byProfile2_ori: colorbyProfile2_Map,
+    byProfile3_ori: colorbyProfile3_Map,
+  };
+  // make simulated map ================================================#########
   const locationRollup = rollup(
-    data_promise_raw,
+    data_promise,
     (d) => d.length,
     (d) => d.isolate_colLocation
   );
   const hierarchyData = hierarchy([null, locationRollup], childrenAccessorFn)
     .sum(([, value]) => value)
     .sort((a, b) => b.value - a.value);
-  
-  //save simulated map to store
-  treemapToSTORE(hierarchyData);
-
-  //create color scale
-  let extra_columns = [];
-  let columns_have_color = [];
-  let colorLUTstore = {};
-  
-  //identify which columns color and regular
-  inputHeaders.forEach((h) => {
-    let splittedHeader = h.split(":");
-    let isHeaderForColor =
-      splittedHeader.length > 1 && splittedHeader[1] === "color" ? true : false;
-    if (isHeaderForColor) {
-      columns_have_color.push(splittedHeader[0]);
-    } else {
-      if (h !== "id" && h !== "date") {
-        extra_columns.push(h);
-      }
-    }
+  //console.log(hierarchyData);
+  //=========================================================================
+  //When all pass validation test, send to store
+  //Convert isolateDate into Map
+  let isolateData_Map = new Map();
+  data_promise.forEach((d) => {
+    isolateData_Map.set(d.uid, d);
   });
 
-  //replace 'location' in extra_columns with 'isolate_colLocation'
-  extra_columns = extra_columns.map((d) => {
-    if (d === "location") {
-      return "isolate_colLocation";
-    } else {
-      return d;
-    }
-  });
-
-  //create color scale for each column that has no color
-  extra_columns.forEach((d) => {
-    const columnHeader = d;
-    let cells = [];
-    data_promise_raw.forEach((da) => {
-      let cell = {}; //{sample: taxaA, header1: valueOfHeader1}
-      cell["sample"] = da.isolate_name;
-      cell[columnHeader] = da[columnHeader];
-      cells.push(cell);
-    });
-
-    let colorLUT = null;
-    let isHeaderHasColor = columns_have_color.indexOf(d) > -1 ? true : false;
-
-    if (isHeaderHasColor) {
-      let headerWithColor = d.concat(":color");
-      colorLUT = colorLUTFromUser(headerWithColor, data_promise_raw);
-    } else {
-      colorLUT = createColorLUT(cells, columnHeader);
-    }
-    colorLUTstore[columnHeader] = colorLUT;
-  });
-  //save color scale to store
-  let colorMap_init = {colorType: 'isolate_colLocation', colorMap: colorLUTstore}
-  colorLUTtoSTORE(colorMap_init);
+  //console.log(colorScale_byLocation.domain());
+  loadIsolateData(isolateData_Map);
+  loadSimulatedMap(hierarchyData);
+  setColorScale(colorScale_init);
 }
 
 export async function parseXML(fileURL, dispatchDataToStore) {
@@ -420,6 +460,25 @@ export const getRandomIntInclusive = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive
 };
 
+export function getColorScale(colorScaleState) {
+  switch (colorScaleState.colorType) {
+    case "species":
+      return colorScaleState.bySpecies;
+    case "location":
+      return colorScaleState.byLocation;
+    case "sourceType":
+      return colorScaleState.bySourceType;
+    case "profile1":
+      return colorScaleState.byProfile1;
+    case "profile2":
+      return colorScaleState.byProfile2;
+    case "profile3":
+      return colorScaleState.byProfile3;
+
+    default:
+      return colorScaleState.byLocation;
+  }
+}
 
 export function getColumnNameByColorType(d, colorType) {
   switch (colorType) {
@@ -442,10 +501,24 @@ export function getColumnNameByColorType(d, colorType) {
 }
 
 export function getColorScaleByObject(obj, colorScaleState) {
-  let colorIndex = colorScaleState.colorType
-  let col = colorScaleState.colorMap[colorIndex].get(obj.isolate_name).colorValue;
-  if (col) {
-    return col
+  if (obj) {
+    switch (colorScaleState.colorType) {
+      case "species":
+        return colorScaleState.bySpecies.get(obj.isolate_species);
+      case "location":
+        return colorScaleState.byLocation.get(obj.isolate_colLocation);
+      case "sourceType":
+        return colorScaleState.bySourceType.get(obj.isolate_sourceType);
+      case "profile1":
+        return colorScaleState.byProfile1.get(obj.profile_1);
+      case "profile2":
+        return colorScaleState.byProfile2.get(obj.profile_2);
+      case "profile3":
+        return colorScaleState.byProfile3.get(obj.profile_3);
+
+      default:
+        return colorScaleState.byLocation.get(obj.isolate_colLocation);
+    }
   } else {
     return "black";
   }
@@ -477,17 +550,81 @@ export function getColorScaleByObjectAndColType(obj, colorScaleState, colType) {
 
 export function getIsolateCompositionByCategory(category, isolateData_Map) {
   let isolateData = _.cloneDeep(Array.from(isolateData_Map.values()));
-  let category_count = _.countBy(isolateData, (d) => {
-    return d[category];
-  });
-  let data = null;
-  data = Object.keys(category_count).map((key) => ({
-    _id: key,
-    id: key,
-    label: key,
-    value: category_count[key],
-  }));
-  return { categoryLength: Object.keys(category_count).length, data: data };
+  let data;
+  switch (category) {
+    case "species":
+      let species_count = _.countBy(isolateData, (d) => {
+        return d.isolate_species;
+      });
+      data = Object.keys(species_count).map((key) => ({
+        _id: key,
+        id: key,
+        label: key,
+        value: species_count[key],
+      }));
+      return { categoryLength: Object.keys(species_count).length, data: data };
+    case "sourceType":
+      let source_count = _.countBy(isolateData, (d) => {
+        return d.isolate_sourceType;
+      });
+      data = Object.keys(source_count).map((key) => ({
+        _id: key,
+        id: key,
+        label: key,
+        value: source_count[key],
+      }));
+      return { categoryLength: Object.keys(source_count).length, data: data };
+    case "location":
+      let location_count = _.countBy(isolateData, (d) => {
+        return d.isolate_colLocation;
+      });
+      data = Object.keys(location_count).map((key) => ({
+        _id: key,
+        id: key,
+        label: key,
+        value: location_count[key],
+      }));
+      return { categoryLength: Object.keys(location_count).length, data: data };
+
+    case "profile1":
+      let profile1_count = _.countBy(isolateData, (d) => {
+        return d.profile_1;
+      });
+      data = Object.keys(profile1_count).map((key) => ({
+        _id: key,
+        id: key,
+        label: key,
+        value: profile1_count[key],
+      }));
+      return { categoryLength: Object.keys(profile1_count).length, data: data };
+
+    case "profile2":
+      let profile2_count = _.countBy(isolateData, (d) => {
+        return d.profile_2;
+      });
+      data = Object.keys(profile2_count).map((key) => ({
+        _id: key,
+        id: key,
+        label: key,
+        value: profile2_count[key],
+      }));
+      return { categoryLength: Object.keys(profile2_count).length, data: data };
+
+    case "profile3":
+      let profile3_count = _.countBy(isolateData, (d) => {
+        return d.profile_3;
+      });
+      data = Object.keys(profile3_count).map((key) => ({
+        _id: key,
+        id: key,
+        label: key,
+        value: profile3_count[key],
+      }));
+      return { categoryLength: Object.keys(profile3_count).length, data: data };
+
+    default:
+      return data;
+  }
 }
 
 export function downloadFileAsText(filename, text) {
@@ -726,9 +863,9 @@ export function randomize(uniqArr) {
 
 export async function getIsolateDataForDev(
   fileURL,
-  metadataToSTORE,
-  colorLUTtoSTORE,
-  treemapToSTORE
+  loadIsolateData,
+  setColorScale,
+  loadSimulatedMap
 ) {
   let data_promise_raw = await csv(fileURL).then(function(result) {
     return result;
@@ -930,9 +1067,9 @@ export async function getIsolateDataForDev(
   });
 
   //console.log(colorScale_byLocation.domain());
-  metadataToSTORE(isolateData_Map);
-  treemapToSTORE(hierarchyData);
-  colorLUTtoSTORE(colorScale_init);
+  loadIsolateData(isolateData_Map);
+  loadSimulatedMap(hierarchyData);
+  setColorScale(colorScale_init);
 }
 
 export const brushResizePath = function(d, temporalbar_h) {

@@ -7,7 +7,7 @@ import { ascending } from "d3-array";
 import "./style_ColorScale.css";
 import { Modal, Empty } from "antd";
 import { scaleBand } from "d3-scale";
-import { getColorScale, downloadSVG } from "../utils/utils";
+import { downloadSVG } from "../utils/utils";
 import { ChromePicker } from "react-color";
 import usePrevious from "../react_hooks/usePrevious-hook";
 
@@ -55,29 +55,6 @@ const ColorScaleChart = (props) => {
         }
       }
     }
-    // if (
-    //   observedWidth &&
-    //   observedHeight &&
-    //   !isUserStartResize &&
-    //   !props.isUserRedraw
-    // ) {
-    //   //when initial draw
-    //   console.log("init");
-    //   draw();
-    // } else if (
-    //   observedWidth &&
-    //   observedHeight &&
-    //   !isUserStartResize &&
-    //   props.isUserRedraw
-    // ) {
-    //   //when user click redraw
-    //   console.log("re-draw");
-    //   draw();
-    //   // reset currentEvent.zoom transform
-    // } else {
-    //   //console.log("hide and remove");
-
-    // }
   }, [isInitialDraw, isUserStartResize, props.isUserRedraw]);
 
   useEffect(() => {
@@ -88,24 +65,28 @@ const ColorScaleChart = (props) => {
   useEffect(() => {
     if (selectedColorPicker) {
       //based on active colorScale.colorType we want to change colorScale so we need a swicth
-      changeColorScaleState(selectedColorPicker, props.colorScale);
+      //changeColorScaleState(selectedColorPicker, props.colorScale);
     }
   }, [selectedColorPicker]);
 
   useEffect(() => {
     if (isDownloading) {
       //create temp svg
-      const currentColorScale = getColorScale(props.colorScale);
-      const colorData = Array.from(currentColorScale.entries()).filter(
-        (d) => d[0] !== null
-      );
-      const colorObj = colorData
-        .map((d) => {
-          return { name: d[0], color: d[1] };
-        })
-        .sort(function(x, y) {
-          return ascending(x.name, y.name);
-        });
+    const colorCategory = props.colorScale.colorType;
+    const currentColorMap = props.colorScale.colorMap[colorCategory]
+    const colorData = Array.from(currentColorMap.entries())
+    const colorObj = colorData
+      .map((d) => {
+        return { name: d[1].colorAttribute, color: d[1].colorValue };
+      })
+      .filter(
+        (d, i, self) =>
+          i === self.findIndex((t) => t.name === d.name && t.color === d.color)
+      )
+      .sort(function(x, y) {
+        return ascending(x.name, y.name);
+      });
+
       const colorList = colorObj.map((d) => d.name);
       const temp_svg_h = colorList.length * 20;
 
@@ -159,26 +140,24 @@ const ColorScaleChart = (props) => {
 
   //DRAWING
   function draw() {
-    //console.log("drawing-colorKey");
-    //clean previous drawing artifacts
-
     select("#colorscale-no-drawing").style("display", "none");
     select("#colorscale-buttons-container").style("display", "block");
-    //select("#colorscale_svgGroup").remove();
     select("#colorCont").remove();
     select("#colorscale-svg").style("display", "block");
     svg.style("height", colorscale_height + margin.top + margin.bottom + "px");
-
-    const currentColorScale = getColorScale(props.colorScale);
-
-    const colorData = Array.from(currentColorScale.entries()).filter(
-      (d) => d[0] !== null
-    );
-
+    
+    const colorCategory = props.colorScale.colorType;
+    const currentColorMap = props.colorScale.colorMap[colorCategory]
+    const colorData = Array.from(currentColorMap.entries())
+    //console.log(colorCategory, currentColorMap);
     const colorObj = colorData
       .map((d) => {
-        return { name: d[0], color: d[1] };
+        return { name: d[1].colorAttribute, color: d[1].colorValue };
       })
+      .filter(
+        (d, i, self) =>
+          i === self.findIndex((t) => t.name === d.name && t.color === d.color)
+      )
       .sort(function(x, y) {
         return ascending(x.name, y.name);
       });
@@ -313,16 +292,3 @@ const ColorScaleChart = (props) => {
 };
 
 export default ColorScaleChart;
-//
-/*
-{displayColorPicker ? (
-  <div id="color-picker-container">
-    <div id="color-picker-cover" onClick={closeColorPickerHandler} />
-    <ChromePicker
-      disableAlpha={true}
-      color={selectedColorPicker.color}
-      onChangeComplete={setColorPickerHandler}
-    />
-  </div>
-) : null}
-*/

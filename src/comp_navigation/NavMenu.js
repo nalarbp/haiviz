@@ -19,6 +19,8 @@ const NavMenu = props => {
           return "home";
         case "/input":
           return "input";
+        case "/visualisation":
+          return "visualisation";
         case "/create-map":
           return "createMap";
         case "/haiviz-spa":
@@ -64,6 +66,15 @@ const NavMenu = props => {
         </Menu.Item>
 
         <Menu.Item
+          key="haivizApp"
+          onClick={e => {
+            props.changeNavLocation(e.key);
+          }}
+        >
+          <NavLink to={"/haiviz-spa"}>Dashboard</NavLink>
+        </Menu.Item>
+
+        <Menu.Item
           key="createMap"
           onClick={e => {
             props.changeNavLocation(e.key);
@@ -72,14 +83,6 @@ const NavMenu = props => {
           <NavLink to="/create-map">Map Editor</NavLink>
         </Menu.Item>
 
-        <Menu.Item
-          key="haivizApp"
-          onClick={e => {
-            props.changeNavLocation(e.key);
-          }}
-        >
-          <NavLink to={"/haiviz-spa"}>HAIviz</NavLink>
-        </Menu.Item>
 
         <Menu.Item
           key="documentation"

@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { xml } from "d3-fetch";
-import { Card, Empty, Spin, Upload } from "antd";
 import { CheckCircleTwoTone } from "@ant-design/icons";
 import { LocalmapInputSVG } from "../utils/customIcons";
+import DeleteInput from "./btn_DeleteInput";
+import { Card, Row, Col, Spin, Upload } from "antd";
 
 const { Dragger } = Upload;
-
-//props.svgMap, props.loadSVG
-
 const LocalmapInput = (props) => {
   const [isLoading, setisLoading] = useState(false);
 
@@ -38,17 +36,11 @@ const LocalmapInput = (props) => {
   return (
     <React.Fragment>
       <Card
-        title={"Local map"}
+        title={"Local Map"}
         headStyle={{ textAlign: "left" }}
         bodyStyle={{ margin: "0px", padding: "5px" }}
       >
-        {!props.isolateData && (
-          <Empty
-            image={Empty.PRESENTED_IMAGE_SIMPLE}
-            description={"Please load the metadata first"}
-          />
-        )}
-        {props.isolateData && !isLoading && !props.svgMap && (
+        {!isLoading && !props.svgMap && (
           <React.Fragment>
             <Dragger
               accept={".xml"}
@@ -64,17 +56,24 @@ const LocalmapInput = (props) => {
             </Dragger>
           </React.Fragment>
         )}
-        {props.isolateData && isLoading && !props.svgMap && <Spin />}
-        {props.isolateData && !isLoading && props.svgMap && (
+        {isLoading && !props.svgMap && <Spin />}
+        {!isLoading && props.svgMap && (
           <React.Fragment>
-            <div style={{ padding: "10px" }}>
+            <Row justify="center" className="input_card"> 
+              <Col>
               <CheckCircleTwoTone
                 twoToneColor="#52c41a"
                 style={{ fontSize: "20pt" }}
               />
-              <p>Loaded!</p>
-            </div>
-          </React.Fragment>
+                <p>Loaded!</p>
+              </Col>
+            </Row>
+            <Row justify="center">
+              <Col>
+                <DeleteInput id={'map'}/>
+              </Col>
+            </Row>
+        </React.Fragment>
         )}
       </Card>
     </React.Fragment>

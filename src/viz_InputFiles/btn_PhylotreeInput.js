@@ -1,26 +1,14 @@
-/*
-// TODO:
-Validation: all leaf node in the tree must exist in isolate data (nodes tidak boleh lebih besar dari isolate data)
-Important settings:
-+ node label text size change
-+ node size
-+ change scale
-+ align
-+ sort
-*/
 import React, { useEffect, useState } from "react";
 import { text } from "d3-fetch";
 import { hierarchy, cluster } from "d3-hierarchy";
-import { Card, Empty, Spin, Upload } from "antd";
+import { Card, Row, Col, Spin, Upload } from "antd";
 import { CheckCircleTwoTone } from "@ant-design/icons";
 import newickParse from "../utils/newick";
 import { PhylotreeInputSVG } from "../utils/customIcons";
 import { filterUnique } from "../utils/utils";
+import DeleteInput from "./btn_DeleteInput";
 
 const { Dragger } = Upload;
-
-//props.treeData, props.loadTreeData
-
 const PhylotreeInput = (props) => {
   const [isLoading, setisLoading] = useState(false);
 
@@ -84,21 +72,15 @@ const PhylotreeInput = (props) => {
   return (
     <React.Fragment>
       <Card
-        title={"Phylogenetic tree"}
+        title={"Tree"}
         style={{ height: "100%" }}
         headStyle={{ textAlign: "left" }}
         bodyStyle={{ margin: "0px", padding: "5px" }}
       >
-        {!props.isolateData && (
-          <Empty
-            image={Empty.PRESENTED_IMAGE_SIMPLE}
-            description={"Please load the metadata first"}
-          />
-        )}
-        {props.isolateData && !isLoading && !props.treeData && (
+        {!isLoading && !props.treeData && (
           <React.Fragment>
             <Dragger
-              accept={".nwk, .tre, .tree"}
+              accept={".nwk, .tre, .tree, .txt"}
               style={{ padding: "10px" }}
               name="file"
               multiple={false}
@@ -111,20 +93,27 @@ const PhylotreeInput = (props) => {
             </Dragger>
           </React.Fragment>
         )}
-        {props.isolateData && isLoading && !props.treeData && <Spin />}
-        {props.isolateData && !isLoading && props.treeData && (
+        {isLoading && !props.treeData && <Spin />}
+        {!isLoading && props.treeData && (
           <React.Fragment>
-            <div style={{ padding: "10px" }}>
-              <CheckCircleTwoTone
-                twoToneColor="#52c41a"
-                style={{ fontSize: "20pt" }}
-              />
+          <Row justify="center" className="input_card"> 
+            <Col>
+            <CheckCircleTwoTone
+              twoToneColor="#52c41a"
+              style={{ fontSize: "20pt" }}
+            />
               <p>Loaded!</p>
-            </div>
-          </React.Fragment>
-        )}
-      </Card>
-    </React.Fragment>
+            </Col>
+          </Row>
+          <Row justify="center">
+            <Col>
+              <DeleteInput id={'tree'}/>
+            </Col>
+          </Row>
+      </React.Fragment>
+      )}
+    </Card>
+  </React.Fragment>
   );
 };
 export default PhylotreeInput;
