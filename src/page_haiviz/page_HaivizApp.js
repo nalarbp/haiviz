@@ -22,15 +22,10 @@ import {
 
 const HAIvizApp = (props) => {
   useEffect(() => {
-    // getIsolateDataForDev(
-    //   isolateData_demo_100,
-    //   props.loadIsolateData,
-    //   props.setColorScale,
-    //   props.loadSimulatedMap
-    // );
-    // parseTree(tree_demo_100, props.loadTreeData);
+    //load demo data
   }, []);
   return (
+    <React.Fragment>
     <Row className="haiviz-row">
       <Col xs={4} sm={3} xl={2} id="haiviz-side-menu">
         <SideMenuNav activeChart={props.activeChart} />
@@ -39,6 +34,7 @@ const HAIvizApp = (props) => {
         <Dashboard />
       </Col>
     </Row>
+    </React.Fragment>
   );
 };
 

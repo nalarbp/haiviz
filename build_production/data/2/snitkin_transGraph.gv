@@ -1,0 +1,162 @@
+/* Created by igraph @VERSION@ */
+digraph {
+  0 [
+    name=1
+  ];
+  1 [
+    name=2
+  ];
+  2 [
+    name=3
+  ];
+  3 [
+    name=4
+  ];
+  4 [
+    name=5
+  ];
+  5 [
+    name=6
+  ];
+  6 [
+    name=7
+  ];
+  7 [
+    name=8
+  ];
+  8 [
+    name=9
+  ];
+  9 [
+    name=10
+  ];
+  10 [
+    name=11
+  ];
+  11 [
+    name=12
+  ];
+  12 [
+    name=13
+  ];
+  13 [
+    name=14
+  ];
+  14 [
+    name=15
+  ];
+  15 [
+    name=16
+  ];
+  16 [
+    name=17
+  ];
+  17 [
+    name=18
+  ];
+
+  0 -> 2 [
+    style=solid,
+    weight=null,
+    color=red
+  ];
+
+  2 -> 4 [
+    style=solid,
+    weight=null,
+    color=red
+
+  ];
+  4 -> 1 [
+    style=solid,
+    weight=null,
+    color=red
+
+  ];
+  3 -> 9 [
+    style=solid,
+    weight=null,
+    color=red
+
+  ];
+  9 -> 10 [
+    style=solid,
+    weight=null,
+    color=red
+
+  ];
+  9 -> 5 [
+    style=solid,
+    weight=null,
+    color=red
+
+  ];
+  5 -> 6 [
+    style=solid,
+    weight=null,
+    color=red
+
+  ];
+  6 -> 16 [
+    style=solid,
+    weight=null,
+    color=red
+
+  ];
+  16 -> 13 [
+    style=solid,
+    weight=null,
+    color=red
+
+  ];
+  13 -> 14 [
+    style=solid,
+    weight=null,
+    color=red
+
+  ];
+  14 -> 15 [
+    style=solid,
+    weight=null,
+    color=red
+
+  ];
+  6 -> 11 [
+    style=dashed,
+    weight=null,
+    color=red
+
+  ];
+  0 -> 7 [
+    style=solid,
+    weight=null,
+    color=black
+
+  ];
+  0 -> 3 [
+    style=solid,
+    weight=null,
+    color=black
+
+  ];
+  3 -> 8 [
+    style=solid,
+    weight=null,
+    color=black
+
+  ];
+  11 -> 12 [
+    style=solid,
+    weight=null,
+    color=black
+
+  ];
+  12 -> 17 [
+    style=dashed,
+    weight=null,
+    color=black
+
+  ];
+
+
+}

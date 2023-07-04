@@ -265,7 +265,7 @@ const TemporalHistogram = (props) => {
               d.isolate_colDate <= dateSelection[1]
           );
         if (selectedData && selectedData.length > 0) {
-          selectedData = selectedData.map((d) => d.uid);
+          selectedData = selectedData.map((d) => d.isolate_name);
           props.setSelectedData(selectedData);
         }
 

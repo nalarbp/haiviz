@@ -125,6 +125,11 @@ export const closeButtonTitle = "Close the window";
 export const quickStartGuideFile =
   "./data/quickStartGuide/haiviz_01Jan2021.pdf";
 
+//======= PRELOADED PATH ==========
+export const PRELOADED_DATA = "./data/preloaded_dataset.json";
+export const SELECT_PRELOADED_DATA = "SELECT_PRELOADED_DATA";
+export const RESET_STORE = "RESET_STORE";
+
 //======= SHOWCASES ==========
 export const SHOWCASE_1 = {
   isolateData: "./data/1/isolateData_100.csv",
@@ -156,3 +161,33 @@ export const SHOWCASE_3 = {
   transData: null,
   movementData: null,
 };
+
+//Layout
+export const DASHBOARD_LAYOUT = {
+  sm: [
+    { i: "summary", x: 0, y: 0, w: 12, h: 10, minW: 12, minH: 10 },
+    { i: "idxCol", x: 6, y: 0, w: 12, h: 10, minW: 12, minH: 10 },
+    { i: "simulatedMap", x: 0, y: 11, w: 12, h: 15, minW: 12, minH: 10 },
+    { i: "floorplan", x: 6, y: 11, w: 12, h: 15, minW: 12, minH: 10 },
+    { i: "tree", x: 6, y: 26, w: 12, h: 15, minW: 12, minH: 10 },
+    { i: "transmission", x: 0, y: 26, w: 12, h: 15, minW: 12, minH: 10 },
+    { i: "bar", x: 0, y: 42, w: 12, h: 10, isResizable: false },
+    { i: "gantt", x: 0, y: 50, w: 12, h: 10, minW: 12, minH: 10 },
+    { i: "table", x: 0, y: 60, w: 12, h: 17, isResizable: false },
+    { i: "home", x: 0, y: 0, w: 12, minH: 10, static: true },
+    { i: "treeGantt", x: 0, y: 0, w: 12, h: 15, minW: 12, minH: 10 },
+  ],
+  md: [
+    { i: "summary", x: 0, y: 0, w: 6, h: 10, minW: 2, minH: 5 },
+    { i: "idxCol", x: 8, y: 0, w: 6, h: 10, minW: 1, minH: 10 },
+    { i: "simulatedMap", x: 0, y: 11, w: 6, h: 15, minW: 2, minH: 10 },
+    { i: "floorplan", x: 6, y: 11, w: 6, h: 15, minW: 2, minH: 10 },
+    { i: "tree", x: 6, y: 26, w: 6, h: 15, minW: 2, minH: 10 },
+    { i: "transmission", x: 0, y: 11, w: 6, h: 15, minW: 2, minH: 10 },
+    { i: "bar", x: 0, y: 42, w: 12, h: 10, isResizable: false },
+    { i: "gantt", x: 0, y: 50, w: 12, h: 10, minW: 4, minH: 10 },
+    { i: "table", x: 0, y: 60, w: 12, h: 18, isResizable: false },
+    { i: "home", x: 0, y: 0, w: 12, minH: 10, static: true },
+    { i: "treeGantt", x: 0, y: 0, w: 12, h: 15, minW: 12, minH: 10 },
+  ],
+}

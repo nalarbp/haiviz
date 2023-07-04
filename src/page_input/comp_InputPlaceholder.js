@@ -14,7 +14,6 @@ import {
   loadTransmissionData,
   loadMovementData,
   setColorScale,
-  setColorByLocation,
 } from "../action/index";
 import { loadSimulatedMap } from "../action/simulatedMap_actions";
 import { loadTreeData } from "../action/phyloTree_actions";
@@ -65,7 +64,6 @@ const InputPlaceholder = (props) => {
               movementData={props.movementData}
               loadMovementData={props.loadMovementData}
               loadIsolateData={props.loadIsolateData}
-              setColorByLocation={props.setColorByLocation}
             />
           </Col>
         </Row>
@@ -93,7 +91,6 @@ function mapDispatchToProps(dispatch, ownProps) {
       loadTransgraphData: loadTransmissionData,
       loadMovementData: loadMovementData,
       setColorScale: setColorScale,
-      setColorByLocation: setColorByLocation,
       loadSimulatedMap: loadSimulatedMap,
     },
     dispatch

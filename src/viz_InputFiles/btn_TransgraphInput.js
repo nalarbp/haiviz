@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { text } from "d3-fetch";
 import DeleteInput from "./btn_DeleteInput";
 import { Card, Row, Col, Spin, Upload } from "antd";
 import { CheckCircleTwoTone } from "@ant-design/icons";
-import { parseDOTtoCytoscape, isIsolateOrHost } from "../utils/utils";
+import { parseGraph } from "../utils/utils";
 import { TransgraphInputSVG } from "../utils/customIcons";
 
 const { Dragger } = Upload;
@@ -14,21 +13,6 @@ const _ = require("lodash");
 const TransgraphInput = (props) => {
   const [isLoading, setisLoading] = useState(false);
 
-  //functions
-  async function parseGraph(fileURL) {
-    let graph_promise = await text(fileURL).then(function(result) {
-      return result;
-    });
-    //const graph = parseDOTtoJSON(graph_promise);
-    const graph = parseDOTtoCytoscape(graph_promise);
-    if (graph) {
-      props.loadTransgraphData(graph);
-    } else {
-      setisLoading(false);
-      return;
-    }
-  }
-
   const beforeUploadHandler = (file) => {
     setisLoading(true);
     if (file) {
@@ -36,7 +20,7 @@ const TransgraphInput = (props) => {
       reader.readAsDataURL(file);
       reader.onloadend = function(evt) {
         const dataUrl = evt.target.result;
-        parseGraph(dataUrl);
+        parseGraph(dataUrl, props.loadTransgraphData, setisLoading);
       };
     }
   };

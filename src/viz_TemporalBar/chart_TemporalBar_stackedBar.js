@@ -65,15 +65,15 @@ const TemporalStackedBar = (props) => {
     }
   }, [props.selectedData]);
 
-  // useEffect(() => {
-  //   if (props.colorScale.colorType) {
-  //     svg.selectAll(".temporal-bar-rectangle").attr("fill", (e) => {
-  //       let obj = props.isolateData.get(e.isolate_name);
-  //       let col = getColorScaleByObject(obj, props.colorScale);
-  //       return col;
-  //     });
-  //   }
-  // }, [props.colorScale]);
+  useEffect(() => {
+    if (props.colorScale.colorType) {
+      svg.selectAll(".temporal-bar-rectangle").attr("fill", (e) => {
+        let obj = props.isolateData.get(e.isolate_name);
+        let col = getColorScaleByObject(obj, props.colorScale);
+        return col;
+      });
+    }
+  }, [props.colorScale]);
 
   useEffect(() => {
     if (selectionDate) {
@@ -191,11 +191,11 @@ const TemporalStackedBar = (props) => {
       .attr("stroke", "black")
       .attr("stroke-width", "0.5")
       .style("opacity", 1)
-      // .attr("fill", (e) => {
-      //   let obj = props.isolateData.get(e.isolate_name);
-      //   let col = getColorScaleByObject(obj, props.colorScale);
-      //   return col;
-      // });
+      .attr("fill", (e) => {
+        let obj = props.isolateData.get(e.isolate_name);
+        let col = getColorScaleByObject(obj, props.colorScale);
+        return col;
+      });
 
 
     if (scaleMode === "daily") {
@@ -267,7 +267,7 @@ const TemporalStackedBar = (props) => {
               d.isolate_colDate <= dateSelection[1]
           );
         if (selectedData && selectedData.length > 0) {
-          selectedData = selectedData.map((d) => d.uid);
+          selectedData = selectedData.map((d) => d.isolate_name);
           props.setSelectedData(selectedData);
         }
 
@@ -329,7 +329,7 @@ const TemporalStackedBar = (props) => {
 
   function updateBySelectedData() {
     svg.selectAll(".temporal-bar-rectangle").style("opacity", (d) => {
-      if (props.selectedData.indexOf(d.uid) !== -1) {
+      if (props.selectedData.indexOf(d.isolate_name) !== -1) {
         return 1;
       } else {
         return 0.2;

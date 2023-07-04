@@ -149,6 +149,26 @@ export function loadMovementData(val) {
   };
 }
 
+export function resetStore(val) {
+  return {
+    type: constant.RESET_STORE,
+    payload: val,
+  };
+}
+
+export function preloadedDataToStore(val) {
+  return {
+    type: constant.PRELOADED_DATA,
+    payload: val,
+  };
+}
+
+export function selectedPreloadedDataToStore(val) {
+  return {
+    type: constant.SELECT_PRELOADED_DATA,
+    payload: val,
+  };
+}
 // ================== SIDE MENU RENDERING ======================
 export function setActiveChart(val) {
   return {

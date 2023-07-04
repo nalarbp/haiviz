@@ -1,0 +1,23 @@
+{
+  "data_list": [
+    {
+      "id": "e0",
+      "name": "Example Dataset",
+      "metadata": "./data/preloaded/e0/metadata.csv",
+      "map": "./data/preloaded/e0/map.xml",
+      "tree": "./data/preloaded/e0/tree.nwk",
+      "network": "./data/preloaded/e0/network.gv",
+      "gantt": "./data/preloaded/e0/gantt.csv"
+    },
+    {
+      "id": "e2",
+      "name": "Example Dataset 2",
+      "metadata": "./data/preloaded/e0/metadata.csv",
+      "map": "",
+      "tree": "./data/preloaded/e0/tree.nwk",
+      "network": "./data/preloaded/e0/network.gv",
+      "gantt": "./data/preloaded/e0/gantt.csv"
+    }
+  ],
+  "description": "This JSON file describes the preloaded datasets."
+}

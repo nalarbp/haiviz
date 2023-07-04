@@ -15,6 +15,7 @@ import Localmap from "../viz_Localmap/comp_Localmap";
 import SummaryCard from "../viz_Summary/comp_Summary";
 import SimulatedMap from "../viz_SimulatedMap/comp_SimulatedMap";
 import ColorScale from "../viz_ColorScale/comp_ColorScale";
+import PreloadedDataset from "../page_all/comp_preloadedDataset"
 
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
@@ -26,7 +27,7 @@ import { changeTreeResizeSignal } from "../action/phyloTree_actions";
 import { changeTempResizeSignal } from "../action/temporalBar_actions";
 import { changeLocalmapResizeSignal } from "../action/localMap_actions";
 import { changeTreeGanttResizeSignal } from "../action/phyloTreeGantt_actions";
-import { Empty } from "antd";
+import { Row, Empty } from "antd";
 const GridLayout = WidthProvider(ReactGridLayout);
 //const dimensions = ["width", "height"];
 //const Mea = withMeasure(dimensions)(PatientMovement);
@@ -149,6 +150,9 @@ const Dashboard = props => {
 
   return (
     <React.Fragment>
+      <Row justify={"center"}>
+        <PreloadedDataset/>
+      </Row>
       {activeCharts.length === 0 && <Empty description={"No active charts: Load input file and click the chart icon in the side menu to create a chart."} />}
       {activeCharts.length > 0 && (
         <div id="dashboard">

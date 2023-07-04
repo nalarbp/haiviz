@@ -1,4 +1,5 @@
 import { combineReducers } from "redux";
+import { RESET_STORE } from "../utils/constants";
 import movementDataReducer from "./reducer-movementDataReducer";
 import activeChartReducer from "./reducer-activeChart";
 import floorplanReducer from "./reducer-floorplanReducer";
@@ -19,8 +20,15 @@ import movementSettingsReducer from "./reducer-movementSettings";
 import temporalbarSettingsReducer from "./reducer-temporalbarSettings";
 import mapEditorReducer from "./reducer-mapEditor";
 import navSettingsReducer from "./reducer-navSettings";
-//
+import preloadedDataReducer from "./reducer-preloadedData";
+import selectedPreloadedDataReducer from "./reducer-selectedPreloadedData";
+import {DASHBOARD_LAYOUT} from "../utils/constants";
+
+const _ = require("lodash");
+
 export const initialState = {
+  preloadedData: null,
+  selectedPreloadedData: null,
   isolateData: null,
   floorplan: null,
   simulatedMap: null,
@@ -28,34 +36,7 @@ export const initialState = {
   transmission: null,
   movementData: null,
   selectedData: null, //we will generate date extent from only isolate data, when brush:generate isoaltes rather than sending daterange
-  layout: {
-    sm: [
-      { i: "summary", x: 0, y: 0, w: 12, h: 10, minW: 12, minH: 10 },
-      { i: "idxCol", x: 6, y: 0, w: 12, h: 10, minW: 12, minH: 10 },
-      { i: "simulatedMap", x: 0, y: 11, w: 12, h: 15, minW: 12, minH: 10 },
-      { i: "floorplan", x: 6, y: 11, w: 12, h: 15, minW: 12, minH: 10 },
-      { i: "tree", x: 6, y: 26, w: 12, h: 15, minW: 12, minH: 10 },
-      { i: "transmission", x: 0, y: 26, w: 12, h: 15, minW: 12, minH: 10 },
-      { i: "bar", x: 0, y: 42, w: 12, h: 10, isResizable: false },
-      { i: "gantt", x: 0, y: 50, w: 12, h: 10, minW: 12, minH: 10 },
-      { i: "table", x: 0, y: 60, w: 12, h: 17, isResizable: false },
-      { i: "home", x: 0, y: 0, w: 12, minH: 10, static: true },
-      { i: "treeGantt", x: 0, y: 0, w: 12, h: 15, minW: 12, minH: 10 },
-    ],
-    md: [
-      { i: "summary", x: 0, y: 0, w: 6, h: 10, minW: 2, minH: 5 },
-      { i: "idxCol", x: 8, y: 0, w: 6, h: 10, minW: 1, minH: 10 },
-      { i: "simulatedMap", x: 0, y: 11, w: 6, h: 15, minW: 2, minH: 10 },
-      { i: "floorplan", x: 6, y: 11, w: 6, h: 15, minW: 2, minH: 10 },
-      { i: "tree", x: 6, y: 26, w: 6, h: 15, minW: 2, minH: 10 },
-      { i: "transmission", x: 0, y: 11, w: 6, h: 15, minW: 2, minH: 10 },
-      { i: "bar", x: 0, y: 42, w: 12, h: 10, isResizable: false },
-      { i: "gantt", x: 0, y: 50, w: 12, h: 10, minW: 4, minH: 10 },
-      { i: "table", x: 0, y: 60, w: 12, h: 18, isResizable: false },
-      { i: "home", x: 0, y: 0, w: 12, minH: 10, static: true },
-      { i: "treeGantt", x: 0, y: 0, w: 12, h: 15, minW: 12, minH: 10 },
-    ],
-  },
+  layout: DASHBOARD_LAYOUT,
   activeChart: {
     summary: { show: false },
     idxCol: { show: false },
@@ -143,7 +124,7 @@ export const initialState = {
   },
   temporalbarSettings: {
     isUserStartResize: false,
-    chartMode: "histogram",
+    chartMode: "stackedBar",
     scaleMode: "weekly",
     isAnimationPlaying: false,
   },
@@ -156,8 +137,17 @@ export const initialState = {
   },
 };
 
-const rootReducer = combineReducers(
+const rootReducer = (state, action) => {
+  if (action.type === RESET_STORE) {
+    state = initialState; // Reset the state to the initial state
+  }
+  return appReducer(state, action);
+};
+
+const appReducer = combineReducers(
   {
+    preloadedData: preloadedDataReducer,
+    selectedPreloadedData: selectedPreloadedDataReducer,
     activeChart: activeChartReducer,
     isolateData: isolateDataReducer,
     tree: treeReducer,

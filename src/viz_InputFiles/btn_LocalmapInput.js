@@ -4,16 +4,11 @@ import { CheckCircleTwoTone } from "@ant-design/icons";
 import { LocalmapInputSVG } from "../utils/customIcons";
 import DeleteInput from "./btn_DeleteInput";
 import { Card, Row, Col, Spin, Upload } from "antd";
+import  {parseXML} from "../utils/utils";
 
 const { Dragger } = Upload;
 const LocalmapInput = (props) => {
   const [isLoading, setisLoading] = useState(false);
-
-  //functions
-  async function parseXML(fileURL) {
-    var xml_promise = await xml(fileURL);
-    props.loadXML(xml_promise);
-  }
 
   const beforeUploadHandler = (file) => {
     setisLoading(true);
@@ -22,7 +17,7 @@ const LocalmapInput = (props) => {
       reader.readAsDataURL(file);
       reader.onloadend = function(evt) {
         const dataUrl = evt.target.result;
-        parseXML(dataUrl);
+        parseXML(dataUrl, props.loadXML);
       };
     }
   };
@@ -36,7 +31,7 @@ const LocalmapInput = (props) => {
   return (
     <React.Fragment>
       <Card
-        title={"Local Map"}
+        title={"Map"}
         headStyle={{ textAlign: "left" }}
         bodyStyle={{ margin: "0px", padding: "5px" }}
       >

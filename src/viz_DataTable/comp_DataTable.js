@@ -1,5 +1,3 @@
-/* ============================================================================
-============================================================================ */
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
@@ -13,8 +11,6 @@ import {
   FilterOutlined,
 } from "@ant-design/icons";
 import { dateToStringIS08601, getIsolateDataHeader } from "../utils/utils";
-//import { ExportToCsv } from "export-to-csv";
-
 import withMeasure from "../hocs/withMeasure";
 
 const dimensions = ["width", "height"];
@@ -23,8 +19,6 @@ const _ = require("lodash");
 const DataTable = (props) => {
   const [isDrawerVisible, setisDrawerVisible] = useState(false);
   const isolateData = _.cloneDeep(Array.from(props.data.values()));
-  // const [searchText, setSearchText] = useState(null);
-  // const [searchedColumn, setSearchedColumn] = useState(null);
   const dataTable = { headers: null, cells: null };
   const cells =
     isolateData && isolateData[0]
@@ -74,45 +68,6 @@ const DataTable = (props) => {
       }
     }
   }, [props.selectedData]);
-
-  // useEffect(() => {
-  //   if (
-  //     searchText &&
-  //     searchedColumn &&
-  //     searchText !== "" &&
-  //     searchedColumn !== ""
-  //   ) {
-  //     let selectedData = [];
-  //     if (searchedColumn === "isolate_colDate") {
-  //       let filteredCells = isolateData.filter(function(d) {
-  //         return dateToStringIS08601(d[searchedColumn])
-  //           .toString()
-  //           .toLowerCase()
-  //           .includes(searchText.toLowerCase());
-  //       });
-  //       if (filteredCells) {
-  //         selectedData = filteredCells;
-  //       }
-  //     } else {
-  //       let filteredCells = isolateData.filter(function(d) {
-  //         return d[searchedColumn]
-  //           .toString()
-  //           .toLowerCase()
-  //           .includes(searchText.toLowerCase());
-  //       });
-  //       if (filteredCells) {
-  //         selectedData = filteredCells;
-  //       }
-  //     }
-  //     let filteredIsolateNames =
-  //       selectedData && selectedData.length > 0
-  //         ? selectedData.map((d) => d.isolate_name)
-  //         : [];
-  //     props.setSelectedData(filteredIsolateNames);
-  //   } else if (searchText === "" || searchedColumn === "") {
-  //     props.setSelectedData([]);
-  //   }
-  // }, [searchText, searchedColumn]);
 
   //HANDLERS
   const onCloseHandler = () => {
@@ -169,8 +124,16 @@ const DataTable = (props) => {
   //Util functions
   function createHeaders(isolateData) {
     let raw_headers = isolateData[0];
-    delete raw_headers["uid"];
-    let headers = Object.keys(raw_headers).map(function(key) {
+    //sort raw_headers so that isolate_name, date and location are always first
+    let headers = Object.keys(raw_headers).sort(function(a, b) {
+      if (a === "isolate_name") return -1;
+      if (b === "isolate_name") return 1;
+      if (a === "isolate_colDate") return -1;
+      if (b === "isolate_colDate") return 1;
+      if (a === "isolate_colLocation") return -1;
+      if (b === "isolate_colLocation") return 1;
+      return 0;
+    }).map(function(key) {
       return {
         key: key,
         dataIndex: key,
@@ -190,8 +153,6 @@ const DataTable = (props) => {
               }
               onPressEnter={() => {
                 confirm();
-                // setSearchText(selectedKeys[0]);
-                // setSearchedColumn(key);
               }}
               style={{ width: 188, marginBottom: 8, display: "block" }}
             />
@@ -200,8 +161,6 @@ const DataTable = (props) => {
                 type="primary"
                 onClick={() => {
                   confirm();
-                  // setSearchText(selectedKeys[0]);
-                  // setSearchedColumn(key);
                 }}
                 icon={<FilterOutlined />}
                 size="small"
@@ -224,22 +183,14 @@ const DataTable = (props) => {
         ),
         filteredValue: null,
         onFilter: function(value, record) {
-          const searchTextList = value.split("::");
           if (record[key]) {
             const textInCell = record[key].toString();
-            //does text in cell are in the search list? !== -1, yes => true, no => false
-            const res =
-              searchTextList.indexOf(textInCell) !== -1 ? true : false;
+            //if text in cell contains value, return true
+            const res = textInCell.match(value) ? true : false;
             return res;
           } else {
             return "";
           }
-          // return record[key]
-          //   ? record[key]
-          //       .toString()
-          //       .toLowerCase()
-          //       .includes(value.toLowerCase())
-          //   : "";
         },
         filterIcon: function(filtered) {
           return (
@@ -257,7 +208,7 @@ const DataTable = (props) => {
   return (
     <React.Fragment>
       <Card
-        title={"Isolates table"}
+        title={"Table"}
         bordered={false}
         style={{ height: "100%" }}
         bodyStyle={{ padding: "0px", width: "100%" }}
@@ -291,7 +242,7 @@ const DataTable = (props) => {
           </Row>
         }
       >
-        <div id="movement-drawer-settings">
+        <div id="dataTable-drawer-settings">
           <DataTableSettings
             isolateData={isolateData}
             selectedData={props.selectedData}
@@ -320,7 +271,7 @@ const DataTable = (props) => {
             }}
           >
             <p style={{ height: "40px", marginLeft: "10px" }}>
-              Number of selected isolates: &nbsp;
+              Data selected: &nbsp;
               <strong>{tableCells.length}</strong> &nbsp;
             </p>
             <Button onClick={clearSelectedDataHandler}>Reset</Button>
@@ -379,8 +330,4 @@ function mapDispatchToProps(dispatch) {
 const MeasuredDataTable = withMeasure(dimensions)(DataTable);
 
 export default connect(mapStateToProps, mapDispatchToProps)(MeasuredDataTable);
-//onChange={function(pagination, filters, sorter, extra) {
-//   console.log(filters);
-// }}
-//sorter: (a, b) => (a[key] > b[key]) - (a[key] < b[key]),
-//sortDirections: ["descend"],
+

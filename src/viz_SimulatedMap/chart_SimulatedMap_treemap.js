@@ -219,7 +219,7 @@ const SimulatedMapChart = (props) => {
           (el) => el.isolate_colLocation === d.data[0]
         );
         if (obj) {
-          let selectedNames = obj.map((d) => d.uid);
+          let selectedNames = obj.map((d) => d.isolate_name);
           props.setSelectedData(selectedNames);
         }
       })
@@ -272,7 +272,7 @@ const SimulatedMapChart = (props) => {
         .style("cursor", "pointer")
         .style("opacity", 0.8)
         .on("click", (d) => {
-          props.setSelectedData([d.uid]);
+          props.setSelectedData([d.isolate_name]);
         })
         .append("title")
         .text((d) => `isolate: ${d.isolate_name}`);
@@ -356,7 +356,7 @@ const SimulatedMapChart = (props) => {
           let clickedselectedData = [];
           if (clickedData.length > 0) {
             clickedData.forEach((d) => {
-              clickedselectedData.push(d.uid);
+              clickedselectedData.push(d.isolate_name);
             });
           }
           props.setSelectedData(clickedselectedData);
@@ -410,14 +410,14 @@ const SimulatedMapChart = (props) => {
       svg
         .selectAll(".simulatedMap_circles")
         .attr("r", (d) => {
-          if (props.selectedData.indexOf(d.uid) !== -1) {
+          if (props.selectedData.indexOf(d.isolate_name) !== -1) {
             return nodeSize * 1.5;
           } else {
             return nodeSize;
           }
         })
         .style("opacity", (d) => {
-          if (props.selectedData.indexOf(d.uid) !== -1) {
+          if (props.selectedData.indexOf(d.isolate_name) !== -1) {
             return 0.8;
           } else {
             return 0.2;
