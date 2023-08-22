@@ -1,10 +1,6 @@
-/* ============================================================================
-============================================================================ */
 import React, { useEffect, useState } from "react";
 import { Row, Col } from "antd";
-import {
-  getIsolateCompositionByCategory,
-} from "../utils/utils";
+import { getIsolateCompositionByCategory } from "../utils/utils";
 import PieChart from "./chart_Pie";
 import "./style_summary.css";
 
@@ -15,12 +11,11 @@ const SummaryChart = (props) => {
   const observedHeight = props.height - 80;
   const desc_cont_h = observedHeight * 0.2;
   const chart_cont_h = observedHeight * 0.8;
-  const currentColorScale = null
 
   useEffect(() => {
     if (props.colorScale.colorType) {
       const data = getIsolateCompositionByCategory(
-        props.colorScale.colorType,
+        props.colorScale,
         props.isolateData
       );
       setData(data);
@@ -38,7 +33,7 @@ const SummaryChart = (props) => {
               marginLeft={20}
               marginRight={20}
               legendsXOffset={0}
-              colorScale={currentColorScale}
+              colorScale={props.colorScale}
             />
           </div>
           <div
@@ -62,4 +57,3 @@ const SummaryChart = (props) => {
 };
 
 export default SummaryChart;
-

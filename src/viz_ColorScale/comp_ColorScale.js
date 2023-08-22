@@ -15,6 +15,7 @@ import {
   changeColorResizeSignal,
   changeIsColorScaleDownloading,
   setColorScaleType,
+  setColorScale,
 } from "../action/index";
 import {
   DragOutlined,
@@ -137,6 +138,7 @@ const ColorScale = (props) => {
                 colorScale={props.colorScale}
                 colorscaleSettings={props.colorscaleSettings}
                 setColorScaleType={props.setColorScaleType}
+                setColorScale={props.setColorScale}
                 changeIsColorScaleDownloading={
                   props.changeIsColorScaleDownloading
                 }
@@ -164,6 +166,7 @@ function mapDispatchToProps(dispatch) {
       changeColorResizeSignal: changeColorResizeSignal,
       changeIsColorScaleDownloading: changeIsColorScaleDownloading,
       setColorScaleType: setColorScaleType,
+      setColorScale,
     },
     dispatch
   );

@@ -22,7 +22,7 @@ import mapEditorReducer from "./reducer-mapEditor";
 import navSettingsReducer from "./reducer-navSettings";
 import preloadedDataReducer from "./reducer-preloadedData";
 import selectedPreloadedDataReducer from "./reducer-selectedPreloadedData";
-import {DASHBOARD_LAYOUT} from "../utils/constants";
+import { DASHBOARD_LAYOUT } from "../utils/constants";
 
 const _ = require("lodash");
 
@@ -91,7 +91,7 @@ export const initialState = {
     textSize: 5,
     textOffset: 0,
   },
-  colorScale: {colorType:'isolate_colLocation', colorMap: null},
+  colorScale: { colorType: "isolate_colLocation", colorMap: null },
   colorscaleSettings: {
     isUserStartResize: false,
     nodeSize: 5,

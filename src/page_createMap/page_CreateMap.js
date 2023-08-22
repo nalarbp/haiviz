@@ -13,7 +13,6 @@ import "./style_CreateMap.css";
 ///
 const CreateMap = (props) => {
   ///const [xmlFile, setXMLFile] = useState(null);
-  console.log("MAPP", props);
   return (
     <React.Fragment>
       {props.svgData === null && (

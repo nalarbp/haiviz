@@ -1,4 +1,4 @@
-source_name,start_date,end_date,location_name,location_color
+pid,start_date,end_date,location,location_color
 1,2011-06-14,2011-06-15,ICU,#0099cc
 1,2011-06-16,2011-06-28,Ward F,#ff6666
 1,2011-06-29,2011-06-30,ICU,#0099cc

@@ -133,7 +133,7 @@ const Dashboard = (props) => {
 
   function onLayoutChangeHandler() {
     let a = generateLayout();
-    console.log(a);
+    //console.log(a);
   }
 
   function onResizeStartHandler(

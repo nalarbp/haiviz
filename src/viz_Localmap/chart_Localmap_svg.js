@@ -1,7 +1,3 @@
-/* ============================================================================
-NOTE: DONT PUT SIMULATION ON CONSTRUCTOR: it slows down resizing behaviour,
-put it on drawing function instead
-============================================================================ */
 import React, { useEffect, useRef } from "react";
 import { select } from "d3-selection";
 import { arc, pie } from "d3-shape";
@@ -246,7 +242,7 @@ const LocalmapChart = (props) => {
         .attr("cy", (d) => d.y)
         .attr("fill", (d) => getColorScaleByObject(d, props.colorScale))
         .on("click", (d) => {
-          props.setSelectedData([d.uid]);
+          props.setSelectedData([d.isolate_name]);
         })
         .append("title")
         .text((d) => `isolate: ${d.isolate_name}`);
@@ -339,7 +335,7 @@ const LocalmapChart = (props) => {
           let clickedselectedData = [];
           if (clickedData.length > 0) {
             clickedData.forEach((d) => {
-              clickedselectedData.push(d.uid);
+              clickedselectedData.push(d.isolate_name);
             });
           }
           props.setSelectedData(clickedselectedData);
@@ -390,14 +386,15 @@ const LocalmapChart = (props) => {
         .selectAll(".localmap-circle")
         .attr("r", (d) => {
           //console.log(selectedData, d);
-          if (props.selectedData.indexOf(d.uid) !== -1) {
+          if (props.selectedData.indexOf(d.isolate_name) !== -1) {
             return nodeSize * 1.5;
           } else {
             return nodeSize;
           }
         })
         .style("opacity", (d) => {
-          if (props.selectedData.indexOf(d.uid) !== -1) {
+          console.log(d);
+          if (props.selectedData.indexOf(d.isolate_name) !== -1) {
             return 0.9;
           } else {
             return 0.2;

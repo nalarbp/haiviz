@@ -1,9 +1,8 @@
-import { Select } from "antd";
+import { Row, Col, Select } from "antd";
 import React from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import * as constant from "../utils/constants";
-import { readPreloadedDatasetJSON, getIsolateData } from "../utils/utils";
+import { getIsolateData } from "../utils/utils";
 import {
   preloadedDataToStore,
   selectedPreloadedDataToStore,
@@ -13,6 +12,7 @@ import {
   loadMovementData,
   setColorScale,
   resetStore,
+  deactivateChartMulti,
 } from "../action/index";
 import { loadSimulatedMap } from "../action/simulatedMap_actions";
 import { loadTreeData } from "../action/phyloTree_actions";
@@ -23,14 +23,6 @@ const { Option } = Select;
 const PreloadedDataset = (props) => {
   let data_options = [];
   let setisLoading = () => {}; //dummy function, to match drag and drop button functions
-
-  //RETRIEVE PRELOADED_DATASET.JSON
-  if (props.preloadedData === null) {
-    readPreloadedDatasetJSON(
-      constant.PRELOADED_DATA,
-      props.preloadedDataToStore
-    );
-  }
 
   //List preloaded dataset and create as options
   if (props.preloadedData) {
@@ -46,6 +38,7 @@ const PreloadedDataset = (props) => {
   const selectPreloadedDataHandler = (val) => {
     if (props.preloadedData && val) {
       props.resetStore();
+      props.deactivateChartMulti();
       //load a new one
       let projectData = props.preloadedData.get(val);
 
@@ -74,7 +67,6 @@ const PreloadedDataset = (props) => {
       }
       //gantt
       if (projectData.gantt) {
-        console.log("gantt", projectData.gantt);
         parseMovement(projectData.gantt, props.loadMovementData, setisLoading);
       }
 
@@ -87,13 +79,20 @@ const PreloadedDataset = (props) => {
 
   return (
     <React.Fragment>
-      <Select
-        value={props.selectedPreloadedData}
-        onChange={selectPreloadedDataHandler}
-        className={"haiviz-preloaded-select"}
-      >
-        {data_options}
-      </Select>
+      <Row gutter={12} style={{ marginBottom: "10px" }}>
+        <Col>
+          <h3>Preloaded Dataset: </h3>
+        </Col>
+        <Col>
+          <Select
+            value={props.selectedPreloadedData}
+            onChange={selectPreloadedDataHandler}
+            className={"haiviz-preloaded-select"}
+          >
+            {data_options}
+          </Select>
+        </Col>
+      </Row>
     </React.Fragment>
   );
 };
@@ -117,6 +116,7 @@ function mapDispatchToProps(dispatch) {
       setColorScale,
       loadSimulatedMap,
       resetStore,
+      deactivateChartMulti,
     },
     dispatch
   );

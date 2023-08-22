@@ -1,6 +1,3 @@
-/* ============================================================================
-props.loadTreeData(colorscale);//
-============================================================================ */
 import React, { useEffect, useRef, useState } from "react";
 import { select } from "d3-selection";
 import { ascending } from "d3-array";
@@ -14,7 +11,6 @@ import usePrevious from "../react_hooks/usePrevious-hook";
 const _ = require("lodash");
 
 const ColorScaleChart = (props) => {
-  //INTERNAL STATES
   const [displayColorPicker, setdisplayColorPicker] = useState(false);
   const [selectedColorPicker, setselectedColorPicker] = useState({
     name: null,
@@ -62,8 +58,25 @@ const ColorScaleChart = (props) => {
       draw();
     }
   }, [props.colorScale]);
+
   useEffect(() => {
-    if (selectedColorPicker) {
+    if (selectedColorPicker && selectedColorPicker.name) {
+      //selectedColorPicker is a single hex color
+      let active_colorType = props.colorScale.colorType;
+      let new_colorMap = _.cloneDeep(props.colorScale.colorMap);
+      let colorAttribute = selectedColorPicker.name;
+      let new_color = selectedColorPicker.color;
+
+      //loop over new_colorMap[active_colorType], find the colorAttribute and change the color
+      new_colorMap[active_colorType].forEach((v, k) => {
+        if (v.colorAttribute === colorAttribute) {
+          v.colorValue = new_color;
+        }
+      });
+      props.setColorScale({
+        colorType: active_colorType,
+        colorMap: new_colorMap,
+      });
       //based on active colorScale.colorType we want to change colorScale so we need a swicth
       //changeColorScaleState(selectedColorPicker, props.colorScale);
     }
@@ -72,20 +85,21 @@ const ColorScaleChart = (props) => {
   useEffect(() => {
     if (isDownloading) {
       //create temp svg
-    const colorCategory = props.colorScale.colorType;
-    const currentColorMap = props.colorScale.colorMap[colorCategory]
-    const colorData = Array.from(currentColorMap.entries())
-    const colorObj = colorData
-      .map((d) => {
-        return { name: d[1].colorAttribute, color: d[1].colorValue };
-      })
-      .filter(
-        (d, i, self) =>
-          i === self.findIndex((t) => t.name === d.name && t.color === d.color)
-      )
-      .sort(function(x, y) {
-        return ascending(x.name, y.name);
-      });
+      const colorCategory = props.colorScale.colorType;
+      const currentColorMap = props.colorScale.colorMap[colorCategory];
+      const colorData = Array.from(currentColorMap.entries());
+      const colorObj = colorData
+        .map((d) => {
+          return { name: d[1].colorAttribute, color: d[1].colorValue };
+        })
+        .filter(
+          (d, i, self) =>
+            i ===
+            self.findIndex((t) => t.name === d.name && t.color === d.color)
+        )
+        .sort(function(x, y) {
+          return ascending(x.name, y.name);
+        });
 
       const colorList = colorObj.map((d) => d.name);
       const temp_svg_h = colorList.length * 20;
@@ -145,10 +159,10 @@ const ColorScaleChart = (props) => {
     select("#colorCont").remove();
     select("#colorscale-svg").style("display", "block");
     svg.style("height", colorscale_height + margin.top + margin.bottom + "px");
-    
+
     const colorCategory = props.colorScale.colorType;
-    const currentColorMap = props.colorScale.colorMap[colorCategory]
-    const colorData = Array.from(currentColorMap.entries())
+    const currentColorMap = props.colorScale.colorMap[colorCategory];
+    const colorData = Array.from(currentColorMap.entries());
     //console.log(colorCategory, currentColorMap);
     const colorObj = colorData
       .map((d) => {
@@ -205,43 +219,6 @@ const ColorScaleChart = (props) => {
       .append("p")
       .text((d) => d.name)
       .style("font-size", "12px");
-  }
-
-  //FUNCTIONS
-  function changeColorScaleState(pickedCol, scaleColor) {
-    switch (scaleColor.colorType) {
-      case "species":
-        let species_col = _.cloneDeep(scaleColor.bySpecies);
-        species_col.set(pickedCol.name, pickedCol.color);
-        props.setColorBySpecies(species_col);
-        break;
-      case "location":
-        let location_col = _.cloneDeep(scaleColor.byLocation);
-        location_col.set(pickedCol.name, pickedCol.color);
-        props.setColorByLocation(location_col);
-        break;
-      case "sourceType":
-        let sourceType_col = _.cloneDeep(scaleColor.bySourceType);
-        sourceType_col.set(pickedCol.name, pickedCol.color);
-        props.setColorBySourceType(sourceType_col);
-        break;
-      case "profile1":
-        let profile1_col = _.cloneDeep(scaleColor.byProfile1);
-        profile1_col.set(pickedCol.name, pickedCol.color);
-        props.setColorByProfile1(profile1_col);
-        break;
-      case "profile2":
-        let profile2_col = _.cloneDeep(scaleColor.byProfile2);
-        profile2_col.set(pickedCol.name, pickedCol.color);
-        props.setColorByProfile2(profile2_col);
-        break;
-      case "profile3":
-        let profile3_col = _.cloneDeep(scaleColor.byProfile3);
-        profile3_col.set(pickedCol.name, pickedCol.color);
-        props.setColorByProfile3(profile3_col);
-        break;
-      default:
-    }
   }
 
   //HANDLERS

@@ -145,7 +145,7 @@ export const TEMPLATE = {
   transData: "./data/template/transmissionGraph_input.gv",
   movementData: "./data/template/movementData_input.csv",
   svg: "./data/template/svgMap_input.svg",
-  bundled: "./data/template/example_inputFiles_HAIviz_v0.3.zip",
+  bundled: "./data/template/example_inputFiles_HAIviz.zip",
 };
 export const SHOWCASE_2 = {
   isolateData: "./data/2/snitkin_metadata.csv",
@@ -190,4 +190,4 @@ export const DASHBOARD_LAYOUT = {
     { i: "home", x: 0, y: 0, w: 12, minH: 10, static: true },
     { i: "treeGantt", x: 0, y: 0, w: 12, h: 15, minW: 12, minH: 10 },
   ],
-}
+};

@@ -1,4 +1,4 @@
-﻿isolate_name,isolate_species,isolate_sourceType,isolate_sourceName,isolate_colDate,isolate_colLocation,profile_1,profile_2,profile_3,isolate_species:color,isolate_sourceType:color,isolate_colLocation:color,profile_1:color,profile_2:color,profile_3:color
+﻿id,isolate_species,isolate_sourceType,isolate_sourceName,date,location,profile_1,profile_2,profile_3,isolate_species:color,isolate_sourceType:color,location:color,profile_1:color,profile_2:color,profile_3:color
 "Isolate_P1","Klebsiella pneumonia","Patient sample","1","2011-06-14","ICU","null","null","null","#19e8d4","#5f9ea0","#00b1c9","#ff66cc","#440154","#ffff00"
 "Isolate_P2","Klebsiella pneumonia","Patient sample","2","2011-08-05","ICU","null","null","null","#19e8d4","#5f9ea0","#00b1c9","#ff66cc","#440154","#ffff00"
 "Isolate_P3","Klebsiella pneumonia","Patient sample","3","2011-08-15","ICU","null","null","null","#19e8d4","#5f9ea0","#00b1c9","#ff66cc","#440154","#ffff00"

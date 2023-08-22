@@ -2,7 +2,7 @@ import {
   ACTIVE_CHART,
   INACTIVE_CHART,
   MULTI_ACTIVE_CHART,
-  MULTI_INACTIVE_CHART
+  MULTI_INACTIVE_CHART,
 } from "../utils/constants";
 import { initialState } from "../reducers";
 //
@@ -29,7 +29,18 @@ const activeChartReducer = (prevState, action) => {
       return action.payload;
 
     case MULTI_INACTIVE_CHART:
-      return action.payload;
+      let mic = Object.assign({}, prevState);
+      mic["summary"].show = false;
+      mic["idxCol"].show = false;
+      mic["simulatedMap"].show = false;
+      mic["floorplan"].show = false;
+      mic["bar"].show = false;
+      mic["tree"].show = false;
+      mic["transmission"].show = false;
+      mic["gantt"].show = false;
+      mic["treeGantt"].show = false;
+      mic["table"].show = false;
+      return mic;
 
     default:
       if (prevState) {

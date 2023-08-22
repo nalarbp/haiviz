@@ -27,7 +27,6 @@ import {
   getRandomInt,
 } from "../utils/utils";
 import { EyeOutlined } from "@ant-design/icons";
-import { random } from "lodash";
 
 const { Meta } = Card;
 
@@ -37,7 +36,6 @@ const Showcases = (props) => {
   let setisLoading = () => {}; //dummy function, to match drag and drop button functions
 
   if (props.preloadedData === null) {
-    console.log("preloaded data is null");
     readPreloadedDatasetJSON(
       constant.PRELOADED_DATA,
       props.preloadedDataToStore
@@ -45,46 +43,43 @@ const Showcases = (props) => {
   }
 
   const showcaseViewHandler = (e) => {
-    let val = e.target.value;
-    if (props.preloadedData && val) {
-      props.resetStore();
-      //load a new one
-      let projectData = props.preloadedData.get(val);
-
-      //for each input (metadata, map, tree, network, and gantt), read the file and load it
-      //metadata
-      if (projectData.metadata) {
-        getIsolateData(
-          projectData.metadata,
-          props.loadIsolateData,
-          props.setColorScale,
-          props.loadSimulatedMap,
-          setisLoading
-        );
-      }
-      //map
-      if (projectData.map) {
-        parseXML(projectData.map, props.loadXML);
-      }
-      //tree
-      if (projectData.tree) {
-        parseTree(projectData.tree, props.loadTreeData, setisLoading);
-      }
-      //network
-      if (projectData.network) {
-        parseGraph(projectData.network, props.loadTransgraphData, setisLoading);
-      }
-      //gantt
-      if (projectData.gantt) {
-        console.log("gantt", projectData.gantt);
-        parseMovement(projectData.gantt, props.loadMovementData, setisLoading);
-      }
-
-      props.selectedPreloadedDataToStore(val);
-      props.changeNavLocation("haivizApp");
-    } else {
-      props.resetStore();
-    }
+    // let val = e.target.value;
+    // if (props.preloadedData && val) {
+    //   props.resetStore();
+    //   //load a new one
+    //   let projectData = props.preloadedData.get(val);
+    //   //for each input (metadata, map, tree, network, and gantt), read the file and load it
+    //   //metadata
+    //   if (projectData.metadata) {
+    //     getIsolateData(
+    //       projectData.metadata,
+    //       props.loadIsolateData,
+    //       props.setColorScale,
+    //       props.loadSimulatedMap,
+    //       setisLoading
+    //     );
+    //   }
+    //   //map
+    //   if (projectData.map) {
+    //     parseXML(projectData.map, props.loadXML);
+    //   }
+    //   //tree
+    //   if (projectData.tree) {
+    //     parseTree(projectData.tree, props.loadTreeData, setisLoading);
+    //   }
+    //   //network
+    //   if (projectData.network) {
+    //     parseGraph(projectData.network, props.loadTransgraphData, setisLoading);
+    //   }
+    //   //gantt
+    //   if (projectData.gantt) {
+    //     console.log("gantt", projectData.gantt);
+    //     parseMovement(projectData.gantt, props.loadMovementData, setisLoading);
+    //   }
+    //   props.selectedPreloadedDataToStore(val);
+    // } else {
+    //   props.resetStore();
+    // }
   };
 
   useEffect(() => {
@@ -93,6 +88,9 @@ const Showcases = (props) => {
       props.preloadedData.forEach((v, k) => {
         let card_name = v["name"];
         let card_desc = v["description"];
+        if (card_desc.length > 50) {
+          card_desc = card_desc.substring(0, 50) + " ...";
+        }
         let card_bg_pattern_class = "hp-" + String(getRandomInt(2, 10));
         let card_bg_col_class = "hp-col-" + String(getRandomInt(1, 10));
         data_options.push(
@@ -107,14 +105,14 @@ const Showcases = (props) => {
               }
               style={{ width: "100%", padding: "0px" }}
               actions={[
-                <Link to="/haiviz-spa">
+                <Link to={"/" + String(k)}>
                   <Button
                     value={k}
                     key={k}
                     onClick={showcaseViewHandler}
                     icon={<EyeOutlined />}
                   >
-                    Load
+                    View data
                   </Button>
                 </Link>,
               ]}

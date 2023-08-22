@@ -11,7 +11,7 @@
       "gantt": "./data/preloaded/e0/gantt.csv"
     },
     {
-      "id": "e2",
+      "id": "e1",
       "name": "Roberts et al. 2021.",
       "description": "Genomic surveillance, characterization and intervention of a polymicrobial multidrug-resistant outbreak in critical care.",
       "metadata": "./data/preloaded/e0/metadata.csv",
@@ -21,9 +21,19 @@
       "gantt": "./data/preloaded/e0/gantt.csv"
     },
     {
-      "id": "e3",
+      "id": "e2",
       "name": "Chung et al. 2015.",
       "description": "A high-resolution genomic analysis of multidrug-resistant hospital outbreaks of Klebsiella pneumoniae.",
+      "metadata": "./data/preloaded/e2/chung_metadata.csv",
+      "map": "./data/preloaded/e2/chung_localmap.xml",
+      "tree": "./data/preloaded/e2/chung_tree.tree",
+      "network": "",
+      "gantt": ""
+    },
+    {
+      "id": "e3",
+      "name": "Permana et al. 2023.",
+      "description": "Using Genomics To Investigate an Outbreak of Vancomycin-Resistant Enterococcus faecium ST78 at a Large Tertiary Hospital in Queensland.",
       "metadata": "./data/preloaded/e0/metadata.csv",
       "map": "",
       "tree": "./data/preloaded/e0/tree.nwk",
@@ -32,13 +42,13 @@
     },
     {
       "id": "e4",
-      "name": "Permana et al. 2023.",
-      "description": "Using Genomics To Investigate an Outbreak of Vancomycin-Resistant Enterococcus faecium ST78 at a Large Tertiary Hospital in Queensland.",
-      "metadata": "./data/preloaded/e0/metadata.csv",
+      "name": "Snitkin et al. 2012.",
+      "description": "Tracking a hospital outbreak of carbapenem-resistant Klebsiella pneumoniae with whole-genome sequencing.",
+      "metadata": "./data/preloaded/e4/snitkin_metadata.csv",
       "map": "",
-      "tree": "./data/preloaded/e0/tree.nwk",
-      "network": "./data/preloaded/e0/network.gv",
-      "gantt": "./data/preloaded/e0/gantt.csv"
+      "tree": "./data/preloaded/e4/snitkin_phyloTree.nwk",
+      "network": "./data/preloaded/e4/snitkin_transGraph.gv",
+      "gantt": "./data/preloaded/e4/snitkin_gantt.csv"
     }
   ],
   "description": "This JSON file describes the preloaded datasets."

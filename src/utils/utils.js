@@ -469,15 +469,26 @@ export function getColorScaleByObjectAndColType(obj, colorScaleState, colType) {
   }
 }
 
-export function getIsolateCompositionByCategory(category, isolateData_Map) {
+export function getIsolateCompositionByCategory(colorScale, isolateData_Map) {
   let isolateData = _.cloneDeep(Array.from(isolateData_Map.values()));
+  let category = colorScale.colorType;
   let category_count = _.countBy(isolateData, (d) => {
     return d[category];
   });
   let data = null;
+  let colorDict = new Map();
+  const currentColorMap = colorScale.colorMap[category];
+  const colorData = Array.from(currentColorMap.entries());
+  colorData.forEach((d) => {
+    if (!colorDict.has(d[1].colorAttribute)) {
+      colorDict.set(d[1].colorAttribute, d[1].colorValue);
+    }
+  });
+
   data = Object.keys(category_count).map((key) => ({
     _id: key,
     id: key,
+    color: colorDict.get(key),
     label: key,
     value: category_count[key],
   }));
@@ -914,7 +925,7 @@ export function parseDOTtoCytoscape(dot) {
     dotparser(dot);
     const graphdata = dotparser(dot);
     const jsondata = _createTransmissionDatafromDOT(graphdata);
-    console.log(jsondata);
+    //console.log(jsondata);
     return jsondata;
   } catch (e) {
     alert(("Invalid dot format. Error", e));

@@ -46,7 +46,7 @@ const Home = (props) => {
                 style={{
                   fontSize: "45pt",
                   fontWeight: "bold",
-                  lineHeight: "40pt",
+                  lineHeight: "30pt",
                   margin: "0px auto",
                 }}
               >
@@ -62,7 +62,7 @@ const Home = (props) => {
               >
                 Healthcare-associated infections visualization tool
               </p>
-              <p style={{ fontSize: "13pt", lineHeight: "18pt" }}>
+              <p style={{ fontSize: "13pt", lineHeight: "16pt" }}>
                 Hi, welcome to HAIviz, a single page application build to help
                 you integrate and interactively visualize genomic
                 epidemiological information of a local outbreak.

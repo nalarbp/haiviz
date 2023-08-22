@@ -1,7 +1,0 @@
-isolate_name,isolate_species,isolate_colDate,isolate_colLocation,isolate_sourceType,isolate_sourceName,profile_1,profile_2,profile_3
-Isolate1,Species1,2021-04-04,Ward 3D,Patient,P1,NA,NA,NA
-Isolate2,Species1,2021-03-31,E.D.,Patient,P2,NA,NA,NA
-Isolate3,Species1,2021-04-11,E.D.,Patient,P3,NA,NA,NA
-Isolate4,Species1,2021-04-04,Ward 3C,Patient,P4,NA,NA,NA
-Isolate5,Species1,2021-04-09,Ward 3C,Patient,P5,NA,NA,NA
-Isolate6,Species1,2021-03-30,E.D.,Patient,P6,NA,NA,NA
