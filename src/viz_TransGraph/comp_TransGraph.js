@@ -1,9 +1,5 @@
-/* ============================================================================
-//
-============================================================================ */
 import React, { useState, useEffect } from "react";
 import TransGraph from "./chart_TransGraph_cytoscape";
-import TransGraphHost from "./chart_TransGraph_cytoscape_host";
 import TransmissionGraphSettings from "./comp_TransGraph_Settings";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
@@ -37,7 +33,6 @@ const TransmissionGraph = (props) => {
 
   // USEEFFECTS
   useEffect(() => {
-    //console.log(isUserRedraw);
     if (isUserRedraw) {
       setisUserRedraw(false);
     }
@@ -65,7 +60,7 @@ const TransmissionGraph = (props) => {
     <React.Fragment>
       <div style={{ height: "100%" }}>
         <Card
-          title={"Graph (Network)"}
+          title={"Network"}
           bordered={true}
           headStyle={{ height: "50px", padding: "0 20px" }}
           style={{ height: "100%" }}
@@ -130,48 +125,19 @@ const TransmissionGraph = (props) => {
               changeTransIsDownloading={props.changeTransIsDownloading}
             />
           </div>
-          {props.transmissionData.graphData &&
-            props.transmissionData.graphKey === "isolate" && (
+          {props.transmissionData && props.transmissionData.data && (
               <TransGraph
                 width={props.width}
                 height={props.height}
-                data={props.transmissionData.graphData}
+                data={props.transmissionData.data}
+                isolateData={props.isolateData}
                 isUserRedraw={isUserRedraw}
                 transgraphSettings={props.transgraphSettings}
                 selectedData={props.selectedData}
                 setSelectedData={props.setSelectedData}
                 colorScale={props.colorScale}
-                isolateData={props.isolateData}
                 changeTransIsDownloading={props.changeTransIsDownloading}
               />
-            )}
-          {props.transmissionData.graphData &&
-            props.transmissionData.graphKey === "host" && (
-              <TransGraphHost
-                width={props.width}
-                height={props.height}
-                data={props.transmissionData.graphData}
-                isUserRedraw={isUserRedraw}
-                transgraphSettings={props.transgraphSettings}
-                selectedData={props.selectedData}
-                setSelectedData={props.setSelectedData}
-                colorScale={props.colorScale}
-                isolateData={props.isolateData}
-                changeTransIsDownloading={props.changeTransIsDownloading}
-              />
-            )}
-          {props.transmissionData.graphData &&
-            !props.transmissionData.graphKey && (
-              <React.Fragment>
-                <div id="transgraph-invalid-graph">
-                  <Empty
-                    description={
-                      "Invalid graph type: More than 20% node's label are neither isolate name nor source name. Please restart HAIviz and load a valid graph input"
-                    }
-                    image={Empty.PRESENTED_IMAGE_SIMPLE}
-                  />
-                </div>
-              </React.Fragment>
             )}
         </Card>
       </div>

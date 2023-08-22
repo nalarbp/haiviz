@@ -7,7 +7,7 @@ import { bindActionCreators } from "redux";
 import history from "../utils/history";
 import { changeNavLocation } from "../action/navigation_actions";
 
-const NavMenu = props => {
+const NavMenu = (props) => {
   const currentKeys = props.navLocation
     ? props.navLocation
     : getKeyFromLocationPath(history.location.pathname);
@@ -45,7 +45,7 @@ const NavMenu = props => {
       >
         <Menu.Item
           key="home"
-          onClick={e => {
+          onClick={(e) => {
             props.changeNavLocation(e.key);
           }}
         >
@@ -53,10 +53,10 @@ const NavMenu = props => {
             Home
           </NavLink>
         </Menu.Item>
-        
+
         <Menu.Item
           key="input"
-          onClick={e => {
+          onClick={(e) => {
             props.changeNavLocation(e.key);
           }}
         >
@@ -66,8 +66,17 @@ const NavMenu = props => {
         </Menu.Item>
 
         <Menu.Item
+          key="createMap"
+          onClick={(e) => {
+            props.changeNavLocation(e.key);
+          }}
+        >
+          <NavLink to="/create-map">Map Editor</NavLink>
+        </Menu.Item>
+
+        <Menu.Item
           key="haivizApp"
-          onClick={e => {
+          onClick={(e) => {
             props.changeNavLocation(e.key);
           }}
         >
@@ -75,24 +84,13 @@ const NavMenu = props => {
         </Menu.Item>
 
         <Menu.Item
-          key="createMap"
-          onClick={e => {
-            props.changeNavLocation(e.key);
-          }}
-        >
-          <NavLink to="/create-map">Map Editor</NavLink>
-        </Menu.Item>
-
-
-        <Menu.Item
           key="documentation"
-          onClick={e => {
+          onClick={(e) => {
             props.changeNavLocation(e.key);
           }}
         >
           <NavLink to="/documentation">Documentation</NavLink>
         </Menu.Item>
-
       </Menu>
     </React.Fragment>
   );
@@ -105,7 +103,7 @@ function mapStateToProps(state, ownProps) {
 function mapDispatchToProps(dispatch, ownProps) {
   return bindActionCreators(
     {
-      changeNavLocation: changeNavLocation
+      changeNavLocation: changeNavLocation,
     },
     dispatch
   );

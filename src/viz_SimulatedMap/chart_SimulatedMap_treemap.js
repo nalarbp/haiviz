@@ -342,9 +342,7 @@ const SimulatedMapChart = (props) => {
         .style("fill", (d) => {
           if (d) {
             let obj = d.data[1][0] ? d.data[1][0] : null;
-            let col = obj
-              ? getColorScaleByObject(obj, props.colorScale)
-              : "black";
+            let col = getColorScaleByObject(obj, props.colorScale)
             return col;
           } else {
             return "black";

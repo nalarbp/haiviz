@@ -49,12 +49,15 @@ export const childrenAccessorFn = ([, value]) => {
   return value.size && Array.from(value);
 };
 
-export async function readPreloadedDatasetJSON(preloadedDataset_json_url, preloadedDatasetJSONToStore) {
+export async function readPreloadedDatasetJSON(
+  preloadedDataset_json_url,
+  preloadedDatasetJSONToStore
+) {
   let response = await fetch(preloadedDataset_json_url);
   let dataInBlob = await response.blob();
   const reader = new FileReader();
   reader.readAsText(dataInBlob);
-  reader.onloadend = function (evt) {
+  reader.onloadend = function(evt) {
     const dataJSON = JSON.parse(evt.target.result);
     const preloadedDatasets = new Map();
     dataJSON.data_list.forEach((p) => {
@@ -74,10 +77,10 @@ export function colorLUTFromUser(headerWithColor, data_promise_raw) {
         ? color(r[headerWithColor]).formatHex()
         : color("lightgray").formatHex();
     colorMap.set(r.sample_id, col);
-    colorMap.set(r.sample_id, 
-      {colorValue:col, 
-       colorAttribute: r[headerWithColor]});
-
+    colorMap.set(r.sample_id, {
+      colorValue: col,
+      colorAttribute: r[headerWithColor],
+    });
   });
   return colorMap;
 }
@@ -92,16 +95,17 @@ export function createColorLUT(raw_sampleJSON, colorIndex) {
     sampleJSON.forEach((d) => {
       groupsAll.push(d[colorIndex]);
     });
-    
+
     let groups = groupsAll.filter(filterUnique); // array of unique element as the group (levels)
     //d3Chroma.schemeSet3 only has 12 color, if you have 13 dateset, the 13th will be same as the 1st
-   
+
     let colorInterpolatorOrd = scaleOrdinal(d3Chroma.schemeSet3).domain(groups);
     let colorMap = new Map();
     sampleJSON.forEach((d) => {
-      colorMap.set(d.sample, 
-        {colorValue:colorInterpolatorOrd(d[colorIndex]), 
-         colorAttribute: d[colorIndex]});
+      colorMap.set(d.sample, {
+        colorValue: colorInterpolatorOrd(d[colorIndex]),
+        colorAttribute: d[colorIndex],
+      });
     });
     colorLUT = colorMap;
   }
@@ -119,11 +123,7 @@ export async function getIsolateData(
     return result;
   });
   //check if input data contain all the required headers
-  const validHeaders = [
-    "id",
-    "date",
-    "location",
-  ];
+  const validHeaders = ["id", "date", "location"];
   const inputHeaders = Object.keys(data_promise_raw[0]);
   for (let i = 0; i < validHeaders.length; i++) {
     if (!inputHeaders.includes(validHeaders[i])) {
@@ -159,7 +159,7 @@ export async function getIsolateData(
     setisLoading(false);
     return;
   }
-  
+
   //check if no empty record in date and invalid format in date
   let isolate_date_invalid = false;
   data_promise_raw.forEach(function(d) {
@@ -213,7 +213,7 @@ export async function getIsolateData(
   const hierarchyData = hierarchy([null, locationRollup], childrenAccessorFn)
     .sum(([, value]) => value)
     .sort((a, b) => b.value - a.value);
-  
+
   //save simulated map to store
   treemapToSTORE(hierarchyData);
 
@@ -221,7 +221,7 @@ export async function getIsolateData(
   let extra_columns = [];
   let columns_have_color = [];
   let colorLUTstore = {};
-  
+
   //identify which columns color and regular
   inputHeaders.forEach((h) => {
     let splittedHeader = h.split(":");
@@ -268,7 +268,10 @@ export async function getIsolateData(
     colorLUTstore[columnHeader] = colorLUT;
   });
   //save color scale to store
-  let colorMap_init = {colorType: 'isolate_colLocation', colorMap: colorLUTstore}
+  let colorMap_init = {
+    colorType: "isolate_colLocation",
+    colorMap: colorLUTstore,
+  };
   colorLUTtoSTORE(colorMap_init);
 }
 
@@ -278,7 +281,6 @@ export async function parseXML(fileURL, dispatchDataToStore) {
   });
   dispatchDataToStore(data_promise);
 }
-
 
 //functions
 export async function parseTree(fileURL, loadTreeData, setisLoading) {
@@ -331,16 +333,15 @@ export async function parseGraph(fileURL, dispatchDataToStore, setisLoading) {
   }
 }
 
-export async function parseMovement(fileURL, dispatchDataToStore) {
+export async function parseMovement(
+  fileURL,
+  dispatchDataToStore,
+  setisLoading
+) {
   let data_promise = await csv(fileURL).then(function(result) {
     return result;
   });
-  const validHeaders = [
-    "source_name",
-    "location_name",
-    "start_date",
-    "end_date",
-  ];
+  const validHeaders = ["pid", "location", "start_date", "end_date"];
   const inputHeaders = Object.keys(data_promise[0]);
   let header_is_valid = true;
   validHeaders.forEach((item) => {
@@ -349,24 +350,36 @@ export async function parseMovement(fileURL, dispatchDataToStore) {
     }
   });
   if (!header_is_valid) {
+    setisLoading(false);
     alert("Invalid headers");
     return;
   }
   // no empty record or invalid format on start and end date
   let date_invalid = false;
   data_promise.forEach(function(d) {
+    //convert dates
     if (moment(d.start_date) && moment(d.end_date)) {
       d.start_date = moment(d.start_date);
       d.end_date = moment(d.end_date);
     } else {
       date_invalid = true;
     }
+    //get color if available
+    if (d.location_color) {
+      d.location_color = color(d.location_color);
+    }
+    //if pid is a number
+    if (parseInt(d.pid)) {
+      d.pid = parseInt(d.pid);
+    }
   });
+
   if (date_invalid) {
-    alert("Invalid data: wrong date format in column start or end date");
+    setisLoading(false);
+    alert("Error: Wrong date format in column start_date or end_date");
     return;
   }
-  data_promise.sort((a, b) => a.source_name - b.source_name);
+  data_promise.sort((a, b) => a.pid - b.pid);
   dispatchDataToStore(data_promise);
 }
 
@@ -419,13 +432,17 @@ export function getColumnNameByColorType(d, colorType) {
 }
 
 export function getColorScaleByObject(obj, colorScaleState) {
-  let col = 'black'
-  try {
-    let colorIndex = colorScaleState.colorType
-    col = colorScaleState.colorMap[colorIndex].get(obj.isolate_name).colorValue;
-  } catch (error) {
+  let col = "gray";
+  if (obj && colorScaleState.colorMap) {
+    try {
+      let colorIndex = colorScaleState.colorType;
+      col = colorScaleState.colorMap[colorIndex].get(obj.isolate_name)
+        .colorValue;
+    } catch (error) {
+      return col;
+    }
   }
-  return col
+  return col;
 }
 
 export function getColorScaleByObjectAndColType(obj, colorScaleState, colType) {
@@ -897,7 +914,7 @@ export function parseDOTtoCytoscape(dot) {
     dotparser(dot);
     const graphdata = dotparser(dot);
     const jsondata = _createTransmissionDatafromDOT(graphdata);
-
+    console.log(jsondata);
     return jsondata;
   } catch (e) {
     alert(("Invalid dot format. Error", e));
@@ -925,3 +942,8 @@ export function isIsolateOrHost(nodeLabels, isolateNames, sourceNames) {
   return res;
 }
 
+export function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min);
+}

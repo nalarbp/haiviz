@@ -82,6 +82,7 @@ const TransGraph = (props) => {
       props.changeTransIsDownloading(false);
     }
   }, [transgraphIsDownloading]);
+
   useEffect(() => {
     if (isUserStartResize) {
       select("#transgraph-zoomButton-container").style("display", "none");
@@ -351,8 +352,11 @@ const TransGraph = (props) => {
       .style({
         "background-color": function(d) {
           let isolate_name = d.data("label");
-          let obj = props.isolateData.get(isolate_name);
-          let col = getColorScaleByObject(obj, props.colorScale);
+          let col = 'gray'
+          if(props.isolateData){
+            let obj = props.isolateData.get(isolate_name);
+            col = obj ? getColorScaleByObject(obj, props.colorScale) : 'gray'
+          }
           return col;
         },
       })

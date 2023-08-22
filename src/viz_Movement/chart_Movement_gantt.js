@@ -2,7 +2,7 @@
 Gantt chart :
 - when dataset for chart is available, render temporal barchart viewer
 let viwer_data_dummy = [
-  { id: val, start_date: "2020-01-1", end_date: "2020-01-1", locationType: Ward, location_name: W1},
+  { id: val, start_date: "2020-01-1", end_date: "2020-01-1", locationType: Ward, location: W1},
   {...}]
 ============================================================================ */
 import React, { useState, useEffect, useRef } from "react";
@@ -87,32 +87,32 @@ const PatientMovement = (props) => {
       clearSelectedData();
     }
   }, [props.selectedData]);
-  useEffect(() => {
-    if (props.colorScale.colorType) {
-      svg.selectAll(".gantt-chart-rectangle").attr("fill", (d) => {
-        let col = props.colorScale.byLocation.get(d.location_name);
-        if (col) {
-          return col;
-        } else {
-          if (d.location_color) {
-            return d.location_color;
-          } else {
-            return "gray";
-          }
-        }
-      });
-      svg.selectAll(".gantt-colDate-marker").attr("fill", (d) => {
-        return getColorScaleByObject(d, props.colorScale);
-      });
-    }
-  }, [props.colorScale]);
+  // useEffect(() => {
+  //   if (props.colorScale.colorType) {
+  //     svg.selectAll(".gantt-chart-rectangle").attr("fill", (d) => {
+  //       let col = 'gray'
+  //       if (col) {
+  //         return col;
+  //       } else {
+  //         if (d.location_color) {
+  //           return d.location_color;
+  //         } else {
+  //           return "gray";
+  //         }
+  //       }
+  //     });
+  //     svg.selectAll(".gantt-colDate-marker").attr("fill", (d) => {
+  //       return getColorScaleByObject(d, props.colorScale);
+  //     });
+  //   }
+  // }, [props.colorScale]);
 
   useEffect(() => {
     if (selectedLocation && isLineShown) {
       //console.log(selectedLocation);
       svg.selectAll(".gantt-overlapping-path").style("display", (d) => {
-        //console.log(d.source.location_name, selectedLocation);
-        if (d.source.location_name === selectedLocation) {
+        //console.log(d.source.location, selectedLocation);
+        if (d.source.location === selectedLocation) {
           return "block";
         } else {
           return "none";
@@ -150,7 +150,7 @@ const PatientMovement = (props) => {
     const dateRange = extent(
       props.data.flatMap((d) => [d.start_date, d.end_date])
     );
-    const hostList = props.data.map((d) => d.source_name).filter(filterUnique);
+    const hostList = props.data.map((d) => d.pid).filter(filterUnique);
     let separator = suffixSeparator;
 
     //sort hostlist
@@ -174,7 +174,7 @@ const PatientMovement = (props) => {
       });
     }
     const locationList = props.data
-      .map((d) => d.location_name)
+      .map((d) => d.location)
       .filter(filterUnique);
     const rectHeight = ganttChart_h / (hostList.length + 1);
     let overlapData = [];
@@ -188,8 +188,8 @@ const PatientMovement = (props) => {
       for (var j = i + 1; j < props.data.length; j++) {
         const targetLoc = props.data[j];
         if (
-          sourceLoc.location_name === targetLoc.location_name &&
-          sourceLoc.source_name !== targetLoc.source_name
+          sourceLoc.location === targetLoc.location &&
+          sourceLoc.pid !== targetLoc.pid
         ) {
           let targetRange = moment.range(
             targetLoc.start_date.startOf("day"),
@@ -211,15 +211,16 @@ const PatientMovement = (props) => {
 
     //get subset of isolate data from location
     let isolateData_loc = [];
-    Array.from(props.isolateData.values()).forEach((d) => {
-      //get records from isolate data and push it
-      if (
-        locationList.indexOf(d.isolate_colLocation) !== -1 &&
-        hostList.indexOf(d.isolate_sourceName) !== -1
-      ) {
-        isolateData_loc.push(d);
-      }
-    });
+    if(props.isolateData){
+      Array.from(props.isolateData.values()).forEach((d) => {
+        //get records from isolate data and push it
+        if (
+          locationList.indexOf(d.isolate_colLocation) !== -1 
+        ) {
+          isolateData_loc.push(d);
+        }
+      });
+    }
 
     const svg = select(ganttChartSVGRef.current);
     svg
@@ -297,7 +298,7 @@ const PatientMovement = (props) => {
       })
       .attr("stroke", "none")
       .attr("fill", (d) => {
-        let col = props.colorScale.byLocation.get(d.location_name);
+        let col = 'gray';
         if (col) {
           return col;
         } else {
@@ -314,12 +315,12 @@ const PatientMovement = (props) => {
       .attr("y", (d) => {
         if (d.is_admDisc) {
           return (
-            parseInt(scale_y(d.source_name)) +
+            parseInt(scale_y(d.pid)) +
             rectHeight / 4 +
             rectHeight / 4 / 2
           );
         } else {
-          return parseInt(scale_y(d.source_name));
+          return parseInt(scale_y(d.pid));
         }
       })
       .attr("width", (d) => {
@@ -334,13 +335,13 @@ const PatientMovement = (props) => {
         }
       })
       .on("click", (d) => {
-        setselectedLocation(d.location_name);
+        setselectedLocation(d.location);
       })
       .append("title")
       .text((d) => {
         let dateStart = moment(d.start_date).format("D-MMM-YYYY");
         let dateEnd = moment(d.end_date).format("D-MMM-YYYY");
-        return d.location_name + ": " + dateStart + " to " + dateEnd;
+        return d.location + ": " + dateStart + " to " + dateEnd;
       });
 
     //make path group
@@ -354,20 +355,20 @@ const PatientMovement = (props) => {
       .attr("d", (d) => {
         let qPoint = computeQuadraticCurve(
           scale_x(d.source.start_date),
-          parseInt(scale_y(d.source.source_name) + rectHeight / 2),
+          parseInt(scale_y(d.source.pid) + rectHeight / 2),
           scale_x(d.target.start_date),
-          parseInt(scale_y(d.target.source_name) + rectHeight / 2),
+          parseInt(scale_y(d.target.pid) + rectHeight / 2),
           10
         );
         return curve([
           [
             scale_x(d.source.start_date),
-            parseInt(scale_y(d.source.source_name) + rectHeight / 2),
+            parseInt(scale_y(d.source.pid) + rectHeight / 2),
           ],
           qPoint,
           [
             scale_x(d.target.start_date),
-            parseInt(scale_y(d.target.source_name) + rectHeight / 2),
+            parseInt(scale_y(d.target.pid) + rectHeight / 2),
           ],
         ]);
       })
@@ -380,7 +381,7 @@ const PatientMovement = (props) => {
       .style("display", (d) => {
         if (isLineShown) {
           if (selectedLocation) {
-            if (d.source.location_name === selectedLocation) {
+            if (d.source.location === selectedLocation) {
               return "block";
             } else {
               return "none";
@@ -395,11 +396,11 @@ const PatientMovement = (props) => {
       .append("title")
       .text((d) => {
         return (
-          d.source.source_name +
+          d.source.pid +
           "-" +
-          d.target.source_name +
+          d.target.pid +
           " at " +
-          d.source.location_name +
+          d.source.location +
           ": " +
           d.overlapDay +
           " days"
@@ -407,25 +408,25 @@ const PatientMovement = (props) => {
       });
     //make isolate collection marker
     let colDateMarker = svgGroup.append("g").attr("id", "gantt-colDate-group");
-    colDateMarker
-      .selectAll(".gantt-colDate-marker")
-      .data(isolateData_loc)
-      .enter()
-      .append("circle")
-      .attr("class", "gantt-colDate-marker")
-      .attr("fill", (d) => getColorScaleByObject(d, props.colorScale))
-      .attr("stroke", "white")
-      .attr("stroke-width", "2px")
-      .attr("r", nodeSize)
-      .attr("cx", (d) => scale_x(d.isolate_colDate))
-      .attr(
-        "cy",
-        (d) => parseInt(scale_y(d.isolate_sourceName)) + rectHeight / 2
-      )
-      .on("click", (d) => props.setSelectedData([d.uid]))
-      .style("cursor", "pointer")
-      .append("title")
-      .text((d) => `isolate ${d.isolate_name} from ${d.isolate_sourceName}`);
+    // colDateMarker
+    //   .selectAll(".gantt-colDate-marker")
+    //   .data(isolateData_loc)
+    //   .enter()
+    //   .append("circle")
+    //   .attr("class", "gantt-colDate-marker")
+    //   .attr("fill", (d) => getColorScaleByObject(d, props.colorScale))
+    //   .attr("stroke", "white")
+    //   .attr("stroke-width", "2px")
+    //   .attr("r", nodeSize)
+    //   .attr("cx", (d) => scale_x(d.isolate_colDate))
+    //   .attr(
+    //     "cy",
+    //     (d) => parseInt(scale_y(d.isolate_sourceName)) + rectHeight / 2
+    //   )
+    //   .on("click", (d) => props.setSelectedData([d.uid]))
+    //   .style("cursor", "pointer")
+    //   .append("title")
+    //   .text((d) => `isolate ${d.isolate_name} from ${d.isolate_sourceName}`);
 
     svg.selectAll("#ganttChart-svgGroup g").attr("font-family", "Verdana");
     //zoom functionality

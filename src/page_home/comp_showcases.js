@@ -1,45 +1,136 @@
-/* ============================================================================
-============================================================================ */
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Card, Row, Col, Button } from "antd";
-import showcaseImg_1 from "../img/showcase-img-1.png";
-import showcaseImg_2 from "../img/showcase-img-2.png";
-import showcaseImg_3 from "../img/showcase-img-3.png";
+import * as constant from "../utils/constants";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import { loadSimulatedMap } from "../action/simulatedMap_actions";
-import { loadTreeData } from "../action/phyloTree_actions";
 import {
+  preloadedDataToStore,
+  selectedPreloadedDataToStore,
   loadIsolateData,
   loadSVG,
   loadTransmissionData,
   loadMovementData,
   setColorScale,
-  deactivateChartMulti,
+  resetStore,
 } from "../action/index";
-import { loadShowcaseData } from "../utils/loadShowcaseData";
+import { loadSimulatedMap } from "../action/simulatedMap_actions";
+import { loadTreeData } from "../action/phyloTree_actions";
 
-import "./style_Home.css";
-
+import {
+  readPreloadedDatasetJSON,
+  getIsolateData,
+  parseXML,
+  parseTree,
+  parseGraph,
+  parseMovement,
+  getRandomInt,
+} from "../utils/utils";
 import { EyeOutlined } from "@ant-design/icons";
+import { random } from "lodash";
+
 const { Meta } = Card;
 
 const Showcases = (props) => {
-  const showcaseViewHandler = (e) => {
-    props.changeNavLocation("haivizApp");
-    loadShowcaseData(
-      e.target.value,
-      props.loadIsolateData,
-      props.setColorScale,
-      props.loadSimulatedMap,
-      props.loadXML,
-      props.loadTreeData,
-      props.loadMovementData,
-      props.loadTransgraphData,
-      props.deactivateChartMulti
+  //make initial state: dataset options
+  const [dataCard, setDataCard] = useState([]);
+  let setisLoading = () => {}; //dummy function, to match drag and drop button functions
+
+  if (props.preloadedData === null) {
+    console.log("preloaded data is null");
+    readPreloadedDatasetJSON(
+      constant.PRELOADED_DATA,
+      props.preloadedDataToStore
     );
+  }
+
+  const showcaseViewHandler = (e) => {
+    let val = e.target.value;
+    if (props.preloadedData && val) {
+      props.resetStore();
+      //load a new one
+      let projectData = props.preloadedData.get(val);
+
+      //for each input (metadata, map, tree, network, and gantt), read the file and load it
+      //metadata
+      if (projectData.metadata) {
+        getIsolateData(
+          projectData.metadata,
+          props.loadIsolateData,
+          props.setColorScale,
+          props.loadSimulatedMap,
+          setisLoading
+        );
+      }
+      //map
+      if (projectData.map) {
+        parseXML(projectData.map, props.loadXML);
+      }
+      //tree
+      if (projectData.tree) {
+        parseTree(projectData.tree, props.loadTreeData, setisLoading);
+      }
+      //network
+      if (projectData.network) {
+        parseGraph(projectData.network, props.loadTransgraphData, setisLoading);
+      }
+      //gantt
+      if (projectData.gantt) {
+        console.log("gantt", projectData.gantt);
+        parseMovement(projectData.gantt, props.loadMovementData, setisLoading);
+      }
+
+      props.selectedPreloadedDataToStore(val);
+      props.changeNavLocation("haivizApp");
+    } else {
+      props.resetStore();
+    }
   };
+
+  useEffect(() => {
+    if (props.preloadedData) {
+      let data_options = [];
+      props.preloadedData.forEach((v, k) => {
+        let card_name = v["name"];
+        let card_desc = v["description"];
+        let card_bg_pattern_class = "hp-" + String(getRandomInt(2, 10));
+        let card_bg_col_class = "hp-col-" + String(getRandomInt(1, 10));
+        data_options.push(
+          <Col xs={24} md={12} lg={6} xxl={5} key={k}>
+            <Card
+              hoverable={true}
+              className={
+                card_bg_col_class +
+                " " +
+                card_bg_pattern_class +
+                " showcase-card"
+              }
+              style={{ width: "100%", padding: "0px" }}
+              actions={[
+                <Link to="/haiviz-spa">
+                  <Button
+                    value={k}
+                    key={k}
+                    onClick={showcaseViewHandler}
+                    icon={<EyeOutlined />}
+                  >
+                    Load
+                  </Button>
+                </Link>,
+              ]}
+            >
+              <Meta
+                className={"showcase-meta-desc"}
+                title={card_name}
+                description={card_desc}
+              />
+            </Card>
+          </Col>
+        );
+      });
+      setDataCard(data_options);
+    }
+  }, [props.preloadedData]);
 
   return (
     <div style={{ width: "100%", backgroundColor: "white" }}>
@@ -50,89 +141,20 @@ const Showcases = (props) => {
         style={{ width: "80%", margin: "auto", padding: "40px 0" }}
       >
         <Col xs={24}>
-          <p style={{ textAlign: "center", fontSize: "18pt" }}>Showcase</p>
+          <p style={{ textAlign: "center", fontSize: "18pt" }}>
+            Preloaded dataset
+          </p>
         </Col>
-        <Col xs={24} md={12} lg={8} xxl={5} id="showcase-1">
-          <Card
-            hoverable={true}
-            style={{ width: "100%", padding: "0px" }}
-            cover={<img alt="example" src={showcaseImg_1} />}
-            actions={[
-              <Link to="/haiviz-spa">
-                <Button
-                  value="showcase-data-1"
-                  key="view-1"
-                  id={"showcase-buttons"}
-                  onClick={showcaseViewHandler}
-                  icon={<EyeOutlined />}
-                >
-                  View
-                </Button>
-              </Link>,
-            ]}
-          >
-            <Meta
-              className={"showcase-meta-desc"}
-              title="Sample dataset"
-              description="A meaningless sample dataset contains 100 hypothetical isolates, a building floorplan, phylogenetic tree, and transmission graph for you to play around"
-            />
-          </Card>
-        </Col>
-        <Col xs={24} md={12} lg={8} xxl={5} id="showcase-2">
-          <Card
-            hoverable={true}
-            style={{ width: "100%" }}
-            cover={<img alt="example" src={showcaseImg_2} />}
-            actions={[
-              <Link to="/haiviz-spa">
-                <Button
-                  value="showcase-data-2"
-                  key="view-2"
-                  id={"showcase-buttons"}
-                  onClick={showcaseViewHandler}
-                  icon={<EyeOutlined />}
-                >
-                  View
-                </Button>
-              </Link>,
-            ]}
-          >
-            <Meta
-              className={"showcase-meta-desc"}
-              title="Carbapenem-resistant Klebsiella pneumonia outbreak in the U.S"
-              description={`Dataset from Snitkin et al., 2012 reporting use of
-              genomic and epidemiological data to track nosocomial K. pneumonia outbreak `}
-            />
-          </Card>
-        </Col>
-        <Col xs={24} md={12} lg={8} xxl={5} id="showcase-3">
-          <Card
-            hoverable={true}
-            style={{ width: "100%" }}
-            cover={<img alt="example" src={showcaseImg_3} />}
-            actions={[
-              <Link to="/haiviz-spa">
-                <Button
-                  value="showcase-data-3"
-                  key="view-3"
-                  id={"showcase-buttons"}
-                  onClick={showcaseViewHandler}
-                  icon={<EyeOutlined />}
-                >
-                  View
-                </Button>
-              </Link>,
-            ]}
-          >
-            <Meta
-              className={"showcase-meta-desc"}
-              title={"Nosocomial Klebsiella pneumonia outbreak in Nepal"}
-              description={
-                "Dataset from Chung et al., 2015 reporting two K. pneumonia strains causing two different outbreaks at a major hospital in Kathmandu, Nepal"
-              }
-            />
-          </Card>
-        </Col>
+        {//when data_options is not empty, display the showcase
+        dataCard.length > 0 ? (
+          dataCard
+        ) : (
+          <Col xs={24}>
+            <p style={{ textAlign: "center", fontSize: "18pt" }}>
+              Loading preloaded dataset...
+            </p>
+          </Col>
+        )}
       </Row>
     </div>
   );
@@ -141,20 +163,23 @@ const Showcases = (props) => {
 function mapStateToProps(state) {
   return {
     isolateData: state.isolateData,
+    preloadedData: state.preloadedData,
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
-      loadIsolateData: loadIsolateData,
+      loadIsolateData,
       loadXML: loadSVG,
-      loadTreeData: loadTreeData,
+      loadTreeData,
       loadTransgraphData: loadTransmissionData,
-      loadMovementData: loadMovementData,
-      setColorScale: setColorScale,
-      loadSimulatedMap: loadSimulatedMap,
-      deactivateChartMulti: deactivateChartMulti,
+      loadMovementData,
+      setColorScale,
+      loadSimulatedMap,
+      selectedPreloadedDataToStore,
+      preloadedDataToStore,
+      resetStore,
     },
     dispatch
   );

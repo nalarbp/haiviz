@@ -1,17 +1,12 @@
-/* ============================================================================
-This is a container for landing page
-- Shows video
-============================================================================ */
 import React, { useState } from "react";
 import { Row, Col, Layout, Button, Modal } from "antd";
 import ReactPlayer from "react-player/youtube";
-//import introVideo from "../img/home.mp4";
 import Showcases from "./comp_showcases";
-import "./style_Home.css";
 import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { bindActionCreators } from "redux";
 import { changeNavLocation } from "../action/navigation_actions";
+import "./style_Home.css";
 
 const { Footer, Content } = Layout;
 
@@ -21,12 +16,12 @@ const Home = (props) => {
   const closeModalHandler = () => {
     setModalVisible(false);
   };
+
   return (
     <React.Fragment>
       <Layout style={{ marginTop: "20px" }}>
         <Content>
-          <Showcases changeNavLocation={props.changeNavLocation} />
-          <Row id="content-header-row" justify="center">
+          <Row className="hp-1" id="content-header-row" justify="center">
             <Col>
               <Modal
                 visible={modalVisible}
@@ -55,7 +50,7 @@ const Home = (props) => {
                   margin: "0px auto",
                 }}
               >
-                HAIviz v.0.4
+                HAIviz v1
               </p>
               <br />
               <p
@@ -109,29 +104,32 @@ const Home = (props) => {
               </NavLink>
             </Col>
           </Row>
-          
+          <Showcases changeNavLocation={props.changeNavLocation} />
         </Content>
 
         <Footer style={{ position: "sticky", margin: "50px 0 0 0" }}>
           <div style={{ textAlign: "center" }}>
             <p>
               <a
-                href="https://haiviz.beatsonlab.com"
+                href="https://haiviz.fordelab.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                HAIviz v.0.4
+                <b>HAIviz v1.0</b> | {new Date().getFullYear()}
               </a>{" "}
-              | built.2021-09-23
-              <br /> Developed by Budi Permana at{" "}
+              <br />
+              An interactive dashboard for visualising and <br />
+              integrating healthcare-associated genomic epidemiological data{" "}
+              <br />
+              Developed by{" "}
               <a
-                href="https://beatsonlab.com/"
+                href="https://nalarbp.github.io/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Beatson Lab
-              </a>
-              <br />{" "}
+                Budi Permana
+              </a>{" "}
+              at <br />
               <a
                 href="https://www.uq.edu.au/"
                 target="_blank"
@@ -147,7 +145,7 @@ const Home = (props) => {
     </React.Fragment>
   );
 };
-function mapDispatchToProps(dispatch, ownProps) {
+function mapDispatchToProps(dispatch) {
   return bindActionCreators({ changeNavLocation: changeNavLocation }, dispatch);
 }
 

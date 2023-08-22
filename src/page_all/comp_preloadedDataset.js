@@ -3,29 +3,33 @@ import React from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as constant from "../utils/constants";
-import {readPreloadedDatasetJSON, getIsolateData} from "../utils/utils";
-import { 
-    preloadedDataToStore, 
-    selectedPreloadedDataToStore,
-    loadIsolateData,
-    loadSVG,
-    loadTransmissionData,
-    loadMovementData,
-    setColorScale,
-    resetStore } from "../action/index";
+import { readPreloadedDatasetJSON, getIsolateData } from "../utils/utils";
+import {
+  preloadedDataToStore,
+  selectedPreloadedDataToStore,
+  loadIsolateData,
+  loadSVG,
+  loadTransmissionData,
+  loadMovementData,
+  setColorScale,
+  resetStore,
+} from "../action/index";
 import { loadSimulatedMap } from "../action/simulatedMap_actions";
 import { loadTreeData } from "../action/phyloTree_actions";
 import "./style_commonComp.css";
-import  {parseXML, parseTree, parseGraph} from "../utils/utils";
+import { parseXML, parseTree, parseGraph, parseMovement } from "../utils/utils";
 
 const { Option } = Select;
 const PreloadedDataset = (props) => {
   let data_options = [];
-  let setisLoading = () => {}
+  let setisLoading = () => {}; //dummy function, to match drag and drop button functions
 
   //RETRIEVE PRELOADED_DATASET.JSON
   if (props.preloadedData === null) {
-    readPreloadedDatasetJSON(constant.PRELOADED_DATA , props.preloadedDataToStore);
+    readPreloadedDatasetJSON(
+      constant.PRELOADED_DATA,
+      props.preloadedDataToStore
+    );
   }
 
   //List preloaded dataset and create as options
@@ -62,31 +66,32 @@ const PreloadedDataset = (props) => {
       }
       //tree
       if (projectData.tree) {
-        console.log("tree", projectData.tree);
         parseTree(projectData.tree, props.loadTreeData, setisLoading);
       }
       //network
       if (projectData.network) {
-        parseGraph(projectData.network, props.loadTransgraphData, setisLoading)
+        parseGraph(projectData.network, props.loadTransgraphData, setisLoading);
       }
-      // //gantt
-      // if (projectData.gantt) {
-      //   props.loadMovementData(projectData.gantt);
-      // }
-      
+      //gantt
+      if (projectData.gantt) {
+        console.log("gantt", projectData.gantt);
+        parseMovement(projectData.gantt, props.loadMovementData, setisLoading);
+      }
+
       props.selectedPreloadedDataToStore(val);
     } else {
       props.resetStore();
     }
   };
   //functions
-   
+
   return (
     <React.Fragment>
       <Select
         value={props.selectedPreloadedData}
         onChange={selectPreloadedDataHandler}
-        className={"haiviz-preloaded-select"}>
+        className={"haiviz-preloaded-select"}
+      >
         {data_options}
       </Select>
     </React.Fragment>
@@ -96,7 +101,7 @@ const PreloadedDataset = (props) => {
 function mapStateToProps(state) {
   return {
     preloadedData: state.preloadedData,
-    selectedPreloadedData: state.selectedPreloadedData
+    selectedPreloadedData: state.selectedPreloadedData,
   };
 }
 function mapDispatchToProps(dispatch) {
@@ -118,4 +123,3 @@ function mapDispatchToProps(dispatch) {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(PreloadedDataset);
-

@@ -15,7 +15,7 @@ import Localmap from "../viz_Localmap/comp_Localmap";
 import SummaryCard from "../viz_Summary/comp_Summary";
 import SimulatedMap from "../viz_SimulatedMap/comp_SimulatedMap";
 import ColorScale from "../viz_ColorScale/comp_ColorScale";
-import PreloadedDataset from "../page_all/comp_preloadedDataset"
+import PreloadedDataset from "../page_all/comp_preloadedDataset";
 
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
@@ -28,21 +28,43 @@ import { changeTempResizeSignal } from "../action/temporalBar_actions";
 import { changeLocalmapResizeSignal } from "../action/localMap_actions";
 import { changeTreeGanttResizeSignal } from "../action/phyloTreeGantt_actions";
 import { Row, Empty } from "antd";
+import _ from "lodash";
 const GridLayout = WidthProvider(ReactGridLayout);
+
 //const dimensions = ["width", "height"];
 //const Mea = withMeasure(dimensions)(PatientMovement);
 
-const Dashboard = props => {
+const Dashboard = (props) => {
   const layout = props.layout;
   const activeCharts = Object.keys(props.activeChart)
-    .map(key => {
+    .map((key) => {
       return { key: key, status: props.activeChart[key].show };
     })
-    .filter(d => {
+    .filter((d) => {
       return d.status;
     });
 
   //Functions
+  function generateLayout() {
+    const p = props;
+    const availableHandles = ["s", "w", "e", "n", "sw", "nw", "se", "ne"];
+
+    return _.map(new Array(p.items), function(item, i) {
+      const y = _.result(p, "y") || Math.ceil(Math.random() * 4) + 1;
+      return {
+        x: (i * 2) % 12,
+        y: Math.floor(i / 6) * y,
+        w: 2,
+        h: y,
+        i: i.toString(),
+        resizeHandles: _.shuffle(availableHandles).slice(
+          0,
+          _.random(1, availableHandles.length - 1)
+        ),
+      };
+    });
+  }
+
   function createChart(id) {
     let newID = id.split("_");
     switch (newID[0]) {
@@ -109,6 +131,11 @@ const Dashboard = props => {
     }
   }
 
+  function onLayoutChangeHandler() {
+    let a = generateLayout();
+    console.log(a);
+  }
+
   function onResizeStartHandler(
     layout,
     oldLayoutItem,
@@ -151,9 +178,15 @@ const Dashboard = props => {
   return (
     <React.Fragment>
       <Row justify={"center"}>
-        <PreloadedDataset/>
+        <PreloadedDataset />
       </Row>
-      {activeCharts.length === 0 && <Empty description={"No active charts: Load input file and click the chart icon in the side menu to create a chart."} />}
+      {activeCharts.length === 0 && (
+        <Empty
+          description={
+            "No active charts: Load input file and click the chart icon in the side menu to create a chart."
+          }
+        />
+      )}
       {activeCharts.length > 0 && (
         <div id="dashboard">
           <GridLayout
@@ -161,9 +194,11 @@ const Dashboard = props => {
             rowHeight={30}
             margin={[3, 3]}
             onResizeStart={onResizeStartHandler}
+            onLayoutChange={onLayoutChangeHandler}
             draggableHandle=".panelHeader"
           >
             {activeCharts.map(function(d, idx) {
+              console.log("Grid Layout ..");
               return (
                 <div key={d.key} data-grid={getDataGrid(layout, d.key)}>
                   {createChart(d.key)}
@@ -180,7 +215,7 @@ const Dashboard = props => {
 function mapStateToProps(state, ownProps) {
   return {
     activeChart: state.activeChart,
-    layout: state.layout
+    layout: state.layout,
   };
 }
 
@@ -194,7 +229,7 @@ function mapDispatchToProps(dispatch, ownProps) {
       changeLocalmapResizeSignal: changeLocalmapResizeSignal,
       changeMovementResizeSignal: changeMovementResizeSignal,
       changeTempResizeSignal: changeTempResizeSignal,
-      changeTreeGanttResizeSignal: changeTreeGanttResizeSignal
+      changeTreeGanttResizeSignal: changeTreeGanttResizeSignal,
     },
     dispatch
   );

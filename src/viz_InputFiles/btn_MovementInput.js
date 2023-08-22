@@ -7,6 +7,7 @@ import { extendMoment } from "moment-range";
 import { color } from "d3-color";
 import DeleteInput from "./btn_DeleteInput";
 import { Card, Row, Col, Spin, Upload } from "antd";
+import {parseMovement} from '../utils/utils'
 
 const moment = extendMoment(Moment);
 const { Dragger } = Upload;
@@ -17,68 +18,6 @@ const MovementInput = (props) => {
   const [isLoading, setisLoading] = useState(false);
 
   //functions
-  async function parseMovement(fileURL) {
-    let data_promise = await csv(fileURL).then(function(result) {
-      return result;
-    });
-    //Validation runs here
-    // headers
-    const validHeaders = [
-      "source_name",
-      "location_name",
-      "start_date",
-      "end_date",
-    ];
-    const inputHeaders = Object.keys(data_promise[0]);
-    let header_is_valid = true;
-    validHeaders.forEach((item) => {
-      if (inputHeaders.indexOf(item) === -1) {
-        header_is_valid = false;
-      }
-    });
-
-    if (!header_is_valid) {
-      setisLoading(false);
-      alert("Invalid headers");
-      return;
-    }
-
-    // no empty record or invalid format on start and end date
-    let date_invalid = false;
-    data_promise.forEach(function(d) {
-      if (moment(d.start_date) && moment(d.end_date)) {
-        d.start_date = moment(d.start_date);
-        d.end_date = moment(d.end_date);
-      } else if (d.location_color) {
-        //console.log(color(d.location_color));
-        d.location_color = color(d.location_color);
-      } else if (parseInt(d.source_name.isInteger())) {
-        d.source_name = parseInt(d.source_name);
-      } else {
-        date_invalid = true;
-      }
-    });
-
-    if (date_invalid) {
-      setisLoading(false);
-      alert("Invalid data: wrong date format in column start or end date");
-      return;
-    }
-
-    //check adm and discharge column
-    data_promise.forEach(function(d) {
-      if (d["is_admDisc"]) {
-        d["is_admDisc"] = d["is_admDisc"] == "y" ? true : false;
-      } else {
-        d["is_admDisc"] = false;
-      }
-    });
-
-    data_promise.sort((a, b) => a.source_name - b.source_name);
-
-    props.loadMovementData(data_promise);
-  }
-
   const beforeUploadHandler = (file) => {
     setisLoading(true);
     if (file) {
@@ -86,7 +25,7 @@ const MovementInput = (props) => {
       reader.readAsDataURL(file);
       reader.onloadend = function(evt) {
         const dataUrl = evt.target.result;
-        parseMovement(dataUrl);
+        parseMovement(dataUrl, props.loadMovementData, setisLoading);
       };
     }
   };

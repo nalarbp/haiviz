@@ -7,10 +7,7 @@
 }
 
 #content-header-row {
-  background: url("../img/bg_content_header.png") no-repeat fixed center,
-    linear-gradient(122deg,
-      rgb(126, 221, 255) 15%,
-      rgb(68, 97, 212) 100%);
+  background-color: rgb(245, 245, 245);
 }
 
 #content-header {
@@ -18,7 +15,7 @@
   margin: auto;
   padding: 50px;
   text-align: center;
-  color: white;
+  color: rgb(112, 112, 112);
 }
 
 #content-showcase-row {
@@ -29,7 +26,8 @@
   margin: auto;
   padding: 50px;
   text-align: center;
-}
+  background-color: #DFDBE5;
+  }
 
 #carousel-container {
   background-color: lightgray;
@@ -53,4 +51,12 @@
 /*
 background-color: #1eb776;
 background: #1eb776 url("../img/bg_dummy.jpg") no-repeat fixed center;
+
+background-color: #e5e5f7;
+opacity: 0.8;
+background-image:  linear-gradient(30deg, #444cf7 12%, transparent 12.5%, transparent 87%, #444cf7 87.5%, #444cf7), linear-gradient(150deg, #444cf7 12%, transparent 12.5%, transparent 87%, #444cf7 87.5%, #444cf7), linear-gradient(30deg, #444cf7 12%, transparent 12.5%, transparent 87%, #444cf7 87.5%, #444cf7), linear-gradient(150deg, #444cf7 12%, transparent 12.5%, transparent 87%, #444cf7 87.5%, #444cf7), linear-gradient(60deg, #444cf777 25%, transparent 25.5%, transparent 75%, #444cf777 75%, #444cf777), linear-gradient(60deg, #444cf777 25%, transparent 25.5%, transparent 75%, #444cf777 75%, #444cf777);
+background-size: 50px 88px;
+background-position: 0 0, 0 0, 25px 44px, 25px 44px, 0 0, 25px 44px;
+background:linear-gradient(122deg,  rgb(126, 221, 255) 15%,  rgb(68, 97, 212) 100%);
+
 */

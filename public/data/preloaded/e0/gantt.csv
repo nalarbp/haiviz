@@ -1,4 +1,4 @@
-source_name,start_date,end_date,location_name
+pid,start_date,end_date,location
 P1,2019-12-17,2019-12-23,Location 21
 P1,2019-12-23,2019-12-24,ICU
 P1,2019-12-24,2019-12-29,Location 22
