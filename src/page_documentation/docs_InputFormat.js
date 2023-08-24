@@ -12,27 +12,24 @@ const InputFormat = (props) => {
   return (
     <React.Fragment>
       <div className="haiviz-docs-content">
-        <Title level={3}>Isolate metadata</Title>
+        <Title level={3}>Metadata</Title>
         <Text>
-          The metadata contains isolate’s information such as the name,
-          locations, date of collection, and other isolates’ profiles, formatted
-          in comma-separated value (.csv). Metadata file is a mandatory input to
-          use HAIviz, as it serves as a central hub to link other inputs and to
-          create integrated visualization. For instance, to integrate
-          phylogenetic tree and transmission graph both files must have
-          identical isolate’s name with the metadata
+          A comma-separated value (CSV) table containing at least column id,
+          date and location. Other columns can be added optionally. Column with
+          prefix ":color" can be used to assign color. Column pid (patient id)
+          is required to link the metadata with gantt chart.
         </Text>
         <br />
         <br />
-        <Button href={constant.TEMPLATE.isolateData}>
+        <Button type="primary" href={constant.TEMPLATE.isolateData}>
           Metadata example file
         </Button>
         <Divider />
 
-        <Title level={3}>Local map </Title>
+        <Title level={3}>Map </Title>
         <Text>
-          The local map input is an XML formatted file that contains SVG map and
-          location data. Users can create this map on the fly at HAIviz
+          HAIviz map is an XML file that contains SVG map and location data.
+          Create this map in page
           <Link
             to="/create-map"
             onClick={() => {
@@ -40,49 +37,53 @@ const InputFormat = (props) => {
             }}
           >
             {" "}
-            map editor page{" "}
+            Map Editor{" "}
           </Link>
-          by loading SVG image and annotating its locations.
         </Text>
         <br />
         <br />
-        <Button href={constant.TEMPLATE.svg}>SVG example file</Button>
-        <Button href={constant.TEMPLATE.xmlData}>XML example file</Button>
+        <Button type="primary" href={constant.TEMPLATE.svg}>
+          SVG example file
+        </Button>
+        <Button type="primary" href={constant.TEMPLATE.xmlData}>
+          XML example file
+        </Button>
         <Divider />
 
         <Title level={3}>Phylogenetic tree </Title>
-        <Text>
-          The phylogenetic tree input requires a Newick formatted tree with the
-          branch length and the name of the taxa. The taxa name is compulsory to
-          label the tree and link it with the metadata, while the branch length
-          is optional to scale an additive tree.
-        </Text>
+        <Text>A Newick formatted tree with taxa name and branch length.</Text>
         <br />
         <br />
-        <Button href={constant.TEMPLATE.treeData}>Tree example file</Button>
+        <Button type="primary" href={constant.TEMPLATE.treeData}>
+          Tree example file
+        </Button>
         <Divider />
 
-        <Title level={3}>Transmission graph</Title>
+        <Title level={3}>Network </Title>
         <Text>
-          The transmission input a graph file that contains a collection of
-          nodes, links, and the corresponding attributes to describe the
-          transmission, written in DOT language format. Similar to the tree, the
-          graph also requires attributes to be displayed correctly.
+          Network input can be used load transmission or cluster or contact
+          tracing network. This network (graph) file need to be formatted DOT
+          language format.
         </Text>
         <br />
         <br />
-        <Button href={constant.TEMPLATE.transData}>Graph example file</Button>
+        <Button type="primary" href={constant.TEMPLATE.transData}>
+          Graph example file
+        </Button>
         <Divider />
 
-        <Title level={3}>Movement table</Title>
+        <Title level={3}>Gantt chart</Title>
         <Text>
-          The host movement input is a CSV file containing host’s name, their
-          location and the duration of their stay at that particular location
-          (e.g., start and end date of stay).
+          Gantt chart is used to display patient (ward, bed) movement timeline.
+          Input file for Gantt chart is a CSV table containing column: pid
+          (patient id), start_date, end_date, and location. Column
+          "location_color" can be used optionally to color the location.
         </Text>
         <br />
         <br />
-        <Button href={constant.TEMPLATE.movementData}>Example file</Button>
+        <Button type="primary" href={constant.TEMPLATE.movementData}>
+          Example file
+        </Button>
         <Divider />
       </div>
     </React.Fragment>

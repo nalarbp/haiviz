@@ -1,16 +1,16 @@
 import * as constant from "../utils/constants";
 
 // ======================= LOAD DATA ====================
-export function loadSvgData(val) {
+export function loadSvgMapEditor(val) {
   return {
     type: constant.NEW_SVG_MAPEDITOR,
-    payload: val
+    payload: val,
   };
 }
 
-export function loadLocationData(val) {
+export function loadLocationsMapEditor(val) {
   return {
     type: constant.NEW_LOCDATA_MAPEDITOR,
-    payload: val
+    payload: val,
   };
 }

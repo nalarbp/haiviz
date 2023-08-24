@@ -4,46 +4,8 @@ import React from "react";
 import { Typography, Divider } from "antd";
 import { Link } from "react-router-dom";
 import "./style_Documentation.css";
-
+import { quickStartGuideFile } from "../utils/constants";
 const { Title, Paragraph, Text } = Typography;
-// const dataSource = [
-//   {
-//     key: "1",
-//     edge: ">=87",
-//     chrome: "last 2 version",
-//     firefox: ">76",
-//     safari: "last 2 version",
-//     opera: "last 2 version",
-//   },
-// ];
-
-// const columns = [
-//   {
-//     title: "MS Edge",
-//     dataIndex: "edge",
-//     key: "edge",
-//   },
-//   {
-//     title: "Chrome",
-//     dataIndex: "chrome",
-//     key: "chrome",
-//   },
-//   {
-//     title: "Firefox",
-//     dataIndex: "firefox",
-//     key: "firefox",
-//   },
-//   {
-//     title: "Safari",
-//     dataIndex: "safari",
-//     key: "safari",
-//   },
-//   {
-//     title: "Opera",
-//     dataIndex: "opera",
-//     key: "opera",
-//   },
-// ];
 
 const AboutHAIviz = (props) => {
   return (
@@ -51,54 +13,36 @@ const AboutHAIviz = (props) => {
       <div className="haiviz-docs-content">
         <Title level={2}>About HAIviz</Title>
         <Paragraph>
-          HAIviz is a single page visualization application designed to help
-          infection control professionals to interactively visualize, integrate,
-          and communicate information related with genomic epidemiological
-          investigation at the local setting, such as hospital and other
-          healthcare settings.
+          HAIviz is a web-based application to create an interactive dashboard
+          for visualising and integrating healthcare-associated genomic
+          epidemiological data.
         </Paragraph>
-        <Divider />
         <Title level={3}>When to use </Title>
         <Text>HAIviz can be useful for you when you want to:</Text>
         <ul>
-          <li> Visualize outbreaks on a customized local map </li>
-          <li> Integrate transmission information with phylogeny </li>
-          <li>
-            Visualize location movements (e.g, patient's ward or bed movement)
-          </li>
-          <li> Explore data using interactive visualization </li>
-          <li>
-            Animate the occurance of the outbreak cases using interactive
-            timeline
-          </li>
-          <li>
-            Rapidly create and download genomic epidemiological related
-            visualization
-          </li>
+          <li>Create and use a customised map to visualise outbreaks</li>
+          <li>Visualise and integrate patient timeline for contact tracing</li>
+          <li>Visualise and integrate transmission or cluster network </li>
+          <li>Animate the outbreak</li>
+          <li>Do it interactively, no scripting required </li>
         </ul>
-        <Divider />
         <Title level={3}>How to use </Title>
         <Text>
-          To start using HAIviz, click{" "}
+          Simply load your files into page{" "}
           <Link
-            to="/haiviz-spa"
+            to="/input"
             onClick={() => {
-              props.changeNavLocation("haivizApp");
+              props.changeNavLocation("input");
             }}
           >
             {" "}
-            here
+            input.
           </Link>{" "}
-          or click HAIviz App from the top navigation. Input the required
-          file(s) and display the relevant visualization window from the menu.
-          Check the tutorial section for more instructions.
         </Text>
-        <Divider />
         <Title level={3}>Browser compatibility </Title>
-        HAIviz is based on a create react app (CRA) tool and so it supports the
-        majority of modern browsers. With the exception of Internet Explorer
-        (IE), HAIviz was tested and compatible on the following desktop
-        browsers:
+        HAIviz is built using create react app (CRA), so it supports the
+        majority of modern browsers. With the exception of Internet Explorer,
+        HAIviz was tested and compatible on the following desktop browsers:
         <ul>
           <li> Microsoft Edge (v.87) </li>
           <li> Safari (v.13.1.2)</li>
@@ -106,12 +50,11 @@ const AboutHAIviz = (props) => {
           <li> Firefox (v.84.0.1)</li>
           <li> Opera (v.73.0.3856) </li>
         </ul>
-        <Divider />
         <Title level={3}>Core libraries</Title>
         <Text>
-          Thanks to all awesome web frameworks and libraries run on the
-          background, HAIviz is now up and running and available worldwide. The
-          following are some of the core libraries used by HAIviz:
+          Thanks to all the awesome web frameworks and libraries run on the
+          background, HAIviz is available worldwide. The following are some of
+          the core libraries used by HAIviz:
           <ul>
             <li>
               <a
@@ -177,7 +120,6 @@ const AboutHAIviz = (props) => {
             </li>
           </ul>
         </Text>
-        <Divider />
         <Title level={3}>Have any questions? </Title>
         <Text>
           Please feel free to send it to my email:{" "}
@@ -185,12 +127,8 @@ const AboutHAIviz = (props) => {
             b.permana@uq.edu.au
           </span>
         </Text>
-        <Divider />
         <Title level={3}>Cite us</Title>
-        <Text>
-          If you are happy to use HAIviz please cite our paper [available soon]
-        </Text>
-        <Divider />
+        <Text>If you use HAIviz please cite this website</Text>
       </div>
     </React.Fragment>
   );

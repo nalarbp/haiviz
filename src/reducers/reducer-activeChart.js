@@ -38,7 +38,7 @@ const activeChartReducer = (prevState, action) => {
       mic["tree"].show = false;
       mic["transmission"].show = false;
       mic["gantt"].show = false;
-      mic["treeGantt"].show = false;
+      //mic["treeGantt"].show = false;
       mic["table"].show = false;
       return mic;
 

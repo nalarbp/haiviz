@@ -1,3 +1,10 @@
+#map-editor-header {
+  background-color: white;
+  font-family: "Nunito", sans-serif;
+  text-align: center;
+  margin: 40px 0;
+}
+
 #map-editor-loading {
   padding: 40px 20px;
   width: 100%;
@@ -15,8 +22,6 @@
 #map-editor-tables {
   background-color: none;
   height: 85vh;
-  width: 100%;
-  padding: 0px 20px;
   overflow-y: auto;
 }
 

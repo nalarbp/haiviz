@@ -162,10 +162,10 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
-      deactivateChart: deactivateChart,
-      changeColorResizeSignal: changeColorResizeSignal,
-      changeIsColorScaleDownloading: changeIsColorScaleDownloading,
-      setColorScaleType: setColorScaleType,
+      deactivateChart,
+      changeColorResizeSignal,
+      changeIsColorScaleDownloading,
+      setColorScaleType,
       setColorScale,
     },
     dispatch

@@ -144,12 +144,13 @@ const SideMenuButton = (props) => {
         } else {
           return icon_simulatedMap;
         }
-      case "treeGantt":
-        if (props.movementData && props.phyloTree && props.isolateData) {
-          return icon_tree_gantt;
-        } else {
-          return icon_tree_gantt_inactive;
-        }
+      // For the next major release
+      // case "treeGantt":
+      //   if (props.movementData && props.phyloTree && props.isolateData) {
+      //     return icon_tree_gantt;
+      //   } else {
+      //     return icon_tree_gantt_inactive;
+      //   }
       case "floorplan":
         if (!props.svgMap) {
           return icon_floorplan_inactive;

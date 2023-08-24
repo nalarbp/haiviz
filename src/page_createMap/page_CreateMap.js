@@ -1,33 +1,32 @@
-/* ============================================================================
-============================================================================ */
 import React from "react";
 import { Row, Col } from "antd";
-import MapXMLInput from "./btn_MapXMLInput";
-import MapEditor from "./comp_MapEditor";
+import MapEditorInput from "./comp_MapEditorInput";
+import MapEditorWorkspace from "./comp_MapEditorWorkspace";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import { loadSVG } from "../action/index";
-import { loadSvgData, loadLocationData } from "../action/mapEditor_actions";
-import { changeNavLocation } from "../action/navigation_actions";
+import {
+  loadSvgMapEditor,
+  loadLocationsMapEditor,
+} from "../action/mapEditor_actions";
 import "./style_CreateMap.css";
-///
+
 const CreateMap = (props) => {
   ///const [xmlFile, setXMLFile] = useState(null);
   return (
     <React.Fragment>
-      {props.svgData === null && (
+      {props.mapEditorSVG === null && (
         <div
           style={{ width: "100%", height: "100%", backgroundColor: "white" }}
         >
           <Row justify={"center"} style={{ margin: "0px 20px" }}>
-            <Col id="inputfiles-header" xs={24} md={18} xl={14} xxl={10}>
-              <p style={{ fontSize: "32pt", marginBottom: "20px" }}>
-                Hi there,
+            <Col id="map-editor-header" xs={24} md={18} xl={14} xxl={10}>
+              <p style={{ fontSize: "30pt", marginBottom: "20px" }}>
+                Map Editor
               </p>
-              <p style={{ fontSize: "14pt", marginBottom: "5px" }}>
-                Welcome to HAIviz local map utility page. Here, you can create
-                or update your local map input. To start using it, click the
-                input button or drag your SVG or XML file to the input area.
+              <p style={{ fontSize: "12pt", marginBottom: "5px" }}>
+                To create a new map, click or drag-and-drop your SVG image into
+                the input placeholder. <br /> To update an existing one, load
+                the XML file.
               </p>
             </Col>
           </Row>
@@ -40,24 +39,18 @@ const CreateMap = (props) => {
               xxl={4}
               className="input-button"
             >
-              <MapXMLInput
-                loadSvgData={props.loadSvgData}
-                loadLocationData={props.loadLocationData}
-                svgData={props.svgData}
-                locationData={props.locationData}
+              <MapEditorInput
+                loadSvgMapEditor={props.loadSvgMapEditor}
+                loadLocationsMapEditor={props.loadLocationsMapEditor}
               />
             </Col>
           </Row>
         </div>
       )}
-      {props.svgData !== null && (
-        <MapEditor
-          isolateData={props.isolateData}
-          svgData={props.svgData}
-          locationData={props.locationData}
-          loadLocationData={props.loadLocationData}
-          loadXML={props.loadXML}
-          changeNavLocation={props.changeNavLocation}
+      {props.mapEditorSVG !== null && (
+        <MapEditorWorkspace
+          mapEditorSVG={props.mapEditorSVG}
+          loadLocationsMapEditor={props.loadLocationsMapEditor}
         />
       )}
     </React.Fragment>
@@ -65,19 +58,15 @@ const CreateMap = (props) => {
 };
 function mapStateToProps(state) {
   return {
-    isolateData: state.isolateData,
-    svgData: state.mapEditor.svgData,
-    locationData: state.mapEditor.locationData,
+    mapEditorSVG: state.mapEditor.svgData,
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
-      loadSvgData: loadSvgData,
-      loadLocationData: loadLocationData,
-      loadXML: loadSVG,
-      changeNavLocation: changeNavLocation,
+      loadSvgMapEditor,
+      loadLocationsMapEditor,
     },
     dispatch
   );

@@ -1,6 +1,16 @@
+/* ============================================================================
+Transmission graph card:
+- when dataset for chart is available, render transmission graph viewer
+- what you need: zoom by button, drag by mouse, select area using polybrush,
+-  change link distance, filter by link's weight, change force charge strength
+// at initial process (dimensions is null) skip drawing, wait until dimensions is available
+// run drawing when only: change in width, props.data
+// when zoom, select the root cytoscapeGraph_contGroup, translate using zoomTransform not re-render/set new state (this approach is faster!)
+// iterate draw function when only page refreshed
+//
+============================================================================ */
 import React, { useEffect, useRef, useState } from "react";
 import { select } from "d3-selection";
-import coseBilkent from "cytoscape-cose-bilkent";
 import {
   getColorScaleByObject,
   removeAllChildFromNode,
@@ -15,10 +25,7 @@ import { ClearOutlined } from "@ant-design/icons";
 import usePrevious from "../react_hooks/usePrevious-hook";
 
 const spread = require("cytoscape-spread");
-const fcose = require("cytoscape-fcose");
 cytoscape.use(spread); // register extension
-cytoscape.use(coseBilkent); // register extension
-cytoscape.use(fcose); // register extension
 cytoscape.use(svg);
 
 const _ = require("lodash");
@@ -27,7 +34,6 @@ const TransGraph = (props) => {
   //DRAWING CONSTRUCTOR
   const [isDrawCompleted, setisDrawCompleted] = useState(null);
   const transmission = _.cloneDeep(props.data);
-  //console.log(transmission);
   const transmissionCytoscapeRef = useRef();
   const transmissionContainerRef = useRef();
   const cytoscapeRef = useRef(null);
@@ -265,24 +271,6 @@ const TransGraph = (props) => {
           },
         },
         {
-          selector: ":parent",
-          shape: "round",
-          style: {
-            "background-image": "none",
-            "padding-top": "5px",
-            "background-position-x": "0",
-            "background-position-y": "0",
-            "background-width": "100%",
-            "background-height": "100%",
-            "background-fit": "contain",
-            "background-opacity": "0",
-            "border-width": "1",
-            "text-valign": "top",
-            "text-halign": "center",
-          },
-        },
-
-        {
           selector: "edge",
           style: {
             label: "data(weight)",
@@ -364,10 +352,10 @@ const TransGraph = (props) => {
       .style({
         "background-color": function(d) {
           let isolate_name = d.data("label");
-          let col = "gray";
-          if (props.isolateData) {
+          let col = 'gray'
+          if(props.isolateData){
             let obj = props.isolateData.get(isolate_name);
-            col = obj ? getColorScaleByObject(obj, props.colorScale) : "gray";
+            col = obj ? getColorScaleByObject(obj, props.colorScale) : 'gray'
           }
           return col;
         },

@@ -36,7 +36,9 @@ const LocalmapChart = (props) => {
   externalSVGnode.setAttribute("id", "externalSVG");
   const container_w = observedWidth;
   const container_h = observedHeight;
-  const isolateDataClone = _.cloneDeep(Array.from(props.isolateData.values()));
+  const isolateDataClone = props.isolateData
+    ? _.cloneDeep(Array.from(props.isolateData.values()))
+    : [];
 
   //SETTINGS
   const isUserStartResize = props.localmapSettings.isUserStartResize;
@@ -169,193 +171,195 @@ const LocalmapChart = (props) => {
     //inject externalSVG and scale it
     let svgBaseGroup = svgGroup.append("g").attr("id", "localmap-base-g");
     svgBaseGroup.node().appendChild(externalSVGnode);
-    //add location coordinates
-    const locCoordMap = new Map();
-    isolateDataClone.forEach((d) => {
-      let key = d.isolate_colLocation;
-      let loc_coord = props.data.locationTable.get(d.isolate_colLocation);
-      if (loc_coord) {
-        d["x"] = loc_coord.x;
-        d["y"] = loc_coord.y;
-      } else {
-        d["x"] = 0;
-        d["y"] = 0;
-      }
-      let val = {
-        locX: d.x,
-        locY: d.y,
-      };
-      locCoordMap.set(key, val);
-    });
-
-    let circlesGroup = svgGroup.append("g").attr("id", "localmap-circle-g");
-    //draw location label
-    circlesGroup
-      .selectAll(".localmap-locationLabel")
-      .data(Array.from(props.data.locationTable.values()))
-      .enter()
-      .append("text")
-      .attr("class", "localmap-locationLabel")
-      .attr("x", (d) => d.x + textOffset)
-      .attr("y", (d) => d.y)
-      .attr("fill", "black")
-      .attr("text-anchor", "start")
-      .attr("font-size", textSize + "pt")
-      .attr("fill", "black")
-      .attr("display", (d) => (isLocTextShown ? "block" : "none"))
-      .text((d) => d.name);
-    // LAYOUT: SCATTER
-    if (layout === "scatter") {
-      // add simulation to it
-      forceSimulation(isolateDataClone) // create simulation for circles
-        .force("gravity", forceManyBody().strength(-0.1))
-        .force(
-          "collide",
-          forceCollide()
-            .radius(nodeSize)
-            .strength(0.3)
-        )
-        .tick(50)
-        .stop();
-
-      //draw circle
-      circlesGroup
-        .selectAll(".localmap-circle")
-        .data(isolateDataClone)
-        .enter()
-        .append("circle")
-        .attr("class", "localmap-circle")
-        .attr("r", (d) => nodeSize)
-        .attr("stroke", "black")
-        .attr("stroke-width", "1px")
-        .style("opacity", "1")
-        .style("display", (d) => {
-          let loc_coord = props.data.locationTable.get(d.isolate_colLocation);
-          if (loc_coord) {
-            return "block";
-          } else {
-            return "none";
-          }
-        })
-        .attr("cursor", "pointer")
-        .attr("cx", (d) => d.x)
-        .attr("cy", (d) => d.y)
-        .attr("fill", (d) => getColorScaleByObject(d, props.colorScale))
-        .on("click", (d) => {
-          props.setSelectedData([d.isolate_name]);
-        })
-        .append("title")
-        .text((d) => `isolate: ${d.isolate_name}`);
-    }
-    // === LAYOUT: PIECHART ===
-    else {
-      const pieGenerator = pie()
-        .sort(null)
-        .value((d) => d[1].length);
-      const isolateDataGroupByLoc = group(
-        isolateDataClone,
-        (d) => d.isolate_colLocation
-      );
-      //make data input for pie chart
-      const locPieChartData = Array.from(locCoordMap.entries());
-      //locPieChartData = [0:[0:loc_name, 1:{locX: loc, locY: loc, data: dataByLocGroup}]]
-      locPieChartData.forEach((loc) => {
-        let data = isolateDataGroupByLoc.get(loc[0]);
-        if (Array.isArray(data)) {
-          data = Array.from(
-            group(data, (d) =>
-              getColumnNameByColorType(d, props.colorScale.colorType)
-            ).entries()
-          );
+    if (props.isolateData) {
+      //add location coordinates
+      const locCoordMap = new Map();
+      isolateDataClone.forEach((d) => {
+        let key = d.isolate_colLocation;
+        let loc_coord = props.data.locationTable.get(d.isolate_colLocation);
+        if (loc_coord) {
+          d["x"] = loc_coord.x;
+          d["y"] = loc_coord.y;
+        } else {
+          d["x"] = 0;
+          d["y"] = 0;
         }
-        loc[1]["data"] = data;
-        //console.log(loc);
+        let val = {
+          locX: d.x,
+          locY: d.y,
+        };
+        locCoordMap.set(key, val);
       });
 
-      // 1. list of locations, with each location has data
-      // 2. this data is feed to pieGenetor
-      // make nodes group and draw nodes on it
-      let nodesGroup = svgGroup.append("g").attr("id", "localmap_nodesGroup");
-      //draw node circle
-      let pieGroup = nodesGroup
-        .selectAll(".localmap_pieGroup")
-        .data(locPieChartData)
+      let circlesGroup = svgGroup.append("g").attr("id", "localmap-circle-g");
+      //draw location label
+      circlesGroup
+        .selectAll(".localmap-locationLabel")
+        .data(Array.from(props.data.locationTable.values()))
         .enter()
-        .append("g")
-        .attr("class", "localmap_pieGroup")
-        .attr(
-          "transform",
-          (d) => "translate(" + d[1].locX + "," + d[1].locY + ")"
-        )
-        .style("display", (d) => {
-          let loc_coord = props.data.locationTable.get(d[0]);
-          if (loc_coord) {
-            return "block";
-          } else {
-            return "none";
+        .append("text")
+        .attr("class", "localmap-locationLabel")
+        .attr("x", (d) => d.x + textOffset)
+        .attr("y", (d) => d.y)
+        .attr("fill", "black")
+        .attr("text-anchor", "start")
+        .attr("font-size", textSize + "pt")
+        .attr("fill", "black")
+        .attr("display", (d) => (isLocTextShown ? "block" : "none"))
+        .text((d) => d.name);
+      // LAYOUT: SCATTER
+      if (layout === "scatter") {
+        // add simulation to it
+        forceSimulation(isolateDataClone) // create simulation for circles
+          .force("gravity", forceManyBody().strength(-0.1))
+          .force(
+            "collide",
+            forceCollide()
+              .radius(nodeSize)
+              .strength(0.3)
+          )
+          .tick(50)
+          .stop();
+
+        //draw circle
+        circlesGroup
+          .selectAll(".localmap-circle")
+          .data(isolateDataClone)
+          .enter()
+          .append("circle")
+          .attr("class", "localmap-circle")
+          .attr("r", (d) => nodeSize)
+          .attr("stroke", "black")
+          .attr("stroke-width", "1px")
+          .style("opacity", "1")
+          .style("display", (d) => {
+            let loc_coord = props.data.locationTable.get(d.isolate_colLocation);
+            if (loc_coord) {
+              return "block";
+            } else {
+              return "none";
+            }
+          })
+          .attr("cursor", "pointer")
+          .attr("cx", (d) => d.x)
+          .attr("cy", (d) => d.y)
+          .attr("fill", (d) => getColorScaleByObject(d, props.colorScale))
+          .on("click", (d) => {
+            props.setSelectedData([d.isolate_name]);
+          })
+          .append("title")
+          .text((d) => `isolate: ${d.isolate_name}`);
+      }
+      // === LAYOUT: PIECHART ===
+      else {
+        const pieGenerator = pie()
+          .sort(null)
+          .value((d) => d[1].length);
+        const isolateDataGroupByLoc = group(
+          isolateDataClone,
+          (d) => d.isolate_colLocation
+        );
+        //make data input for pie chart
+        const locPieChartData = Array.from(locCoordMap.entries());
+        //locPieChartData = [0:[0:loc_name, 1:{locX: loc, locY: loc, data: dataByLocGroup}]]
+        locPieChartData.forEach((loc) => {
+          let data = isolateDataGroupByLoc.get(loc[0]);
+          if (Array.isArray(data)) {
+            data = Array.from(
+              group(data, (d) =>
+                getColumnNameByColorType(d, props.colorScale.colorType)
+              ).entries()
+            );
           }
+          loc[1]["data"] = data;
+          //console.log(loc);
         });
 
-      let pieArcGroup = pieGroup
-        .selectAll(".localmap_pieArcGroup")
-        .data((d) => {
-          let res = d[1].data ? pieGenerator(d[1].data) : [null];
-          return res;
-        })
-        .enter()
-        .append("g")
-        .attr("class", "localmap_pieArcGroup");
+        // 1. list of locations, with each location has data
+        // 2. this data is feed to pieGenetor
+        // make nodes group and draw nodes on it
+        let nodesGroup = svgGroup.append("g").attr("id", "localmap_nodesGroup");
+        //draw node circle
+        let pieGroup = nodesGroup
+          .selectAll(".localmap_pieGroup")
+          .data(locPieChartData)
+          .enter()
+          .append("g")
+          .attr("class", "localmap_pieGroup")
+          .attr(
+            "transform",
+            (d) => "translate(" + d[1].locX + "," + d[1].locY + ")"
+          )
+          .style("display", (d) => {
+            let loc_coord = props.data.locationTable.get(d[0]);
+            if (loc_coord) {
+              return "block";
+            } else {
+              return "none";
+            }
+          });
 
-      pieArcGroup
-        .append("path")
-        .attr("d", (d) => {
-          if (d) {
-            let arcGenerator = arc()
-              .outerRadius(nodeSize)
-              .innerRadius(0);
-            return arcGenerator(d);
-          } else {
-            return "none";
-          }
-        })
-        .style("fill", (d) => {
-          if (d) {
-            let obj = d.data[1][0] ? d.data[1][0] : null;
-            let col = obj
-              ? getColorScaleByObject(obj, props.colorScale)
-              : "black";
-            return col;
-          } else {
-            return "black";
-          }
-        })
-        .style("opacity", (d) => 1)
-        .on("click", (d) => {
-          let clickedData = d.data[1];
-          let clickedselectedData = [];
-          if (clickedData.length > 0) {
-            clickedData.forEach((d) => {
-              clickedselectedData.push(d.isolate_name);
-            });
-          }
-          props.setSelectedData(clickedselectedData);
-        })
-        .append("title")
-        .text((d) => {
-          if (d) {
-            let percentage = (
-              ((d.endAngle - d.startAngle) / (2 * Math.PI)) *
-              100
-            ).toFixed(2);
-            return d.data[0] + " " + percentage + "%";
-          } else {
-            return "none";
-          }
-        });
-    }
+        let pieArcGroup = pieGroup
+          .selectAll(".localmap_pieArcGroup")
+          .data((d) => {
+            let res = d[1].data ? pieGenerator(d[1].data) : [null];
+            return res;
+          })
+          .enter()
+          .append("g")
+          .attr("class", "localmap_pieArcGroup");
 
-    if (props.selectedData && props.selectedData.length > 0) {
-      updateBySelectedData();
+        pieArcGroup
+          .append("path")
+          .attr("d", (d) => {
+            if (d) {
+              let arcGenerator = arc()
+                .outerRadius(nodeSize)
+                .innerRadius(0);
+              return arcGenerator(d);
+            } else {
+              return "none";
+            }
+          })
+          .style("fill", (d) => {
+            if (d) {
+              let obj = d.data[1][0] ? d.data[1][0] : null;
+              let col = obj
+                ? getColorScaleByObject(obj, props.colorScale)
+                : "black";
+              return col;
+            } else {
+              return "black";
+            }
+          })
+          .style("opacity", (d) => 1)
+          .on("click", (d) => {
+            let clickedData = d.data[1];
+            let clickedselectedData = [];
+            if (clickedData.length > 0) {
+              clickedData.forEach((d) => {
+                clickedselectedData.push(d.isolate_name);
+              });
+            }
+            props.setSelectedData(clickedselectedData);
+          })
+          .append("title")
+          .text((d) => {
+            if (d) {
+              let percentage = (
+                ((d.endAngle - d.startAngle) / (2 * Math.PI)) *
+                100
+              ).toFixed(2);
+              return d.data[0] + " " + percentage + "%";
+            } else {
+              return "none";
+            }
+          });
+      }
+
+      if (props.selectedData && props.selectedData.length > 0) {
+        updateBySelectedData();
+      }
     }
 
     //zoom functionality

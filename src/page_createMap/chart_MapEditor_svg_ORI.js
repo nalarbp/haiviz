@@ -1,4 +1,5 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useCallback } from "react";
+import { useHistory } from "react-router-dom";
 import { select } from "d3-selection";
 import { Button, Input } from "antd";
 import { zoom } from "d3-zoom";
@@ -10,7 +11,6 @@ import buildHAIvizXML from "../utils/buildXML";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { loadLocationsMapEditor } from "../action/mapEditor_actions";
-import _ from "lodash";
 
 import { downloadFileAsText } from "../utils/utils";
 import {
@@ -23,7 +23,10 @@ import {
   UploadOutlined,
 } from "@ant-design/icons";
 
+//props.mapEditorSVG props.height, props.width, props.mapEditorLocations, props.setlocationData
 const MapEditorChart = (props) => {
+  //NAV states
+  const history = useHistory();
   //INTERNAL STATES
   const initalLocationData = props.mapEditorLocations
     ? props.mapEditorLocations
@@ -32,24 +35,23 @@ const MapEditorChart = (props) => {
   //DATA PREP
   const locationDataRef = useRef(initalLocationData);
   const activeLocationRef = useRef(null);
+  const tableData = useRef(null);
 
   //DRAWING CONSTRUCTOR
   const mapeditorSVGRef = useRef();
   const mapeditorContainerRef = useRef();
+  const mapeditorTableContainerRef = useRef();
+
   const observedWidth = props.width ? props.width - 10 : null; //arbitary width so that cause negative
   const observedHeight = props.height ? props.height - 80 : null;
   const container = select(mapeditorContainerRef.current);
+  const tableContainer = select(mapeditorTableContainerRef.current);
+
+  const svg = select(mapeditorSVGRef.current);
   const externalSVGnode = props.mapEditorSVG.cloneNode(true);
   externalSVGnode.setAttribute("id", "externalSVG");
   const container_w = observedWidth;
   const container_h = observedHeight;
-
-  //Initital drawing
-  useEffect(() => {
-    if (props.mapEditorSVG) {
-      draw();
-    }
-  }, []);
 
   //USE EFFECTS
   useEffect(() => {
@@ -61,7 +63,6 @@ const MapEditorChart = (props) => {
       draw();
     }
   }, [props.mapEditorLocations, initalLocationData]);
-
   useEffect(() => {
     if (observedWidth && observedHeight && props.mapEditorSVG) {
       draw();
@@ -86,7 +87,11 @@ const MapEditorChart = (props) => {
     let markerBaseGroup = svg.select("#location-marker-g");
     updateLocationMarker();
 
-    // BUTTON: Add new location
+    //Draw initial table location
+    updateTable();
+
+    // == ADDING NEW LOCATION ==
+    // Button
     container.select("#map-editor-addLocation").on("click", () => {
       const uniqueid = uuidv1();
       const newLocation = {
@@ -96,67 +101,49 @@ const MapEditorChart = (props) => {
         active: false,
         name: "New-" + String(uniqueid),
       };
-      //do all together: update locationDataRef.current, update Store, Update this workspace
-      //locationDataRef.current.push(newLocation);
-      locationDataRef.current.push(newLocation);
-      //deep copy locationDataRef.current and assign to newLocations
-      let newLocations = _.cloneDeep(locationDataRef.current);
-      props.loadLocationsMapEditor(newLocations);
-      updateLocationMarker();
+      const isDuplicatedRecords = locationDataRef.current.find(
+        (d) => d.name === newLocation.name
+      )
+        ? true
+        : false;
+      if (!isDuplicatedRecords) {
+        locationDataRef.current.push(newLocation);
+        updateLocationMarker();
+        updateTable();
+      } else {
+        alert(newLocation.name + " exist. Change the existing name first");
+      }
     });
 
-    // BUTTON: Remove location
+    // == REMOVING NEW LOCATION ==
+    // Button
     container.select("#map-editor-removeLocation").on("click", () => {
       if (activeLocationRef.current) {
         let filteredLocation = locationDataRef.current.filter(
           (d) => activeLocationRef.current.id !== d.id
         );
         locationDataRef.current = filteredLocation;
-        props.loadLocationsMapEditor(locationDataRef.current);
         updateLocationMarker();
+        updateTable();
       }
     });
 
-    // CALL: When click the circle
     function clickedMarkerHandler(d) {
       markerBaseGroup.selectAll(".map-editor-markers").attr("fill", "blue");
       select(this).attr("fill", "red");
       let activeLocClone = Object.assign({}, d);
       activeLocationRef.current = activeLocClone;
-      //props.changeActiveLocationMapEditor(activeLocClone);
+      updateTable();
     }
 
-    function dragstarted(d) {
-      let activeLocClone = Object.assign({}, d);
-      activeLocationRef.current = activeLocClone;
-      markerBaseGroup.selectAll(".map-editor-markers").attr("fill", "blue");
-      select(this).attr("fill", "red");
-    }
-
-    function dragging(d) {
+    function dragged(d) {
       select(this)
         .attr("cx", (d.x = currentEvent.x))
         .attr("cy", (d.y = currentEvent.y));
     }
 
     function dragended(d) {
-      let new_locationData = {
-        x: Math.floor(currentEvent.x),
-        y: Math.floor(currentEvent.y),
-      };
-      select(this)
-        .attr("cx", (d.x = new_locationData.x))
-        .attr("cy", (d.y = new_locationData.y));
-      //update locationDataRef.current
-      if (locationDataRef.current) {
-        let activeLocIdx = locationDataRef.current.findIndex(function(d) {
-          return d.id === activeLocationRef.current.id;
-        });
-        locationDataRef.current[activeLocIdx].x = new_locationData.x;
-        locationDataRef.current[activeLocIdx].y = new_locationData.y;
-        let newLocations = _.cloneDeep(locationDataRef.current);
-        props.loadLocationsMapEditor(newLocations);
-      }
+      updateTable();
     }
 
     //UPDATE FUNCTIONS
@@ -176,34 +163,61 @@ const MapEditorChart = (props) => {
           return d.y;
         })
         .attr("r", 10)
-        .attr("fill", (d) => {
-          if (activeLocationRef.current) {
-            if (d.id === activeLocationRef.current.id) {
-              return "red";
-            } else {
-              return "blue";
-            }
-          } else {
-            return "blue";
-          }
-        })
+        .attr("fill", "blue")
         .style("opacity", "0.5")
         .on("click", clickedMarkerHandler)
         .call(
           drag()
-            .on("start", dragstarted)
-            .on("drag", dragging)
+            .on("drag", dragged)
             .on("end", dragended)
         )
         .append("title")
         .text((d) => d.name);
     }
+    function updateTable() {
+      tableData.current = locationDataRef.current.map((d) => {
+        return {
+          id: d.id,
+          name: d.name,
+          x: Math.floor(d.x),
+          y: Math.floor(d.y),
+        };
+      });
+      tableContainer.select("#map-editor-table-viewer tbody").remove();
+      let tableViewer_tr = tableContainer
+        .select("#map-editor-table-viewer")
+        .append("tbody")
+        .selectAll("tr")
+        .data(tableData.current)
+        .enter()
+        .append("tr");
 
-    // INPUT: update location name
+      tableViewer_tr
+        .selectAll("td")
+        .data(function(d, i) {
+          return [d.name, d.x, d.y];
+        })
+        .enter()
+        .append("td")
+        .style("background-color", function(d) {
+          if (
+            activeLocationRef.current &&
+            activeLocationRef.current.name === d
+          ) {
+            return "pink";
+          } else {
+            return "white";
+          }
+        })
+        .text(function(d) {
+          return d;
+        });
+    }
+
+    // AUXILARY FUNCTIONALITIES
+    // == LOCATION NAME UPDATE ==
     container.select("#marker-update-button").on("click", () => {
-      let inputVal = container.select("#marker-update-input").node().value;
       if (activeLocationRef.current) {
-        activeLocationRef.current.name = inputVal;
         let activeLocIdx = locationDataRef.current.findIndex(function(d) {
           return d.id === activeLocationRef.current.id;
         });
@@ -212,13 +226,10 @@ const MapEditorChart = (props) => {
         )
           ? true
           : false;
-
         if (!isDuplicatedRecords) {
           locationDataRef.current[activeLocIdx].name =
             activeLocationRef.current.name;
-          let newLocations = _.cloneDeep(locationDataRef.current);
-          props.loadLocationsMapEditor(newLocations);
-          updateLocationMarker();
+          updateTable();
         } else {
           alert(
             "Location with name " +
@@ -228,19 +239,6 @@ const MapEditorChart = (props) => {
         }
       }
     });
-
-    // == MAP DOWNLOAD ==
-    container.select("#download-map-button").on("click", () => {
-      if (locationDataRef.current.length === 0) {
-        alert("Location data is empty, please add one");
-        return;
-      }
-      let svgMapClone = externalSVGnode.cloneNode(true);
-      let haivizXML = buildHAIvizXML(svgMapClone, locationDataRef.current);
-
-      downloadFileAsText("haivizMap.xml", haivizXML);
-    });
-
     // == ZOOM ==
     const zoomHandler = zoom()
       .scaleExtent([0.1, 8])
@@ -263,6 +261,23 @@ const MapEditorChart = (props) => {
       zoomHandler.scaleBy(svg.transition().duration(500), 0.5);
     });
 
+    // == MAP DOWNLOAD ==
+    container.select("#download-map-button").on("click", () => {
+      if (locationDataRef.current.length === 0) {
+        alert("Location data is empty, please add one");
+        return;
+      }
+      let svgMapClone = externalSVGnode.cloneNode(true);
+      let haivizXML = buildHAIvizXML(svgMapClone, locationDataRef.current);
+
+      downloadFileAsText("haivizMap.xml", haivizXML);
+    });
+
+    // == SAVE MAP ==
+    container.select("#load-map-button").on("click", () => {
+      //test
+    });
+
     svg.call(zoomHandler);
   }
 
@@ -272,7 +287,16 @@ const MapEditorChart = (props) => {
         <div id="marker-update-container">
           <Input
             id={"marker-update-input"}
-            placeholder="Location's name"
+            placeholder={
+              activeLocationRef.current
+                ? activeLocationRef.current
+                : "Location name"
+            }
+            onChange={(e) => {
+              if (activeLocationRef.current) {
+                activeLocationRef.current.name = e.target.value;
+              }
+            }}
             prefix={<CompassOutlined />}
           />
           <Button
@@ -292,6 +316,14 @@ const MapEditorChart = (props) => {
             size={"medium"}
           >
             Download Map
+          </Button>
+          <Button
+            id={"load-map-button"}
+            shape="round"
+            icon={<UploadOutlined />}
+            size={"medium"}
+          >
+            Save Map
           </Button>
         </div>
         <div id="map-editor-buttons-container">
@@ -344,7 +376,6 @@ const MapEditorChart = (props) => {
 function mapStateToProps(state) {
   return {
     mapEditorSVG: state.mapEditor.svgData,
-    mapEditorLocations: state.mapEditor.locationData,
   };
 }
 
@@ -357,3 +388,18 @@ function mapDispatchToProps(dispatch) {
   );
 }
 export default connect(mapStateToProps, mapDispatchToProps)(MapEditorChart);
+
+/*
+<div ref={mapeditorTableContainerRef}>
+          <table id="map-editor-table-viewer">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>x</th>
+                <th>y</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+*/

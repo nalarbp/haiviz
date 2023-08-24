@@ -69,7 +69,6 @@ const PreloadedDataset = (props) => {
       if (projectData.gantt) {
         parseMovement(projectData.gantt, props.loadMovementData, setisLoading);
       }
-
       props.selectedPreloadedDataToStore(val);
     } else {
       props.resetStore();
@@ -80,10 +79,11 @@ const PreloadedDataset = (props) => {
   return (
     <React.Fragment>
       <Row gutter={12} style={{ marginBottom: "10px" }}>
-        <Col>
+        <Col xs={24} md={10} style={{ textAlign: "center", lineHeight: "8pt" }}>
           <h3>Preloaded Dataset: </h3>
+          <p style={{ fontSize: "8pt" }}>(Select to load one)</p>
         </Col>
-        <Col>
+        <Col xs={24} md={14} style={{ textAlign: "left" }}>
           <Select
             value={props.selectedPreloadedData}
             onChange={selectPreloadedDataHandler}

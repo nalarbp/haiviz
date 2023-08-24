@@ -40,7 +40,7 @@ const Localmap = (props) => {
   }, [isUserRedraw]);
 
   useEffect(() => {
-    if (props.xmlMap && props.isolateData && !localmapData) {
+    if (props.xmlMap && !localmapData) {
       // get svg node here
       const xmlNodeClone = props.xmlMap.cloneNode(true);
       const svgNodeClone = xmlNodeClone
@@ -215,14 +215,14 @@ function mapStateToProps(state, ownProps) {
 function mapDispatchToProps(dispatch, ownProps) {
   return bindActionCreators(
     {
-      deactivateChart: deactivateChart,
-      changeLocalmapResizeSignal: changeLocalmapResizeSignal,
-      changeLocalmapNodeSize: changeLocalmapNodeSize,
-      changeLocalmapTextSize: changeLocalmapTextSize,
-      changeLocalmapTextOffset: changeLocalmapTextOffset,
-      changeLocalmapLayout: changeLocalmapLayout,
-      changeLocalmapIsLocTextShown: changeLocalmapIsLocTextShown,
-      setSelectedData: setSelectedData,
+      deactivateChart,
+      changeLocalmapResizeSignal,
+      changeLocalmapNodeSize,
+      changeLocalmapTextSize,
+      changeLocalmapTextOffset,
+      changeLocalmapLayout,
+      changeLocalmapIsLocTextShown,
+      setSelectedData,
     },
     dispatch
   );

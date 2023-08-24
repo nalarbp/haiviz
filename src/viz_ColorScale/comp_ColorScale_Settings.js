@@ -10,10 +10,11 @@ const ColorScaleSettings = (props) => {
   const downloadSVGHandler = () => {
     props.changeIsColorScaleDownloading(true);
   };
-  const getColorOption = function (header, i) {
+  const getColorOption = function(header, i) {
+    let label = header === "isolate_colLocation" ? "location" : header;
     return (
       <Option key={i} disabled={false} value={header}>
-        {header}
+        {label}
       </Option>
     );
   };
@@ -37,12 +38,12 @@ const ColorScaleSettings = (props) => {
               onChange={setColorScaleHandler}
             >
               {props.colorScale && Object.keys(props.colorScale.colorMap)
-              ? Object.keys(props.colorScale.colorMap).map((k, i) => {
-                  return getColorOption(k, i);
-                })
-              : ["na"].map((l, j) => {
-                  return getColorOption(l, j);
-                })}
+                ? Object.keys(props.colorScale.colorMap).map((k, i) => {
+                    return getColorOption(k, i);
+                  })
+                : ["na"].map((l, j) => {
+                    return getColorOption(l, j);
+                  })}
             </Select>
           </Col>
           <Col span={24}>

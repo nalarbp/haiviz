@@ -50,7 +50,7 @@ const Home = (props) => {
                   margin: "0px auto",
                 }}
               >
-                HAIviz v1
+                HAIviz v1.0
               </p>
               <br />
               <p
@@ -62,10 +62,10 @@ const Home = (props) => {
               >
                 Healthcare-associated infections visualization tool
               </p>
-              <p style={{ fontSize: "13pt", lineHeight: "16pt" }}>
-                Hi, welcome to HAIviz, a single page application build to help
-                you integrate and interactively visualize genomic
-                epidemiological information of a local outbreak.
+              <p style={{ fontSize: "13pt", lineHeight: "18pt" }}>
+                Welcome to HAIviz, a single page application build to help you
+                create an interactive dashboard for visualising and integrating
+                healthcare-associated genomic epidemiological data.
               </p>
               <br />
               <Button
@@ -99,7 +99,7 @@ const Home = (props) => {
                     props.changeNavLocation("documentation");
                   }}
                 >
-                  Let's get started
+                  Quick Start Guide
                 </Button>
               </NavLink>
             </Col>
@@ -107,7 +107,7 @@ const Home = (props) => {
           <Showcases changeNavLocation={props.changeNavLocation} />
         </Content>
 
-        <Footer style={{ position: "sticky", margin: "50px 0 0 0" }}>
+        <Footer style={{ position: "sticky", margin: "20px 0 0 0" }}>
           <div style={{ textAlign: "center" }}>
             <p>
               <a

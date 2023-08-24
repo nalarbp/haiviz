@@ -4,6 +4,12 @@
 }
 
 .haiviz-docs-content {
-  width: 80%;
+  width:80%;
   margin: auto;
+}
+
+#haiviz-docs-pdf {
+  width:fit-content;
+  border: 1px solid #a0a0a0;
+  padding: 5px;
 }

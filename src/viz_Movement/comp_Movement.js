@@ -1,7 +1,3 @@
-/* ============================================================================
-Patient movement, render:
--Gantt chart
-============================================================================ */
 import React, { useState, useEffect } from "react";
 import MovementChart from "./chart_Movement_gantt";
 import MovementSettings from "./comp_Movement_Settings";
@@ -65,7 +61,7 @@ const PatientMovement = (props) => {
     <React.Fragment>
       <div style={{ height: "100%" }}>
         <Card
-          title={"Movement timeline"}
+          title={"Gantt Chart"}
           bordered={true}
           headStyle={{ height: "50px", padding: "0 20px" }}
           style={{ height: "100%" }}

@@ -17,15 +17,7 @@ import {
 import { loadSimulatedMap } from "../action/simulatedMap_actions";
 import { loadTreeData } from "../action/phyloTree_actions";
 
-import {
-  readPreloadedDatasetJSON,
-  getIsolateData,
-  parseXML,
-  parseTree,
-  parseGraph,
-  parseMovement,
-  getRandomInt,
-} from "../utils/utils";
+import { readPreloadedDatasetJSON, getRandomInt } from "../utils/utils";
 import { EyeOutlined } from "@ant-design/icons";
 
 const { Meta } = Card;
@@ -41,46 +33,6 @@ const Showcases = (props) => {
       props.preloadedDataToStore
     );
   }
-
-  const showcaseViewHandler = (e) => {
-    // let val = e.target.value;
-    // if (props.preloadedData && val) {
-    //   props.resetStore();
-    //   //load a new one
-    //   let projectData = props.preloadedData.get(val);
-    //   //for each input (metadata, map, tree, network, and gantt), read the file and load it
-    //   //metadata
-    //   if (projectData.metadata) {
-    //     getIsolateData(
-    //       projectData.metadata,
-    //       props.loadIsolateData,
-    //       props.setColorScale,
-    //       props.loadSimulatedMap,
-    //       setisLoading
-    //     );
-    //   }
-    //   //map
-    //   if (projectData.map) {
-    //     parseXML(projectData.map, props.loadXML);
-    //   }
-    //   //tree
-    //   if (projectData.tree) {
-    //     parseTree(projectData.tree, props.loadTreeData, setisLoading);
-    //   }
-    //   //network
-    //   if (projectData.network) {
-    //     parseGraph(projectData.network, props.loadTransgraphData, setisLoading);
-    //   }
-    //   //gantt
-    //   if (projectData.gantt) {
-    //     console.log("gantt", projectData.gantt);
-    //     parseMovement(projectData.gantt, props.loadMovementData, setisLoading);
-    //   }
-    //   props.selectedPreloadedDataToStore(val);
-    // } else {
-    //   props.resetStore();
-    // }
-  };
 
   useEffect(() => {
     if (props.preloadedData) {
@@ -106,12 +58,7 @@ const Showcases = (props) => {
               style={{ width: "100%", padding: "0px" }}
               actions={[
                 <Link to={"/" + String(k)}>
-                  <Button
-                    value={k}
-                    key={k}
-                    onClick={showcaseViewHandler}
-                    icon={<EyeOutlined />}
-                  >
+                  <Button value={k} key={k} icon={<EyeOutlined />}>
                     View data
                   </Button>
                 </Link>,
@@ -138,9 +85,13 @@ const Showcases = (props) => {
         gutter={[24, 24]}
         style={{ width: "80%", margin: "auto", padding: "40px 0" }}
       >
-        <Col xs={24}>
+        <Col xs={24} style={{ marginBottom: "-20px" }}>
           <p style={{ textAlign: "center", fontSize: "18pt" }}>
-            Preloaded dataset
+            Preloaded datasets <br />
+            <span style={{ fontSize: "10pt", fontWeight: "bold" }}>
+              {" "}
+              Use the following preloaded dataset for a quick demo{" "}
+            </span>
           </p>
         </Col>
         {//when data_options is not empty, display the showcase

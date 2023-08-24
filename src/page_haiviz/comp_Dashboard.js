@@ -181,11 +181,7 @@ const Dashboard = (props) => {
         <PreloadedDataset />
       </Row>
       {activeCharts.length === 0 && (
-        <Empty
-          description={
-            "No active charts: Load input file and click the chart icon in the side menu to create a chart."
-          }
-        />
+        <Empty description={"Click any active icon to create chart."} />
       )}
       {activeCharts.length > 0 && (
         <div id="dashboard">

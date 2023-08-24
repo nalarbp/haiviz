@@ -1,10 +1,3 @@
-/* ============================================================================
-Gantt chart :
-- when dataset for chart is available, render temporal barchart viewer
-let viwer_data_dummy = [
-  { id: val, start_date: "2020-01-1", end_date: "2020-01-1", locationType: Ward, location: W1},
-  {...}]
-============================================================================ */
 import React, { useState, useEffect, useRef } from "react";
 import { extent } from "d3-array";
 import { timeFormat } from "d3-time-format";
@@ -150,6 +143,10 @@ const PatientMovement = (props) => {
     const dateRange = extent(
       props.data.flatMap((d) => [d.start_date, d.end_date])
     );
+    const dateRange_extra = [
+      moment(dateRange[0]).subtract(1, "days"),
+      moment(dateRange[1]).add(1, "days"),
+    ];
     const hostList = props.data.map((d) => d.pid).filter(filterUnique);
     let separator = suffixSeparator;
 
@@ -173,9 +170,7 @@ const PatientMovement = (props) => {
         }
       });
     }
-    const locationList = props.data
-      .map((d) => d.location)
-      .filter(filterUnique);
+    const locationList = props.data.map((d) => d.location).filter(filterUnique);
     const rectHeight = ganttChart_h / (hostList.length + 1);
     let overlapData = [];
     props.data.forEach((d, i) => {
@@ -210,17 +205,6 @@ const PatientMovement = (props) => {
     });
 
     //get subset of isolate data from location
-    let isolateData_loc = [];
-    if(props.isolateData){
-      Array.from(props.isolateData.values()).forEach((d) => {
-        //get records from isolate data and push it
-        if (
-          locationList.indexOf(d.isolate_colLocation) !== -1 
-        ) {
-          isolateData_loc.push(d);
-        }
-      });
-    }
 
     const svg = select(ganttChartSVGRef.current);
     svg
@@ -229,10 +213,7 @@ const PatientMovement = (props) => {
 
     //scale
     const scale_x = scaleTime()
-      .domain([
-        moment(dateRange[0]).subtract(1, "days"),
-        moment(dateRange[1]).add(1, "days"),
-      ])
+      .domain(dateRange_extra)
       .range([0, ganttChart_w]);
     const scale_y = scaleBand()
       .domain(hostList)
@@ -298,15 +279,10 @@ const PatientMovement = (props) => {
       })
       .attr("stroke", "none")
       .attr("fill", (d) => {
-        let col = 'gray';
-        if (col) {
-          return col;
+        if (d.location_color) {
+          return d.location_color;
         } else {
-          if (d.location_color) {
-            return d.location_color;
-          } else {
-            return "gray";
-          }
+          return "gray";
         }
       })
       .attr("x", (d) => {
@@ -314,11 +290,7 @@ const PatientMovement = (props) => {
       })
       .attr("y", (d) => {
         if (d.is_admDisc) {
-          return (
-            parseInt(scale_y(d.pid)) +
-            rectHeight / 4 +
-            rectHeight / 4 / 2
-          );
+          return parseInt(scale_y(d.pid)) + rectHeight / 4 + rectHeight / 4 / 2;
         } else {
           return parseInt(scale_y(d.pid));
         }
@@ -407,26 +379,50 @@ const PatientMovement = (props) => {
         );
       });
     //make isolate collection marker
-    let colDateMarker = svgGroup.append("g").attr("id", "gantt-colDate-group");
-    // colDateMarker
-    //   .selectAll(".gantt-colDate-marker")
-    //   .data(isolateData_loc)
-    //   .enter()
-    //   .append("circle")
-    //   .attr("class", "gantt-colDate-marker")
-    //   .attr("fill", (d) => getColorScaleByObject(d, props.colorScale))
-    //   .attr("stroke", "white")
-    //   .attr("stroke-width", "2px")
-    //   .attr("r", nodeSize)
-    //   .attr("cx", (d) => scale_x(d.isolate_colDate))
-    //   .attr(
-    //     "cy",
-    //     (d) => parseInt(scale_y(d.isolate_sourceName)) + rectHeight / 2
-    //   )
-    //   .on("click", (d) => props.setSelectedData([d.uid]))
-    //   .style("cursor", "pointer")
-    //   .append("title")
-    //   .text((d) => `isolate ${d.isolate_name} from ${d.isolate_sourceName}`);
+
+    //if props.isolateData is not null and its data (d) contains pid
+    //that is in hostList, then draw it
+    if (props.isolateData) {
+      let isolateData_loc = [];
+      let has_pid_column = false;
+      Array.from(props.isolateData.values()).forEach((d) => {
+        //get records from isolate data and push it
+        if (locationList.indexOf(d.isolate_colLocation) !== -1) {
+          let isolateDate = moment(d.isolate_colDate);
+          if (isolateDate.isBetween(dateRange_extra[0], dateRange_extra[1])) {
+            isolateData_loc.push(d);
+          }
+        }
+        if (d.pid && !has_pid_column) {
+          has_pid_column = true;
+        }
+      });
+
+      if (has_pid_column) {
+        let colDateMarker = svgGroup
+          .append("g")
+          .attr("id", "gantt-colDate-group");
+        colDateMarker
+          .selectAll(".gantt-colDate-marker")
+          .data(isolateData_loc)
+          .enter()
+          .append("circle")
+          .attr("class", "gantt-colDate-marker")
+          //fill to transparent
+          .attr("fill", "none")
+          .attr("stroke", "black")
+          // fill opacity is 0.2
+          .style("opacity", 0.9)
+          .attr("stroke-width", "2px")
+          .attr("r", nodeSize)
+          .attr("cx", (d) => scale_x(d.isolate_colDate))
+          .attr("cy", (d) => parseInt(scale_y(d.pid)) + rectHeight / 2)
+          .on("click", (d) => props.setSelectedData([d.uid]))
+          .style("cursor", "pointer")
+          .append("title")
+          .text((d) => `${d.isolate_name} from ${d.pid}`);
+      }
+    }
 
     svg.selectAll("#ganttChart-svgGroup g").attr("font-family", "Verdana");
     //zoom functionality

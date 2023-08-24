@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { csv } from "d3-fetch";
 import { CheckCircleTwoTone } from "@ant-design/icons";
 import { MovementInputSVG } from "../utils/customIcons";
 import Moment from "moment";
 import { extendMoment } from "moment-range";
-import { color } from "d3-color";
 import DeleteInput from "./btn_DeleteInput";
 import { Card, Row, Col, Spin, Upload } from "antd";
-import {parseMovement} from '../utils/utils'
+import { parseMovement } from "../utils/utils";
 
 const moment = extendMoment(Moment);
 const { Dragger } = Upload;
@@ -63,21 +61,21 @@ const MovementInput = (props) => {
         {isLoading && !props.movementData && <Spin />}
         {!isLoading && props.movementData && (
           <React.Fragment>
-          <Row justify="center" className="input_card"> 
-            <Col>
-            <CheckCircleTwoTone
-              twoToneColor="#52c41a"
-              style={{ fontSize: "20pt" }}
-            />
-              <p>Loaded!</p>
-            </Col>
-          </Row>
-          <Row justify="center">
-            <Col>
-              <DeleteInput id={'gantt'}/>
-            </Col>
-          </Row>
-      </React.Fragment>
+            <Row justify="center" className="input_card">
+              <Col>
+                <CheckCircleTwoTone
+                  twoToneColor="#52c41a"
+                  style={{ fontSize: "20pt" }}
+                />
+                <p>Loaded!</p>
+              </Col>
+            </Row>
+            <Row justify="center">
+              <Col>
+                <DeleteInput id={"gantt"} />
+              </Col>
+            </Row>
+          </React.Fragment>
         )}
       </Card>
     </React.Fragment>

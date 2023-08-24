@@ -673,13 +673,12 @@ export function parseDOTtoJSON(dot) {
   try {
     dotparser(dot);
   } catch (e) {
-    alert(("Invalid dot format. Error": e));
+    alert("Invalid dot format. Error:", e);
     return;
   }
-  const graphdata = dotparser(dot);
-  //console.log(graphdata);
-  const jsondata = _createTransmissionDatafromDOT(graphdata);
 
+  const graphdata = dotparser(dot);
+  const jsondata = _createTransmissionDatafromDOT(graphdata);
   return jsondata;
 }
 
@@ -875,13 +874,20 @@ export function parseDOTtoCytoscape(dot) {
   }
 
   function _getLinkDirAtt(attrList) {
-    let dirAttObj = attrList.find((att) => att.id === "dir");
-    let validDir = ["forward", "none"];
-    let dirAtt =
-      dirAttObj && validDir.indexOf(dirAttObj.eq) !== -1
-        ? dirAttObj.eq
-        : "forward";
-    return dirAtt;
+    let ltail = attrList.find((att) => att.id === "ltail");
+    let lhead = attrList.find((att) => att.id === "lhead");
+    //if ltail and lhead not exist, return forward
+    if (ltail && lhead) {
+      return "compound_link";
+    } else {
+      let dirAttObj = attrList.find((att) => att.id === "dir");
+      let validDir = ["forward", "none"];
+      let dirAtt =
+        dirAttObj && validDir.indexOf(dirAttObj.eq) !== -1
+          ? dirAttObj.eq
+          : "forward";
+      return dirAtt;
+    }
   }
 
   function _createTransmissionDatafromDOT(graphDOT) {
@@ -891,41 +897,140 @@ export function parseDOTtoCytoscape(dot) {
     let data_cy = [];
     let node_labels = [];
     graphDOT[0].children.forEach(function(d) {
+      //Get all individual nodes
       if (d.type === "node_stmt") {
         let id = d.node_id.id;
         let nodeName = _getNodeLabelAtt(d.attr_list);
         let name = nodeName ? nodeName : id;
         node_labels.push(name);
-        data_cy.push({ data: { id: id, label: name } });
-      } else {
+        data_cy.push({ data: { id: id, label: name } }); //later add other attribute: shape, color, etc
+      }
+
+      //Get all edges
+      if (d.type === "edge_stmt") {
         //process edges
         //link (d)={'source': 'P1', 'target': 'P2', 'weight': '0.5'}
         let source = d.edge_list[0].id;
         let target = d.edge_list[1].id;
         let weight = _getLinkWeightAtt(d.attr_list);
         let color = _getLinkColorAtt(d.attr_list);
-        let dir = graphType === "graph" ? "none" : _getLinkDirAtt(d.attr_list);
-        let style = _getLinkStyleAtt(d.attr_list);
-        data_cy.push({
-          data: {
-            source: source,
-            target: target,
-            weight: weight,
-            color: color,
-            dir: dir,
-            style: style,
-          },
-        });
+        let dir =
+          _getLinkDirAtt(d.attr_list) != "compound_link"
+            ? _getLinkDirAtt(d.attr_list)
+            : "compound_link";
+        if (dir === "compound_link") {
+          //add source and target to edge list
+          let cluster_source = d.attr_list.find((att) => att.id === "ltail").eq;
+          let cluster_target = d.attr_list.find((att) => att.id === "lhead").eq;
+          let style = _getLinkStyleAtt(d.attr_list);
+          data_cy.push({
+            data: {
+              source: cluster_source,
+              target: cluster_target,
+              weight: weight,
+              color: color,
+              dir: "forward",
+              style: style,
+            },
+          });
+        } else {
+          if (graphType === "graph") {
+            dir = "none";
+          }
+          let style = _getLinkStyleAtt(d.attr_list);
+          data_cy.push({
+            data: {
+              source: source,
+              target: target,
+              weight: weight,
+              color: color,
+              dir: dir,
+              style: style,
+            },
+          });
+        }
       }
     });
+    //Then look at children nodes in subgraph
+    graphDOT[0].children.forEach(function(d) {
+      if (d.type === "subgraph") {
+        //check if subgraph has id or not. if not, create a random id
+        let subgraph_id = d.id
+          ? d.id
+          : Math.random()
+              .toString(36)
+              .substring(7);
+
+        //add subgraph id to node_labels and data_cy
+        node_labels.push(subgraph_id);
+        data_cy.push({ data: { id: subgraph_id, label: subgraph_id } });
+
+        //if subgraph has children, iterate through children.
+        if (d.children) {
+          d.children.forEach(function(child) {
+            if (child.type === "node_stmt") {
+              //check if node exist in data_cy, if not, add to data_cy, if exist, update attribute
+              let id = child.node_id.id;
+              //check if node exist in data_cy, if not, add to data_cy, if exist, ignore
+              let nodeExist = data_cy.find((d) => d.data.id === id);
+
+              if (!nodeExist) {
+                let nodeName = _getNodeLabelAtt(child.attr_list);
+                let name = nodeName ? nodeName : id;
+                //if name not exist in node_labels, add to node_labels
+                if (!node_labels.includes(name)) {
+                  node_labels.push(name);
+                }
+
+                data_cy.push({
+                  data: { id: id, label: name, parent: subgraph_id },
+                });
+              } else {
+                //if node exist, update parent attribute
+                nodeExist.data.parent = subgraph_id;
+              }
+            }
+            if (child.type === "edge_stmt") {
+              //check if edge exist in data_cy, if not, add to data_cy, if exist, update attribute
+              let source = child.edge_list[0].id;
+              let target = child.edge_list[1].id;
+              let weight = _getLinkWeightAtt(child.attr_list);
+              let color = _getLinkColorAtt(child.attr_list);
+              let dir =
+                graphType === "graph"
+                  ? "none"
+                  : _getLinkDirAtt(child.attr_list);
+              let style = _getLinkStyleAtt(child.attr_list);
+              let edgeExist = data_cy.find(
+                (d) => d.data.source === source && d.data.target === target
+              );
+              if (!edgeExist) {
+                data_cy.push({
+                  data: {
+                    source: source,
+                    target: target,
+                    weight: weight,
+                    color: color,
+                    dir: dir,
+                    style: style,
+                  },
+                });
+              }
+            }
+          });
+        }
+      }
+    });
+
     let graphObj = { nodeLabels: node_labels, data: data_cy };
     return graphObj;
   }
   try {
     dotparser(dot);
     const graphdata = dotparser(dot);
+    console.log(graphdata);
     const jsondata = _createTransmissionDatafromDOT(graphdata);
-    //console.log(jsondata);
+
     return jsondata;
   } catch (e) {
     alert(("Invalid dot format. Error", e));

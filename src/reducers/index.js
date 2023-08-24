@@ -46,7 +46,7 @@ export const initialState = {
     tree: { show: false },
     transmission: { show: false },
     gantt: { show: false },
-    treeGantt: { show: false },
+    //treeGantt: { show: false }, //for the next major release
     table: { show: false },
   },
   phylotreeSettings: {
@@ -80,7 +80,7 @@ export const initialState = {
   },
   transgraphSettings: {
     isUserStartResize: false,
-    layoutKey: "cose",
+    layoutKey: "fcose",
     isLinkLabelShown: false,
     linkLabelSize: 5,
     isUserStyleApplied: false,

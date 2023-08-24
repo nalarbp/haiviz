@@ -1,5 +1,3 @@
-/* ============================================================================
-============================================================================ */
 import React from "react";
 import { Button, Drawer, Checkbox, Row, Col, InputNumber, Input } from "antd";
 import { downloadSVG } from "../utils/utils";
@@ -24,25 +22,25 @@ const MovementSettings = (props) => {
   const changeLineScaleFactorHandler = (val) => {
     props.changeOverlappingLineScaleFactor(val);
   };
-  const changeSortedBySuffix = (e) => {
-    let isChecked = e.target.checked;
-    props.changeIsSortedBySuffix(isChecked);
-  };
-  const changeSuffixSeparator = (e) => {
-    let val = e.target.value;
-    props.changeSuffixSeparator(val);
-  };
-  const resortHandler = () => {
-    let separator = props.movementSettings.suffixSeparator;
-    let resortCode = "resort";
-    if (separator.length > 0) {
-      props.changeIsResort(resortCode.concat(separator));
-    } else {
-      alert(
-        "Invalid suffix after splitting source_name. Please change the separator."
-      );
-    }
-  };
+  // const changeSortedBySuffix = (e) => {
+  //   let isChecked = e.target.checked;
+  //   props.changeIsSortedBySuffix(isChecked);
+  // };
+  // const changeSuffixSeparator = (e) => {
+  //   let val = e.target.value;
+  //   props.changeSuffixSeparator(val);
+  // };
+  // const resortHandler = () => {
+  //   let separator = props.movementSettings.suffixSeparator;
+  //   let resortCode = "resort";
+  //   if (separator.length > 0) {
+  //     props.changeIsResort(resortCode.concat(separator));
+  //   } else {
+  //     alert(
+  //       "Invalid suffix after splitting source_name. Please change the separator."
+  //     );
+  //   }
+  // };
 
   return (
     <React.Fragment>
@@ -71,33 +69,6 @@ const MovementSettings = (props) => {
             >
               Scale the lines
             </Checkbox>
-          </Col>
-          <Col span={24}>
-            <Checkbox
-              onChange={changeSortedBySuffix}
-              checked={props.movementSettings.isSortedBySuffix}
-            >
-              Sort Y-axis by suffix
-            </Checkbox>
-          </Col>
-          <Col span={10}>
-            <p>Separator</p>
-          </Col>
-          <Col span={6}>
-            <Input
-              maxLength={2}
-              value={props.movementSettings.suffixSeparator}
-              onChange={changeSuffixSeparator}
-              disabled={!props.movementSettings.isSortedBySuffix}
-            />
-          </Col>
-          <Col span={8}>
-            <Button
-              onClick={resortHandler}
-              disabled={!props.movementSettings.isSortedBySuffix}
-            >
-              Sort
-            </Button>
           </Col>
           <Col span={12}>
             <p>Scale factor</p>
@@ -178,4 +149,32 @@ const textOffsetHandler = val => {
     defaultValue={props.movementSettings.textOffset}
   ></Slider>
 </Col>
+
+<Col span={24}>
+            <Checkbox
+              onChange={changeSortedBySuffix}
+              checked={props.movementSettings.isSortedBySuffix}
+            >
+              Sort Y-axis by suffix
+            </Checkbox>
+          </Col>
+          <Col span={10}>
+            <p>Separator</p>
+          </Col>
+          <Col span={6}>
+            <Input
+              maxLength={2}
+              value={props.movementSettings.suffixSeparator}
+              onChange={changeSuffixSeparator}
+              disabled={!props.movementSettings.isSortedBySuffix}
+            />
+          </Col>
+          <Col span={8}>
+            <Button
+              onClick={resortHandler}
+              disabled={!props.movementSettings.isSortedBySuffix}
+            >
+              Sort
+            </Button>
+          </Col>
 */
