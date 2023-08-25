@@ -1,4 +1,4 @@
-id,isolate_species,date,location,isolate_sourceType,isolate_sourceName,profile_1,profile_2,profile_3
+id,species,date,location,sample_type,pid,sample_source,st,profile_3
 ERR349747,Klebsiella pneumoniae,2012-05-16,Medical,Patient sample,10315_6#1,Urine,37,K12
 ERR349756,Klebsiella pneumoniae,2012-06-16,Nursery C,Patient sample,10315_6#10,Blood,14,K2
 ERR349757,Klebsiella pneumoniae,2012-06-17,ICU,Patient sample,10315_6#11,Tracheal aspiration,15,novel Ktype

@@ -48,6 +48,7 @@ const Showcases = (props) => {
         data_options.push(
           <Col xs={24} md={12} lg={6} xxl={5} key={k}>
             <Card
+              id={k}
               hoverable={true}
               className={
                 card_bg_col_class +
@@ -57,11 +58,14 @@ const Showcases = (props) => {
               }
               style={{ width: "100%", padding: "0px" }}
               actions={[
-                <Link to={"/" + String(k)}>
-                  <Button value={k} key={k} icon={<EyeOutlined />}>
-                    View data
-                  </Button>
-                </Link>,
+                <React.Fragment>
+                  <p className="showcase-card-id">id:{k}</p>
+                  <Link to={"/" + String(k)}>
+                    <Button value={k} key={k} icon={<EyeOutlined />}>
+                      View data
+                    </Button>
+                  </Link>
+                </React.Fragment>,
               ]}
             >
               <Meta

@@ -82,14 +82,13 @@ const TransmissionGraphSettings = (props) => {
             <Select
               style={{ width: "100%" }}
               disabled={layoutKey ? false : true}
-              placeholder={
-                layoutKey && layoutKey === "cose" ? "CoSE" : "Spread"
-              }
+              placeholder={layoutKey}
               onChange={setLayoutKeyHandler}
               value={layoutKey}
             >
               <Option value="cose">CoSE</Option>
               <Option value="spread">Spread</Option>
+              <Option value="fcose">Fcose</Option>
             </Select>
           </Col>
           <Col span={24}>

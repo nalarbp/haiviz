@@ -68,6 +68,7 @@ export async function readPreloadedDatasetJSON(
 }
 
 export function colorLUTFromUser(headerWithColor, data_promise_raw) {
+  let header = headerWithColor.split(":")[0];
   let data_raw = _.cloneDeep(data_promise_raw);
   let colorMap = new Map();
   //iterate each row and set the map by sample_id and color
@@ -76,10 +77,10 @@ export function colorLUTFromUser(headerWithColor, data_promise_raw) {
       r[headerWithColor] && color(r[headerWithColor])
         ? color(r[headerWithColor]).formatHex()
         : color("lightgray").formatHex();
-    colorMap.set(r.sample_id, col);
-    colorMap.set(r.sample_id, {
+    colorMap.set(r.isolate_name, col);
+    colorMap.set(r.isolate_name, {
       colorValue: col,
-      colorAttribute: r[headerWithColor],
+      colorAttribute: r[header],
     });
   });
   return colorMap;
@@ -1028,9 +1029,7 @@ export function parseDOTtoCytoscape(dot) {
   try {
     dotparser(dot);
     const graphdata = dotparser(dot);
-    console.log(graphdata);
     const jsondata = _createTransmissionDatafromDOT(graphdata);
-
     return jsondata;
   } catch (e) {
     alert(("Invalid dot format. Error", e));

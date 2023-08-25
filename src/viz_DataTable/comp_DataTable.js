@@ -17,27 +17,19 @@ const dimensions = ["width", "height"];
 const _ = require("lodash");
 
 const DataTable = (props) => {
-  const [isDrawerVisible, setisDrawerVisible] = useState(false);
   const isolateData = _.cloneDeep(Array.from(props.data.values()));
   const dataTable = { headers: null, cells: null };
   const cells =
     isolateData && isolateData[0]
       ? isolateData.map((d, idx) => {
-          return {
-            key: idx,
-            isolate_name: d.isolate_name,
-            isolate_species: d.isolate_species,
-            isolate_sourceType: d.isolate_sourceType,
-            isolate_sourceName: d.isolate_sourceName,
-            isolate_colDate: dateToStringIS08601(d.isolate_colDate),
-            isolate_colLocation: d.isolate_colLocation,
-            profile_1: d.profile_1,
-            profile_2: d.profile_2,
-            profile_3: d.profile_3,
-          };
+          if (d.isolate_colDate instanceof Date) {
+            d.isolate_colDate = dateToStringIS08601(d.isolate_colDate);
+          }
+          return { key: idx, ...d };
         })
       : null;
   const [tableCells, setTableCells] = useState(cells);
+  //create headers
   const tableHeaders =
     isolateData && isolateData[0] ? createHeaders(isolateData) : null;
 
@@ -45,19 +37,12 @@ const DataTable = (props) => {
   useEffect(() => {
     if (props.selectedData) {
       let tableCells = isolateData.map((d, idx) => {
-        return {
-          key: idx,
-          isolate_name: d.isolate_name,
-          isolate_species: d.isolate_species,
-          isolate_sourceType: d.isolate_sourceType,
-          isolate_sourceName: d.isolate_sourceName,
-          isolate_colDate: dateToStringIS08601(d.isolate_colDate),
-          isolate_colLocation: d.isolate_colLocation,
-          profile_1: d.profile_1,
-          profile_2: d.profile_2,
-          profile_3: d.profile_3,
-        };
+        if (d.isolate_colDate instanceof Date) {
+          d.isolate_colDate = dateToStringIS08601(d.isolate_colDate);
+        }
+        return { key: idx, ...d };
       });
+
       if (props.selectedData.length > 0) {
         let filteredCells = tableCells.filter((d) => {
           return props.selectedData.indexOf(d.isolate_name) !== -1;
@@ -85,7 +70,7 @@ const DataTable = (props) => {
         let selectedData = [];
         if (searchedColumn === "isolate_colDate") {
           let filteredCells = isolateData.filter(function(d) {
-            let record = dateToStringIS08601(d[searchedColumn]).toString();
+            let record = d[searchedColumn];
             return searchTextList.indexOf(record) !== -1 ? true : false;
             //return searchTextList.some((t) => record.includes(t.toLowerCase()));
           });
@@ -114,94 +99,94 @@ const DataTable = (props) => {
     //setSearchText(null);
     props.setSelectedData([]);
   };
-  const openDrawerHandler = () => {
-    setisDrawerVisible(true);
-  };
-  const closeDrawerHandler = () => {
-    setisDrawerVisible(false);
-  };
 
   //Util functions
   function createHeaders(isolateData) {
     let raw_headers = isolateData[0];
     //sort raw_headers so that isolate_name, date and location are always first
-    let headers = Object.keys(raw_headers).sort(function(a, b) {
-      if (a === "isolate_name") return -1;
-      if (b === "isolate_name") return 1;
-      if (a === "isolate_colDate") return -1;
-      if (b === "isolate_colDate") return 1;
-      if (a === "isolate_colLocation") return -1;
-      if (b === "isolate_colLocation") return 1;
-      return 0;
-    }).map(function(key) {
-      return {
-        key: key,
-        dataIndex: key,
-        title: getIsolateDataHeader(key),
-        filterDropdown: ({
-          setSelectedKeys,
-          selectedKeys,
-          confirm,
-          clearFilters,
-        }) => (
-          <div style={{ padding: 8 }}>
-            <Input
-              placeholder={`Filter ${getIsolateDataHeader(key)}`}
-              value={selectedKeys[0]}
-              onChange={(e) =>
-                setSelectedKeys(e.target.value ? [e.target.value] : [])
-              }
-              onPressEnter={() => {
-                confirm();
-              }}
-              style={{ width: 188, marginBottom: 8, display: "block" }}
-            />
-            <Space>
-              <Button
-                type="primary"
-                onClick={() => {
+    let headers = Object.keys(raw_headers)
+      .sort(function(a, b) {
+        if (a === "isolate_name") return -1;
+        if (b === "isolate_name") return 1;
+        if (a === "isolate_colDate") return -1;
+        if (b === "isolate_colDate") return 1;
+        if (a === "isolate_colLocation") return -1;
+        if (b === "isolate_colLocation") return 1;
+        return 0;
+      })
+      .filter(function(key) {
+        // remove any header contain ":color"
+        return key.indexOf(":color") === -1;
+      })
+      .map(function(key) {
+        return {
+          key: key,
+          dataIndex: key,
+          title: getIsolateDataHeader(key),
+          filterDropdown: ({
+            setSelectedKeys,
+            selectedKeys,
+            confirm,
+            clearFilters,
+          }) => (
+            <div style={{ padding: 8 }}>
+              <Input
+                placeholder={`Filter ${getIsolateDataHeader(key)}`}
+                value={selectedKeys[0]}
+                onChange={(e) =>
+                  setSelectedKeys(e.target.value ? [e.target.value] : [])
+                }
+                onPressEnter={() => {
                   confirm();
                 }}
-                icon={<FilterOutlined />}
-                size="small"
-                style={{ width: 90 }}
-              >
-                Filter
-              </Button>
-              <Button
-                onClick={() => {
-                  clearFilters();
-                  clearSelectedDataHandler();
-                }}
-                size="small"
-                style={{ width: 90 }}
-              >
-                Reset filter
-              </Button>
-            </Space>
-          </div>
-        ),
-        filteredValue: null,
-        onFilter: function(value, record) {
-          if (record[key]) {
-            const textInCell = record[key].toString();
-            //if text in cell contains value, return true
-            const res = textInCell.match(value) ? true : false;
-            return res;
-          } else {
-            return "";
-          }
-        },
-        filterIcon: function(filtered) {
-          return (
-            <FilterOutlined
-              style={{ color: filtered ? "#1890ff" : undefined }}
-            />
-          );
-        },
-        filterMultiple: true,
-      };
-    });
+                style={{ width: 188, marginBottom: 8, display: "block" }}
+              />
+              <Space>
+                <Button
+                  type="primary"
+                  onClick={() => {
+                    confirm();
+                  }}
+                  icon={<FilterOutlined />}
+                  size="small"
+                  style={{ width: 90 }}
+                >
+                  Filter
+                </Button>
+                <Button
+                  onClick={() => {
+                    clearFilters();
+                    clearSelectedDataHandler();
+                  }}
+                  size="small"
+                  style={{ width: 90 }}
+                >
+                  Reset filter
+                </Button>
+              </Space>
+            </div>
+          ),
+          filteredValue: null,
+          onFilter: function(value, record) {
+            if (record[key]) {
+              const textInCell = record[key].toString();
+              //if text in cell contains value, return true
+              const res = textInCell.match(value) ? true : false;
+              return res;
+            } else {
+              return "";
+            }
+          },
+          filterIcon: function(filtered) {
+            return (
+              <FilterOutlined
+                style={{ color: filtered ? "#1890ff" : undefined }}
+              />
+            );
+          },
+          filterMultiple: true,
+        };
+      });
     return headers;
   }
 
@@ -222,19 +207,12 @@ const DataTable = (props) => {
                 icon={<DragOutlined />}
               ></Button>
             </Col>
-            <Col span={8}>
-              <Button
-                size={"small"}
-                style={{ margin: "0 5px", border: "none" }}
-                icon={<SettingOutlined />}
-                onClick={openDrawerHandler}
-              ></Button>
-            </Col>
+
             <Col span={8}>
               {" "}
               <Button
                 size={"small"}
-                style={{ border: "none" }}
+                style={{ margin: "0 5px", border: "none" }}
                 icon={<CloseOutlined />}
                 onClick={onCloseHandler}
               ></Button>
@@ -242,15 +220,6 @@ const DataTable = (props) => {
           </Row>
         }
       >
-        <div id="dataTable-drawer-settings">
-          <DataTableSettings
-            isolateData={isolateData}
-            selectedData={props.selectedData}
-            colorScale={props.colorScale}
-            isDrawerVisible={isDrawerVisible}
-            closeDrawerHandler={closeDrawerHandler}
-          />
-        </div>
         {!dataTable && (
           <Row
             style={{
@@ -313,7 +282,6 @@ function mapStateToProps(state) {
   return {
     data: state.isolateData,
     selectedData: state.selectedData,
-    colorScale: state.colorScale,
   };
 }
 
@@ -331,3 +299,31 @@ const MeasuredDataTable = withMeasure(dimensions)(DataTable);
 
 export default connect(mapStateToProps, mapDispatchToProps)(MeasuredDataTable);
 
+/*
+for next release:
+  const openDrawerHandler = () => {
+    setisDrawerVisible(true);
+  };
+  const closeDrawerHandler = () => {
+    setisDrawerVisible(false);
+  };
+  
+<Col span={8}>
+              <Button
+                size={"small"}
+                style={{ margin: "0 5px", border: "none" }}
+                icon={<SettingOutlined />}
+                onClick={openDrawerHandler}
+              ></Button>
+            </Col>
+            
+<div id="dataTable-drawer-settings">
+          <DataTableSettings
+            isolateData={isolateData}
+            selectedData={props.selectedData}
+            colorScale={props.colorScale}
+            isDrawerVisible={isDrawerVisible}
+            closeDrawerHandler={closeDrawerHandler}
+          />
+        </div>
+*/

@@ -82,7 +82,7 @@ const InputFormat = (props) => {
         <br />
         <br />
         <Button type="primary" href={constant.TEMPLATE.movementData}>
-          Example file
+          Gantt example file
         </Button>
         <Divider />
       </div>
