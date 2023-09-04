@@ -18,6 +18,7 @@ import { event as currentEvent } from "d3";
 import { zoom } from "d3-zoom";
 import { forceSimulation, forceManyBody, forceCollide } from "d3-force";
 import usePrevious from "../react_hooks/usePrevious-hook";
+import { node } from "prop-types";
 
 const _ = require("lodash");
 
@@ -42,8 +43,6 @@ const SimulatedMapChart = (props) => {
   const isInitialDraw = prevDimension && prevDimension < 0 ? true : false;
 
   //DRAWING DATA PREP/
-  //
-  //SETTINGS
   const isUserStartResize = props.simulatedmapSettings.isUserStartResize_simap;
   const nodeSize = props.simulatedmapSettings.nodeSize;
   const textSize = props.simulatedmapSettings.textSize;
@@ -282,6 +281,7 @@ const SimulatedMapChart = (props) => {
       const pieGenerator = pie()
         .sort(null)
         .value((d) => d[1].length);
+
       const isolateDataGroupByLoc = group(
         isolateDataClone,
         (d) => d.isolate_colLocation
@@ -293,30 +293,47 @@ const SimulatedMapChart = (props) => {
         let data = isolateDataGroupByLoc.get(loc[0]);
         if (Array.isArray(data)) {
           data = Array.from(
-            group(data, (d) =>
-              getColumnNameByColorType(d, props.colorScale.colorType)
-            ).entries()
+            group(data, (d) => {
+              return getColumnNameByColorType(d, props.colorScale.colorType);
+            }).entries()
           );
         }
         loc[1]["data"] = data;
         //console.log(loc);
       });
-
       // 1. list of locations, with each location has data
       // 2. this data is feed to pieGenetor
       // make nodes group and draw nodes on it
       let nodesGroup = svgGroup.append("g").attr("id", "simap_nodesGroup");
-      //draw node circle
+
+      //draw node circle group
       let pieGroup = nodesGroup
         .selectAll(".simap_pieGroup")
         .data(locPieChartData)
         .enter()
         .append("g")
         .attr("class", "simap_pieGroup")
-        .attr(
-          "transform",
-          (d) => "translate(" + d[1].locX + "," + d[1].locY + ")"
-        );
+        .attr("transform", (d) => {
+          let scale = 1;
+          if (d[1].data) {
+            let total = 0;
+            d[1].data.forEach((d) => {
+              total += d[1].length;
+            });
+            scale = Math.sqrt(total) / 1;
+          }
+          return (
+            "translate(" +
+            d[1].locX +
+            "," +
+            d[1].locY +
+            ")" +
+            "scale(" +
+            scale +
+            ")"
+          );
+        });
+
       let pieArcGroup = pieGroup
         .selectAll(".simap_pieArcGroup")
         .data((d) => {
@@ -342,7 +359,7 @@ const SimulatedMapChart = (props) => {
         .style("fill", (d) => {
           if (d) {
             let obj = d.data[1][0] ? d.data[1][0] : null;
-            let col = getColorScaleByObject(obj, props.colorScale)
+            let col = getColorScaleByObject(obj, props.colorScale);
             return col;
           } else {
             return "black";

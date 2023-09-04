@@ -49,6 +49,16 @@
       "tree": "./data/preloaded/e4/snitkin_phyloTree.nwk",
       "network": "./data/preloaded/e4/snitkin_transGraph.gv",
       "gantt": "./data/preloaded/e4/snitkin_gantt.csv"
+    },
+    {
+      "id": "private-bp-tsv",
+      "name": "BP TSV",
+      "description": "Private dataset for testing purposes.",
+      "metadata": "./data/preloaded/p2/gassiep_metadata.csv",
+      "map": "./data/preloaded/p2/gassiep_map.xml",
+      "tree": "",
+      "network": "",
+      "gantt": ""
     }
   ],
   "description": "This JSON file describes the preloaded datasets."

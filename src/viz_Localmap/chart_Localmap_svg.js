@@ -286,10 +286,26 @@ const LocalmapChart = (props) => {
           .enter()
           .append("g")
           .attr("class", "localmap_pieGroup")
-          .attr(
-            "transform",
-            (d) => "translate(" + d[1].locX + "," + d[1].locY + ")"
-          )
+          .attr("transform", (d) => {
+            let scale = 1;
+            if (d[1].data) {
+              let total = 0;
+              d[1].data.forEach((d) => {
+                total += d[1].length;
+              });
+              scale = Math.sqrt(total) / 1;
+            }
+            return (
+              "translate(" +
+              d[1].locX +
+              "," +
+              d[1].locY +
+              ")" +
+              "scale(" +
+              scale +
+              ")"
+            );
+          })
           .style("display", (d) => {
             let loc_coord = props.data.locationTable.get(d[0]);
             if (loc_coord) {

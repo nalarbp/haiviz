@@ -61,7 +61,10 @@ export async function readPreloadedDatasetJSON(
     const dataJSON = JSON.parse(evt.target.result);
     const preloadedDatasets = new Map();
     dataJSON.data_list.forEach((p) => {
-      preloadedDatasets.set(p.id, p);
+      //if p.id doesnt contain word private, then add to preloadedDatasets
+      if (p.id.indexOf("private") === -1) {
+        preloadedDatasets.set(p.id, p);
+      }
     });
     preloadedDatasetJSONToStore(preloadedDatasets);
   };
@@ -432,23 +435,7 @@ export const getMapLocationData = (mapDataNode) => {
 // ================================= OTHERS  ===================================
 
 export function getColumnNameByColorType(d, colorType) {
-  switch (colorType) {
-    case "species":
-      return d.isolate_species;
-    case "location":
-      return d.isolate_colLocation;
-    case "sourceType":
-      return d.isolate_sourceType;
-    case "profile1":
-      return d.profile_1;
-    case "profile2":
-      return d.profile_2;
-    case "profile3":
-      return d.profile_3;
-
-    default:
-      return d.isolate_colLocation;
-  }
+  return d[colorType];
 }
 
 export function getColorScaleByObject(obj, colorScaleState) {

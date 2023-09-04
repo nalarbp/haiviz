@@ -51,14 +51,14 @@
       "gantt": "./data/preloaded/e4/snitkin_gantt.csv"
     },
     {
-      "id": "private-bp-tsv",
-      "name": "BP TSV",
+      "id": "p1-vre-1424",
+      "name": "VRE ST1424",
       "description": "Private dataset for testing purposes.",
-      "metadata": "./data/preloaded/p2/gassiep_metadata.csv",
-      "map": "./data/preloaded/p2/gassiep_map.xml",
+      "metadata": "./data/preloaded/p1/rb_metadata.csv",
+      "map": "./data/preloaded/p1/rb_map.xml",
       "tree": "",
       "network": "",
-      "gantt": ""
+      "gantt": "./data/preloaded/p1/rb_gantt.csv"
     }
   ],
   "description": "This JSON file describes the preloaded datasets."
