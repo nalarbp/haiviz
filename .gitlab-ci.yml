@@ -1,0 +1,9 @@
+stages:
+  - deploy
+
+deploy-job:
+  stage: deploy
+  environment: production
+  script:
+    - rsync -avhPL --delete build_production/ /var/www/haiviz-v04/build_production/
+    - echo "Application successfully deployed."
