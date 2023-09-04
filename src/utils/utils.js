@@ -125,7 +125,18 @@ export async function getIsolateData(
   });
   //check if input data contain all the required headers
   const validHeaders = ["id", "date", "location"];
+  //if any key of data_promise_raw equal to location:color change it to isolate_colLocation:color
+  data_promise_raw.forEach(function(d) {
+    Object.keys(d).forEach(function(key) {
+      if (key === "location:color") {
+        d["isolate_colLocation:color"] = d[key];
+        delete d[key];
+      }
+    });
+  });
+
   const inputHeaders = Object.keys(data_promise_raw[0]);
+
   for (let i = 0; i < validHeaders.length; i++) {
     if (!inputHeaders.includes(validHeaders[i])) {
       alert(
@@ -380,7 +391,15 @@ export async function parseMovement(
     alert("Error: Wrong date format in column start_date or end_date");
     return;
   }
-  data_promise.sort((a, b) => a.pid - b.pid);
+  //sort data_promise by pid and start_date, so its group by pid and sorted by start_date
+  data_promise.sort(function(a, b) {
+    if (a.pid === b.pid) {
+      return a.start_date - b.start_date;
+    } else {
+      return a.pid - b.pid;
+    }
+  });
+
   dispatchDataToStore(data_promise);
 }
 

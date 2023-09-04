@@ -40,7 +40,7 @@ const PatientMovement = (props) => {
 
   //SETTINGS
   const isUserStartResize = props.movementSettings.isUserStartResize;
-  const nodeSize = props.movementSettings.nodeSize;
+  const nodeSize = props.movementSettings.nodeSize / 2;
   const isLineShown = props.movementSettings.isOverlappingLineShown;
   const isLineScaled = props.movementSettings.isOverlappingLineScaled;
   const lineScaleFactor = props.movementSettings.overlappingLineScaleFactor;
@@ -408,10 +408,8 @@ const PatientMovement = (props) => {
           .enter()
           .append("circle")
           .attr("class", "gantt-colDate-marker")
-          //fill to transparent
           .attr("fill", "none")
           .attr("stroke", "black")
-          // fill opacity is 0.2
           .style("opacity", 0.9)
           .attr("stroke-width", "2px")
           .attr("r", nodeSize)
