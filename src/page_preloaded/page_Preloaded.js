@@ -48,11 +48,7 @@ const Preloaded = (props) => {
     let val = props.preloadedID;
     if (props.preloadedData && val) {
       props.resetStore();
-      //load a new one
       let projectData = props.preloadedData.get(val);
-      console.log(projectData);
-      //for each input (metadata, map, tree, network, and gantt), read the file and load it
-      //metadata
       if (projectData.metadata) {
         getIsolateData(
           projectData.metadata,
@@ -92,7 +88,7 @@ const Preloaded = (props) => {
       <Row justify={"center"} style={{ margin: "0px 20px" }}>
         <Col xs={24} md={18} xl={14} xxl={10}>
           <p style={{ fontSize: "22pt", marginBottom: "20px" }}>
-            Dataset {props.preloadedID}
+            Dataset: {props.preloadedID}
           </p>
           <p style={{ fontSize: "14pt", marginBottom: "5px" }}>
             Title: {getTitleDesc("title")}

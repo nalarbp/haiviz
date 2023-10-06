@@ -78,7 +78,7 @@ const DataTableSettings = (props) => {
   return (
     <React.Fragment>
       <Drawer
-        title="Table settings"
+        title="Settings"
         placement="right"
         closable={true}
         onClose={props.closeDrawerHandler}

@@ -39,6 +39,7 @@ const TransGraph = (props) => {
   //SETTINGS
   const isUserStartResize = props.transgraphSettings.isUserStartResize;
   const isUserStyleApplied = props.transgraphSettings.isUserStyleApplied;
+  const isNodeLabelShown = props.transgraphSettings.isNodeLabelShown;
   const isLinkLabelShown = props.transgraphSettings.isLinkLabelShown;
   const isLinkWeightApplied = props.transgraphSettings.isLinkWeightApplied;
   const layoutKey = props.transgraphSettings.layoutKey;
@@ -181,6 +182,33 @@ const TransGraph = (props) => {
   useEffect(() => {
     if (cytoscapeRef.current) {
       let cy = cytoscapeRef.current;
+      if (isNodeLabelShown) {
+        cy.style()
+          .selector("node")
+          .style({
+            "text-size": 1,
+          })
+          .update();
+        cytoscapeRef.current = cy;
+      } else {
+        cy.style()
+          .selector("node")
+          .style({
+            "text-opacity": 0,
+          })
+          .selector(":parent")
+          .style({
+            "text-opacity": 1,
+          })
+          .update();
+        cytoscapeRef.current = cy;
+      }
+    }
+  }, [isNodeLabelShown]);
+
+  useEffect(() => {
+    if (cytoscapeRef.current) {
+      let cy = cytoscapeRef.current;
       if (isLinkWeightApplied) {
         cy.style()
           .selector("edge")
@@ -308,6 +336,7 @@ const TransGraph = (props) => {
             "target-arrow-shape": function(e) {
               let arrowShape =
                 e.data("dir") === "forward" ? "triangle" : "none";
+
               return arrowShape;
             },
             "arrow-scale": function(e) {

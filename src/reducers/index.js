@@ -82,6 +82,7 @@ export const initialState = {
     isUserStartResize: false,
     layoutKey: "fcose",
     isLinkLabelShown: false,
+    isNodeLabelShown: true,
     linkLabelSize: 5,
     isUserStyleApplied: false,
     transgraphIsDownloading: false,

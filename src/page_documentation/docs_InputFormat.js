@@ -28,8 +28,8 @@ const InputFormat = (props) => {
 
         <Title level={3}>Map </Title>
         <Text>
-          HAIviz map is an XML file that contains SVG map and location data.
-          Create this map in page
+          HAIviz map is an XML file that contains non-geograpical, raster image
+          based map and location data. Create this map in page
           <Link
             to="/create-map"
             onClick={() => {
@@ -42,8 +42,8 @@ const InputFormat = (props) => {
         </Text>
         <br />
         <br />
-        <Button type="primary" href={constant.TEMPLATE.svg}>
-          SVG example file
+        <Button type="primary" href={constant.TEMPLATE.jpg}>
+          JPG example file
         </Button>
         <Button type="primary" href={constant.TEMPLATE.xmlData}>
           XML example file

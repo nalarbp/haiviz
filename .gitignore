@@ -10,6 +10,9 @@
 
 # production
 
+# private preloaded dataset
+/private_preloaded_dataset*
+
 # misc
 .DS_Store
 .env.local

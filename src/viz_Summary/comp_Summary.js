@@ -29,7 +29,7 @@ const SummaryCard = (props) => {
     <React.Fragment>
       <div style={{ height: "100%" }}>
         <Card
-          title={"Dataset overview"}
+          title={"Piechart"}
           bordered={true}
           headStyle={{ height: "50px", padding: "0 20px" }}
           style={{ height: "100%" }}

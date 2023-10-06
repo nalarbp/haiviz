@@ -406,32 +406,6 @@ export async function parseMovement(
   dispatchDataToStore(data_promise);
 }
 
-export const getMapLocationData = (mapDataNode) => {
-  if (mapDataNode) {
-    const serializedMapData = new XMLSerializer().serializeToString(
-      mapDataNode
-    );
-    const locationDataObj = xmlJSconvert.xml2js(serializedMapData, {
-      compact: true,
-      spaces: 0,
-    });
-    const locationData = locationDataObj.mapdata.location.map((d) => {
-      return {
-        name: d._attributes.name,
-        x: +d._attributes.x,
-        y: +d._attributes.y,
-      };
-    });
-    const locationData_Map = new Map();
-    locationData.forEach((d) => {
-      locationData_Map.set(d.name, d);
-    });
-    return locationData_Map;
-  } else {
-    return null;
-  }
-};
-
 // ================================= OTHERS  ===================================
 
 export function getColumnNameByColorType(d, colorType) {
@@ -883,16 +857,16 @@ export function parseDOTtoCytoscape(dot) {
   function _getLinkDirAtt(attrList) {
     let ltail = attrList.find((att) => att.id === "ltail");
     let lhead = attrList.find((att) => att.id === "lhead");
+    let dirAttObj = attrList.find((att) => att.id === "dir");
+    let validDir = ["forward", "none"];
+    let dirAtt =
+      dirAttObj && validDir.indexOf(dirAttObj.eq) !== -1
+        ? dirAttObj.eq
+        : "forward";
     //if ltail and lhead not exist, return forward
     if (ltail && lhead) {
-      return "compound_link";
+      return "compound_link" + ":" + dirAtt;
     } else {
-      let dirAttObj = attrList.find((att) => att.id === "dir");
-      let validDir = ["forward", "none"];
-      let dirAtt =
-        dirAttObj && validDir.indexOf(dirAttObj.eq) !== -1
-          ? dirAttObj.eq
-          : "forward";
       return dirAtt;
     }
   }
@@ -921,26 +895,46 @@ export function parseDOTtoCytoscape(dot) {
         let target = d.edge_list[1].id;
         let weight = _getLinkWeightAtt(d.attr_list);
         let color = _getLinkColorAtt(d.attr_list);
-        let dir =
-          _getLinkDirAtt(d.attr_list) != "compound_link"
-            ? _getLinkDirAtt(d.attr_list)
-            : "compound_link";
-        if (dir === "compound_link") {
+        // let dir =
+        //   _getLinkDirAtt(d.attr_list) != "compound_link"
+        //     ? _getLinkDirAtt(d.attr_list)
+        //     : "compound_link";
+        let dir = _getLinkDirAtt(d.attr_list);
+        // write condition if dir contains word compound_link
+        if (dir.includes("compound_link")) {
           //add source and target to edge list
           let cluster_source = d.attr_list.find((att) => att.id === "ltail").eq;
           let cluster_target = d.attr_list.find((att) => att.id === "lhead").eq;
           let style = _getLinkStyleAtt(d.attr_list);
+          let cpd_dir = dir.split(":")[1];
           data_cy.push({
             data: {
               source: cluster_source,
               target: cluster_target,
               weight: weight,
               color: color,
-              dir: "forward",
+              dir: cpd_dir,
               style: style,
             },
           });
-        } else {
+        }
+
+        // if (dir === "compound_link") {
+        //   //add source and target to edge list
+        //   let cluster_source = d.attr_list.find((att) => att.id === "ltail").eq;
+        //   let cluster_target = d.attr_list.find((att) => att.id === "lhead").eq;
+        //   let style = _getLinkStyleAtt(d.attr_list);
+        //   data_cy.push({
+        //     data: {
+        //       source: cluster_source,
+        //       target: cluster_target,
+        //       weight: weight,
+        //       color: color,
+        //       dir: "forward",
+        //       style: style,
+        //     },
+        //   });
+        else {
           if (graphType === "graph") {
             dir = "none";
           }

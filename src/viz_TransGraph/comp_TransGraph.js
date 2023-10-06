@@ -23,6 +23,7 @@ import {
   changeTransisUserStyleApplied,
   changeTransisLinkWeightApplied,
   changeTransLinkFactor,
+  changeTransIsNodeLabelShown,
 } from "../action/transGraph_actions";
 
 const dimensions = ["width", "height"];
@@ -115,6 +116,7 @@ const TransmissionGraph = (props) => {
               changeTransTextOffset={props.changeTransTextOffset}
               changeTransLayoutKey={props.changeTransLayoutKey}
               changeTransIsLinkLabelShown={props.changeTransIsLinkLabelShown}
+              changeTransIsNodeLabelShown={props.changeTransIsNodeLabelShown}
               changeTransLinkFactor={props.changeTransLinkFactor}
               changeTransisUserStyleApplied={
                 props.changeTransisUserStyleApplied
@@ -126,19 +128,19 @@ const TransmissionGraph = (props) => {
             />
           </div>
           {props.transmissionData && props.transmissionData.data && (
-              <TransGraph
-                width={props.width}
-                height={props.height}
-                data={props.transmissionData.data}
-                isolateData={props.isolateData}
-                isUserRedraw={isUserRedraw}
-                transgraphSettings={props.transgraphSettings}
-                selectedData={props.selectedData}
-                setSelectedData={props.setSelectedData}
-                colorScale={props.colorScale}
-                changeTransIsDownloading={props.changeTransIsDownloading}
-              />
-            )}
+            <TransGraph
+              width={props.width}
+              height={props.height}
+              data={props.transmissionData.data}
+              isolateData={props.isolateData}
+              isUserRedraw={isUserRedraw}
+              transgraphSettings={props.transgraphSettings}
+              selectedData={props.selectedData}
+              setSelectedData={props.setSelectedData}
+              colorScale={props.colorScale}
+              changeTransIsDownloading={props.changeTransIsDownloading}
+            />
+          )}
         </Card>
       </div>
     </React.Fragment>
@@ -158,18 +160,19 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
-      deactivateChart: deactivateChart,
-      changeTransResizeSignal: changeTransResizeSignal,
-      changeTransNodeSize: changeTransNodeSize,
-      changeTransTextSize: changeTransTextSize,
-      changeTransTextOffset: changeTransTextOffset,
-      setSelectedData: setSelectedData,
-      changeTransIsDownloading: changeTransIsDownloading,
-      changeTransLayoutKey: changeTransLayoutKey,
-      changeTransIsLinkLabelShown: changeTransIsLinkLabelShown,
-      changeTransisUserStyleApplied: changeTransisUserStyleApplied,
-      changeTransLinkFactor: changeTransLinkFactor,
-      changeTransisLinkWeightApplied: changeTransisLinkWeightApplied,
+      deactivateChart,
+      changeTransResizeSignal,
+      changeTransNodeSize,
+      changeTransTextSize,
+      changeTransTextOffset,
+      setSelectedData,
+      changeTransIsDownloading,
+      changeTransLayoutKey,
+      changeTransIsLinkLabelShown,
+      changeTransIsNodeLabelShown,
+      changeTransisUserStyleApplied,
+      changeTransLinkFactor,
+      changeTransisLinkWeightApplied,
     },
     dispatch
   );

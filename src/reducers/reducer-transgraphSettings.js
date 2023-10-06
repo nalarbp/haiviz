@@ -46,6 +46,13 @@ const transgraphSettingsReducer = (prevState, action) => {
       }
       return newState_resizeSignal;
 
+    case constant.IS_NODE_LABEL_SHOWN_TRANS:
+      let newState_isNodeLabelShown = Object.assign({}, prevState);
+      if (action.payload !== prevState.isNodeLabelShown) {
+        newState_isNodeLabelShown.isNodeLabelShown = action.payload;
+      }
+      return newState_isNodeLabelShown;
+
     case constant.IS_LINK_LABEL_SHOWN_TRANS:
       let newState_isLinkLabelShown = Object.assign({}, prevState);
       if (action.payload !== prevState.isLinkLabelShown) {

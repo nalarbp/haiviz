@@ -24,9 +24,10 @@ const CreateMap = (props) => {
                 Map Editor
               </p>
               <p style={{ fontSize: "12pt", marginBottom: "5px" }}>
-                To create a new map, click or drag-and-drop your SVG image into
-                the input placeholder. <br /> To update an existing one, load
-                the XML file.
+                To create a new map, click or drag-and-drop a JPEG or PNG image
+                to the input placeholder. <br /> To update an existing map, load
+                the XML file. <br /> (Accepted file extensions: .jpeg, .jpg,
+                .png, and .xml.)
               </p>
             </Col>
           </Row>

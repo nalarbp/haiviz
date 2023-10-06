@@ -34,7 +34,7 @@ const SimulatedMapSettings = (props) => {
   return (
     <React.Fragment>
       <Drawer
-        title="Simulated map settings"
+        title="Settings"
         placement="right"
         closable={true}
         onClose={props.closeDrawerHandler}

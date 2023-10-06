@@ -1,10 +1,7 @@
-/* ============================================================================
-============================================================================ */
 import React from "react";
-import { Typography, Divider } from "antd";
+import { Typography } from "antd";
 import { Link } from "react-router-dom";
 import "./style_Documentation.css";
-import { quickStartGuideFile } from "../utils/constants";
 const { Title, Paragraph, Text } = Typography;
 
 const AboutHAIviz = (props) => {
@@ -20,11 +17,17 @@ const AboutHAIviz = (props) => {
         <Title level={3}>When to use </Title>
         <Text>HAIviz can be useful for you when you want to:</Text>
         <ul>
-          <li>Create and use a customised map to visualise outbreaks</li>
-          <li>Visualise and integrate patient timeline for contact tracing</li>
+          <li>
+            Create and use a customised, non-geographical map to visualise
+            outbreaks
+          </li>
+          <li>
+            Visualise and integrate patient stays history and timeline for
+            contact tracing
+          </li>
           <li>Visualise and integrate transmission or cluster network </li>
           <li>Animate the outbreak</li>
-          <li>Do it interactively, no scripting required </li>
+          <li>Do it all just interactively, no scripting required </li>
         </ul>
         <Title level={3}>How to use </Title>
         <Text>
@@ -42,13 +45,14 @@ const AboutHAIviz = (props) => {
         <Title level={3}>Browser compatibility </Title>
         HAIviz is built using create react app (CRA), so it supports the
         majority of modern browsers. With the exception of Internet Explorer,
-        HAIviz was tested and compatible on the following desktop browsers:
+        HAIviz was tested and compatible with the latest version of the
+        following desktop browsers:
         <ul>
-          <li> Microsoft Edge (v.87) </li>
-          <li> Safari (v.13.1.2)</li>
-          <li> Chrome (v.87.0.4280) </li>
-          <li> Firefox (v.84.0.1)</li>
-          <li> Opera (v.73.0.3856) </li>
+          <li> Microsoft Edge </li>
+          <li> Apple Safari </li>
+          <li> Google Chrome </li>
+          <li> Mozilla Firefox </li>
+          <li> Opera </li>
         </ul>
         <Title level={3}>Core libraries</Title>
         <Text>

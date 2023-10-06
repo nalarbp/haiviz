@@ -26,14 +26,14 @@ const HAIvizApp = (props) => {
   }, []);
   return (
     <React.Fragment>
-    <Row className="haiviz-row">
-      <Col xs={4} sm={3} xl={2} id="haiviz-side-menu">
-        <SideMenuNav activeChart={props.activeChart} />
-      </Col>
-      <Col xs={20} sm={21} xl={22} id="haiviz-side-dashboard">
-        <Dashboard />
-      </Col>
-    </Row>
+      <Row className="haiviz-row">
+        <Col xs={4} sm={3} xl={2} id="haiviz-side-menu">
+          <SideMenuNav activeChart={props.activeChart} />
+        </Col>
+        <Col xs={20} sm={21} xl={22} id="haiviz-side-dashboard">
+          <Dashboard />
+        </Col>
+      </Row>
     </React.Fragment>
   );
 };

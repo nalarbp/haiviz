@@ -1,4 +1,4 @@
-id,isolate_species,date,location,isolate_sourceType,isolate_sourceName,profile_1,profile_2,profile_3,isolate_species:color
+id,Species,date,location,Source,pid,ST,ABR_genotype,Ward,Species:color
 MS8418,K. pneumoniae,2016-05-06,ICU-4A,Patient,P1,Kp ST515,ESBL,4A~ICU,red
 MS14417,K. pneumoniae,2016-05-07,ICU-4A,Patient,P1,Kp ST515,ESBL,4A~ICU,red
 MS14431,A. baumannii,2016-05-07,ICU-4A-26,Patient,P1,Ab ST1050,carb-R,4A~ICU,orange

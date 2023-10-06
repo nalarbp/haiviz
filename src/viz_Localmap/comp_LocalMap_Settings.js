@@ -37,7 +37,7 @@ const LocalMapSettings = (props) => {
   return (
     <React.Fragment>
       <Drawer
-        title="Localmap settings"
+        title="Settings"
         placement="right"
         closable={true}
         onClose={props.closeDrawerHandler}

@@ -18,8 +18,6 @@ const MapEditorTableViewer = (props) => {
     title: k,
   }));
 
-  console.log(tableHeaders);
-
   useEffect(() => {
     if (props.mapEditorLocations) {
       let tableData = props.mapEditorLocations.map((d, idx) => {

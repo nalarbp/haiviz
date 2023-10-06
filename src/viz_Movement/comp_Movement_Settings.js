@@ -45,7 +45,7 @@ const MovementSettings = (props) => {
   return (
     <React.Fragment>
       <Drawer
-        title="Movement settings"
+        title="Settings"
         placement="right"
         closable={true}
         onClose={props.closeDrawerHandler}

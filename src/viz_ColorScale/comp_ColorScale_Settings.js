@@ -22,7 +22,7 @@ const ColorScaleSettings = (props) => {
   return (
     <React.Fragment>
       <Drawer
-        title="Color Settings"
+        title="Settings"
         placement="right"
         closable={true}
         onClose={props.closeDrawerHandler}

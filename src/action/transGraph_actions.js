@@ -47,6 +47,13 @@ export function changeTransIsLinkLabelShown(value) {
   };
 }
 
+export function changeTransIsNodeLabelShown(value) {
+  return {
+    type: constant.IS_NODE_LABEL_SHOWN_TRANS,
+    payload: value,
+  };
+}
+
 export function changeTransisUserStyleApplied(value) {
   return {
     type: constant.IS_LINK_FILTER_ON_TRANS,

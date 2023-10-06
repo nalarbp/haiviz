@@ -77,8 +77,8 @@ td {
   width: 200px;
   height: 50px;
   float: right;
-  top: 0px;
-  right: 10px;
+  top: 5px;
+  right: 15px;
 }
 #map-editor-zoomIn {
   background-color: white;

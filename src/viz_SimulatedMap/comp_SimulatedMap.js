@@ -14,18 +14,18 @@ import {
   changeSimapNodeSize,
   changeSimapTextSize,
   changeSimapLayout,
-  changeSimapIsLocTextShown
+  changeSimapIsLocTextShown,
 } from "../action/simulatedMap_actions";
 import {
   DragOutlined,
   CloseOutlined,
   RetweetOutlined,
-  SettingOutlined
+  SettingOutlined,
 } from "@ant-design/icons";
 
 const dimensions = ["width", "height"];
 
-const SimulatedMap = props => {
+const SimulatedMap = (props) => {
   const [isUserRedraw, setisUserRedraw] = useState(false);
   const [isDrawerVisible, setisDrawerVisible] = useState(false);
 
@@ -42,7 +42,7 @@ const SimulatedMap = props => {
     props.deactivateChart(props.id);
     props.changeSimapResizeSignal(false);
   };
-  const userRedrawHandler = val => {
+  const userRedrawHandler = (val) => {
     if (!isUserRedraw) {
       setisUserRedraw(true);
       props.changeSimapResizeSignal(false);
@@ -59,7 +59,7 @@ const SimulatedMap = props => {
     <React.Fragment>
       <div style={{ height: "100%" }}>
         <Card
-          title={"Location Treemap"}
+          title={"Treemap"}
           bordered={true}
           headStyle={{ height: "50px", padding: "0 20px" }}
           style={{ height: "100%" }}
@@ -137,7 +137,7 @@ function mapStateToProps(state, ownProps) {
     selectedData: state.selectedData,
     simulatedMap: state.simulatedMap,
     simulatedmapSettings: state.simulatedmapSettings,
-    colorScale: state.colorScale
+    colorScale: state.colorScale,
   };
 }
 
@@ -150,7 +150,7 @@ function mapDispatchToProps(dispatch, ownProps) {
       changeSimapNodeSize: changeSimapNodeSize,
       changeSimapTextSize: changeSimapTextSize,
       changeSimapLayout: changeSimapLayout,
-      changeSimapIsLocTextShown: changeSimapIsLocTextShown
+      changeSimapIsLocTextShown: changeSimapIsLocTextShown,
     },
     dispatch
   );

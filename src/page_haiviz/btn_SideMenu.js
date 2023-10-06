@@ -26,8 +26,6 @@ import icon_simulatedMap from "../img/icon_simulatedMap.png";
 import icon_simulatedMap_inactive from "../img/icon_simulatedMap_inactive.png";
 import icon_summary from "../img/icon_summary_active.png";
 import icon_summary_inactive from "../img/icon_summary_inactive.png";
-import icon_tree_gantt from "../img/icon_tree_gantt_active.png";
-import icon_tree_gantt_inactive from "../img/icon_tree_gantt_inactive.png";
 //============================================================================
 
 const SideMenuButton = (props) => {
@@ -144,13 +142,6 @@ const SideMenuButton = (props) => {
         } else {
           return icon_simulatedMap;
         }
-      // For the next major release
-      // case "treeGantt":
-      //   if (props.movementData && props.phyloTree && props.isolateData) {
-      //     return icon_tree_gantt;
-      //   } else {
-      //     return icon_tree_gantt_inactive;
-      //   }
       case "floorplan":
         if (!props.svgMap) {
           return icon_floorplan_inactive;

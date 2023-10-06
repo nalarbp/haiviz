@@ -40,7 +40,7 @@ const MapEditorChart = (props) => {
   const observedHeight = props.height ? props.height - 80 : null;
   const container = select(mapeditorContainerRef.current);
   const externalSVGnode = props.mapEditorSVG.cloneNode(true);
-  externalSVGnode.setAttribute("id", "externalSVG");
+  //externalSVGnode.setAttribute("id", "externalSVG");
   const container_w = observedWidth;
   const container_h = observedHeight;
 
@@ -232,7 +232,7 @@ const MapEditorChart = (props) => {
     // == MAP DOWNLOAD ==
     container.select("#download-map-button").on("click", () => {
       if (locationDataRef.current.length === 0) {
-        alert("Location data is empty, please add one");
+        alert("Error: Minimum 1 location required.");
         return;
       }
       let svgMapClone = externalSVGnode.cloneNode(true);

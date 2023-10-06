@@ -13,7 +13,7 @@
     {
       "id": "e1-roberts-crab",
       "name": "Roberts et al. 2021.",
-      "description": "Genomic surveillance, characterization and intervention of a polymicrobial multidrug-resistant outbreak in critical care.",
+      "description": "Genomic surveillance, characterization and intervention of a polymicrobial multidrug-resistant outbreak in critical care. DOI: https://doi.org/10.1099/mgen.0.000530",
       "metadata": "./data/preloaded/e1/roberts_crab_metadata.csv",
       "map": "./data/preloaded/e1/roberts_crab_map.xml",
       "tree": "",
@@ -23,7 +23,7 @@
     {
       "id": "e2-chung-kp",
       "name": "Chung et al. 2015.",
-      "description": "A high-resolution genomic analysis of multidrug-resistant hospital outbreaks of Klebsiella pneumoniae.",
+      "description": "A high-resolution genomic analysis of multidrug-resistant hospital outbreaks of Klebsiella pneumoniae. DOI: https://doi.org/10.15252/emmm.201404767 ",
       "metadata": "./data/preloaded/e2/chung_metadata.csv",
       "map": "./data/preloaded/e2/chung_localmap.xml",
       "tree": "./data/preloaded/e2/chung_tree.tree",
@@ -33,7 +33,7 @@
     {
       "id": "e3-permana-vrefm-st78",
       "name": "Permana et al. 2023.",
-      "description": "Using Genomics To Investigate an Outbreak of Vancomycin-Resistant Enterococcus faecium ST78 at a Large Tertiary Hospital in Queensland.",
+      "description": "Using Genomics To Investigate an Outbreak of Vancomycin-Resistant Enterococcus faecium ST78 at a Large Tertiary Hospital in Queensland. DOI: https://doi.org/10.1128/spectrum.04204-22 ",
       "metadata": "./data/preloaded/e3/permana_vrefm_st78_metadata.csv",
       "map": "",
       "tree": "./data/preloaded/e3/permana_vrefm_st78_tree.nwk",
@@ -43,7 +43,7 @@
     {
       "id": "e4-snitkin-kp",
       "name": "Snitkin et al. 2012.",
-      "description": "Tracking a hospital outbreak of carbapenem-resistant Klebsiella pneumoniae with whole-genome sequencing.",
+      "description": "Tracking a hospital outbreak of carbapenem-resistant Klebsiella pneumoniae with whole-genome sequencing. DOI: https://doi.org/10.1126/scitranslmed.3004129",
       "metadata": "./data/preloaded/e4/snitkin_metadata.csv",
       "map": "",
       "tree": "./data/preloaded/e4/snitkin_phyloTree.nwk",
@@ -54,8 +54,18 @@
       "id": "private-bp-tsv",
       "name": "BP TSV",
       "description": "Private dataset for testing purposes.",
-      "metadata": "./data/preloaded/p2/gassiep_metadata.csv",
-      "map": "./data/preloaded/p2/gassiep_map.xml",
+      "metadata": "./data/preloaded/private_preloaded_dataset_2/gassiep_metadata.csv",
+      "map": "./data/preloaded/private_preloaded_dataset_2/gassiep_map.xml",
+      "tree": "",
+      "network": "",
+      "gantt": ""
+    },
+    {
+      "id": "private-uti-ecoli",
+      "name": "AGED Ecoli UTI",
+      "description": "Private dataset for testing purposes.",
+      "metadata": "./data/preloaded/private_preloaded_dataset_3/p3_metadata.csv",
+      "map": "",
       "tree": "",
       "network": "",
       "gantt": ""

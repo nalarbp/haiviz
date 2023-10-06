@@ -75,6 +75,7 @@ export const TEXT_SIZE_TRANS = "TEXT_SIZE_TRANS";
 export const TEXT_OFFSET_TRANS = "TEXT_OFFSET_TRANS";
 export const RESIZE_SIGNAL_TRANS = "RESIZE_SIGNAL_TRANS";
 export const KEY_TRANS = "KEY_TRANS";
+export const IS_NODE_LABEL_SHOWN_TRANS = "IS_NODE_LABEL_SHOWN_TRANS";
 export const IS_LINK_LABEL_SHOWN_TRANS = "IS_LINK_LABEL_SHOWN_TRANS";
 export const IS_LINK_WEIGHT_APPLIED_TRANS = "IS_LINK_WEIGHT_APPLIED";
 export const LINK_FACTOR_TRANS = "LINK_FACTOR_TRANS";
@@ -145,6 +146,7 @@ export const TEMPLATE = {
   transData: "./data/template/transmissionGraph_input.gv",
   movementData: "./data/template/movementData_input.csv",
   svg: "./data/template/svgMap_input.svg",
+  jpg: "./data/template/jpgMap_input.jpg",
   bundled: "./data/template/example_inputFiles_HAIviz.zip",
 };
 export const SHOWCASE_2 = {

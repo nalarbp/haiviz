@@ -18,7 +18,7 @@ const PhyloTreeGanttSettings = (props) => {
   return (
     <React.Fragment>
       <Drawer
-        title="Phylotreegantt settings"
+        title="Settings"
         placement="right"
         closable={true}
         onClose={props.closeDrawerHandler}

@@ -163,7 +163,7 @@ const TemporalBar = (props) => {
     <React.Fragment>
       <div style={{ height: "100%" }}>
         <Card
-          title={"Temporal distribution"}
+          title={"Epidemic Curve"}
           bordered={true}
           headStyle={{ height: "50px", padding: "0 20px" }}
           style={{ height: "100%" }}
@@ -200,7 +200,7 @@ const TemporalBar = (props) => {
         >
           <div id="temporalbar-drawer-settings">
             <Drawer
-              title="Timeline settings"
+              title="Settings"
               placement="right"
               closable={true}
               onClose={closeDrawerHandler}

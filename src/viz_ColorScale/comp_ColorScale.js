@@ -70,7 +70,7 @@ const ColorScale = (props) => {
     <React.Fragment>
       <div style={{ height: "100%" }}>
         <Card
-          title={"Color key"}
+          title={"Colour"}
           bordered={true}
           headStyle={{ height: "50px", padding: "0 20px" }}
           style={{ height: "100%" }}

@@ -21,6 +21,10 @@ const TransmissionGraphSettings = (props) => {
   const setLayoutKeyHandler = (val) => {
     props.changeTransLayoutKey(val);
   };
+  const showNodeLabelHandler = (e) => {
+    let isChecked = e.target.checked;
+    props.changeTransIsNodeLabelShown(isChecked);
+  };
   const showLinkLabelHandler = (e) => {
     let isChecked = e.target.checked;
     props.changeTransIsLinkLabelShown(isChecked);
@@ -69,7 +73,7 @@ const TransmissionGraphSettings = (props) => {
   return (
     <React.Fragment>
       <Drawer
-        title="Graph settings"
+        title="Settings"
         placement="right"
         closable={true}
         onClose={props.closeDrawerHandler}
@@ -90,6 +94,14 @@ const TransmissionGraphSettings = (props) => {
               <Option value="spread">Spread</Option>
               <Option value="fcose">Fcose</Option>
             </Select>
+          </Col>
+          <Col span={24}>
+            <Checkbox
+              onChange={showNodeLabelHandler}
+              checked={props.transgraphSettings.isNodeLabelShown}
+            >
+              Display node's label
+            </Checkbox>
           </Col>
           <Col span={24}>
             <Checkbox
