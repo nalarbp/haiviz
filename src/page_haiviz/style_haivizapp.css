@@ -12,7 +12,7 @@
 /* Side menu */
 #haiviz-side-menu {
   background-color: #333;
-  padding: 20px 0 0 0;
+  padding: 20px 10px;
   min-height: 80vh;
   max-width: fit-content;
   border-radius: 10px;
@@ -22,7 +22,7 @@
   background-color: none;
   width: 30px;
   height: 30px;
-  margin: 20px 10px;
+  margin: 20px auto;
   text-align: center;
 }
 
@@ -38,13 +38,12 @@
   padding: 0px;
 }
 
-/*at media screen of width <400px*/
 @media screen and (max-width: 400px) {
   .haiviz-menu-icon {
     background-color: none;
     width: 30px;
     height: 30px;
-    margin: 20px 2px;
+    margin: 20px auto;
     text-align: center;
   }
 

@@ -39,11 +39,8 @@ const PreloadedDataset = (props) => {
     if (props.preloadedData && val) {
       props.resetStore();
       props.deactivateChartMulti();
-      //load a new one
       let projectData = props.preloadedData.get(val);
 
-      //for each input (metadata, map, tree, network, and gantt), read the file and load it
-      //metadata
       if (projectData.metadata) {
         getIsolateData(
           projectData.metadata,

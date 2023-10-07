@@ -14,7 +14,7 @@ const MapEditorInput = (props) => {
   function parseRasterImage(fileURL) {
     const img = new Image();
     img.src = fileURL;
-    img.onloadend = function() {
+    img.onload = function() {
       const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
       svg.setAttribute("id", "haiviz-localmap-svg");
       svg.setAttribute("width", img.width);
@@ -101,7 +101,9 @@ const MapEditorInput = (props) => {
   const beforeUploadHandler = (file, fileList) => {
     setisLoading(true);
     if (file) {
-      const extension = file.name.split(".")[1].toLowerCase();
+      //get the extension by gettingt the last element of the split array
+      const extension = file.name.split(".").pop();
+      console.log(extension);
       const reader = new FileReader();
       reader.readAsDataURL(file);
       reader.onloadend = function(evt) {
