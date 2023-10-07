@@ -19,25 +19,26 @@ const CreateMap = (props) => {
           style={{ width: "100%", height: "100%", backgroundColor: "white" }}
         >
           <Row justify={"center"} style={{ margin: "0px 20px" }}>
-            <Col id="map-editor-header" xs={24} md={18} xl={14} xxl={10}>
+            <Col id="map-editor-header" xs={24} md={18} xl={16} xxl={14}>
               <p style={{ fontSize: "30pt", marginBottom: "20px" }}>
                 Map Editor
               </p>
               <p style={{ fontSize: "12pt", marginBottom: "5px" }}>
-                To create a new map, click or drag-and-drop a JPEG or PNG image
-                to the input placeholder. <br /> To update an existing map, load
-                the XML file. <br /> (Accepted file extensions: .jpeg, .jpg,
-                .png, and .xml.)
+                To create a new map, load a JPEG or PNG file.
+                <br /> To update an existing map, load an XML file. <br /> To
+                load, click or drag-and-drop the file to input placeholder.{" "}
+                <br />
+                Accepted file extensions are .jpeg, .jpg, .png, and .xml.
               </p>
             </Col>
           </Row>
           <Row justify={"center"} style={{ width: "80%", margin: "auto" }}>
             <Col
               xs={24}
-              sm={12}
-              md={11}
-              xl={8}
-              xxl={4}
+              sm={16}
+              md={12}
+              xl={10}
+              xxl={6}
               className="input-button"
             >
               <MapEditorInput

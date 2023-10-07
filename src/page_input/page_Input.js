@@ -18,7 +18,6 @@ import {
   loadTreeData,
   changeTreeResizeSignal,
 } from "../action/phyloTree_actions";
-import * as constant from "../utils/constants";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 const Input = (props) => {
@@ -40,8 +39,8 @@ const Input = (props) => {
               marginBottom: "5px",
             }}
           >
-            To start using HAIviz, click or drag and drop your input file to the
-            input button, or select from preloaded dataset options, and then go
+            To use HAIviz, click or drag-and-drop input files to the input
+            placeholder, or select from preloaded dataset options, and then go
             page &nbsp;
             <span>
               <Link to="/haiviz-spa">
@@ -80,7 +79,7 @@ const Input = (props) => {
                 </Button>
               </Link>
             </span>
-            &nbsp; for input file details and examples.
+            &nbsp; for input requirements and examples.
           </p>
         </Col>
       </Row>

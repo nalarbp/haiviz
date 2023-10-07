@@ -80,7 +80,7 @@ const PreloadedDataset = (props) => {
           <h3>Preloaded Dataset: </h3>
           <p style={{ fontSize: "8pt" }}>(Select to load one)</p>
         </Col>
-        <Col xs={24} md={14} style={{ textAlign: "left" }}>
+        <Col xs={24} md={14} style={{ textAlign: "center" }}>
           <Select
             value={props.selectedPreloadedData}
             onChange={selectPreloadedDataHandler}

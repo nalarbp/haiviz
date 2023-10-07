@@ -101,23 +101,47 @@ const MapEditorInput = (props) => {
   const beforeUploadHandler = (file, fileList) => {
     setisLoading(true);
     if (file) {
-      //get the extension by gettingt the last element of the split array
       const extension = file.name.split(".").pop();
-      console.log(extension);
+      let acceptedExtensions = [
+        "jpg",
+        "jpeg",
+        "png",
+        "xml",
+        ".JPEG",
+        ".JPG",
+        ".PNG",
+        ".XML",
+      ];
+
+      if (!acceptedExtensions.includes(extension)) {
+        alert(
+          "Error: Invalid file type. Please upload a JPEG, PNG or XML file."
+        );
+        setisLoading(false);
+        return;
+      }
+
       const reader = new FileReader();
       reader.readAsDataURL(file);
       reader.onloadend = function(evt) {
         const dataUrl = evt.target.result;
-        if (extension === "xml") {
+        const extensionLower = extension.toLowerCase();
+        if (extensionLower === "xml") {
           parseXMl(dataUrl);
         }
 
         if (
-          extension === "jpg" ||
-          extension === "jpeg" ||
-          extension === "png"
+          extensionLower === "jpg" ||
+          extensionLower === "jpeg" ||
+          extensionLower === "png"
         ) {
           parseRasterImage(dataUrl);
+        } else {
+          alert(
+            "Error: Invalid file type. Please upload a JPEG, PNG or XML file."
+          );
+          setisLoading(false);
+          return;
         }
       };
     }
@@ -131,7 +155,7 @@ const MapEditorInput = (props) => {
   return (
     <React.Fragment>
       <Card
-        title={"Load a JPEG or PNG or XML file here"}
+        title={"Load a JPEG/PNG/XML file here"}
         headStyle={{ textAlign: "center" }}
         bodyStyle={{ margin: "0px", padding: "5px" }}
       >

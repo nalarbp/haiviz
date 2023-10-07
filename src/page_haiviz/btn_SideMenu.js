@@ -156,7 +156,7 @@ const SideMenuButton = (props) => {
 
   return (
     <React.Fragment>
-      <Col xs={24} className="haiviz-menu-icon">
+      <div className="haiviz-menu-icon">
         <button
           title={btnAttributes.title}
           onClick={onClickHandler}
@@ -169,7 +169,7 @@ const SideMenuButton = (props) => {
             src={btnAttributes.icon}
           ></img>
         </button>
-      </Col>
+      </div>
     </React.Fragment>
   );
 };

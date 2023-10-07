@@ -38,13 +38,15 @@
   padding: 0px;
 }
 
+
 @media screen and (max-width: 400px) {
   .haiviz-menu-icon {
     background-color: none;
     width: 30px;
     height: 30px;
-    margin: 20px auto;
+    margin: 20px 1px;
     text-align: center;
   }
 
+  
 }
