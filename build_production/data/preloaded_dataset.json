@@ -69,6 +69,24 @@
       "tree": "",
       "network": "",
       "gantt": ""
+    },
+    {
+      "id": "private-pipe_1",
+      "name": "Demo: Hospital water treatment plant",
+      "description": "Private dataset for testing purposes.",
+      "metadata": "./data/preloaded/private_pipe_1/dummy_metadata.csv",
+      "map": "./data/preloaded/private_pipe_1/azuma_et_al_map.xml",
+      "network": "./data/preloaded/private_pipe_1/network.gv",
+      "gantt": ""
+    },
+    {
+      "id": "private-pipe_2",
+      "name": "Demo: Splash zone",
+      "description": "Private dataset for testing purposes.",
+      "metadata": "./data/preloaded/private_pipe_2/dummy_metadata.csv",
+      "map": "./data/preloaded/private_pipe_2/chg_harvey_map.xml",
+      "network": "./data/preloaded/private_pipe_2/network.gv",
+      "gantt": ""
     }
   ],
   "description": "This JSON file describes the preloaded datasets."
