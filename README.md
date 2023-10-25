@@ -1,8 +1,7 @@
 # HAIviz: Healthcare Associated Infections Visualization Tool
+A web-based application to create an interactive dashboard for visualising and integrating healthcare-associated genomic epidemiological data.
 
-An easy to use and interactive single page application for visualization of HAI outbreak as a unified and integrated graphical report that features both of phylogenetic and epidemiology information. HAIviz was built using React.js framework (https://reactjs.org/) and Redux.js (https://redux.js.org/). The chart component itself mainly built using D3.js (https://d3js.org/).
-
-## How to use HAIviz for dev mode
+## Offline use or self-hosting
 
 ## 1. Clone this repo
 

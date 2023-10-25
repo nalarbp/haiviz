@@ -1,0 +1,20 @@
+﻿id,date,location,st,species
+1,2019-12-20,Sampling_port_1,ST 17,Species1
+2,2019-11-20,Sampling_port_2,ST 20,Species1
+3,2019-05-01,Sampling_port_3,ST 17,Species2
+4,2018-11-19,Sampling_port_3,NF,Species1
+5,2018-03-10,Sampling_port_3,ST 17,Species1
+6,2018-03-28,Sampling_port_2,ST 18,Species1
+7,2018-05-19,Sampling_port_2,ST 19,Species1
+8,2018-08-05,Sampling_port_4,ST 20,Species1
+9,2019-01-08,Sampling_port_9,ST 17,Species1
+10,2019-02-01,Sampling_port_2,ST 18,Species1
+11,2019-04-06,Sampling_port_4,ST 19,Species1
+12,2019-08-16,Sampling_port_1,ST 20,Species1
+13,2019-09-21,Sampling_port_2,ST 18,Species1
+14,2019-09-02,Sampling_port_1,NF,Species1
+15,2019-04-25,Sampling_port_3,ST 19,Species1
+16,2018-01-27,Sampling_port_2,ST 20,Species1
+17,2019-04-22,Sampling_port_4,NF,Species1
+18,2019-12-13,Sampling_port_1,ST 78,Species1
+19,2019-12-18,Sampling_port_2,ST 328,Species1
