@@ -19,7 +19,8 @@
 .env.development.local
 .env.test.local
 .env.production.local
-
+TODO.list
+NOTES
 /extra_data
 /under_dev
 
