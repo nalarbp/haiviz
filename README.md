@@ -1,45 +1,45 @@
 # HAIviz: Healthcare Associated Infections Visualization Tool
+
 A web-based application to create an interactive dashboard for visualising and integrating healthcare-associated genomic epidemiological data.
 
-## Offline use or self-hosting
+## Using HAIviz online:
 
-## 1. Clone this repo
+Visit https://haiviz.fordelab.com/
 
-### `git clone git@gitlab.beatsonlab.com:s4470811/haiviz-new.git`
+Offline use or self-hosting
 
-## 2. Install all dependencies
+## Run HAIviz locally or for self hosting:
 
-### `npm install`
+1. Download the bundled version of HAIviz from the build directory (https://github.com/nalarbp/haiviz/tree/main/build)
 
-## 3. Go to the directory and run the development server
+2. Serve it locally (e.g., using serve from https://www.npmjs.com/package/serve)
+   `serve -s build`
 
-### `npm start`
+## Run HAIviz for development
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Clone this repository
+   `git clone git@github.com:nalarbp/haiviz.git`
 
-The page will reload if you make edits.<br>
+2. Install all dependencies
+   `npm install`
+
+3. Go to the directory and run the development
+   `cd haiviz`
+   `npm start`
+
+4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make changes.<br>
 You will also see any lint errors in the console.
 
-## 4. Build the app
+## Have any questions?
 
-### `npm run-script build`
+Please feel free to send it to my email: b.permana@uq.edu.au
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Cite us
 
-## How to use HAIviz as the bundled app
+If you use HAIviz please cite HAIviz website: https://haiviz.fordelab.com
 
-## 1. Go to build directory
+## License
 
-### `cd ./build`
-
-## 2. Install virtual web server
-
-### `npm install -g live-server`
-
-## 3. Run the web server
-
-### `live-server`
-
-Open the browser to use it
+GPLv3
