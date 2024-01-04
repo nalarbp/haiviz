@@ -12,7 +12,6 @@ import { color } from "d3-color";
 
 const moment = extendMoment(Moment);
 const _ = require("lodash");
-const xmlJSconvert = require("xml-js");
 const d3 = {
   ...require("d3-scale"),
   ...require("d3-selection"),
@@ -865,7 +864,7 @@ export function parseDOTtoCytoscape(dot) {
         : "forward";
     //if ltail and lhead not exist, return forward
     if (ltail && lhead) {
-      return "compound_link" + ":" + dirAtt;
+      return "compound_link:" + dirAtt;
     } else {
       return dirAtt;
     }

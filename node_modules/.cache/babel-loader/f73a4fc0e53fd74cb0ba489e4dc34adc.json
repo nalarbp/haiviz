@@ -1,1 +1,0 @@
-{"ast":null,"code":"var parent = require('../../es/array/from');\n\nmodule.exports = parent;","map":null,"metadata":{},"sourceType":"script"}

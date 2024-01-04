@@ -25,7 +25,6 @@ const { Meta } = Card;
 const Showcases = (props) => {
   //make initial state: dataset options
   const [dataCard, setDataCard] = useState([]);
-  let setisLoading = () => {}; //dummy function, to match drag and drop button functions
 
   if (props.preloadedData === null) {
     readPreloadedDatasetJSON(

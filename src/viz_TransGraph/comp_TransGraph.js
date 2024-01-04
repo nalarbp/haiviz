@@ -4,7 +4,7 @@ import TransmissionGraphSettings from "./comp_TransGraph_Settings";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import withMeasure from "../hocs/withMeasure";
-import { Row, Col, Card, Button, Empty } from "antd";
+import { Row, Col, Card, Button } from "antd";
 import {
   DragOutlined,
   CloseOutlined,
@@ -184,20 +184,3 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(MeasuredTransmissionGraph);
-
-/*
-<Button
-  size={"small"}
-  style={{ margin: "0 5px", border: "none" }}
-  icon={<DownloadOutlined />}
-></Button>
-<p>Link's weight threshold</p>
-<Slider
-  id={"transgraph-change-linkThreshold"}
-  min={-1}
-  max={25}
-  step={1}
-  onChange={linkThresholdHandler}
-  defaultValue={props.transgraphSettings.transgraphIsDownloading}
-></Slider>
-*/

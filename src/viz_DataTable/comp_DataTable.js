@@ -3,10 +3,9 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { deactivateChart, setSelectedData } from "../action/index";
 import { Row, Col, Card, Button, Table, Skeleton, Input, Space } from "antd";
-import DataTableSettings from "./comp_DataTable_Settings";
+//import DataTableSettings from "./comp_DataTable_Settings";
 import {
   DragOutlined,
-  SettingOutlined,
   CloseOutlined,
   FilterOutlined,
 } from "@ant-design/icons";

@@ -1,6 +1,3 @@
-/* ============================================================================
-
-============================================================================ */
 import React, { useState, useEffect } from "react";
 import ColorScaleChart from "./chart_ColorScale";
 import ColorScaleSettings from "./comp_ColorScale_Settings";
@@ -25,8 +22,6 @@ import {
 } from "@ant-design/icons";
 
 const dimensions = ["width", "height"];
-const _ = require("lodash");
-
 const ColorScale = (props) => {
   const [isUserRedraw, setisUserRedraw] = useState(false);
   const [isDrawerVisible, setisDrawerVisible] = useState(false);

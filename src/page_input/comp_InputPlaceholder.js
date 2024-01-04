@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Row, Col, Button, Modal, Input } from "antd";
+import React from "react";
+import { Row, Col } from "antd";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import MetadataInput from "../viz_InputFiles/btn_MetadataInput";

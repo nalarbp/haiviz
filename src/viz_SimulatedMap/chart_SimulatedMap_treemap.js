@@ -18,10 +18,8 @@ import { event as currentEvent } from "d3";
 import { zoom } from "d3-zoom";
 import { forceSimulation, forceManyBody, forceCollide } from "d3-force";
 import usePrevious from "../react_hooks/usePrevious-hook";
-import { node } from "prop-types";
 
 const _ = require("lodash");
-
 const SimulatedMapChart = (props) => {
   //INTERNAL STATES/REFS
   const zoomStateRef = useRef(null);

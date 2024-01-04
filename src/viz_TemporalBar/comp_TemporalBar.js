@@ -13,7 +13,7 @@ import {
   downloadSVG,
   getColumnNameByColorType,
 } from "../utils/utils";
-import { group, rollup, descending } from "d3-array";
+import { group, rollup } from "d3-array";
 import withMeasure from "../hocs/withMeasure";
 import "./style_TemporalBar.css";
 import {

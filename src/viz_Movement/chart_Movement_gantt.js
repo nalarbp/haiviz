@@ -11,13 +11,11 @@ import { Empty, Button } from "antd";
 import { ZoomInOutlined, ZoomOutOutlined } from "@ant-design/icons";
 import {
   filterUnique,
-  getColorScaleByObject,
   computeQuadraticCurve,
 } from "../utils/utils";
 
 import Moment from "moment";
 import { extendMoment } from "moment-range";
-import { isInteger } from "lodash";
 
 const moment = extendMoment(Moment);
 

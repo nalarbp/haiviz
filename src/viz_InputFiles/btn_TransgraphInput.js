@@ -6,9 +6,7 @@ import { parseGraph } from "../utils/utils";
 import { TransgraphInputSVG } from "../utils/customIcons";
 
 const { Dragger } = Upload;
-const _ = require("lodash");
 
-//props.transgraphData, props.loadTransgraphData
 
 const TransgraphInput = (props) => {
   const [isLoading, setisLoading] = useState(false);

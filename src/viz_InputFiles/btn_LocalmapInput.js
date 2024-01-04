@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { xml } from "d3-fetch";
 import { CheckCircleTwoTone } from "@ant-design/icons";
 import { LocalmapInputSVG } from "../utils/customIcons";
 import DeleteInput from "./btn_DeleteInput";

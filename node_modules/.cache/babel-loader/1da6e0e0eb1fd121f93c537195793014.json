@@ -1,1 +1,0 @@
-{"ast":null,"code":"// TODO: remove from `core-js@4`\nvar defineWellKnownSymbol = require('../internals/define-well-known-symbol');\n\ndefineWellKnownSymbol('replaceAll');","map":null,"metadata":{},"sourceType":"script"}

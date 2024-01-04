@@ -20,7 +20,6 @@ import {
   PlusCircleOutlined,
   CompassOutlined,
   DeleteOutlined,
-  UploadOutlined,
 } from "@ant-design/icons";
 
 const MapEditorChart = (props) => {

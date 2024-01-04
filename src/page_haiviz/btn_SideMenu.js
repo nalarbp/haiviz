@@ -1,8 +1,4 @@
-/* ============================================================================
-
-============================================================================ */
 import React from "react";
-import { Col } from "antd";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { setActiveChart } from "../action/index";

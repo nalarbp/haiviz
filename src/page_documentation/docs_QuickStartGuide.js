@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Typography, Row, Col, Button, Divider } from "antd";
+import { Typography, Row, Col, Button } from "antd";
 import { pdfjs, Document, Page } from "react-pdf";
 import { quickStartGuideFile } from "../utils/constants";
 

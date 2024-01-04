@@ -1,12 +1,9 @@
 import React from "react";
-import { Button, Drawer, Checkbox, Row, Col, InputNumber, Input } from "antd";
+import { Button, Drawer, Checkbox, Row, Col, InputNumber } from "antd";
 import { downloadSVG } from "../utils/utils";
 
 const MovementSettings = (props) => {
-  //SETTINGS/STATE
-
-  //HANDLERS
-
+ 
   const downloadSVGHandler = () => {
     downloadSVG("ganttChart-svg");
   };
@@ -94,87 +91,3 @@ const MovementSettings = (props) => {
 };
 
 export default MovementSettings;
-/*
-<Col span={24}>
-            <p>Layout</p>
-            <Select
-              style={{ width: "100%" }}
-              placeholder={layoutKeyText}
-              onChange={movementChartLayoutHandler}
-              value={layoutKey}
-            >
-              <Option value="gantt">Gantt</Option>
-            </Select>
-          </Col>
-
-const nodeSizeHandler = val => {
-  props.changeMovementNodeSize(val);
-};
-const textSizeHandler = val => {
-  props.changeMovementTextSize(val);
-};
-const textOffsetHandler = val => {
-  props.changeMovementTextOffset(val);
-};
-<Col span={24}>
-  <p>Node size </p>
-  <Slider
-    id={"movement-change-nodeSize"}
-    min={0}
-    max={15}
-    step={1}
-    onChange={nodeSizeHandler}
-    defaultValue={props.movementSettings.nodeSize}
-  ></Slider>
-</Col>
-<Col span={24}>
-  <p>Text size </p>
-  <Slider
-    id={"movement-change-textSize"}
-    min={0}
-    max={15}
-    step={1}
-    onChange={textSizeHandler}
-    defaultValue={props.movementSettings.textSize}
-  ></Slider>
-</Col>
-<Col span={24}>
-  <p>Text offset </p>
-  <Slider
-    id={"movement-change-textOffset"}
-    min={-25}
-    max={25}
-    step={5}
-    onChange={textOffsetHandler}
-    defaultValue={props.movementSettings.textOffset}
-  ></Slider>
-</Col>
-
-<Col span={24}>
-            <Checkbox
-              onChange={changeSortedBySuffix}
-              checked={props.movementSettings.isSortedBySuffix}
-            >
-              Sort Y-axis by suffix
-            </Checkbox>
-          </Col>
-          <Col span={10}>
-            <p>Separator</p>
-          </Col>
-          <Col span={6}>
-            <Input
-              maxLength={2}
-              value={props.movementSettings.suffixSeparator}
-              onChange={changeSuffixSeparator}
-              disabled={!props.movementSettings.isSortedBySuffix}
-            />
-          </Col>
-          <Col span={8}>
-            <Button
-              onClick={resortHandler}
-              disabled={!props.movementSettings.isSortedBySuffix}
-            >
-              Sort
-            </Button>
-          </Col>
-*/

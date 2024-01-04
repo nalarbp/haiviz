@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Row, Col, Button } from "antd";
 import { bindActionCreators } from "redux";
 import "./style_Preloaded.css";

@@ -24,8 +24,6 @@ import preloadedDataReducer from "./reducer-preloadedData";
 import selectedPreloadedDataReducer from "./reducer-selectedPreloadedData";
 import { DASHBOARD_LAYOUT } from "../utils/constants";
 
-const _ = require("lodash");
-
 export const initialState = {
   preloadedData: null,
   selectedPreloadedData: null,

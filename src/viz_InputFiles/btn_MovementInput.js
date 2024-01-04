@@ -1,16 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { CheckCircleTwoTone } from "@ant-design/icons";
 import { MovementInputSVG } from "../utils/customIcons";
-import Moment from "moment";
-import { extendMoment } from "moment-range";
 import DeleteInput from "./btn_DeleteInput";
 import { Card, Row, Col, Spin, Upload } from "antd";
 import { parseMovement } from "../utils/utils";
 
-const moment = extendMoment(Moment);
 const { Dragger } = Upload;
-
-//props.movementData, loadMovementData
 
 const MovementInput = (props) => {
   const [isLoading, setisLoading] = useState(false);
