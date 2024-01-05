@@ -80,3 +80,10 @@ export function changeTransLinkFactor(value) {
     payload: value,
   };
 }
+
+export function changeTransSavedGraph(value) {
+  return {
+    type: constant.SAVED_GRAPH_TRANS,
+    payload: value,
+  };
+}

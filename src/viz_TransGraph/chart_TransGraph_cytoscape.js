@@ -79,18 +79,44 @@ const TransGraph = (props) => {
   }, [transgraphIsDownloading]);
 
   useEffect(() => {
+    console.log("transgraph isInitialDraw, isUserStartResize, isUserRedraw");
     if (isUserStartResize) {
-      select("#transgraph-zoomButton-container").style("display", "none");
-      select("#transgraph-no-drawing").style("display", "block");
-      removeAllChildFromNode("#transmission-cy");
+      console.log("transgraph isUserStartResize");
+      //if its back from other tab or page
+      //else if its from resize
+      if(cytoscapeRef.current){
+        console.log("transgraph isUserStartResize, cytoscapeRef.current is not null");
+        //save current Ref
+        const savedGraph = cytoscapeRef.current.json().elements;
+        props.changeTransSavedGraph(savedGraph);
+        select("#transgraph-zoomButton-container").style("display", "none");
+        select("#transgraph-no-drawing").style("display", "block");
+        removeAllChildFromNode("#transmission-cy");
+        cytoscapeRef.current = null;
+      } else {
+        console.log("transgraph isUserStartResize, cytoscapeRef.current is null");
+        //cytoscapeRef.current = null;
+        
+      }
     } else {
       if (isInitialDraw) {
+        console.log("transgraph isInitialDraw");
         draw();
-      } else {
-        if (props.isUserRedraw) {
-          draw();
+      } else if (props.isUserRedraw) {
+          console.log("transgraph isUserRedraw");
+          //redraw using the saved graph
+          const cy = cytoscape({
+            container: document.getElementById("transmission-cy"),
+            pannable: true,
+            selected: true,
+            boxSelectionEnabled: false});
+          cy.add(props.transgraphSettings.savedGraph);
+          
+
+
+          cy.style().update();
+          cytoscapeRef.current = cy;
         }
-      }
     }
   }, [isInitialDraw, isUserStartResize, props.isUserRedraw]);
   //changing layout
@@ -113,11 +139,11 @@ const TransGraph = (props) => {
   }, [props.selectedData]);
 
   useEffect(() => {
-    if (isDrawCompleted) {
-      select("#transgraph-loading").style("display", "none");
-    } else {
-      select("#transgraph-loading").style("display", "block");
-    }
+      if (isDrawCompleted) {
+          select("#transgraph-loading").style("display", "none");
+      } else {
+        select("#transgraph-loading").style("display", "block");
+      }
   }, [isDrawCompleted]);
 
   useEffect(() => {
@@ -383,6 +409,13 @@ const TransGraph = (props) => {
         props.setSelectedData([]);
       }
     });
+    cy.on('position', 'node', function(event) {
+      var node = event.target; // Get the node object
+      var newPosition = node.position(); // Get the new position of the node
+    
+      // Call your custom function here and pass the necessary arguments
+      console.log(newPosition);
+    });
     // cy.on("box", function(evt) {
     //   props.setSelectedData([evt.target.data("label")]);
     // });
@@ -407,6 +440,18 @@ const TransGraph = (props) => {
     cytoscapeRef.current = cy;
     setisDrawCompleted(true);
   }
+  //write fuction redraw, that will be called when user click redraw button. it should be based on the current state of the cytoscapeRef.current. dont rerun the layout, just update the data and style
+  //REDRAW
+  function redraw() {
+    if (cytoscapeRef.current) {
+      const graph_layout = { name: layoutKey, animate: false, fit: true };
+      let cy = cytoscapeRef.current;
+      cy.layout(graph_layout).run();
+    }
+  }
+
+      
+
   //SELECT & UNSELECT
   function selectUnselect() {
     if (cytoscapeRef.current) {
@@ -435,14 +480,14 @@ const TransGraph = (props) => {
   return (
     <React.Fragment>
       <div id="transmissionContainer" ref={transmissionContainerRef}>
-        <div id="transgraph-loading">
-          <Spin />
-        </div>
         <div id="transgraph-no-drawing">
           <Empty
             description={"No chart: please click redraw button"}
             image={Empty.PRESENTED_IMAGE_SIMPLE}
           />
+        </div>
+        <div id="transgraph-loading">
+          <Spin />
         </div>
         <div id="transgraph-zoomButton-container">
           <Button

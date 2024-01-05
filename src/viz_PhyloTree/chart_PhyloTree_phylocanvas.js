@@ -33,6 +33,7 @@ const PhyloTreeChart = (props) => {
 
   //USE-EFFECTS
   useEffect(() => {
+    //console.log("PhyloTreeChart: useEffect: props.data");
     if (
       observedWidth &&
       observedHeight &&
@@ -60,8 +61,13 @@ const PhyloTreeChart = (props) => {
 
   //Update selected node(s)
   useEffect(() => {
+    //console.log("PhyloTreeChart: useEffect: props.selectedData");
     if (props.selectedData) {
       let tree = phylocanvasRef.current;
+      if (!tree) {
+        return;
+      }
+
       if (props.selectedData.length > 0) {
         //console.log(props.selectedData);
         //tree.clearSelect();
@@ -89,35 +95,47 @@ const PhyloTreeChart = (props) => {
 
   //Update layout
   useEffect(() => {
+    //console.log("PhyloTreeChart: useEffect: props.phylotreeSettings.layout");
     let tree = phylocanvasRef.current;
-    tree.setTreeType(treeLayout);
-    tree.draw();
+    if (tree) {
+      tree.setTreeType(treeLayout);
+      tree.draw();
+    }
   }, [treeLayout]);
 
   //downloading
   useEffect(() => {
+    //console.log("PhyloTreeChart: useEffect: props.phylotreeSettings.isDownloading");
     if (treeIsDownloading) {
       let tree = phylocanvasRef.current;
-      let svgData = tree.exportSVG.getSerialisedSVG(true);
-      downloadFileAsText("HAIviz-phylocanvas-svg.svg", svgData);
-      props.changeIsTreeDownloading(false);
+      if(tree){
+        let svgData = tree.exportSVG.getSerialisedSVG(true);
+        downloadFileAsText("HAIviz-phylocanvas-svg.svg", svgData);
+        props.changeIsTreeDownloading(false);
+      }
     }
   }, [treeIsDownloading]);
 
   //Update isTaxaAligned
   useEffect(() => {
+    //console.log("PhyloTreeChart: useEffect: props.phylotreeSettings.isTaxaAligned");
     let tree = phylocanvasRef.current;
-    tree.alignLabels = isTaxaAligned;
-    tree.draw();
+    if (tree) {
+      tree.alignLabels = isTaxaAligned;
+      tree.draw();
+    }
   }, [isTaxaAligned]);
 
   //Update leaf's label size
   useEffect(() => {
+    //console.log("PhyloTreeChart: useEffect: props.phylotreeSettings.textSize");
     let tree = phylocanvasRef.current;
-    tree.leaves.forEach((leaf, i) => {
-      leaf.labelStyle = { textSize: leafLabelSize };
-    });
-    tree.draw();
+    if (tree) {
+      tree.leaves.forEach((leaf, i) => {
+        leaf.labelStyle = { textSize: leafLabelSize };
+      });
+      tree.draw();
+    }
   }, [leafLabelSize]);
 
   //DRAWING

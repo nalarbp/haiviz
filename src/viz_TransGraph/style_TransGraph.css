@@ -48,3 +48,12 @@
 #transmission-cy- {
   background-color: wheat;
 }
+#transgraph-no-drawing {
+  background-color: #ffffff;
+  /*make it in front of other elements*/
+  z-index: 1000;
+  position: absolute;
+  width: 99%;
+  margin-top: -5px;
+  text-align: center;
+}

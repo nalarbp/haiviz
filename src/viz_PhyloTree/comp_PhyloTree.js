@@ -1,6 +1,3 @@
-/* ============================================================================
-
-============================================================================ */
 import React, { useState, useEffect } from "react";
 import PhyloTreeChart from "./chart_PhyloTree_phylocanvas";
 import PhyloTreeSettings from "./comp_PhyloTree_Settings";

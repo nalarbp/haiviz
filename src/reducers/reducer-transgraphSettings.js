@@ -81,6 +81,13 @@ const transgraphSettingsReducer = (prevState, action) => {
       }
       return newState_linkFactor;
 
+    case constant.SAVED_GRAPH_TRANS:
+      let newState_sg = Object.assign({}, prevState);
+      if (action.payload && action.payload !== prevState.savedGraph) {
+        newState_sg.savedGraph = action.payload;
+      }
+      return newState_sg;
+
     default:
       if (prevState) {
         return prevState;

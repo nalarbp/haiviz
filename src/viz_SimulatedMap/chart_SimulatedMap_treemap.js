@@ -49,7 +49,6 @@ const SimulatedMapChart = (props) => {
 
   //USEEFFECTS
   useEffect(() => {
-    //console.log(isUserStartResize, props.isUserRedraw);
     if (isUserStartResize) {
       select("#simulatedmap_svgGroup").remove();
       select("#simulatedmap-buttons-container").style("display", "none");
@@ -63,26 +62,6 @@ const SimulatedMapChart = (props) => {
         }
       }
     }
-    // if (
-    //   observedWidth &&
-    //   observedHeight &&
-    //   !isUserStartResize &&
-    //   !props.isUserRedraw
-    // ) {
-    //   draw(); //when initial draw
-    // } else if (
-    //   observedWidth &&
-    //   observedHeight &&
-    //   !isUserStartResize &&
-    //   props.isUserRedraw
-    // ) {
-    //   draw(); //when user click redraw
-    // } else {
-    //   //console.log("hide and remove");
-    //   select("#simulatedmap_svgGroup").remove();
-    //   select("#simulatedmap-buttons-container").style("display", "none");
-    //   select("#simulatedmap-no-drawing").style("display", "block");
-    // }
   }, [isInitialDraw, isUserStartResize, props.isUserRedraw]);
 
   // === SELECTED DATA ===

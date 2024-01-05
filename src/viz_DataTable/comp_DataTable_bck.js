@@ -2,11 +2,12 @@ import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { deactivateChart, setSelectedData } from "../action/index";
-import { Row, Col, Card, Button, Table, Skeleton} from "antd";
+import { Row, Col, Card, Button, Table, Skeleton, Input, Space } from "antd";
 //import DataTableSettings from "./comp_DataTable_Settings";
 import {
   DragOutlined,
   CloseOutlined,
+  FilterOutlined,
 } from "@ant-design/icons";
 import { dateToStringIS08601, getIsolateDataHeader } from "../utils/utils";
 import withMeasure from "../hocs/withMeasure";
@@ -15,33 +16,30 @@ const dimensions = ["width", "height"];
 const _ = require("lodash");
 
 const DataTable = (props) => {
-  const [selectedRowKeys, setSelectedRowKeys] = useState([]);
   const isolateData = _.cloneDeep(Array.from(props.data.values()));
   const dataTable = { headers: null, cells: null };
-
   const cells =
     isolateData && isolateData[0]
       ? isolateData.map((d, idx) => {
           if (d.isolate_colDate instanceof Date) {
             d.isolate_colDate = dateToStringIS08601(d.isolate_colDate);
           }
-          return { key: d.isolate_name, ...d };
+          return { key: idx, ...d };
         })
       : null;
   const [tableCells, setTableCells] = useState(cells);
   //create headers
   const tableHeaders =
     isolateData && isolateData[0] ? createHeaders(isolateData) : null;
-  
-    //USE EFFECTS
+
+  //USE EFFECTS
   useEffect(() => {
     if (props.selectedData) {
-      setSelectedRowKeys(props.selectedData);
       let tableCells = isolateData.map((d, idx) => {
         if (d.isolate_colDate instanceof Date) {
           d.isolate_colDate = dateToStringIS08601(d.isolate_colDate);
         }
-        return { key: d.isolate_name, ...d };
+        return { key: idx, ...d };
       });
 
       if (props.selectedData.length > 0) {
@@ -49,7 +47,6 @@ const DataTable = (props) => {
           return props.selectedData.indexOf(d.isolate_name) !== -1;
         });
         setTableCells(filteredCells);
-        
       } else {
         setTableCells(tableCells);
       }
@@ -61,25 +58,46 @@ const DataTable = (props) => {
     props.deactivateChart(props.id);
   };
 
-  const onSelectChange = (newSelectedRowKeys) => {
-    setSelectedRowKeys(newSelectedRowKeys);
+  const onTableChangeHandler = (searchedColumn, searchText, tableData) => {
+    const searchTextList = searchText.split("::");
+    if (Array.isArray(tableData.currentDataSource)) {
+      if (tableData.currentDataSource.length > 0) {
+        props.setSelectedData(
+          tableData.currentDataSource.map((d) => d.isolate_name)
+        );
+      } else {
+        let selectedData = [];
+        if (searchedColumn === "isolate_colDate") {
+          let filteredCells = isolateData.filter(function(d) {
+            let record = d[searchedColumn];
+            return searchTextList.indexOf(record) !== -1 ? true : false;
+            //return searchTextList.some((t) => record.includes(t.toLowerCase()));
+          });
+          if (filteredCells) {
+            selectedData = filteredCells;
+          }
+        } else {
+          let filteredCells = isolateData.filter(function(d) {
+            let record = d[searchedColumn].toString();
+            return searchTextList.indexOf(record) !== -1 ? true : false;
+            //return searchTextList.some((t) => record.includes(t.toLowerCase()));
+          });
+
+          if (filteredCells) {
+            selectedData = filteredCells;
+          }
+        }
+        if (selectedData && selectedData.length > 0) {
+          props.setSelectedData(selectedData.map((d) => d.isolate_name));
+        }
+      }
+    }
   };
 
-  const rowSelection = {
-    selectedRowKeys,
-    onChange: onSelectChange,
-  };
-
-  const resetSelection = () => {
-    setSelectedRowKeys([]);
+  const clearSelectedDataHandler = () => {
+    //setSearchText(null);
     props.setSelectedData([]);
   };
-
-const displaySelectedData = () => {
-if (selectedRowKeys.length > 0) {
-    props.setSelectedData(selectedRowKeys);
-  }
-}
 
   //Util functions
   function createHeaders(isolateData) {
@@ -104,17 +122,68 @@ if (selectedRowKeys.length > 0) {
           key: key,
           dataIndex: key,
           title: getIsolateDataHeader(key),
-          sorter: {
-            compare: (a, b) => {
-              if (a[key] < b[key]) {
-                return -1;
-              }
-              if (a[key] > b[key]) {
-                return 1;
-              }
-              return 0;
+          filterDropdown: ({
+            setSelectedKeys,
+            selectedKeys,
+            confirm,
+            clearFilters,
+          }) => (
+            <div style={{ padding: 8 }}>
+              <Input
+                placeholder={`Filter ${getIsolateDataHeader(key)}`}
+                value={selectedKeys[0]}
+                onChange={(e) =>
+                  setSelectedKeys(e.target.value ? [e.target.value] : [])
+                }
+                onPressEnter={() => {
+                  confirm();
+                }}
+                style={{ width: 188, marginBottom: 8, display: "block" }}
+              />
+              <Space>
+                <Button
+                  type="primary"
+                  onClick={() => {
+                    confirm();
+                  }}
+                  icon={<FilterOutlined />}
+                  size="small"
+                  style={{ width: 90 }}
+                >
+                  Filter
+                </Button>
+                <Button
+                  onClick={() => {
+                    clearFilters();
+                    clearSelectedDataHandler();
+                  }}
+                  size="small"
+                  style={{ width: 90 }}
+                >
+                  Reset filter
+                </Button>
+              </Space>
+            </div>
+          ),
+          filteredValue: null,
+          onFilter: function(value, record) {
+            if (record[key]) {
+              const textInCell = record[key].toString();
+              //if text in cell contains value, return true
+              const res = textInCell.match(value) ? true : false;
+              return res;
+            } else {
+              return "";
             }
-          }
+          },
+          filterIcon: function(filtered) {
+            return (
+              <FilterOutlined
+                style={{ color: filtered ? "#1890ff" : undefined }}
+              />
+            );
+          },
+          filterMultiple: true,
         };
       });
     return headers;
@@ -170,11 +239,10 @@ if (selectedRowKeys.length > 0) {
             }}
           >
             <p style={{ height: "40px", marginLeft: "10px" }}>
-              Row/s selected: &nbsp;
-              <strong>{selectedRowKeys.length}</strong> &nbsp;
+              Data selected: &nbsp;
+              <strong>{tableCells.length}</strong> &nbsp;
             </p>
-            <Button onClick={resetSelection}>Reset Selection</Button>
-            <Button style={{marginLeft: "10px"}} onClick={displaySelectedData}>Display Selected Row/s</Button>
+            <Button onClick={clearSelectedDataHandler}>Reset</Button>
             <Table
               style={{
                 width: "100%",
@@ -183,7 +251,20 @@ if (selectedRowKeys.length > 0) {
               dataSource={tableCells}
               pagination={false}
               columns={tableHeaders}
-              rowSelection={rowSelection}
+              onChange={function(filters, extra) {
+                //only trigered when filters are changed
+                let searchedColumn = null;
+                let searchText = null;
+                Object.keys(filters).forEach(function(key) {
+                  if (filters[key]) {
+                    searchedColumn = key;
+                    searchText = filters[key][0]; //get the content of an array
+                  }
+                });
+                if (searchedColumn && searchText) {
+                  onTableChangeHandler(searchedColumn, searchText, extra);
+                }
+              }}
             />
           </Row>
         )}

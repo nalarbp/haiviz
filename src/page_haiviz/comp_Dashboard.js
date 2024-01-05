@@ -1,6 +1,3 @@
-/* ============================================================================
-
-============================================================================ */
 import React from "react";
 import ReactGridLayout, { WidthProvider } from "react-grid-layout";
 import "react-grid-layout/css/styles.css";
@@ -19,7 +16,7 @@ import PreloadedDataset from "../page_all/comp_preloadedDataset";
 
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import { changeColorResizeSignal } from "../action/index";
+import { setLayout, changeColorResizeSignal } from "../action/index";
 import { changeTransResizeSignal } from "../action/transGraph_actions";
 import { changeMovementResizeSignal } from "../action/movementChart_actions";
 import { changeSimapResizeSignal } from "../action/simulatedMap_actions";
@@ -35,7 +32,12 @@ const GridLayout = WidthProvider(ReactGridLayout);
 //const Mea = withMeasure(dimensions)(PatientMovement);
 
 const Dashboard = (props) => {
-  const layout = props.layout;
+  const layoutState = props.layout;
+  const vw = Math.max(
+    document.documentElement.clientWidth || 0,
+    window.innerWidth || 0
+  );
+  const layoutState_mode = vw < 768 ? "sm" : "md";
   const activeCharts = Object.keys(props.activeChart)
     .map((key) => {
       return { key: key, status: props.activeChart[key].show };
@@ -43,28 +45,16 @@ const Dashboard = (props) => {
     .filter((d) => {
       return d.status;
     });
+ //use useEffect to prevent re-rendering when layoutState changes
+  // useEffect(() => {
+  //   console.log("Dashboard useEffect");
+  //   console.log(layoutState);
+  //   console.log(layoutState_mode);
+  //   console.log(activeCharts);
+  // }, [layoutState, layoutState_mode, activeCharts]);
+  
 
-  //Functions
-  function generateLayout() {
-    const p = props;
-    const availableHandles = ["s", "w", "e", "n", "sw", "nw", "se", "ne"];
-
-    return _.map(new Array(p.items), function(item, i) {
-      const y = _.result(p, "y") || Math.ceil(Math.random() * 4) + 1;
-      return {
-        x: (i * 2) % 12,
-        y: Math.floor(i / 6) * y,
-        w: 2,
-        h: y,
-        i: i.toString(),
-        resizeHandles: _.shuffle(availableHandles).slice(
-          0,
-          _.random(1, availableHandles.length - 1)
-        ),
-      };
-    });
-  }
-
+// functions
   function createChart(id) {
     let newID = id.split("_");
     switch (newID[0]) {
@@ -98,31 +88,26 @@ const Dashboard = (props) => {
         return <div></div>;
     }
   }
-  function getDataGrid(layout, id) {
+
+  function getDataGrid(layoutState, id) {
     let dataGrid;
-    //check viewport browser
-    const vw = Math.max(
-      document.documentElement.clientWidth || 0,
-      window.innerWidth || 0
-    );
-    const layout_mode = vw < 768 ? "sm" : "md";
-    switch (layout_mode) {
+    switch (layoutState_mode) {
       case "sm":
-        layout.sm.forEach(function(d) {
+        layoutState.sm.forEach(function(d) {
           if (d.i === id) {
             dataGrid = d;
           }
         });
         return dataGrid;
       case "md":
-        layout.md.forEach(function(d) {
+        layoutState.md.forEach(function(d) {
           if (d.i === id) {
             dataGrid = d;
           }
         });
         return dataGrid;
       default:
-        layout.md.forEach(function(d) {
+        layoutState.md.forEach(function(d) {
           if (d.i === id) {
             dataGrid = d;
           }
@@ -131,16 +116,35 @@ const Dashboard = (props) => {
     }
   }
 
-  function onLayoutChangeHandler() {
-    let a = generateLayout();
-    console.log(a);
+  function onLayoutChangeHandler(changingLayout) {
+    let newLayoutState = _.cloneDeep(layoutState);
+    changingLayout.forEach(function(d) {
+      let windowID = d.i;
+      let windowLayout = d;
+      if(layoutState_mode === "sm"){
+        newLayoutState.sm.forEach(function(d) {
+          if (d.i === windowID) {
+            Object.keys(windowLayout).forEach(function(key) {
+              d[key] = windowLayout[key];
+            });
+          }
+        });
+      }
+      else{
+        newLayoutState.md.forEach(function(d) {
+          if (d.i === windowID) {
+            Object.keys(windowLayout).forEach(function(key) {
+              d[key] = windowLayout[key];
+            });
+          }
+        });
+      }
+    });
+    props.setLayout(newLayoutState);
   }
 
-  function onResizeStartHandler(
-    layout,
-    oldLayoutItem,
-    layoutItem,
-    placeholder
+  function onResizeStartHandler(layout,
+    layoutItem
   ) {
     let chartIdx = layoutItem.i;
     switch (chartIdx) {
@@ -173,6 +177,7 @@ const Dashboard = (props) => {
     }
   }
 
+
   //inside GridLayout you need multiple div with data-grid and inside the div you put your chart
 
   return (
@@ -194,9 +199,8 @@ const Dashboard = (props) => {
             draggableHandle=".panelHeader"
           >
             {activeCharts.map(function(d, idx) {
-              console.log("Grid Layout ..");
               return (
-                <div key={d.key} data-grid={getDataGrid(layout, d.key)}>
+                <div key={d.key} data-grid={getDataGrid(layoutState, d.key)}>
                   {createChart(d.key)}
                 </div>
               );
@@ -226,6 +230,7 @@ function mapDispatchToProps(dispatch, ownProps) {
       changeMovementResizeSignal: changeMovementResizeSignal,
       changeTempResizeSignal: changeTempResizeSignal,
       changeTreeGanttResizeSignal: changeTreeGanttResizeSignal,
+      setLayout: setLayout,
     },
     dispatch
   );

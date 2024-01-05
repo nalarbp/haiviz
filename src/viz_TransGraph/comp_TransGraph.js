@@ -24,6 +24,7 @@ import {
   changeTransisLinkWeightApplied,
   changeTransLinkFactor,
   changeTransIsNodeLabelShown,
+  changeTransSavedGraph
 } from "../action/transGraph_actions";
 
 const dimensions = ["width", "height"];
@@ -139,6 +140,7 @@ const TransmissionGraph = (props) => {
               setSelectedData={props.setSelectedData}
               colorScale={props.colorScale}
               changeTransIsDownloading={props.changeTransIsDownloading}
+              changeTransSavedGraph={props.changeTransSavedGraph}
             />
           )}
         </Card>
@@ -173,6 +175,7 @@ function mapDispatchToProps(dispatch) {
       changeTransisUserStyleApplied,
       changeTransLinkFactor,
       changeTransisLinkWeightApplied,
+      changeTransSavedGraph
     },
     dispatch
   );

@@ -89,6 +89,7 @@ export const initialState = {
     nodeSize: 5,
     textSize: 5,
     textOffset: 0,
+    savedGraph: null,
   },
   colorScale: { colorType: "isolate_colLocation", colorMap: null },
   colorscaleSettings: {

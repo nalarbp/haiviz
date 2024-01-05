@@ -17,6 +17,7 @@ const simulatedmapSettingsReducer = (prevState, action) => {
         newState_resizeSignal_simap.isUserStartResize_simap = action.payload;
       }
       return newState_resizeSignal_simap;
+      
     case NEW_NODE_SIZE_SIMAP:
       let newState_nodeSize = Object.assign({}, prevState);
       if (action.payload && action.payload !== prevState.nodeSize) {
