@@ -1,6 +1,3 @@
-/* ============================================================================
-props.loadTreeData(phylotree);//
-============================================================================ */
 import React, { useEffect, useRef } from "react";
 import { select } from "d3-selection";
 import "./style_PhyloTree.css";
@@ -64,34 +61,37 @@ const PhyloTreeChart = (props) => {
     //console.log("PhyloTreeChart: useEffect: props.selectedData");
     if (props.selectedData) {
       let tree = phylocanvasRef.current;
-      if (!tree) {
-        return;
-      }
-
-      if (props.selectedData.length > 0) {
-        //console.log(props.selectedData);
-        //tree.clearSelect();
-        tree.leaves.forEach((leaf, i) => {
-          //console.log(leaf);
-          if (props.selectedData.indexOf(leaf.id) !== -1) {
-            leaf.highlighted = true;
-            leaf.selected = true;
-          } else {
-            leaf.highlighted = false;
-            leaf.selected = false;
-          }
-        });
-        tree.draw();
-      } else {
-        //tree.clearSelect();
-        tree.leaves.forEach((leaf, i) => {
-          leaf.highlighted = false;
-          leaf.selected = false;
-        });
-        tree.draw();
+      if (tree) {
+        updateSelectedData(tree)
       }
     }
   }, [props.selectedData]);
+  function updateSelectedData(tree) {
+    if (props.selectedData && props.selectedData.length > 0) {
+      //keep all branch lines color to black. tree.branches is a object, so iterate through its keys
+      Object.keys(tree.branches).forEach((key) => {
+        tree.branches[key].highlighted = false;
+        tree.branches[key].selected = false;
+      });
+
+      tree.leaves.forEach((leaf, i) => {
+        if (props.selectedData.indexOf(leaf.id) !== -1) {
+          leaf.highlighted = true;
+          leaf.selected = true;
+        } else {
+          leaf.highlighted = false;
+          leaf.selected = false;
+        }
+      });
+      tree.draw();
+    } else {
+      tree.leaves.forEach((leaf, i) => {
+        leaf.highlighted = false;
+        leaf.selected = false;
+      });
+      tree.draw();
+    }
+  }
 
   //Update layout
   useEffect(() => {
@@ -131,12 +131,16 @@ const PhyloTreeChart = (props) => {
     //console.log("PhyloTreeChart: useEffect: props.phylotreeSettings.textSize");
     let tree = phylocanvasRef.current;
     if (tree) {
-      tree.leaves.forEach((leaf, i) => {
-        leaf.labelStyle = { textSize: leafLabelSize };
-      });
-      tree.draw();
+      updateLeafLabelSize(tree)
     }
   }, [leafLabelSize]);
+  function updateLeafLabelSize(tree) {
+    tree.leaves.forEach((leaf, i) => {
+      leaf.labelStyle = { textSize: leafLabelSize };
+    });
+    tree.draw();
+ 
+  }
 
   //DRAWING
   function draw() {
@@ -186,6 +190,9 @@ const PhyloTreeChart = (props) => {
     tree.setTreeType(treeLayout); // Supported for rectangular, circular, and hierarchical tree types
     tree.alignLabels = isTaxaAligned; // false to reset
     tree.load(phylotreeData);
+    updateLeafLabelSize(tree)
+    updateSelectedData(tree)
+    //
     phylocanvasRef.current = tree;
   }
 

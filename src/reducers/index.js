@@ -50,7 +50,7 @@ export const initialState = {
   phylotreeSettings: {
     isUserStartResize: false,
     layout: "rectangular",
-    isTaxaAligned: true,
+    isTaxaAligned: false,
     isDownloading: false,
     nodeSize: 5,
     textSize: 6,
