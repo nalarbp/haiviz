@@ -24,7 +24,8 @@ import {
   changeTransisLinkWeightApplied,
   changeTransLinkFactor,
   changeTransIsNodeLabelShown,
-  changeTransSavedGraph
+  changeTransSavedGraph,
+  changeTransIsSavingGraph
 } from "../action/transGraph_actions";
 
 const dimensions = ["width", "height"];
@@ -175,7 +176,8 @@ function mapDispatchToProps(dispatch) {
       changeTransisUserStyleApplied,
       changeTransLinkFactor,
       changeTransisLinkWeightApplied,
-      changeTransSavedGraph
+      changeTransSavedGraph,
+      changeTransIsSavingGraph
     },
     dispatch
   );

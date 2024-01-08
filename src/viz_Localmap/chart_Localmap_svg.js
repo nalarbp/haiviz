@@ -413,7 +413,6 @@ const LocalmapChart = (props) => {
           }
         })
         .style("opacity", (d) => {
-          console.log(d);
           if (props.selectedData.indexOf(d.isolate_name) !== -1) {
             return 0.9;
           } else {

@@ -6,12 +6,11 @@ import {
   removeAllChildFromNode,
   downloadFileAsText,
 } from "../utils/utils";
-import { Button, Empty, Spin } from "antd";
+import { Button, Empty, Spin, notification } from "antd";
 import "./style_TransGraph.css";
 import cytoscape from "cytoscape";
-
 import svg from "cytoscape-svg";
-import { ClearOutlined } from "@ant-design/icons";
+import { ClearOutlined, SaveOutlined } from "@ant-design/icons";
 import usePrevious from "../react_hooks/usePrevious-hook";
 
 const spread = require("cytoscape-spread");
@@ -27,7 +26,6 @@ const TransGraph = (props) => {
   //DRAWING CONSTRUCTOR
   const [isDrawCompleted, setisDrawCompleted] = useState(null);
   const transmission = _.cloneDeep(props.data);
-  //console.log(transmission);
   const transmissionCytoscapeRef = useRef();
   const transmissionContainerRef = useRef();
   const cytoscapeRef = useRef(null);
@@ -51,18 +49,28 @@ const TransGraph = (props) => {
     props.setSelectedData([]);
   };
 
+  const saveGraphHandler = () => {
+    const savedGraph = cytoscapeRef.current.json().elements;
+    props.changeTransSavedGraph(savedGraph);
+    notification.info({
+      message: "Graph's layout has been saved",
+      placement: "bottomRight",
+      duration: 1
+    });
+  };
+
   // const boxSelectionHandler = () => {
   //   if (cytoscapeRef.current) {
   //     let cy = cytoscapeRef.current;
 
   //     let selectedNodes = [];
   //     cy.nodes().forEach(function(n) {
-  //       console.log(n.selected());
+  //       //console.log(n.selected());
   //       if (n.active()) {
   //         selectedNodes.push(n.data("label"));
   //       }
   //     });
-  //     //console.log(selectedNodes);
+  //     ////console.log(selectedNodes);
   //     //props.setSelectedData(selectedNodes);
   //   }
   // };
@@ -71,6 +79,7 @@ const TransGraph = (props) => {
   //downloading
   useEffect(() => {
     if (transgraphIsDownloading) {
+      //console.log("downloading");
       let cy = cytoscapeRef.current;
       let svgContent = cy.svg({ scale: 1, full: true });
       downloadFileAsText("HAIviz-cytoscape-svg.svg", svgContent);
@@ -79,49 +88,105 @@ const TransGraph = (props) => {
   }, [transgraphIsDownloading]);
 
   useEffect(() => {
-    console.log("transgraph isInitialDraw, isUserStartResize, isUserRedraw");
-    if (isUserStartResize) {
-      console.log("transgraph isUserStartResize");
-      //if its back from other tab or page
-      //else if its from resize
-      if(cytoscapeRef.current){
-        console.log("transgraph isUserStartResize, cytoscapeRef.current is not null");
-        //save current Ref
-        const savedGraph = cytoscapeRef.current.json().elements;
-        props.changeTransSavedGraph(savedGraph);
-        select("#transgraph-zoomButton-container").style("display", "none");
-        select("#transgraph-no-drawing").style("display", "block");
-        removeAllChildFromNode("#transmission-cy");
-        cytoscapeRef.current = null;
-      } else {
-        console.log("transgraph isUserStartResize, cytoscapeRef.current is null");
-        //cytoscapeRef.current = null;
+    //console.log("useEffect isInitialDraw ---");
+    if(isInitialDraw){
+      if(!props.transgraphSettings.savedGraph){
+        if(isUserStartResize && !props.isUserRedraw){
+          //console.log("isUserStartResize");
+          select("#transgraph-zoomButton-container").style("display", "none");
+          select("#transgraph-no-drawing").style("display", "block");
+          removeAllChildFromNode("#transmission-cy");
+        } else {
+          //console.log("no saved graph");
+          draw();
+        }
         
       }
-    } else {
-      if (isInitialDraw) {
-        console.log("transgraph isInitialDraw");
-        draw();
-      } else if (props.isUserRedraw) {
-          console.log("transgraph isUserRedraw");
-          //redraw using the saved graph
-          const cy = cytoscape({
-            container: document.getElementById("transmission-cy"),
-            pannable: true,
-            selected: true,
-            boxSelectionEnabled: false});
-          cy.add(props.transgraphSettings.savedGraph);
-          
-
-
-          cy.style().update();
-          cytoscapeRef.current = cy;
+      else{
+        if(isUserStartResize && !props.isUserRedraw){
+          //console.log("isUserStartResize");
+          select("#transgraph-zoomButton-container").style("display", "none");
+          select("#transgraph-no-drawing").style("display", "block");
+          removeAllChildFromNode("#transmission-cy");
         }
+        else{
+          //console.log("saved graph");
+          removeAllChildFromNode("#transmission-cy");
+          redrawPreviousGraph()
+        }
+      }
     }
-  }, [isInitialDraw, isUserStartResize, props.isUserRedraw]);
+  }, [isInitialDraw])
+
+  useEffect(() => {
+    if(isUserStartResize){
+      //console.log("isUserStartResize");
+      select("#transgraph-zoomButton-container").style("display", "none");
+      select("#transgraph-no-drawing").style("display", "block");
+      removeAllChildFromNode("#transmission-cy");
+    }
+  },[isUserStartResize])
+
+  useEffect(() => {
+    if(props.isUserRedraw){
+      //console.log("isUserRedraw");
+      if(props.transgraphSettings.savedGraph){
+        //console.log("savedGraph is true");
+        removeAllChildFromNode("#transmission-cy");
+        redrawPreviousGraph();
+      }
+      else{
+        //console.log("else");
+        removeAllChildFromNode("#transmission-cy");
+        draw();
+      }
+    }
+  }, [props.isUserRedraw]);
+
+  // useEffect(() => {
+  //   //console.log("useEffect ---");
+  //   if (isUserStartResize) {
+  //       //console.log("isUserStartResize");
+  //       select("#transgraph-zoomButton-container").style("display", "none");
+  //       select("#transgraph-no-drawing").style("display", "block");
+  //       removeAllChildFromNode("#transmission-cy");
+  //   } else {
+  //     if (isInitialDraw) {
+  //       //console.log("isInitialDraw");
+  //       draw();
+  //     } else if (props.isUserRedraw) {
+  //         //console.log("isUserRedraw");
+  //         //redraw using the saved graph
+  //         if(props.transgraphSettings.savedGraph){
+  //           //console.log("savedGraph is true");
+  //           removeAllChildFromNode("#transmission-cy");
+  //           const cy = cytoscape({
+  //             container: document.getElementById("transmission-cy"),
+  //             pannable: true,
+  //             selected: true,
+  //             boxSelectionEnabled: false});
+  //           cy.add(props.transgraphSettings.savedGraph);
+  //           cy.style().update();
+  //           cytoscapeRef.current = cy;
+  //         }
+  //         else{
+  //           //console.log("else");
+  //           removeAllChildFromNode("#transmission-cy");
+  //           draw();
+  //         }
+  //       } else {
+  //         //console.log("from other tab");
+  //       select("#transgraph-zoomButton-container").style("display", "none");
+  //       select("#transgraph-no-drawing").style("display", "block");
+  //       removeAllChildFromNode("#transmission-cy");
+  //       }
+  //   }
+  // }, [isInitialDraw, isUserStartResize, props.isUserRedraw]);
+  
   //changing layout
   useEffect(() => {
     if (cytoscapeRef.current) {
+      //console.log("changing layout");
       let cy = cytoscapeRef.current;
       let graph_layout = {
         name: layoutKey,
@@ -135,19 +200,23 @@ const TransGraph = (props) => {
   }, [layoutKey]);
 
   useEffect(() => {
+    //console.log("useEffect selectedData ---");
     selectUnselect();
   }, [props.selectedData]);
 
   useEffect(() => {
       if (isDrawCompleted) {
+        //console.log("isDrawCompleted");
           select("#transgraph-loading").style("display", "none");
       } else {
+        //console.log("isDrawCompleted else");
         select("#transgraph-loading").style("display", "block");
       }
   }, [isDrawCompleted]);
 
   useEffect(() => {
     if (cytoscapeRef.current && props.colorScale.colorType) {
+      //console.log("colorScale changed");
       let cy = cytoscapeRef.current;
       cy.style()
         .selector("node")
@@ -167,7 +236,12 @@ const TransGraph = (props) => {
   useEffect(() => {
     if (cytoscapeRef.current) {
       let cy = cytoscapeRef.current;
-      cy.style()
+      updateUserLinkStyle(cy)
+    }
+  }, [isUserStyleApplied]);
+
+  function updateUserLinkStyle(cy) {
+    cy.style()
         .selector("edge")
         .style({
           "line-style": (d) => (isUserStyleApplied ? d.data("style") : "solid"),
@@ -177,99 +251,108 @@ const TransGraph = (props) => {
         })
         .update();
       cytoscapeRef.current = cy;
-    }
-  }, [isUserStyleApplied]);
+  }
 
   useEffect(() => {
     if (cytoscapeRef.current) {
       let cy = cytoscapeRef.current;
-      if (isLinkLabelShown) {
-        cy.style()
-          .selector("edge")
-          .style({
-            "text-background-opacity": 1,
-            "text-opacity": 1,
-          })
-          .update();
-        cytoscapeRef.current = cy;
-      } else {
-        cy.style()
-          .selector("edge")
-          .style({
-            "text-background-opacity": 0,
-            "text-opacity": 0,
-          })
-          .update();
-        cytoscapeRef.current = cy;
-      }
+      updateLinkLabelShow(cy);
     }
   }, [isLinkLabelShown]);
+function updateLinkLabelShow(cy) {
+  if (isLinkLabelShown) {
+    cy.style()
+      .selector("edge")
+      .style({
+        "text-background-opacity": 1,
+        "text-opacity": 1,
+      })
+      .update();
+    cytoscapeRef.current = cy;
+  } else {
+    cy.style()
+      .selector("edge")
+      .style({
+        "text-background-opacity": 0,
+        "text-opacity": 0,
+      })
+      .update();
+    cytoscapeRef.current = cy;
+  }
+}
 
   useEffect(() => {
     if (cytoscapeRef.current) {
-      let cy = cytoscapeRef.current;
-      if (isNodeLabelShown) {
-        cy.style()
-          .selector("node")
-          .style({
-            "text-size": 1,
-          })
-          .update();
-        cytoscapeRef.current = cy;
-      } else {
-        cy.style()
-          .selector("node")
-          .style({
-            "text-opacity": 0,
-          })
-          .selector(":parent")
-          .style({
-            "text-opacity": 1,
-          })
-          .update();
-        cytoscapeRef.current = cy;
-      }
+      var cy = cytoscapeRef.current;
+      updateNodeLabelShow(cy);
     }
   }, [isNodeLabelShown]);
+  function updateNodeLabelShow(cy) {
+    if (isNodeLabelShown) {
+      cy.style()
+        .selector("node")
+        .style({
+          "text-opacity": 1,
+        })
+        .update();
+      cytoscapeRef.current = cy;
+    } else {
+      cy.style()
+        .selector("node")
+        .style({
+          "text-opacity": 0,
+        })
+        .selector(":parent")
+        .style({
+          "text-opacity": 1,
+        })
+        .update();
+      cytoscapeRef.current = cy;
+    }
+  }
 
   useEffect(() => {
     if (cytoscapeRef.current) {
+      //console.log("isLinkWeightApplied changed")
       let cy = cytoscapeRef.current;
-      if (isLinkWeightApplied) {
-        cy.style()
-          .selector("edge")
-          .style({
-            width: function(e) {
-              return getEdgeArrowWidth(
-                isLinkWeightApplied,
-                e.data("weight"),
-                linkFactor,
-                "edge"
-              );
-            },
-            "arrow-scale": function(e) {
-              return getEdgeArrowWidth(
-                isLinkWeightApplied,
-                e.data("weight"),
-                linkFactor,
-                "arrow"
-              );
-            },
-          })
-          .update();
-        cytoscapeRef.current = cy;
-      } else {
-        cy.style()
-          .selector("edge")
-          .style({
-            width: 3,
-            "arrow-scale": 1,
-          })
-          .update();
-        cytoscapeRef.current = cy;
-      }
+      updateLinkWeight(cy);
     }
   }, [isLinkWeightApplied, linkFactor]);
+  function updateLinkWeight(cy) {
+    if (isLinkWeightApplied) {
+      cy.style()
+        .selector("edge")
+        .style({
+          width: function(e) {
+            return getEdgeArrowWidth(
+              isLinkWeightApplied,
+              e.data("weight"),
+              linkFactor,
+              "edge"
+            );
+          },
+          "arrow-scale": function(e) {
+            return getEdgeArrowWidth(
+              isLinkWeightApplied,
+              e.data("weight"),
+              linkFactor,
+              "arrow"
+            );
+          },
+        })
+        .update();
+      cytoscapeRef.current = cy;
+    } else {
+      cy.style()
+        .selector("edge")
+        .style({
+          width: 3,
+          "arrow-scale": 1,
+        })
+        .update();
+      cytoscapeRef.current = cy;
+    }
+  }
 
   //Util
   const getEdgeArrowWidth = function(
@@ -297,31 +380,104 @@ const TransGraph = (props) => {
 
   //DRAW
   function draw() {
-    //clean previous drawing artifacts
+    //console.log("draw");
     select("#transgraph-no-drawing").style("display", "none");
-    select("#transgraph-zoomButton-container").style("display", "block");
-    const graph_layout = { name: layoutKey, animate: false, fit: true };
-
+    const graph_layout = { name: layoutKey, animate: false, fit: true, prelayout: false };
     const cy = cytoscape({
       elements: transmission,
       container: document.getElementById("transmission-cy"),
       pannable: true,
       selected: true,
-      boxSelectionEnabled: false,
-      style: [
-        {
-          selector: "node",
-          style: {
-            label: "data(label)",
-            "border-width": 3,
-            "border-style": "solid",
-            "border-color": "black",
-          },
+      boxSelectionEnabled: true});
+    coreDraw(cy);
+    cy.layout(graph_layout).run();
+    setisDrawCompleted(true);
+    select("#transgraph-zoomButton-container").style("display", "block");
+  }
+  
+  //REDRAW
+  function redrawPreviousGraph() {
+    if (props.transgraphSettings.savedGraph) {
+      select("#transgraph-no-drawing").style("display", "none");
+      const cy = cytoscape({
+        container: document.getElementById("transmission-cy"),
+        pannable: true,
+        selected: true,
+        boxSelectionEnabled: true});
+      cy.add(props.transgraphSettings.savedGraph);
+      coreDraw(cy);
+      const graph_layout = {
+        name: 'preset',
+        positions: function( node ){ 
+          return node.position(); 
         },
-        {
-          selector: ":parent",
-          shape: "round",
-          style: {
+        fit: true
+      };
+      cy.layout(graph_layout).run();
+      setisDrawCompleted(true);
+      select("#transgraph-zoomButton-container").style("display", "block");
+    }
+  }
+
+  //CORE DRAW
+  function coreDraw(cy) {
+    //update the child nodes
+    cy.style()
+    .selector("node")
+    .style({
+        label: "data(label)",
+        "border-width": 3,
+        "border-style": "solid",
+        "border-color": "black",
+        "background-color": function(d) {
+            let isolate_name = d.data("label");
+            let col = "gray";
+            if (props.isolateData) {
+              let obj = props.isolateData.get(isolate_name);
+              col = obj ? getColorScaleByObject(obj, props.colorScale) : "gray";
+            }
+            return col;
+          }
+      })
+      .update();
+    
+    //set the selected nodes by props.selectedData
+    if (props.selectedData && props.selectedData.length > 0) {
+      cy.nodes().forEach(function(n) {
+        let node = n.data("label");
+        let isNodeInSelectedData =
+          props.selectedData.indexOf(node) === -1 ? false : true;
+        if (isNodeInSelectedData) {
+          n.select();
+        } else {
+          n.unselect();
+        }
+      });
+      cy.style().update();
+      cytoscapeRef.current = cy;
+    } else if (props.selectedData && props.selectedData.length === 0) {
+      cy.nodes().unselect();
+      cy.style().update();
+      cytoscapeRef.current = cy;
+    }
+    
+    //update the selected nodes style
+    cy.style()
+    .selector(":selected")
+    .style({
+          "border-width": "5",
+          "border-color": "red",
+          "border-style": "dashed",
+          padding: "8px",
+        })
+        .update();
+
+    cy.selectionType("single");
+
+      //update the parent nodes
+      cy.style()
+      .selector(":parent")
+      .style({
             "background-image": "none",
             "padding-top": "5px",
             "background-position-x": "0",
@@ -333,12 +489,13 @@ const TransGraph = (props) => {
             "border-width": "1",
             "text-valign": "top",
             "text-halign": "center",
-          },
-        },
+          })
+        .update();
 
-        {
-          selector: "edge",
-          style: {
+    //update the edges
+    cy.style()
+      .selector("edge")
+      .style({
             label: "data(weight)",
             "font-size": "8px",
             "text-background-color": "yellow",
@@ -362,7 +519,6 @@ const TransGraph = (props) => {
             "target-arrow-shape": function(e) {
               let arrowShape =
                 e.data("dir") === "forward" ? "triangle" : "none";
-
               return arrowShape;
             },
             "arrow-scale": function(e) {
@@ -374,83 +530,33 @@ const TransGraph = (props) => {
               );
             },
             "curve-style": "bezier",
-          },
-        },
-        {
-          selector: ":selected",
-          style: {
-            "border-width": "5",
-            "border-color": "red",
-            "border-style": "dashed",
-            padding: "8px",
-          },
-        },
-      ],
-    });
-    cy.selectionType("single");
-    cy.layout(graph_layout).run();
+          })
+          .update();
 
     //node event click listener
     cy.nodes().bind("click", function(evt) {
       let clickedNode = [evt.target.data("label")];
-      // let prevSelectedNodes = [];
-      // cy.nodes().forEach(function(n) {
-      //   if (n.selected()) {
-      //     prevSelectedNodes.push(n.data("label"));
-      //   }
-      // });
-      // console.log(prevSelectedNodes);
-      // prevSelectedNodes.push(clickedNode);
       props.setSelectedData(clickedNode);
     });
-    //click on background listener
+
+    //when box selection is enabled
+    cy.on("boxselect", function(evt) {
+      boxSelectionHandler();
+    });
+
+    //click on background listener to reset selection
     cy.on("click", function(evt) {
       if (evt.target === cy) {
         props.setSelectedData([]);
       }
     });
-    cy.on('position', 'node', function(event) {
-      var node = event.target; // Get the node object
-      var newPosition = node.position(); // Get the new position of the node
-    
-      // Call your custom function here and pass the necessary arguments
-      console.log(newPosition);
-    });
-    // cy.on("box", function(evt) {
-    //   props.setSelectedData([evt.target.data("label")]);
-    // });
+    //some preliminary updates
+    updateLinkWeight(cy);
+    updateNodeLabelShow(cy);
+    updateLinkLabelShow(cy);
 
-    //color the nodes
-    cy.style()
-      .selector("node")
-      .style({
-        "background-color": function(d) {
-          let isolate_name = d.data("label");
-          let col = "gray";
-          if (props.isolateData) {
-            let obj = props.isolateData.get(isolate_name);
-            col = obj ? getColorScaleByObject(obj, props.colorScale) : "gray";
-          }
-          return col;
-        },
-      })
-      .update();
-
-    //save current Ref
     cytoscapeRef.current = cy;
-    setisDrawCompleted(true);
   }
-  //write fuction redraw, that will be called when user click redraw button. it should be based on the current state of the cytoscapeRef.current. dont rerun the layout, just update the data and style
-  //REDRAW
-  function redraw() {
-    if (cytoscapeRef.current) {
-      const graph_layout = { name: layoutKey, animate: false, fit: true };
-      let cy = cytoscapeRef.current;
-      cy.layout(graph_layout).run();
-    }
-  }
-
-      
 
   //SELECT & UNSELECT
   function selectUnselect() {
@@ -477,18 +583,31 @@ const TransGraph = (props) => {
     }
   }
 
+  function boxSelectionHandler() {
+    if (cytoscapeRef.current) {
+      let cy = cytoscapeRef.current;
+      let selectedNodes = [];
+      cy.nodes().forEach(function(n) {
+        if (n.selected()) {
+          selectedNodes.push(n.data("label"));
+        }
+      });
+      props.setSelectedData(selectedNodes);
+    }
+  }
+
   return (
     <React.Fragment>
       <div id="transmissionContainer" ref={transmissionContainerRef}>
-        <div id="transgraph-no-drawing">
+      <div id="transgraph-no-drawing">
           <Empty
             description={"No chart: please click redraw button"}
             image={Empty.PRESENTED_IMAGE_SIMPLE}
           />
         </div>
-        <div id="transgraph-loading">
-          <Spin />
-        </div>
+      <div id="transgraph-loading">
+        <Spin />
+      </div>
         <div id="transgraph-zoomButton-container">
           <Button
             title={"Clear selection"}
@@ -497,6 +616,14 @@ const TransGraph = (props) => {
             size={"medium"}
             icon={<ClearOutlined />}
             onClick={clearSelectedDataHandler}
+          ></Button>
+          <Button
+            title={"Save graph"}
+            shape={"circle"}
+            id={"transgraph-saveGraph"}
+            size={"medium"}
+            icon={<SaveOutlined />}
+            onClick={saveGraphHandler}
           ></Button>
         </div>
         <div

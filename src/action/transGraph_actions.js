@@ -87,3 +87,10 @@ export function changeTransSavedGraph(value) {
     payload: value,
   };
 }
+
+export function changeTransIsSavingGraph(value) {
+  return {
+    type: constant.IS_SAVING_GRAPH_TRANS,
+    payload: value,
+  };
+}
