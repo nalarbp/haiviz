@@ -51,43 +51,105 @@
       "gantt": "./data/preloaded/e4/snitkin_gantt.csv"
     },
     {
-      "id": "private-bp-tsv",
-      "name": "BP TSV",
-      "description": "Private dataset for testing purposes.",
-      "metadata": "./data/preloaded/private_preloaded_dataset_2/gassiep_metadata.csv",
-      "map": "./data/preloaded/private_preloaded_dataset_2/gassiep_map.xml",
-      "tree": "",
-      "network": "",
-      "gantt": ""
+      "id": "360b11a7c096dada4985768d289b35e7_1000_samples",
+      "name": "1000_samples",
+      "description": "Dummy dataset for testing purposes.",
+      "metadata": "./data/preloaded/1000_samples/metadata.csv",
+      "map": "./data/preloaded/1000_samples/map.xml",
+      "tree": "./data/preloaded/1000_samples/tree.nwk",
+      "network": "./data/preloaded/1000_samples/graph.dot",
+      "gantt": "./data/preloaded/1000_samples/movement.csv"
     },
     {
-      "id": "private-uti-ecoli",
-      "name": "AGED Ecoli UTI",
-      "description": "Private dataset for testing purposes.",
-      "metadata": "./data/preloaded/private_preloaded_dataset_3/p3_metadata.csv",
-      "map": "",
-      "tree": "",
-      "network": "",
-      "gantt": ""
+      "id": "360b11a7c096dada4985768d289b35e7_250_samples",
+      "name": "250_samples",
+      "description": "Dummy dataset for testing purposes.",
+      "metadata": "./data/preloaded/250_samples/metadata.csv",
+      "map": "./data/preloaded/250_samples/map.xml",
+      "tree": "./data/preloaded/250_samples/tree.nwk",
+      "network": "./data/preloaded/250_samples/graph.dot",
+      "gantt": "./data/preloaded/250_samples/movement.csv"
     },
     {
-      "id": "private-pipe_1",
-      "name": "Demo: Hospital water treatment plant",
-      "description": "Private dataset for testing purposes.",
-      "metadata": "./data/preloaded/private_pipe_1/dummy_metadata.csv",
-      "map": "./data/preloaded/private_pipe_1/azuma_et_al_map.xml",
-      "network": "./data/preloaded/private_pipe_1/network.gv",
-      "gantt": ""
+      "id": "360b11a7c096dada4985768d289b35e7_50_samples",
+      "name": "50_samples",
+      "description": "Dummy dataset for testing purposes.",
+      "metadata": "./data/preloaded/50_samples/metadata.csv",
+      "map": "./data/preloaded/50_samples/map.xml",
+      "tree": "./data/preloaded/50_samples/tree.nwk",
+      "network": "./data/preloaded/50_samples/graph.dot",
+      "gantt": "./data/preloaded/50_samples/movement.csv"
     },
     {
-      "id": "private-pipe_2",
-      "name": "Demo: Splash zone",
-      "description": "Private dataset for testing purposes.",
-      "metadata": "./data/preloaded/private_pipe_2/dummy_metadata.csv",
-      "map": "./data/preloaded/private_pipe_2/chg_harvey_map.xml",
-      "network": "./data/preloaded/private_pipe_2/network.gv",
-      "gantt": ""
+      "id": "360b11a7c096dada4985768d289b35e7_500_samples",
+      "name": "500_samples",
+      "description": "Dummy dataset for testing purposes.",
+      "metadata": "./data/preloaded/500_samples/metadata.csv",
+      "map": "./data/preloaded/500_samples/map.xml",
+      "tree": "./data/preloaded/500_samples/tree.nwk",
+      "network": "./data/preloaded/500_samples/graph.dot",
+      "gantt": "./data/preloaded/500_samples/movement.csv"
+    },
+    {
+      "id": "360b11a7c096dada4985768d289b35e7_750_samples",
+      "name": "750_samples",
+      "description": "Dummy dataset for testing purposes.",
+      "metadata": "./data/preloaded/750_samples/metadata.csv",
+      "map": "./data/preloaded/750_samples/map.xml",
+      "tree": "./data/preloaded/750_samples/tree.nwk",
+      "network": "./data/preloaded/750_samples/graph.dot",
+      "gantt": "./data/preloaded/750_samples/movement.csv"
+    },
+    {
+      "id": "360b11a7c096dada4985768d289b35e7_1000_samples",
+      "name": "1000_samples",
+      "description": "Dummy dataset for testing purposes.",
+      "metadata": "./data/preloaded/1000_samples/metadata.csv",
+      "map": "./data/preloaded/1000_samples/map.xml",
+      "tree": "./data/preloaded/1000_samples/tree.nwk",
+      "network": "./data/preloaded/1000_samples/graph.dot",
+      "gantt": "./data/preloaded/1000_samples/movement.csv"
+    },
+    {
+      "id": "360b11a7c096dada4985768d289b35e7_250_samples",
+      "name": "250_samples",
+      "description": "Dummy dataset for testing purposes.",
+      "metadata": "./data/preloaded/250_samples/metadata.csv",
+      "map": "./data/preloaded/250_samples/map.xml",
+      "tree": "./data/preloaded/250_samples/tree.nwk",
+      "network": "./data/preloaded/250_samples/graph.dot",
+      "gantt": "./data/preloaded/250_samples/movement.csv"
+    },
+    {
+      "id": "360b11a7c096dada4985768d289b35e7_50_samples",
+      "name": "50_samples",
+      "description": "Dummy dataset for testing purposes.",
+      "metadata": "./data/preloaded/50_samples/metadata.csv",
+      "map": "./data/preloaded/50_samples/map.xml",
+      "tree": "./data/preloaded/50_samples/tree.nwk",
+      "network": "./data/preloaded/50_samples/graph.dot",
+      "gantt": "./data/preloaded/50_samples/movement.csv"
+    },
+    {
+      "id": "360b11a7c096dada4985768d289b35e7_500_samples",
+      "name": "500_samples",
+      "description": "Dummy dataset for testing purposes.",
+      "metadata": "./data/preloaded/500_samples/metadata.csv",
+      "map": "./data/preloaded/500_samples/map.xml",
+      "tree": "./data/preloaded/500_samples/tree.nwk",
+      "network": "./data/preloaded/500_samples/graph.dot",
+      "gantt": "./data/preloaded/500_samples/movement.csv"
+    },
+    {
+      "id": "360b11a7c096dada4985768d289b35e7_750_samples",
+      "name": "750_samples",
+      "description": "Dummy dataset for testing purposes.",
+      "metadata": "./data/preloaded/750_samples/metadata.csv",
+      "map": "./data/preloaded/750_samples/map.xml",
+      "tree": "./data/preloaded/750_samples/tree.nwk",
+      "network": "./data/preloaded/750_samples/graph.dot",
+      "gantt": "./data/preloaded/750_samples/movement.csv"
     }
   ],
-  "description": "This JSON file describes the preloaded datasets."
+  "description": ["This JSON file describes the preloaded datasets."]
 }

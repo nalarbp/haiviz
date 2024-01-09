@@ -3,6 +3,7 @@ import { Row, Col } from "antd";
 import { getIsolateCompositionByCategory } from "../utils/utils";
 import PieChart from "./chart_Pie";
 import "./style_summary.css";
+import { func } from "prop-types";
 
 const SummaryChart = (props) => {
   //states
@@ -21,6 +22,15 @@ const SummaryChart = (props) => {
       setData(data);
     }
   }, [props.isolateData, props.colorScale]);
+
+  function getColorIndexLabel() {
+    switch (props.colorScale.colorType) {
+      case "isolate_colLocation":
+        return "location";
+      default:
+        return props.colorScale.colorType;
+    }
+  }
 
   return (
     <React.Fragment>
@@ -48,7 +58,7 @@ const SummaryChart = (props) => {
             }}
           >
             <p>Total isolates: {totalIsolates}</p>
-            <p>Color index: {props.colorScale.colorType}</p>
+            <p>Color index: {getColorIndexLabel()}</p>
           </div>
         </Col>
       </Row>
