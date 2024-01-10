@@ -33,6 +33,7 @@ To run HAIviz locally, for self-hosting, or development, follow these instructio
    - Navigate to the HAIviz repository by typing `cd haiviz` or `cd haiviz-main`.
    - Install all the required dependency packages by typing `npm install -s`.
    - Start the development server by typing `npm start`. 
+   - Some Warnings may be displayed (e.g: Browserslist: caniuse-lite is outdated. Please run: npx browserslist@latest --update-db), but its safe to ignore and wait until compilation complete.
    - This will open your internet browser with the default local address: [http://localhost:3000](http://localhost:3000).
    - This development server and browser will reflect any changes you make to the source code.
 
