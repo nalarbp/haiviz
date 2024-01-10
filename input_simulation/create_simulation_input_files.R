@@ -48,12 +48,6 @@ all_locations <- data.frame(
   'x' = rep(seq(50, 950, length.out = 15), 15),
   'y' = rep(seq(50, 950, length.out = 15), each = 15)
 )
-#plot the all locations grid using ggplot and save as pdf
-p <- ggplot(all_locations, aes(x, y)) + 
-  geom_point(size = 0.1) + theme_void() + theme(aspect.ratio = 1) + labs(x = NULL, y = NULL)
-
-ggsave('./all_locations.pdf', p, width = 1000, height = 1000, units = 'px')
- 
 metadata_locations <- all_locations %>% filter(location %in% metadata_df$location)
 haiviz_mapdata <- metadata_locations %>%
     mutate(haiviz_mapdata=as.character(paste0('location name="', location, '" x="', round(x), '" y="', round(y), '"'))) %>%

@@ -24,10 +24,12 @@ To run HAIviz locally, for self-hosting, or development, follow these instructio
    - Alternatively, you can download the repository by clicking the 'Code' dropdown button and selecting 'Download ZIP'. After downloading, unzip the repository, which will create a new directory named `haiviz-main`. 
  
 4. To run HAIviz offline or for self-hosting.
-- Navigate to the HAIviz build repository by typing `cd haiviz/build` or `cd haiviz-main/build`.
-   - Use the `serve` package to serve this build (current working) directory. Type `serve -s .`. 
+   - From step 3.
+   - Navigate to the HAIviz repository by typing `cd haiviz/` or `cd haiviz-main/`.
+   - Use the `serve` package to serve the build directory. Type `serve -s build`. 
 
 5. To run the development mode.
+   - From step 3. 
    - Navigate to the HAIviz repository by typing `cd haiviz` or `cd haiviz-main`.
    - Install all the required dependency packages by typing `npm install -s`.
    - Start the development server by typing `npm start`. 
