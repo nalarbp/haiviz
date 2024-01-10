@@ -126,7 +126,7 @@ export const closeButtonTitle = "Close the window";
 
 //======= QUICK START GUIDE ==========
 export const quickStartGuideFile =
-  "./data/quickStartGuide/haiviz_01Jan2021.pdf";
+  "./data/quickStartGuide/haiviz_manual.pdf";
 
 //======= PRELOADED PATH ==========
 export const PRELOADED_DATA = "./data/preloaded_dataset.json";

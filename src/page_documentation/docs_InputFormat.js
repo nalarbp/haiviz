@@ -42,9 +42,6 @@ const InputFormat = (props) => {
         </Text>
         <br />
         <br />
-        <Button type="primary" href={constant.TEMPLATE.jpg}>
-          JPG example file
-        </Button>
         <Button type="primary" href={constant.TEMPLATE.xmlData}>
           XML example file
         </Button>

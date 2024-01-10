@@ -1,3 +1,4 @@
+#This file is for continuous integration and deployment (CI/CD) of HAIviz in FordeLab GitLab.
 stages:
   - deploy
 
