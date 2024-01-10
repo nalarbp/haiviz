@@ -51,14 +51,14 @@
       "gantt": "./data/preloaded/e4/snitkin_gantt.csv"
     },
     {
-      "id": "1000_samples",
-      "name": "1000_samples",
+      "id": "50_samples",
+      "name": "50_samples",
       "description": "Dummy dataset for testing purposes.",
-      "metadata": "./data/preloaded/1000_samples/metadata.csv",
-      "map": "./data/preloaded/1000_samples/map.xml",
-      "tree": "./data/preloaded/1000_samples/tree.nwk",
-      "network": "./data/preloaded/1000_samples/graph.dot",
-      "gantt": "./data/preloaded/1000_samples/movement.csv"
+      "metadata": "./data/preloaded/50_samples/metadata.csv",
+      "map": "./data/preloaded/50_samples/map.xml",
+      "tree": "./data/preloaded/50_samples/tree.nwk",
+      "network": "./data/preloaded/50_samples/graph.dot",
+      "gantt": "./data/preloaded/50_samples/movement.csv"
     },
     {
       "id": "250_samples",
@@ -69,16 +69,6 @@
       "tree": "./data/preloaded/250_samples/tree.nwk",
       "network": "./data/preloaded/250_samples/graph.dot",
       "gantt": "./data/preloaded/250_samples/movement.csv"
-    },
-    {
-      "id": "50_samples",
-      "name": "50_samples",
-      "description": "Dummy dataset for testing purposes.",
-      "metadata": "./data/preloaded/50_samples/metadata.csv",
-      "map": "./data/preloaded/50_samples/map.xml",
-      "tree": "./data/preloaded/50_samples/tree.nwk",
-      "network": "./data/preloaded/50_samples/graph.dot",
-      "gantt": "./data/preloaded/50_samples/movement.csv"
     },
     {
       "id": "500_samples",
@@ -99,6 +89,16 @@
       "tree": "./data/preloaded/750_samples/tree.nwk",
       "network": "./data/preloaded/750_samples/graph.dot",
       "gantt": "./data/preloaded/750_samples/movement.csv"
+    },
+    {
+      "id": "1000_samples",
+      "name": "1000_samples",
+      "description": "Dummy dataset for testing purposes.",
+      "metadata": "./data/preloaded/1000_samples/metadata.csv",
+      "map": "./data/preloaded/1000_samples/map.xml",
+      "tree": "./data/preloaded/1000_samples/tree.nwk",
+      "network": "./data/preloaded/1000_samples/graph.dot",
+      "gantt": "./data/preloaded/1000_samples/movement.csv"
     }
   ],
   "description": ["This JSON file describes the preloaded datasets."]
