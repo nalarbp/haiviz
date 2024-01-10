@@ -3,7 +3,6 @@ import { Row, Col } from "antd";
 import { getIsolateCompositionByCategory } from "../utils/utils";
 import PieChart from "./chart_Pie";
 import "./style_summary.css";
-import { func } from "prop-types";
 
 const SummaryChart = (props) => {
   //states

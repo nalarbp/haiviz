@@ -59,22 +59,6 @@ const TransGraph = (props) => {
     });
   };
 
-  // const boxSelectionHandler = () => {
-  //   if (cytoscapeRef.current) {
-  //     let cy = cytoscapeRef.current;
-
-  //     let selectedNodes = [];
-  //     cy.nodes().forEach(function(n) {
-  //       //console.log(n.selected());
-  //       if (n.active()) {
-  //         selectedNodes.push(n.data("label"));
-  //       }
-  //     });
-  //     ////console.log(selectedNodes);
-  //     //props.setSelectedData(selectedNodes);
-  //   }
-  // };
-
   //USE-EFFECTS
   //downloading
   useEffect(() => {
@@ -142,46 +126,6 @@ const TransGraph = (props) => {
       }
     }
   }, [props.isUserRedraw]);
-
-  // useEffect(() => {
-  //   //console.log("useEffect ---");
-  //   if (isUserStartResize) {
-  //       //console.log("isUserStartResize");
-  //       select("#transgraph-zoomButton-container").style("display", "none");
-  //       select("#transgraph-no-drawing").style("display", "block");
-  //       removeAllChildFromNode("#transmission-cy");
-  //   } else {
-  //     if (isInitialDraw) {
-  //       //console.log("isInitialDraw");
-  //       draw();
-  //     } else if (props.isUserRedraw) {
-  //         //console.log("isUserRedraw");
-  //         //redraw using the saved graph
-  //         if(props.transgraphSettings.savedGraph){
-  //           //console.log("savedGraph is true");
-  //           removeAllChildFromNode("#transmission-cy");
-  //           const cy = cytoscape({
-  //             container: document.getElementById("transmission-cy"),
-  //             pannable: true,
-  //             selected: true,
-  //             boxSelectionEnabled: false});
-  //           cy.add(props.transgraphSettings.savedGraph);
-  //           cy.style().update();
-  //           cytoscapeRef.current = cy;
-  //         }
-  //         else{
-  //           //console.log("else");
-  //           removeAllChildFromNode("#transmission-cy");
-  //           draw();
-  //         }
-  //       } else {
-  //         //console.log("from other tab");
-  //       select("#transgraph-zoomButton-container").style("display", "none");
-  //       select("#transgraph-no-drawing").style("display", "block");
-  //       removeAllChildFromNode("#transmission-cy");
-  //       }
-  //   }
-  // }, [isInitialDraw, isUserStartResize, props.isUserRedraw]);
   
   //changing layout
   useEffect(() => {
@@ -208,9 +152,12 @@ const TransGraph = (props) => {
       if (isDrawCompleted) {
         //console.log("isDrawCompleted");
           select("#transgraph-loading").style("display", "none");
+          //hide #transmission-cy by setting opacity to 0
+          select("#transmission-cy").style("opacity", 1);
       } else {
         //console.log("isDrawCompleted else");
         select("#transgraph-loading").style("display", "block");
+        select("#transmission-cy").style("opacity", 0);
       }
   }, [isDrawCompleted]);
 
@@ -381,6 +328,7 @@ function updateLinkLabelShow(cy) {
   //DRAW
   function draw() {
     //console.log("draw");
+    setisDrawCompleted(false);
     select("#transgraph-no-drawing").style("display", "none");
     const graph_layout = { name: layoutKey, animate: false, fit: true, prelayout: false };
     const cy = cytoscape({
@@ -389,14 +337,24 @@ function updateLinkLabelShow(cy) {
       pannable: true,
       selected: true,
       boxSelectionEnabled: true});
-    coreDraw(cy);
-    cy.layout(graph_layout).run();
-    setisDrawCompleted(true);
+    if(transmission.length > 300){
+      setTimeout(() => {
+        coreDraw(cy);
+        cy.layout(graph_layout).run();
+        setisDrawCompleted(true);
+      }, 1000);
+    }
+    else{
+      coreDraw(cy);
+      cy.layout(graph_layout).run();
+      setisDrawCompleted(true);
+    }
     select("#transgraph-zoomButton-container").style("display", "block");
   }
   
   //REDRAW
   function redrawPreviousGraph() {
+    setisDrawCompleted(false);
     if (props.transgraphSettings.savedGraph) {
       select("#transgraph-no-drawing").style("display", "none");
       const cy = cytoscape({
@@ -405,7 +363,7 @@ function updateLinkLabelShow(cy) {
         selected: true,
         boxSelectionEnabled: true});
       cy.add(props.transgraphSettings.savedGraph);
-      coreDraw(cy);
+      const nodesEdgesCount = cy.nodes().length + cy.edges().length;
       const graph_layout = {
         name: 'preset',
         positions: function( node ){ 
@@ -413,8 +371,18 @@ function updateLinkLabelShow(cy) {
         },
         fit: true
       };
-      cy.layout(graph_layout).run();
-      setisDrawCompleted(true);
+      if(nodesEdgesCount > 300){
+        setTimeout(() => {
+          coreDraw(cy);
+          cy.layout(graph_layout).run();
+          setisDrawCompleted(true);
+        }, 1000);
+      }
+      else{
+        coreDraw(cy);
+        cy.layout(graph_layout).run();
+        setisDrawCompleted(true);
+      }
       select("#transgraph-zoomButton-container").style("display", "block");
     }
   }
@@ -607,6 +575,7 @@ function updateLinkLabelShow(cy) {
         </div>
       <div id="transgraph-loading">
         <Spin />
+        <p>Rendering graph, please wait ...</p>
       </div>
         <div id="transgraph-zoomButton-container">
           <Button

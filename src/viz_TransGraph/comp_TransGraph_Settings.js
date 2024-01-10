@@ -1,25 +1,16 @@
-/* ============================================================================
-//
-============================================================================ */
 import React from "react";
-import { Row, Button, Col, Drawer, Checkbox, InputNumber, Select } from "antd";
+import { Row, Button, Col, Drawer, Checkbox, InputNumber } from "antd";
 import "./style_TransGraph.css";
-
-const { Option } = Select;
 
 const TransmissionGraphSettings = (props) => {
   //SETTINGS
   const transgraphIsDownloading =
     props.transgraphSettings.transgraphIsDownloading;
-  const layoutKey = props.transgraphSettings.layoutKey;
   //HANDLERS
   const downloadSVGHandler = () => {
     if (!transgraphIsDownloading) {
       props.changeTransIsDownloading(true);
     }
-  };
-  const setLayoutKeyHandler = (val) => {
-    props.changeTransLayoutKey(val);
   };
   const showNodeLabelHandler = (e) => {
     let isChecked = e.target.checked;
@@ -81,20 +72,6 @@ const TransmissionGraphSettings = (props) => {
         getContainer={true}
       >
         <Row gutter={[1, 16]}>
-          <Col span={24}>
-            <p>Layout key </p>
-            <Select
-              style={{ width: "100%" }}
-              disabled={layoutKey ? false : true}
-              placeholder={layoutKey}
-              onChange={setLayoutKeyHandler}
-              value={layoutKey}
-            >
-              <Option value="cose">CoSE</Option>
-              <Option value="spread">Spread</Option>
-              <Option value="fcose">Fcose</Option>
-            </Select>
-          </Col>
           <Col span={24}>
             <Checkbox
               onChange={showNodeLabelHandler}

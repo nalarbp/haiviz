@@ -22,7 +22,6 @@ import {
   RetweetOutlined,
   SettingOutlined,
 } from "@ant-design/icons";
-import { use } from "cytoscape";
 
 const dimensions = ["width", "height"];
 
