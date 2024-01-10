@@ -1,0 +1,29 @@
+#simmap-change-gravity {
+  background-color: #ccc;
+  margin-bottom: 2px;
+}
+#simulatedmap-buttons-container {
+  position: absolute;
+  width: 40px;
+  margin: 10px 0 0 10px;
+  text-align: center;
+}
+#simulatedmap-zoom-buttons {
+  width: 35px;
+  height: 80px;
+  margin: 10px 0 0 10px;
+  text-align: center;
+}
+#simulatedmap-zoomIn {
+  background-color: #ccc;
+  margin: 2px 0;
+}
+#simulatedmap-zoomOut {
+  background-color: #ccc;
+  margin: 2px 0;
+}
+#simulatedmap-clearSelection {
+  background-color: #1eb776;
+  margin: 2px 0;
+  color: white;
+}

@@ -1,0 +1,56 @@
+#localmapContainer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#localmap-tooltip {
+  background-color: #ccff99;
+  position: absolute;
+  opacity: 0;
+  text-align: left;
+  padding: 10px;
+  border: solid 1px #aaa;
+  border-radius: 4px;
+  pointer-events: none;
+}
+#localmap-buttons-container {
+  position: absolute;
+  width: 150px;
+  margin: 10px 0 0 10px;
+  text-align: center;
+}
+#localmap-zoom-buttons {
+  width: 35px;
+  height: 80px;
+  margin: 10px 0 0 10px;
+  text-align: center;
+}
+#localmap-zoomIn {
+  background-color: #ccc;
+  margin: 2px 0;
+}
+#localmap-zoomOut {
+  background-color: #ccc;
+  margin: 2px 0;
+}
+#localmap-clearSelection {
+  background-color: #1eb776;
+  margin: 2px 0;
+  color: white;
+}
+#localmap-gravity-slider {
+  width: 140px;
+  margin: 10px 0 0 10px;
+  font-size: 10pt;
+  text-align: left;
+}
+#localmap-slider {
+  background-color: gray;
+}
+
+#localmap-setting {
+  background-color: #1eb776;
+  color: white;
+  border-color: #1eb776;
+}

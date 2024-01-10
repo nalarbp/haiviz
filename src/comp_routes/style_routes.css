@@ -1,0 +1,11 @@
+#main-header {
+  background-color: white;
+  height: 75px;
+}
+
+#nav-menu {
+  background-color: white;
+  float: right;
+  width: auto;
+  margin: 20px 20px 0 0;
+}

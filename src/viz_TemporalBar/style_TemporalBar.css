@@ -1,0 +1,25 @@
+#temporalbarContainer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.temporalbar-drawer-settings-p {
+  font-size: 10pt;
+  margin: 2px;
+}
+#temporalbar-buttons-container {
+  width: 100%;
+}
+#temporalbar-playback {
+  float: left;
+}
+#temporalbar-selectedDate {
+  float: right;
+  margin-right: 20px;
+}
+.temporal-brushArea rect.selection {
+  fill: #1eb776;
+  fill-opacity: 0.07;
+  stroke: black;
+  stroke-width: 2;
+}

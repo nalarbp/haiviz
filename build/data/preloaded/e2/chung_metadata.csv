@@ -1,0 +1,90 @@
+id,species,date,location,sample_type,pid,sample_source,st,st:color,profile_3
+ERR349747,Klebsiella pneumoniae,2012-05-16,Medical,Patient sample,10315_6#1,Urine,37,#9E9E9E,K12
+ERR349756,Klebsiella pneumoniae,2012-06-16,Nursery C,Patient sample,10315_6#10,Blood,14,#9E9E9E,K2
+ERR349757,Klebsiella pneumoniae,2012-06-17,ICU,Patient sample,10315_6#11,Tracheal aspiration,15,#46C8F5,novel Ktype
+ERR349758,Klebsiella pneumoniae,2012-06-19,ICU,Patient sample,10315_6#12,Blood,307,#9E9E9E,NK29
+ERR349759,Klebsiella pneumoniae,2012-06-19,ICU,Patient sample,10315_6#13,Sputum,15,#46C8F5,novel Ktype
+ERR349763,Klebsiella pneumoniae,2012-06-26,NICU,Patient sample,10315_6#17,Blood,15,#46C8F5,novel Ktype
+ERR349764,Klebsiella pneumoniae,2012-06-28,Nursery A,Patient sample,10315_6#18,Blood,15,#46C8F5,novel Ktype
+ERR349765,Klebsiella pneumoniae,2012-06-26,NICU,Patient sample,10315_6#19,Blood,15,#46C8F5,novel Ktype
+ERR349748,Klebsiella pneumoniae,2012-05-17,Medical,Patient sample,10315_6#2,ET Tip,15,#46C8F5,novel Ktype
+ERR349766,Klebsiella pneumoniae,2012-06-29,ICU,Patient sample,10315_6#20,Sputum,15,#46C8F5,novel Ktype
+ERR349767,Klebsiella pneumoniae,2012-06-29,Nursery A,Patient sample,10315_6#21,Blood,15,#46C8F5,novel Ktype
+ERR349768,Klebsiella pneumoniae,2012-07-01,ICU,Patient sample,10315_6#22,Pus,340,#9E9E9E,K52
+ERR349769,Klebsiella pneumoniae,2012-07-01,ER,Patient sample,10315_6#23,Swab,novel,#9E9E9E,R. Ornithininolytica capsule
+ERR349770,Klebsiella pneumoniae,2012-06-30,ICU,Patient sample,10315_6#24,Sputum,297,#9E9E9E,K10
+ERR349773,Klebsiella pneumoniae,2012-07-06,Medical,Patient sample,10315_6#27,Catheter tip,307,#9E9E9E,NK29 (unidentified K type)
+ERR349774,Klebsiella pneumoniae,2012-07-07,Nursery C,Patient sample,10315_6#28,Swab,15,#46C8F5,K24
+ERR349775,Klebsiella pneumoniae,2012-07-08,PICU,Patient sample,10315_6#29,ET Tip,15,#46C8F5,R. Planticola capsule
+ERR349749,Klebsiella pneumoniae,2012-05-24,NICU,Patient sample,10315_6#3,Blood,15,#46C8F5,novel Ktype
+ERR349777,Klebsiella pneumoniae,2012-07-11,Medical,Patient sample,10315_6#31,Sputum,147,#9E9E9E,K81
+ERR349778,Klebsiella pneumoniae,2012-07-16,Private,Patient sample,10315_6#32,Urine,661,#9E9E9E,K. oxytoca E718
+ERR349780,Klebsiella pneumoniae,2012-07-19,Medical,Patient sample,10315_6#34,Sputum,661,#9E9E9E,K. oxytoca E718
+ERR349784,Klebsiella pneumoniae,2012-07-24,Paediatric,Patient sample,10315_6#38,Swab,1,#9E9E9E,K17
+ERR349785,Klebsiella pneumoniae,2012-07-25,Medical,Patient sample,10315_6#39,Sputum,45,#9E9E9E,K24
+ERR349786,Klebsiella pneumoniae,2012-07-25,PICU,Patient sample,10315_6#40,Sputum,716,#9E9E9E,untypeable
+ERR349787,Klebsiella pneumoniae,2012-07-26,Medical,Patient sample,10315_6#41,Sputum,307,#9E9E9E,NK29 (unidentified K type)
+ERR349788,Klebsiella pneumoniae,2012-07-29,Medical,Patient sample,10315_6#42,Sputum,661,#9E9E9E,K. oxytoca E718
+ERR349789,Klebsiella pneumoniae,2012-07-31,Gynaecological,Patient sample,10315_6#43,Pus,14,#9E9E9E,untypeable
+ERR349790,Klebsiella pneumoniae,2012-07-31,Paediatric,Patient sample,10315_6#44,Urine,novel,#9E9E9E,K30
+ERR349791,Klebsiella pneumoniae,2012-07-31,Nursery B,Patient sample,10315_6#45,Blood,14,#9E9E9E,K2
+ERR349795,Klebsiella pneumoniae,2012-08-11,Maternity,Patient sample,10315_6#49,Pus,1559,#46C8F5,K14
+ERR349751,Klebsiella pneumoniae,2012-05-28,NICU,Patient sample,10315_6#5,ET Tip,15,#46C8F5,novel Ktype
+ERR349797,Klebsiella pneumoniae,2012-08-12,Surgical,Patient sample,10315_6#51,Tissue,307,#9E9E9E,NK29 (unidentified K type)
+ERR349798,Klebsiella pneumoniae,2012-08-12,Medical,Patient sample,10315_6#52,Sputum,37,#9E9E9E,K12
+ERR349799,Klebsiella pneumoniae,2012-08-16,PICU,Patient sample,10315_6#53,ET Tip,20,#9E9E9E,K28
+ERR349800,Klebsiella pneumoniae,2012-08-16,PICU,Patient sample,10315_6#54,ET Tip,20,#9E9E9E,K28
+ERR349803,Klebsiella pneumoniae,2012-08-23,Medical,Patient sample,10315_6#57,Pus,15,#46C8F5,novel Ktype
+ERR349804,Klebsiella pneumoniae,2012-08-25,Medical,Patient sample,10315_6#58,Catheter tip,45,#9E9E9E,K52
+ERR349805,Klebsiella pneumoniae,2012-08-26,OPD,Patient sample,10315_6#59,Urine,340,#9E9E9E,K52
+ERR349752,Klebsiella pneumoniae,2012-06-01,NICU,Patient sample,10315_6#6,Blood,15,#46C8F5,novel Ktype
+ERR349806,Klebsiella pneumoniae,2012-08-26,Medical,Patient sample,10315_6#60,Urine,1,#9E9E9E,K17
+ERR349807,Klebsiella pneumoniae,2012-08-31,Surgical,Patient sample,10315_6#61,Tissue,35,#9E9E9E,K16
+ERR349808,Klebsiella pneumoniae,2012-09-09,ICU,Patient sample,10315_6#62,Blood,15,#46C8F5,K24
+ERR349811,Klebsiella pneumoniae,2012-09-24,Gynaecological,Patient sample,10315_6#65,Urine,628,#9E9E9E,K52
+ERR349812,Klebsiella pneumoniae,2012-09-25,Paediatric,Patient sample,10315_6#66,Urine,15,#46C8F5,novel Ktype
+ERR349813,Klebsiella pneumoniae,2012-09-26,NICU,Patient sample,10315_6#67,ET Tip,1559,#46C8F5,K14
+ERR349814,Klebsiella pneumoniae,2012-09-26,NICU,Patient sample,10315_6#68,Suction,1559,#46C8F5,K14
+ERR349815,Klebsiella pneumoniae,2012-09-27,Maternity,Patient sample,10315_6#69,Urine,711,#9E9E9E,K54
+ERR349753,Klebsiella pneumoniae,2012-06-03,NICU,Patient sample,10315_6#7,Blood,15,#46C8F5,novel Ktype
+ERR349816,Klebsiella pneumoniae,2012-09-28,Private,Patient sample,10315_6#70,Urine,novel,#9E9E9E,untypeable
+ERR349817,Klebsiella pneumoniae,2012-09-29,NICU,Patient sample,10315_6#71,ET Tip,1559,#46C8F5,K14
+ERR349818,Klebsiella pneumoniae,2012-09-29,OPD,Patient sample,10315_6#72,Pus,716,#9E9E9E,untypeable
+ERR349819,Klebsiella pneumoniae,2012-09-29,Postpartum,Patient sample,10315_6#73,Urine,15,#46C8F5,novel Ktype
+ERR349820,Klebsiella pneumoniae,2012-09-30,PICU,Patient sample,10315_6#74,ET Tip,29,#9E9E9E,K19
+ERR349821,Klebsiella pneumoniae,2012-10-01,NICU,Patient sample,10315_6#75,Blood,1559,#46C8F5,K14
+ERR349822,Klebsiella pneumoniae,2012-10-01,Gynaecological,Patient sample,10315_6#76,Urine,11,#9E9E9E,K52
+ERR349823,Klebsiella pneumoniae,2012-10-06,PICU,Patient sample,10315_6#77,ET Tip,15,#46C8F5,novel Ktype
+ERR349824,Klebsiella pneumoniae,2012-10-10,Medical,Patient sample,10315_6#78,Sputum,15,#46C8F5,novel Ktype
+ERR349825,Klebsiella pneumoniae,2012-10-10,PICU,Patient sample,10315_6#79,ET Tip,15,#46C8F5,novel Ktype
+ERR349754,Klebsiella pneumoniae,2012-06-09,Nursery B,Patient sample,10315_6#8,Blood,15,#46C8F5,novel Ktype
+ERR349826,Klebsiella pneumoniae,2012-10-11,OPD,Patient sample,10315_6#80,Pus,15,#46C8F5,novel Ktype
+ERR349828,Klebsiella pneumoniae,2012-10-14,OPD,Patient sample,10315_6#82,Urine,15,#46C8F5,novel Ktype
+ERR349831,Klebsiella pneumoniae,2012-10-14,ICU,Patient sample,10315_6#85,Suction,551,#9E9E9E,K10
+ERR349833,Klebsiella pneumoniae,2012-10-21,Nursery B,Patient sample,10315_6#87,Blood,1559,#46C8F5,K14
+ERR349834,Klebsiella pneumoniae,2012-10-28,Maternity,Patient sample,10315_6#88,Catheter tip,340,#9E9E9E,ST258-cps1
+ERR349835,Klebsiella pneumoniae,2012-10-29,PICU,Patient sample,10315_6#89,Blood,1559,#46C8F5,K14
+ERR349755,Klebsiella pneumoniae,2012-06-13,Nursery B,Patient sample,10315_6#9,Blood,15,#46C8F5,novel Ktype
+ERR349838,Klebsiella pneumoniae,2012-11-05,Nursery B,Patient sample,10315_6#92,Blood,1559,#46C8F5,K14
+ERR349839,Klebsiella pneumoniae,2012-11-05,Nursery B,Patient sample,10315_6#93,Blood,1559,#46C8F5,K14
+ERR349841,Klebsiella pneumoniae,2012-11-07,PICU,Patient sample,10315_6#95,Blood,1559,#46C8F5,K14
+ERR349842,Klebsiella pneumoniae,2012-11-09,Gynaecological,Patient sample,10315_6#96,Urine,29,#9E9E9E,K19
+ERR349843,Klebsiella pneumoniae,2012-11-10,Surgical,Patient sample,10356_5#76,Urine,1559,#46C8F5,K14
+ERR349844,Klebsiella pneumoniae,2012-11-12,PICU,Patient sample,10356_5#77,ET Tip,15,#46C8F5,novel Ktype
+ERR349845,Klebsiella pneumoniae,2012-11-12,PICU,Patient sample,10356_5#78,Blood,1559,#46C8F5,K14
+ERR349846,Klebsiella pneumoniae,2012-11-16,ICU,Patient sample,10356_5#79,Urine,152,#9E9E9E,untypeable
+ERR349847,Klebsiella pneumoniae,2012-11-18,PICU,Patient sample,10356_5#80,Blood,1559,#46C8F5,K14
+ERR349848,Klebsiella pneumoniae,2012-11-18,PICU,Patient sample,10356_5#81,Blood,441,#9E9E9E,K62
+ERR349849,Klebsiella pneumoniae,2012-11-18,Nursery C,Patient sample,10356_5#82,CSF,1559,#46C8F5,K14
+ERR349852,Klebsiella pneumoniae,2012-11-21,PICU,Patient sample,10356_5#85,Blood,1559,#46C8F5,K14
+ERR349853,Klebsiella pneumoniae,2012-11-22,Maternity,Patient sample,10356_5#86,Urine,25,#9E9E9E,K2
+ERR349854,Klebsiella pneumoniae,2012-11-26,Maternity,Patient sample,10356_5#87,Urine,4,#9E9E9E,K10
+ERR317538,Klebsiella pneumoniae,2012-11-21,PICU,Patient sample,9878_1#11,Blood,1559,#46C8F5,K14
+ERR317539,Klebsiella pneumoniae,2012-11-28,Medical,Patient sample,9878_1#12,Blood,1559,#46C8F5,K14
+ERR317529,Klebsiella pneumoniae,2012-06-01,Nursery B,Patient sample,9878_1#2,Blood,15,#46C8F5,novel Ktype
+ERR317530,Klebsiella pneumoniae,2012-06-08,Nursery B,Patient sample,9878_1#3,Blood,15,#46C8F5,novel Ktype
+ERR317531,Klebsiella pneumoniae,2012-06-28,NICU,Patient sample,9878_1#4,Blood,15,#46C8F5,novel Ktype
+ERR317532,Klebsiella pneumoniae,2012-06-30,Nursery A,Patient sample,9878_1#5,Blood,15,#46C8F5,novel Ktype
+ERR317533,Klebsiella pneumoniae,2012-07-03,NICU,Patient sample,9878_1#6,Blood,15,#46C8F5,novel Ktype
+ERR317535,Klebsiella pneumoniae,2012-09-30,Nursery C,Patient sample,9878_1#8,Blood,1559,#46C8F5,K14
+ERR317536,Klebsiella pneumoniae,2012-10-09,Nursery C,Patient sample,9878_1#9,Blood,1559,#46C8F5,K14

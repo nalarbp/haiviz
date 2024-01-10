@@ -1,0 +1,101 @@
+﻿id,isolate_species,date,location,isolate_sourceType,isolate_sourceName,profile_1,profile_2,profile_3
+Isolate1,Species1,2019-12-20,Location 21,Patient,P1,Sp1 ST 17,ResGeneE,NA
+Isolate10,Species1,2019-11-20,Location 28,Patient,P4,Sp1 ST 20,ResGeneE,NA
+Isolate100,Species2,2019-05-01,NA,Others,NA,Sp2 ST 17,ResGeneE,NA
+Isolate11,Species1,2018-11-19,Location 31,Environment,Env5,Sp1 NF,ResGeneB,NA
+Isolate12,Species1,2018-03-10,Location 30,Environment,Env6,Sp1 ST 17,ResGeneA,NA
+Isolate13,Species1,2018-03-28,NA,Others,NA,Sp1 ST 18,ResGeneB,NA
+Isolate14,Species1,2018-05-19,Location 29,Environment,Env7,Sp1 ST 19,ResGeneB,NA
+Isolate15,Species1,2018-08-05,NA,Others,NA,Sp1 ST 20,ResGeneB,NA
+Isolate16,Species1,2019-01-08,Location 31,Patient,P5,Sp1 ST 17,ResGeneB,NA
+Isolate17,Species1,2019-02-01,Location 32,Environment,Env8,Sp1 ST 18,ResGeneB,NA
+Isolate18,Species1,2019-04-06,Location 33,Environment,Env9,Sp1 ST 19,ResGeneB,NA
+Isolate19,Species1,2019-08-16,NA,Others,NA,Sp1 ST 20,ResGeneC,NA
+Isolate2,Species1,2019-09-21,Location 21,Environment,Env1,Sp1 ST 18,ResGeneE,NA
+Isolate20,Species1,2019-09-02,Location 20,Environment,Env10,Sp1 NF,ResGeneC,NA
+Isolate21,Species1,2019-04-25,Location 33,Environment,Env11,Sp1 ST 19,ResGeneC,NA
+Isolate22,Species1,2018-01-27,NA,Others,NA,Sp1 ST 20,ResGeneA,NA
+Isolate23,Species1,2019-04-22,Location 30,Patient,P6,Sp1 NF,ResGeneC,NA
+Isolate24,Species1,2019-12-13,Location 31,Environment,Env12,Sp1 ST 78,ResGeneE,NA
+Isolate25,Species1,2019-12-18,Location 30,Environment,Env13,Sp1 ST 328,ResGeneD,NA
+Isolate26,Species1,2019-12-17,NA,Others,NA,Sp1 ST 761,ResGeneD,NA
+Isolate27,Species1,2020-01-03,Location 29,Environment,Env14,Sp1 ST 800,ResGeneE,NA
+Isolate28,Species1,2020-01-12,NA,Others,NA,Sp1 ST 20,ResGeneE,NA
+Isolate29,Species1,2018-11-12,Location 29,Patient,P7,Sp1 NF,ResGeneE,NA
+Isolate3,Species1,2019-09-17,Location 34,Environment,Env2,Sp1 ST 19,ResGeneB,NA
+Isolate30,Species1,2018-11-26,Location 32,Environment,Env15,Sp1 ST 17,ResGeneB,NA
+Isolate31,Species1,2019-11-12,Location 33,Environment,Env16,Sp1 ST 17,ResGeneD,NA
+Isolate32,Species1,2019-11-20,NA,Others,NA,Sp1 ST 18,ResGeneD,NA
+Isolate33,Species1,2018-11-19,Location 20,Environment,Env17,Sp1 ST 19,ResGeneB,NA
+Isolate34,Species1,2018-03-10,Location 33,Environment,Env18,Sp1 ST 20,ResGeneB,NA
+Isolate35,Species1,2018-03-28,Location 22,Environment,Env19,Sp1 NF,ResGeneB,NA
+Isolate36,Species1,2019-09-21,Location 21,Environment,Env20,Sp1 ST 78,ResGeneC,NA
+Isolate37,Species1,2019-09-17,Location 21,Environment,Env21,Sp1 ST 328,ResGeneC,NA
+Isolate38,Species1,2019-09-10,Location 34,Environment,Env22,Sp1 ST 761,ResGeneD,NA
+Isolate39,Species1,2019-08-29,Location 32,Patient,P8,Sp1 ST 800,ResGeneC,NA
+Isolate4,Species1,2019-09-10,Location 34,Patient,P2,Sp1 ST 20,ResGeneB,NA
+Isolate40,Species1,2019-11-12,NA,Others,NA,Sp1 ST 20,ResGeneD,NA
+Isolate41,Species1,2019-11-12,Location 26,Environment,Env23,Sp1 ST 20,ResGeneD,NA
+Isolate42,Species1,2019-04-06,Location 33,Patient,P9,Sp1 ST 17,ResGeneB,NA
+Isolate43,Species1,2019-11-12,Location 28,Environment,Env24,Sp1 ST 18,ResGeneD,NA
+Isolate44,Species1,2019-12-20,NA,Others,NA,Sp1 ST 19,ResGeneE,NA
+Isolate45,Species1,2019-09-21,Location 20,Patient,P10,Sp1 ST 20,ResGeneC,NA
+Isolate46,Species1,2019-09-17,Location 31,Environment,Env25,Sp1 NF,ResGeneC,NA
+Isolate47,Species1,2019-09-18,Location 33,Patient,P11,Sp1 ST 19,ResGeneD,NA
+Isolate48,Species1,2019-09-19,Location 28,Environment,Env26,Sp1 ST 20,ResGeneE,NA
+Isolate49,Species1,2019-09-20,Location 31,Environment,Env27,Sp1 NF,ResGeneE,NA
+Isolate5,Species1,2019-08-29,Location 30,Others,NA,Sp1 NF,ResGeneC,NA
+Isolate50,Species1,2019-09-21,Location 31,Patient,P12,Sp1 ST 78,ResGeneC,NA
+Isolate51,Species2,2019-09-22,NA,Others,NA,Sp2 ST 17,ResGeneC,NA
+Isolate52,Species2,2019-04-22,Location 21,Environment,Env28,Sp2 NF,ResGeneC,NA
+Isolate53,Species2,2019-12-13,Location 30,Patient,P13,Sp2 ST 78,ResGeneE,NA
+Isolate54,Species2,2019-12-18,Location 34,Environment,Env29,Sp2 ST 18,ResGeneE,NA
+Isolate55,Species2,2019-12-17,NA,Others,NA,Sp2 ST 17,ResGeneD,NA
+Isolate56,Species2,2018-08-05,Location 29,Patient,P14,Sp2 ST 328,ResGeneE,NA
+Isolate57,Species2,2019-01-08,Location 26,Environment,Env30,Sp2 ST 19,ResGeneC,NA
+Isolate58,Species2,2019-02-01,Location 28,Environment,Env31,Sp2 ST 78,ResGeneB,NA
+Isolate59,Species2,2019-04-06,NA,Others,NA,Sp2 ST 18,ResGeneB,NA
+Isolate6,Species1,2019-11-12,Location 26,Environment,Env3,Sp1 ST 78,ResGeneE,NA
+Isolate60,Species2,2019-08-16,Location 31,Environment,Env32,Sp2 ST 761,ResGeneC,NA
+Isolate61,Species2,2019-09-02,NA,Others,NA,Sp2 ST 19,ResGeneD,NA
+Isolate62,Species2,2019-04-25,Location 32,Patient,P15,Sp2 ST 800,ResGeneC,NA
+Isolate63,Species2,2019-04-26,Location 30,Environment,Env33,Sp2 NF,ResGeneC,NA
+Isolate64,Species2,2019-04-27,Location 29,Environment,Env34,Sp2 ST 17,ResGeneC,NA
+Isolate65,Species2,2019-04-28,NA,Others,NA,Sp2 NF,ResGeneB,NA
+Isolate66,Species2,2019-04-29,Location 32,Environment,Env35,Sp2 ST 19,ResGeneB,NA
+Isolate67,Species2,2019-04-30,Location 33,Environment,Env36,Sp2 ST 18,ResGeneB,NA
+Isolate68,Species2,2019-05-01,Location 20,Environment,Env37,Sp2 ST 19,ResGeneE,NA
+Isolate69,Species2,2019-05-02,Location 33,Environment,Env38,Sp2 NF,ResGeneC,NA
+Isolate7,Species1,2019-11-12,Location 26,Patient,P3,Sp1 ST 328,ResGeneD,NA
+Isolate70,Species2,2019-12-18,Location 22,Environment,Env39,Sp2 ST 19,ResGeneE,NA
+Isolate71,Species2,2019-12-17,Location 21,Environment,Env40,Sp2 ST 78,ResGeneD,NA
+Isolate72,Species2,2020-01-03,Location 24,Environment,Env41,Sp2 ST 328,ResGeneE,NA
+Isolate73,Species2,2020-01-12,Location 25,Environment,Env42,Sp2 ST 800,ResGeneE,NA
+Isolate74,Species2,2018-11-12,Location 26,Environment,Env43,Sp2 ST 17,ResGeneE,NA
+Isolate75,Species2,2018-11-26,Location 27,Environment,Env44,Sp2 ST 17,ResGeneB,NA
+Isolate76,Species2,2019-11-12,Location 33,Environment,Env45,Sp2 ST 19,ResGeneC,NA
+Isolate77,Species2,2019-11-20,NA,Others,NA,Sp2 ST 19,ResGeneE,NA
+Isolate78,Species2,2019-11-12,Location 33,Patient,P16,Sp2 ST 17,ResGeneC,NA
+Isolate79,Species2,2019-04-06,Location 32,Environment,Env46,Sp2 ST 20,ResGeneB,NA
+Isolate8,Species1,2019-12-10,Location 28,Environment,Env4,Sp1 ST 761,ResGeneE,NA
+Isolate80,Species2,2019-11-12,Location 20,Patient,P17,Sp2 ST 17,ResGeneD,NA
+Isolate81,Species2,2019-12-20,Location 33,Environment,Env47,Sp2 NF,ResGeneE,NA
+Isolate82,Species2,2019-09-21,Location 31,Environment,Env48,Sp2 ST 17,ResGeneC,NA
+Isolate83,Species2,2019-09-17,Location 26,Patient,P23,Sp2 ST 21,ResGeneC,NA
+Isolate84,Species2,2019-09-18,Location 33,Patient,P18,Sp2 ST 18,ResGeneD,NA
+Isolate85,Species2,2019-09-19,Location 21,Environment,Env49,Sp2 ST 19,ResGeneE,NA
+Isolate86,Species2,2019-09-20,Location 22,Patient,P19,Sp2 ST 19,ResGeneE,NA
+Isolate87,Species2,2019-09-21,Location 34,Environment,Env50,Sp2 ST 18,ResGeneC,NA
+Isolate88,Species2,2019-09-22,Location 31,Environment,Env51,Sp2 ST 19,ResGeneC,NA
+Isolate89,Species2,2019-09-23,Location 21,Patient,P20,Sp2 NF,ResGeneE,NA
+Isolate9,Species1,2019-11-12,Location 29,Others,NA,Sp1 ST 800,ResGeneD,NA
+Isolate90,Species2,2019-09-24,NA,Others,NA,Sp2 ST 78,ResGeneE,NA
+Isolate91,Species2,2019-09-25,Location 21,Environment,Env52,Sp2 NF,ResGeneE,NA
+Isolate92,Species2,2019-09-26,Location 21,Patient,P21,Sp2 ST 19,ResGeneE,NA
+Isolate93,Species2,2019-09-27,Location 34,Environment,Env53,Sp2 ST 19,ResGeneE,NA
+Isolate94,Species2,2019-09-28,NA,Others,NA,Sp2 ST 328,ResGeneE,NA
+Isolate95,Species2,2019-04-26,Location 34,Patient,P22,Sp2 ST 20,ResGeneC,NA
+Isolate96,Species2,2019-04-27,Location 26,Environment,Env54,Sp2 ST 78,ResGeneC,NA
+Isolate97,Species2,2019-04-28,Location 28,Environment,Env55,Sp2 ST 328,ResGeneB,NA
+Isolate98,Species2,2019-04-29,NA,Others,NA,Sp2 ST 800,ResGeneB,NA
+Isolate99,Species2,2019-04-30,Location 31,Environment,Env56,Sp2 ST 800,ResGeneE,NA

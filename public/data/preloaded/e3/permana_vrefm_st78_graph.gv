@@ -1,0 +1,858 @@
+/* Created by igraph 1.2.6 */
+digraph {
+  0 [
+    name=M86159
+  ];
+  1 [
+    name=M810154
+  ];
+  2 [
+    name=M94211
+  ];
+  3 [
+    name=M91414
+  ];
+  4 [
+    name=M96902
+  ];
+  5 [
+    name=M810885
+  ];
+  6 [
+    name=M93370
+  ];
+  7 [
+    name=M93924
+  ];
+  8 [
+    name=M95768
+  ];
+  9 [
+    name=M99826
+  ];
+  10 [
+    name=M94927
+  ];
+  11 [
+    name=M94926
+  ];
+  12 [
+    name=M01236
+  ];
+  13 [
+    name=M96011
+  ];
+  14 [
+    name=M97750
+  ];
+  15 [
+    name=M98146
+  ];
+  16 [
+    name=M98703
+  ];
+  17 [
+    name=M99624
+  ];
+  18 [
+    name=M912106
+  ];
+  19 [
+    name=M00943
+  ];
+  20 [
+    name=M97944
+  ];
+  21 [
+    name=M98516
+  ];
+  22 [
+    name=M98884
+  ];
+  23 [
+    name=M99250
+  ];
+  24 [
+    name=M97945
+  ];
+  25 [
+    name=M98147
+  ];
+  26 [
+    name=M01234
+  ];
+  27 [
+    name=M98889
+  ];
+  28 [
+    name=M910050
+  ];
+  29 [
+    name=M910479
+  ];
+  30 [
+    name=M99402
+  ];
+  31 [
+    name=M99825
+  ];
+  32 [
+    name=M910478
+  ];
+  33 [
+    name=M910665_1
+  ];
+  34 [
+    name=M910888
+  ];
+  35 [
+    name=M05847
+  ];
+  36 [
+    name=M910881
+  ];
+  37 [
+    name=M911140
+  ];
+  38 [
+    name=M910882
+  ];
+  39 [
+    name=M00066
+  ];
+  40 [
+    name=M911374
+  ];
+  41 [
+    name=M01603
+  ];
+  42 [
+    name=M911142
+  ];
+  43 [
+    name=M911144
+  ];
+  44 [
+    name=M911375
+  ];
+  45 [
+    name=M911364
+  ];
+  46 [
+    name=M911620
+  ];
+  47 [
+    name=M911619
+  ];
+  48 [
+    name=M911842
+  ];
+  49 [
+    name=M912103
+  ];
+  50 [
+    name=M01235
+  ];
+  51 [
+    name=M911146
+  ];
+  52 [
+    name=M911362
+  ];
+  53 [
+    name=M911373
+  ];
+  54 [
+    name=M00945
+  ];
+  55 [
+    name=M06114_3
+  ];
+  56 [
+    name=M912102
+  ];
+  57 [
+    name=M00362
+  ];
+  58 [
+    name=M00065
+  ];
+  59 [
+    name=M00363
+  ];
+  60 [
+    name=M07824
+  ];
+  61 [
+    name=M00680
+  ];
+  62 [
+    name=M910480_2
+  ];
+
+  0 -> 1 [
+    weight=1
+    style=solid
+    color=gray
+  ];
+  0 -> 2 [
+    weight=1
+    style=solid
+    color=gray
+  ];
+  1 -> 3 [
+    weight=0.999644444444444
+    style=dashed
+    color=gray
+  ];
+  1 -> 4 [
+    weight=1
+    style=solid
+    color=gray
+  ];
+  5 -> 6 [
+    weight=0.572933333333333
+    style=dashed
+    color=gray
+  ];
+  5 -> 7 [
+    weight=0.427066666666667
+    style=dashed
+    color=gray
+  ];
+  3 -> 8 [
+    weight=1
+    style=dashed
+    color=gray
+  ];
+  3 -> 9 [
+    weight=0.918622222222222
+    style=solid
+    color=gray
+  ];
+  6 -> 7 [
+    weight=0.572933333333333
+    style=solid
+    color=gray
+  ];
+  6 -> 10 [
+    weight=0.506666666666667
+    style=dashed
+    color=gray
+  ];
+  7 -> 6 [
+    weight=0.427066666666667
+    style=solid
+    color=gray
+  ];
+  7 -> 10 [
+    weight=0.493333333333333
+    style=dashed
+    color=gray
+  ];
+  2 -> 11 [
+    weight=0.998622222222222
+    style=solid
+    color=gray
+  ];
+  10 -> 12 [
+    weight=1
+    style=dashed
+    color=gray
+  ];
+  8 -> 13 [
+    weight=1
+    style=dashed
+    color=gray
+  ];
+  8 -> 14 [
+    weight=0.155555555555556
+    style=solid
+    color=gray
+  ];
+  8 -> 15 [
+    weight=0.728444444444444
+    style=solid
+    color=gray
+  ];
+  8 -> 16 [
+    weight=0.278711111111111
+    style=solid
+    color=gray
+  ];
+  4 -> 17 [
+    weight=1
+    style=dashed
+    color=gray
+  ];
+  4 -> 18 [
+    weight=0.876488888888889
+    style=solid
+    color=gray
+  ];
+  4 -> 19 [
+    weight=0.121777777777778
+    style=solid
+    color=gray
+  ];
+  14 -> 20 [
+    weight=0.987066666666667
+    style=solid
+    color=red
+  ];
+  14 -> 21 [
+    weight=0.308622222222222
+    style=solid
+    color=red
+  ];
+  14 -> 22 [
+    weight=0.757066666666667
+    style=solid
+    color=gray
+  ];
+  14 -> 23 [
+    weight=0.216266666666667
+    style=solid
+    color=gray
+  ];
+  15 -> 14 [
+    weight=0.636844444444444
+    style=solid
+    color=gray
+  ];
+  15 -> 24 [
+    weight=0.9984
+    style=solid
+    color=red
+  ];
+  15 -> 25 [
+    weight=0.991466666666667
+    style=solid
+    color=red
+  ];
+  15 -> 16 [
+    weight=0.687866666666667
+    style=solid
+    color=gray
+  ];
+  15 -> 26 [
+    weight=0.933733333333333
+    style=solid
+    color=gray
+  ];
+  21 -> 27 [
+    weight=0.985377777777778
+    style=solid
+    color=red
+  ];
+  21 -> 28 [
+    weight=0.939644444444444
+    style=solid
+    color=gray
+  ];
+  21 -> 29 [
+    weight=0.186133333333333
+    style=solid
+    color=gray
+  ];
+  16 -> 14 [
+    weight=0.195422222222222
+    style=solid
+    color=gray
+  ];
+  16 -> 15 [
+    weight=0.2428
+    style=solid
+    color=gray
+  ];
+  22 -> 21 [
+    weight=0.534
+    style=solid
+    color=gray
+  ];
+  22 -> 23 [
+    weight=0.659288888888889
+    style=solid
+    color=gray
+  ];
+  22 -> 30 [
+    weight=0.295022222222222
+    style=solid
+    color=gray
+  ];
+  23 -> 21 [
+    weight=0.136133333333333
+    style=solid
+    color=gray
+  ];
+  23 -> 22 [
+    weight=0.183644444444444
+    style=solid
+    color=gray
+  ];
+  23 -> 30 [
+    weight=0.576533333333333
+    style=solid
+    color=red
+  ];
+  23 -> 31 [
+    weight=0.283866666666667
+    style=solid
+    color=red
+  ];
+  30 -> 31 [
+    weight=0.631511111111111
+    style=solid
+    color=red
+  ];
+  30 -> 32 [
+    weight=0.156266666666667
+    style=solid
+    color=gray
+  ];
+  30 -> 33 [
+    weight=0.119688888888889
+    style=solid
+    color=gray
+  ];
+  30 -> 34 [
+    weight=0.115688888888889
+    style=solid
+    color=red
+  ];
+  17 -> 35 [
+    weight=1
+    style=dashed
+    color=gray
+  ];
+  31 -> 29 [
+    weight=0.279066666666667
+    style=solid
+    color=red
+  ];
+  31 -> 32 [
+    weight=0.366533333333333
+    style=solid
+    color=gray
+  ];
+  31 -> 33 [
+    weight=0.371333333333333
+    style=solid
+    color=gray
+  ];
+  31 -> 36 [
+    weight=0.212488888888889
+    style=solid
+    color=gray
+  ];
+  31 -> 34 [
+    weight=0.3436
+    style=solid
+    color=red
+  ];
+  31 -> 37 [
+    weight=0.165911111111111
+    style=solid
+    color=red
+  ];
+  9 -> 38 [
+    weight=0.865466666666667
+    style=solid
+    color=gray
+  ];
+  9 -> 39 [
+    weight=0.180622222222222
+    style=solid
+    color=gray
+  ];
+  38 -> 39 [
+    weight=0.809822222222222
+    style=solid
+    color=gray
+  ];
+  29 -> 40 [
+    weight=0.950044444444444
+    style=solid
+    color=gray
+  ];
+  29 -> 41 [
+    weight=0.105511111111111
+    style=solid
+    color=gray
+  ];
+  33 -> 29 [
+    weight=0.187911111111111
+    style=solid
+    color=gray
+  ];
+  33 -> 32 [
+    weight=0.195244444444444
+    style=solid
+    color=gray
+  ];
+  33 -> 36 [
+    weight=0.340311111111111
+    style=solid
+    color=gray
+  ];
+  33 -> 34 [
+    weight=0.240755555555556
+    style=solid
+    color=gray
+  ];
+  33 -> 42 [
+    weight=0.373955555555556
+    style=solid
+    color=gray
+  ];
+  33 -> 37 [
+    weight=0.419688888888889
+    style=solid
+    color=gray
+  ];
+  33 -> 43 [
+    weight=0.148177777777778
+    style=solid
+    color=gray
+  ];
+  33 -> 44 [
+    weight=0.125733333333333
+    style=solid
+    color=gray
+  ];
+  33 -> 45 [
+    weight=0.213688888888889
+    style=solid
+    color=gray
+  ];
+  33 -> 46 [
+    weight=0.176711111111111
+    style=solid
+    color=gray
+  ];
+  33 -> 47 [
+    weight=0.229644444444444
+    style=solid
+    color=gray
+  ];
+  34 -> 29 [
+    weight=0.158355555555556
+    style=solid
+    color=red
+  ];
+  34 -> 32 [
+    weight=0.161111111111111
+    style=solid
+    color=gray
+  ];
+  34 -> 33 [
+    weight=0.294266666666667
+    style=solid
+    color=gray
+  ];
+  34 -> 36 [
+    weight=0.2196
+    style=solid
+    color=gray
+  ];
+  34 -> 42 [
+    weight=0.2892
+    style=solid
+    color=gray
+  ];
+  34 -> 37 [
+    weight=0.251777777777778
+    style=solid
+    color=red
+  ];
+  34 -> 43 [
+    weight=0.119111111111111
+    style=solid
+    color=gray
+  ];
+  34 -> 45 [
+    weight=0.263644444444444
+    style=solid
+    color=gray
+  ];
+  34 -> 46 [
+    weight=0.227333333333333
+    style=solid
+    color=gray
+  ];
+  34 -> 47 [
+    weight=0.2812
+    style=solid
+    color=gray
+  ];
+  34 -> 48 [
+    weight=0.125777777777778
+    style=solid
+    color=gray
+  ];
+  37 -> 33 [
+    weight=0.165466666666667
+    style=solid
+    color=gray
+  ];
+  37 -> 36 [
+    weight=0.108177777777778
+    style=solid
+    color=gray
+  ];
+  37 -> 34 [
+    weight=0.235022222222222
+    style=solid
+    color=red
+  ];
+  37 -> 42 [
+    weight=0.165111111111111
+    style=solid
+    color=gray
+  ];
+  37 -> 45 [
+    weight=0.335111111111111
+    style=solid
+    color=gray
+  ];
+  37 -> 46 [
+    weight=0.326488888888889
+    style=solid
+    color=gray
+  ];
+  37 -> 47 [
+    weight=0.414666666666667
+    style=solid
+    color=gray
+  ];
+  37 -> 48 [
+    weight=0.238977777777778
+    style=solid
+    color=gray
+  ];
+  37 -> 49 [
+    weight=0.212177777777778
+    style=solid
+    color=gray
+  ];
+  37 -> 50 [
+    weight=0.147733333333333
+    style=solid
+    color=gray
+  ];
+  43 -> 51 [
+    weight=0.401377777777778
+    style=solid
+    color=gray
+  ];
+  43 -> 52 [
+    weight=0.101866666666667
+    style=solid
+    color=gray
+  ];
+  43 -> 53 [
+    weight=0.192088888888889
+    style=solid
+    color=gray
+  ];
+  43 -> 44 [
+    weight=0.449511111111111
+    style=solid
+    color=red
+  ];
+  43 -> 54 [
+    weight=0.145333333333333
+    style=solid
+    color=gray
+  ];
+  43 -> 55 [
+    weight=0.143733333333333
+    style=solid
+    color=gray
+  ];
+  52 -> 51 [
+    weight=0.123822222222222
+    style=solid
+    color=gray
+  ];
+  52 -> 43 [
+    weight=0.155955555555556
+    style=solid
+    color=gray
+  ];
+  52 -> 44 [
+    weight=0.116666666666667
+    style=solid
+    color=gray
+  ];
+  52 -> 54 [
+    weight=0.356088888888889
+    style=solid
+    color=gray
+  ];
+  52 -> 55 [
+    weight=0.3948
+    style=solid
+    color=gray
+  ];
+  53 -> 51 [
+    weight=0.135466666666667
+    style=solid
+    color=gray
+  ];
+  53 -> 43 [
+    weight=0.133733333333333
+    style=solid
+    color=gray
+  ];
+  53 -> 52 [
+    weight=0.240444444444444
+    style=solid
+    color=red
+  ];
+  53 -> 44 [
+    weight=0.107688888888889
+    style=solid
+    color=gray
+  ];
+  53 -> 54 [
+    weight=0.299644444444444
+    style=solid
+    color=gray
+  ];
+  53 -> 55 [
+    weight=0.281422222222222
+    style=solid
+    color=gray
+  ];
+  44 -> 51 [
+    weight=0.324088888888889
+    style=solid
+    color=gray
+  ];
+  44 -> 43 [
+    weight=0.326266666666667
+    style=solid
+    color=red
+  ];
+  44 -> 52 [
+    weight=0.469822222222222
+    style=solid
+    color=gray
+  ];
+  44 -> 53 [
+    weight=0.653866666666667
+    style=solid
+    color=gray
+  ];
+  44 -> 54 [
+    weight=0.151555555555556
+    style=solid
+    color=gray
+  ];
+  44 -> 55 [
+    weight=0.148666666666667
+    style=solid
+    color=gray
+  ];
+  47 -> 45 [
+    weight=0.136577777777778
+    style=solid
+    color=gray
+  ];
+  47 -> 46 [
+    weight=0.227955555555556
+    style=solid
+    color=gray
+  ];
+  47 -> 48 [
+    weight=0.508177777777778
+    style=solid
+    color=gray
+  ];
+  47 -> 49 [
+    weight=0.570888888888889
+    style=solid
+    color=gray
+  ];
+  47 -> 50 [
+    weight=0.674311111111111
+    style=solid
+    color=gray
+  ];
+  56 -> 57 [
+    weight=0.487333333333333
+    style=solid
+    color=gray
+  ];
+  56 -> 19 [
+    weight=0.648088888888889
+    style=solid
+    color=gray
+  ];
+  18 -> 56 [
+    weight=0.815555555555556
+    style=solid
+    color=red
+  ];
+  18 -> 58 [
+    weight=0.823155555555556
+    style=dashed
+    color=gray
+  ];
+  18 -> 57 [
+    weight=0.168888888888889
+    style=solid
+    color=gray
+  ];
+  18 -> 19 [
+    weight=0.230133333333333
+    style=solid
+    color=gray
+  ];
+  59 -> 60 [
+    weight=1
+    style=solid
+    color=gray
+  ];
+  19 -> 56 [
+    weight=0.182711111111111
+    style=solid
+    color=gray
+  ];
+  19 -> 18 [
+    weight=0.1232
+    style=solid
+    color=gray
+  ];
+  19 -> 58 [
+    weight=0.1132
+    style=dashed
+    color=gray
+  ];
+  19 -> 57 [
+    weight=0.343777777777778
+    style=solid
+    color=red
+  ];
+  54 -> 61 [
+    weight=0.749644444444444
+    style=solid
+    color=red
+  ];
+  50 -> 59 [
+    weight=0.804844444444444
+    style=solid
+    color=gray
+  ];
+  50 -> 41 [
+    weight=0.840222222222222
+    style=solid
+    color=gray
+  ];
+  26 -> 62 [
+    weight=0.999555555555556
+    style=solid
+    color=gray
+  ];
+}
