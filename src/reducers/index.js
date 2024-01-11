@@ -39,13 +39,14 @@ export const initialState = {
     summary: { show: false },
     idxCol: { show: false },
     simulatedMap: { show: false },
-    floorplan: { show: false },
     bar: { show: false },
-    tree: { show: false },
-    transmission: { show: false },
-    gantt: { show: false },
-    //treeGantt: { show: false }, //for the next major release
     table: { show: false },
+    floorplan: { show: false },
+    tree: { show: false },
+    gantt: { show: false },
+    transmission: { show: false },
+    //treeGantt: { show: false }, //for the next major release
+    
   },
   phylotreeSettings: {
     isUserStartResize: false,

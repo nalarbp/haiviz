@@ -76,6 +76,7 @@ const TemporalStackedBar = (props) => {
   }, [props.colorScale]);
 
   useEffect(() => {
+    console.log("selectionDate", selectionDate);
     if (selectionDate) {
       const cont = select(temporalbarContainerRef.current);
       cont.select("#selection-date-text").text(() => {
@@ -247,6 +248,7 @@ const TemporalStackedBar = (props) => {
 
 
     function brushEnd() {
+      console.log("brush end");
       //when brush is end, do logic here (e.g., filter data)
       let selection = currentEvent.selection;
       if (selection !== null) {
