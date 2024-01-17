@@ -6,30 +6,26 @@ A web-based application to create an interactive dashboard for visualising and i
 Visit https://haiviz.fordelab.com/.
 
 ## Run HAIviz locally, for self hosting or for development.
-To run HAIviz locally, for self-hosting, or development, follow these instructions. Basic command line experience is recommended for the installation process.
+To run HAIviz locally, for self-hosting, or development, please follow these instructions. Basic command line experience is recommended for the installation process. More detailed, step-by-step instructions are also available in the video tutorials on the HAIviz page Documentation.
 
-1. Install Node.js version 16.20.2 by downloading it from: https://nodejs.org/download/release/v16.20.2/
-   - For Windows: The `node-v16.20.2-x64.msi` for 64-bit systems or `node-v16.20.2-x86.msi` for 32-bit systems.
-   - For MacOS: The `node-v16.20.2-darwin-arm64.tar.gz` for Apple Silicon-based systems or `node-v16.20.2-darwin-x64.tar.gz` for Intel-based systems.
-   - For Linux: Pick the appropriate package based on your Linux distribution.
+1. Install Node.js
+   - Download the Node.js installer (e.g. the LTS version) from https://nodejs.org/en. 
+   - Installing Node.js will also install the `npm` package manager. Check if they have been installed correctly by typing the following commands in your terminal: `npm -v` and `node -v`. These commands should return the versions of `npm` and Node.js installed.
 
-2. Install `serve` Node.js package.
-   - Installing Node.js will also install the `npm` package manager. Check if `npm` is already installed by typing `npm -v` in your terminal. Also, verify your Node.js version by typing `node -v`, which should return `v16.20.2`. 
-   - Then install `serve` by typing `npm install serve -g`
-   - We will use the `serve` package to serve the builded HAIviz app.
-   However, before proceeding, first clone or download the repository.
+2. Clone or download HAIviz (this) repository.
+   - Clone the repository using git by typing: `git clone https://github.com/nalarbp/haiviz.git`. This will create a new directory named `haiviz`.
+   - Alternatively, you can download the repository by clicking the 'Code' dropdown button and selecting 'Download ZIP'. After downloading, unzip the repository, which will create a new directory named `haiviz-main`.
 
-3. Clone or download this repository.
-   - Clone the repository using git: `git clone https://github.com/nalarbp/haiviz.git`. This will create a new directory named `haiviz`. 
-   - Alternatively, you can download the repository by clicking the 'Code' dropdown button and selecting 'Download ZIP'. After downloading, unzip the repository, which will create a new directory named `haiviz-main`. 
- 
-4. To run HAIviz offline or for self-hosting.
-   - From step 3.
-   - Navigate to the HAIviz repository by typing `cd haiviz/` or `cd haiviz-main/`.
-   - Use the `serve` package to serve the build directory. Type `serve -s build`. 
+3. To run HAIviz offline or for self-hosting.
+   - Install the `serve` Node.js package by typing: `npm install serve -g` (or `sudo npm install serve -g` if admin permission is required)
+   - Navigate to HAIviz repository by typing: `cd haiviz/` or `cd haiviz-main/`
+   - Use the `serve` package to serve the build directory by typing: `serve -s build/`
 
-5. To run the development mode.
-   - From step 3. 
+4. To run the development mode.
+   - The development mode requires Node.js version 16.20.2.
+   - Install the `n` package (for switching between Node.js versions) by typing: `npm install n -g` (or `sudo npm install n -g`).
+   - Use `n` to install and switch to the Node.js v16.20.2 by typing: `n install 16.20.2` (or `sudo n install 16.20.2`).
+   - Check if the Node.js version has been changed by typing `node -v`, which should return v16.20.2.
    - Navigate to the HAIviz repository by typing `cd haiviz` or `cd haiviz-main`.
    - Install all the required dependency packages by typing `npm install -s`.
    - Start the development server by typing `npm start`. 
