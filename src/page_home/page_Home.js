@@ -33,7 +33,7 @@ const Home = (props) => {
                 footer={null}
               >
                 <ReactPlayer
-                  url={"https://youtu.be/JUUNn8KAcU0"}
+                  url={"https://youtu.be/wvTrc-kWUAI"}
                   controls={true}
                   width={"100%"}
                   playing={modalVisible}
@@ -115,7 +115,7 @@ const Home = (props) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <b>HAIviz v1.0</b> | {new Date().getFullYear()}
+                <b>HAIviz v1.0.0</b> | {new Date().getFullYear()}
               </a>{" "}
               <br />
               An interactive dashboard for visualising and <br />
