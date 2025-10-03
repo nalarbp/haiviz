@@ -1,10 +1,10 @@
 {
-  "main.css": "/static/css/main.265c35f3.chunk.css",
-  "main.js": "/static/js/main.cf6e0399.chunk.js",
-  "static/css/1.9b40214c.chunk.css": "/static/css/1.9b40214c.chunk.css",
-  "static/js/1.dd67cc32.chunk.js": "/static/js/1.dd67cc32.chunk.js",
-  "runtime~main.js": "/static/js/runtime~main.229c360f.js",
-  "static/media/icon_colorpal_active.png": "/static/media/icon_colorpal_active.ff0c8904.png",
-  "static/media/icon_colorpal_inactive.png": "/static/media/icon_colorpal_inactive.cdfb45d4.png",
-  "index.html": "/index.html"
+  "main.css": "/haiviz/static/css/main.f38d9518.chunk.css",
+  "main.js": "/haiviz/static/js/main.9ee15df4.chunk.js",
+  "static/css/1.9b40214c.chunk.css": "/haiviz/static/css/1.9b40214c.chunk.css",
+  "static/js/1.580a86d9.chunk.js": "/haiviz/static/js/1.580a86d9.chunk.js",
+  "runtime~main.js": "/haiviz/static/js/runtime~main.05d813a6.js",
+  "static/media/icon_colorpal_active.png": "/haiviz/static/media/icon_colorpal_active.ff0c8904.png",
+  "static/media/icon_colorpal_inactive.png": "/haiviz/static/media/icon_colorpal_inactive.cdfb45d4.png",
+  "index.html": "/haiviz/index.html"
 }
