@@ -1,6 +1,7 @@
 {
   "name": "HAIviz",
   "version": "1.0",
+  "homepage": "https://nalarbp.github.io/haiviz",
   "description": "HAIviz: An interactive visualization tool to integrate your genomic epidemiology information",
   "author": "Budi Permana, Beatson Lab UQ, Australia",
   "private": true,
