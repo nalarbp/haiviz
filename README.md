@@ -3,9 +3,13 @@
 A web-based application to create an interactive dashboard for visualising and integrating healthcare-associated genomic epidemiological data.
 
 ## Using HAIviz online.
-Visit https://haiviz.fordelab.com/.
+Visit https://nalarbp.github.io/haiviz/ or https://haiviz.fordelab.com/.
+
+> [!IMPORTANT]
+> To run HAIviz locally, in self-hosting or development mode, reset the git to commit 82946469b86a5dc5705c1c265629fb24ca78d215 (Build 17-Jan-2024). The latest commit was set up for compatibility with GitHub Pages deployment at https://nalarbp.github.io/haiviz/. Alternatively, use build_production to run locally, e.g., `serve -s build_production`.
 
 ## Run HAIviz locally, for self hosting or for development.
+
 To run HAIviz locally, for self-hosting, or development, follow these instructions. Basic command line experience is recommended for the installation process.
 
 1. Install Node.js version 16.20.2 by downloading it from: https://nodejs.org/download/release/v16.20.2/
